@@ -8,11 +8,11 @@ the app will not connect to anything that is not Phantom Dust, so no random edit
 3. go to the "lab" in the game  
 4. click the options you need  
   
-download it from the release tab or here https://github.com/eradication0/PDHelper/releases/download/Release/PD.Helper.exe
+download it from the release tab or here [https://github.com/eradication0/PDHelper/releases/download/Release/PD.Helper.exe](https://github.com/eradication0/PDHelper/releases/download/Release/PD.Helper.exe)
   
 it uses a simple library called "memory.dll" to use pointers to find specific parts of the memory to reliably edit the result  
   
 thanks to guild "Octo Dazzle" for helping out
   
 requirements dotnet 6.0
-https://dotnet.microsoft.com/en-us/download
+[https://dotnet.microsoft.com/en-us/download](https://download.visualstudio.microsoft.com/download/pr/dc0e0e83-0115-4518-8b6a-590ed594f38a/65b63e41f6a80decb37fa3c5af79a53d/windowsdesktop-runtime-6.0.7-win-x64.exe)
