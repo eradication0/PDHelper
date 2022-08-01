@@ -12,4 +12,5 @@ it uses a simple library called "memory.dll" to use pointers to find specific pa
   
 thanks to guild "Octo Dazzle" for helping out
   
-  
+requirements dotnet 6.0
+https://dotnet.microsoft.com/en-us/download
