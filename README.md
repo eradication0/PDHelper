@@ -8,6 +8,8 @@ the app will not connect to anything that is not Phantom Dust, so no random edit
 3. go to the "lab" in the game  
 4. click the options you need  
  
+Download it here: https://github.com/eradication0/PDHelper/releases/download/Release/PD.Helper.exe (or at the releases tab on the right)  
+  
   
 check out phatomdust.online for everything Phantom Dust related  
 https://phantomdust.online/  
