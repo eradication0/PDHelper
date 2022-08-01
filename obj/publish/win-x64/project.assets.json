@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "Memory.dll.x64/1.2.24": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Memory.dll": {}
+        }
+      }
+    },
+    "net6.0-windows7.0/win-x64": {
+      "Memory.dll.x64/1.2.24": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Memory.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Memory.dll.x64/1.2.24": {
+      "sha512": "fjpioQZXMFn5OoFJ2nPqhokBT0OMzH59PMiol0wP0TF0v3XL3cRFwgu/4C9tvwEs1Qxv5WeHcjw6S+z2zgpvRQ==",
+      "type": "package",
+      "path": "memory.dll.x64/1.2.24",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.txt",
+        "icon.png",
+        "lib/netstandard2.0/Memory.dll",
+        "lib/netstandard2.0/Memory.xml",
+        "memory.dll.x64.1.2.24.nupkg.sha512",
+        "memory.dll.x64.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Memory.dll.x64 >= 1.2.24"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Zer0\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
+      "projectName": "PD Helper",
+      "projectPath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
+      "packagesPath": "C:\\Users\\Zer0\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\obj\\publish\\win-x64\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Zer0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "Memory.dll.x64": {
+            "target": "Package",
+            "version": "[1.2.24, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[6.0.5, 6.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+            "version": "[6.0.5, 6.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[6.0.5, 6.0.5]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[6.0.5, 6.0.5]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
+      }
+    }
+  }
+}

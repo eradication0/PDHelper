@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uHjMwfzfZzejsVOwkUXtKVUXKcMcztdSjbCbq8XNePLcCYQ53hcOXYrGFyxQGRa3kbl2s5Hn8Ckq1EdQBIAAjA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zer0\\.nuget\\packages\\memory.dll.x64\\1.2.24\\memory.dll.x64.1.2.24.nupkg.sha512"
+  ],
+  "logs": []
+}

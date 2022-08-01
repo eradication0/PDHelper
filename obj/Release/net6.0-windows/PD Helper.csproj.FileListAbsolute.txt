@@ -1,0 +1,19 @@
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\PD Helper.exe
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\PD Helper.deps.json
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\PD Helper.runtimeconfig.json
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\PD Helper.dll
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\PD Helper.pdb
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\Memory.dll
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.csproj.AssemblyReference.cache
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD_Helper.Form1.resources
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.csproj.GenerateResource.cache
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.AssemblyInfoInputs.cache
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.AssemblyInfo.cs
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.csproj.CoreCompileInputs.cache
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.csproj.CopyComplete
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.dll
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\refint\PD Helper.dll
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.pdb
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\PD Helper.genruntimeconfig.cache
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Release\net6.0-windows\ref\PD Helper.dll
