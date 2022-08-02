@@ -16,7 +16,7 @@ Everything is explained inside the application, still here is how it works
 Download from [Microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.5-windows-x64-installer)
  
 # How it works
-Basically im using a library called [memory.doll](https://github.com/erfg12/memory.dll) it allows to read, search and write memory directly into applications.  
+Basically im using a library called [memory.dll](https://github.com/erfg12/memory.dll) it allows to read, search and write memory directly into applications.  
   
 ## Max Credits
 Its simple, I just edit a single byte that represents the highest number of the credit value.  
