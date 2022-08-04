@@ -173,7 +173,7 @@ namespace PD_Helper
             string str = "";
             for (int i = 0; i < 30; i++)
             {
-                str += loadedDeck[i] + '","';
+                //str += loadedDeck[i] + '","';
             }
             using (StreamWriter sw = File.CreateText(path))
             {
