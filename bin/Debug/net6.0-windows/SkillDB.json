@@ -1,0 +1,3722 @@
+{
+  "FF FF": {
+    "NAME": "Aura Particle",
+    "ID": "000",
+    "SCHOOL": "Aura",
+    "DAMAGE": 0,
+    "COST": 0,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Adds one Aura"
+  },
+  "01 00": {
+    "NAME": "Psycho Wave",
+    "ID": "001",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "STR = target's Level"
+  },
+  "02 00": {
+    "NAME": "Psycho Burst",
+    "ID": "002",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 7,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR = target's Level"
+  },
+  "03 00": {
+    "NAME": "Psycho Knife",
+    "ID": "003",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "04 00": {
+    "NAME": "Psycho Blade",
+    "ID": "004",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "05 00": {
+    "NAME": "Excalibur",
+    "ID": "005",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": 7,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: 7 or fewer skills left in arsenal"
+  },
+  "23 00": {
+    "NAME": "Debris Bullet",
+    "ID": "006",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] STR randomly 0,2,or 4."
+  },
+  "25 00": {
+    "NAME": "Stone Shot",
+    "ID": "007",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola]"
+  },
+  "26 00": {
+    "NAME": "Rock Shot",
+    "ID": "008",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola]"
+  },
+  "28 00": {
+    "NAME": "Psycho Spear",
+    "ID": "009",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 8,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] Add: Pierce effect."
+  },
+  "1F 00": {
+    "NAME": "Bomb",
+    "ID": "010",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] Explodes on impact."
+  },
+  "21 00": {
+    "NAME": "Cluster Bomb",
+    "ID": "011",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] Explodes on impact. Requires: 7 or fewer skills left in arsenal."
+  },
+  "20 00": {
+    "NAME": "Big Bomb",
+    "ID": "012",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] Explodes on impact."
+  },
+  "24 00": {
+    "NAME": "Throwing Stone",
+    "ID": "013",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 0,
+    "COST": 0,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Parabola]"
+  },
+  "27 00": {
+    "NAME": "Rail Gun",
+    "ID": "014",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Requires: 7 or fewer skills left in arsenal."
+  },
+  "22 00": {
+    "NAME": "Psycho Sniper",
+    "ID": "015",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": ""
+  },
+  "04 01": {
+    "NAME": "Bomb Shot",
+    "ID": "016",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 6,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "Explodes on impact."
+  },
+  "12 01": {
+    "NAME": "Power",
+    "ID": "017",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 0,
+    "COST": "X",
+    "USAGE": 3,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Object] Throws nearby object; STR depends on object. Requires: Available object."
+  },
+  "29 00": {
+    "NAME": "Psycho Kinesis",
+    "ID": "018",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Object] Throws nearby object; STR depends on object. Requires: Available object."
+  },
+  "5C 00": {
+    "NAME": "Meteor",
+    "ID": "019",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Fall] Add: Pierce effect."
+  },
+  "62 00": {
+    "NAME": "Rain of Stones",
+    "ID": "020",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain]"
+  },
+  "63 00": {
+    "NAME": "Rain of Rocks",
+    "ID": "021",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain]"
+  },
+  "5D 00": {
+    "NAME": "Gravity Press",
+    "ID": "022",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": 8,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Hole] Effective against downed opponents."
+  },
+  "61 00": {
+    "NAME": "Timer Mine",
+    "ID": "023",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 1,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Press once to set. Explodes automatically 5 sec later."
+  },
+  "10 01": {
+    "NAME": "Sensor Mine",
+    "ID": "024",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when anyone enters blast area."
+  },
+  "60 00": {
+    "NAME": "Remote Mine",
+    "ID": "025",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 1,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Press once to set and again to detonate."
+  },
+  "73 00": {
+    "NAME": "Crystal Wall",
+    "ID": "026",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 1,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Anti-Pierce; protects from damage regardless of STR."
+  },
+  "74 00": {
+    "NAME": "Wall",
+    "ID": "027",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Anti-Pierce; protects from damage regardless of STR."
+  },
+  "75 00": {
+    "NAME": "Psychic Wall",
+    "ID": "028",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 8,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Anti-Pierce; protects from damage regardless of STR."
+  },
+  "11 01": {
+    "NAME": "Power Shell",
+    "ID": "029",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Add: Anti-Pierce; protects from damage regardless of STR."
+  },
+  "81 00": {
+    "NAME": "Psycho Shell",
+    "ID": "030",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Add: Anti-Pierce; protects from damage regardless of STR."
+  },
+  "93 00": {
+    "NAME": "Bend",
+    "ID": "031",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Course]"
+  },
+  "94 00": {
+    "NAME": "Change Course",
+    "ID": "032",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Course]"
+  },
+  "89 00": {
+    "NAME": "About Face",
+    "ID": "033",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Course]"
+  },
+  "8A 00": {
+    "NAME": "Reverse",
+    "ID": "034",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Course]"
+  },
+  "AA 00": {
+    "NAME": "Confusion Gas",
+    "ID": "035",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when target enters blast area; erases 1 equipped skill."
+  },
+  "A9 00": {
+    "NAME": "Shatter",
+    "ID": "036",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "capsule",
+    "DESCRIPTION": "Erases capsule you are touching (not Aura)."
+  },
+  "14 01": {
+    "NAME": "Crush",
+    "ID": "037",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "all",
+    "DESCRIPTION": "Erases Environmental crystals from battlefield."
+  },
+  "BE 00": {
+    "NAME": "Reduce Gravity",
+    "ID": "038",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Increases everyone's movement speed by 20%."
+  },
+  "BF 00": {
+    "NAME": "Abnormal Gravity",
+    "ID": "039",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Reduces everyone's movement speed by 20%."
+  },
+  "15 01": {
+    "NAME": "Confused Gravity",
+    "ID": "040",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Inverts everyone's directional controls."
+  },
+  "13 01": {
+    "NAME": "Vanishing Light",
+    "ID": "041",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prevents everyone from using Optical skills for 1 min."
+  },
+  "CE 00": {
+    "NAME": "Pressure",
+    "ID": "042",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Prevents target from moving or using skills for 3 sec."
+  },
+  "CF 00": {
+    "NAME": "Lift Up",
+    "ID": "043",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Levitates target 10 ft in air for 3 sec. Prevents target from moving or using skills."
+  },
+  "DE 00": {
+    "NAME": "Alleviate",
+    "ID": "044",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Increases target's movement speed by 30%."
+  },
+  "E8 00": {
+    "NAME": "Brain Concussion",
+    "ID": "045",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Inverts target's directional controls for 15 sec."
+  },
+  "E3 00": {
+    "NAME": "Magnetic Field",
+    "ID": "046",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduces target's homing accuracy by 30%."
+  },
+  "DF 00": {
+    "NAME": "Burden",
+    "ID": "047",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduces target's movement speed by 20%."
+  },
+  "B7 00": {
+    "NAME": "Freeze Gas",
+    "ID": "048",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when target enters blast area; freezes target's skill button for 10 sec."
+  },
+  "E0 00": {
+    "NAME": "Speed Up",
+    "ID": "049",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Increases your movement speed by 20%."
+  },
+  "E4 00": {
+    "NAME": "Acquisition",
+    "ID": "050",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Increases your homing accuracy by 20%."
+  },
+  "E5 00": {
+    "NAME": "Skywalk",
+    "ID": "051",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Levitate 15 ft in air for 15 sec."
+  },
+  "5A 00": {
+    "NAME": "Frighten",
+    "ID": "052",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "auto",
+    "DESCRIPTION": "Briefly stops target's movement."
+  },
+  "FC 00": {
+    "NAME": "Teleportation",
+    "ID": "053",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Teleports target to your start point."
+  },
+  "F7 00": {
+    "NAME": "Dazzle",
+    "ID": "054",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Scrambles target's skill buttons for 10 sec."
+  },
+  "02 01": {
+    "NAME": "Bravery Decision",
+    "ID": "055",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Erases all Aura Particles from your arsenal."
+  },
+  "FE 00": {
+    "NAME": "Levitate",
+    "ID": "056",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Levitate 30 ft in air for 3 sec."
+  },
+  "FF 00": {
+    "NAME": "Return",
+    "ID": "057",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Teleports you to your start point."
+  },
+  "FD 00": {
+    "NAME": "Surprise Attack",
+    "ID": "058",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Teleports you to target's start point."
+  },
+  "F9 00": {
+    "NAME": "Call",
+    "ID": "059",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Sets capsule spawn point to current location for duration of battle."
+  },
+  "FA 00": {
+    "NAME": "Retreat",
+    "ID": "060",
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Teleports you to one of your capsule spawn points."
+  },
+  "07 00": {
+    "NAME": "Mist Blade",
+    "ID": "061",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Penalty: 1 Level"
+  },
+  "06 00": {
+    "NAME": "Laser Blade",
+    "ID": "062",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "6D 00": {
+    "NAME": "Photon Wave",
+    "ID": "063",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Explodes around self."
+  },
+  "6E 00": {
+    "NAME": "Photon Burst",
+    "ID": "064",
+    "SCHOOL": "Optical",
+    "DAMAGE": 7,
+    "COST": 7,
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Explodes around self."
+  },
+  "2A 00": {
+    "NAME": "Laser",
+    "ID": "065",
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc]"
+  },
+  "2B 00": {
+    "NAME": "Slide Laser",
+    "ID": "066",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc]"
+  },
+  "33 00": {
+    "NAME": "Vibration Laser",
+    "ID": "067",
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc] Requires: Level 10 or higher."
+  },
+  "2C 00": {
+    "NAME": "Mist Laser",
+    "ID": "068",
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc] Penalty: 1 Level"
+  },
+  "2D 00": {
+    "NAME": "Double Lasers",
+    "ID": "069",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc] Shoots 2 lasers simultaneously"
+  },
+  "D3 00": {
+    "NAME": "Triple Lasers",
+    "ID": "070",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc] Fires 3 lasers simultaneously"
+  },
+  "19 01": {
+    "NAME": "Octolaser",
+    "ID": "071",
+    "SCHOOL": "Optical",
+    "DAMAGE": 8,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc] Fires 8 lasers simultaneously"
+  },
+  "34 00": {
+    "NAME": "Trench Mortar",
+    "ID": "072",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Parabola]"
+  },
+  "39 00": {
+    "NAME": "Gungnir",
+    "ID": "073",
+    "SCHOOL": "Optical",
+    "DAMAGE": "X",
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] STR = Aura spent on skill. Hold button to charge."
+  },
+  "3A 00": {
+    "NAME": "Finisher",
+    "ID": "074",
+    "SCHOOL": "Optical",
+    "DAMAGE": 0,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "long",
+    "DESCRIPTION": "STR = double your level. Penalty: Level reduced to 0 Requires: maximum Aura"
+  },
+  "30 00": {
+    "NAME": "Rapid Cannon",
+    "ID": "075",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": ""
+  },
+  "31 00": {
+    "NAME": "Charged Particle",
+    "ID": "076",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "Penetrates obstacles. Penalty: 1 Level"
+  },
+  "32 00": {
+    "NAME": "Ricochet Laser",
+    "ID": "077",
+    "SCHOOL": "Optical",
+    "DAMAGE": 7,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "Shoots 4 lasers that ricochet off objects."
+  },
+  "37 00": {
+    "NAME": "Bundled laser",
+    "ID": "078",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "long",
+    "DESCRIPTION": "STR = STR of all equipped laser"
+  },
+  "2F 00": {
+    "NAME": "Mist Blaster",
+    "ID": "079",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penalty: 1 Level"
+  },
+  "35 00": {
+    "NAME": "Blaster",
+    "ID": "080",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "36 00": {
+    "NAME": "Vibration Blaster",
+    "ID": "081",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Requires: Level 10 or higher"
+  },
+  "38 00": {
+    "NAME": "Bundled Blaster",
+    "ID": "082",
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = STR of all equipped Blaster"
+  },
+  "17 01": {
+    "NAME": "Compressor",
+    "ID": "083",
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = the number of consumed defensive skills."
+  },
+  "64 00": {
+    "NAME": "Photon Shower",
+    "ID": "084",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Rain]"
+  },
+  "65 00": {
+    "NAME": "Killer Satellite",
+    "ID": "085",
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Rain]"
+  },
+  "00 01": {
+    "NAME": "Overheat",
+    "ID": "086",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole] STR = total Aura Particles on battlefield."
+  },
+  "77 00": {
+    "NAME": "Flash Barrier",
+    "ID": "087",
+    "SCHOOL": "Optical",
+    "DAMAGE": 0,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier]"
+  },
+  "76 00": {
+    "NAME": "Laser Barrier",
+    "ID": "088",
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier]"
+  },
+  "79 00": {
+    "NAME": "Eraser",
+    "ID": "089",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Erases any attack skill it blocks."
+  },
+  "7A 00": {
+    "NAME": "Photon Barrier",
+    "ID": "090",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Retain if you have Aura to use again."
+  },
+  "78 00": {
+    "NAME": "Paralyze Barrier",
+    "ID": "091",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Target can't move for 3 sec."
+  },
+  "8B 00": {
+    "NAME": "Reflect Barrier",
+    "ID": "092",
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Reflect]"
+  },
+  "8C 00": {
+    "NAME": "Reflect Mirror",
+    "ID": "093",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Reflect]"
+  },
+  "82 00": {
+    "NAME": "Laser Shell",
+    "ID": "094",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter]"
+  },
+  "2E 00": {
+    "NAME": "Auto Shell",
+    "ID": "095",
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Automatically projects when attacked."
+  },
+  "9B 00": {
+    "NAME": "Interference",
+    "ID": "096",
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduce target's level by 2."
+  },
+  "9C 00": {
+    "NAME": "Restrain",
+    "ID": "097",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduces target's Level by 1. Penalty: 1 level."
+  },
+  "AC 00": {
+    "NAME": "Panic Gas",
+    "ID": "098",
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when target enters blast area; reduces target's Level by 50%."
+  },
+  "AB 00": {
+    "NAME": "Eliminate",
+    "ID": "099",
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "capsule",
+    "DESCRIPTION": "Erases Aura Particle you are touching."
+  },
+  "AD 00": {
+    "NAME": "Evaporate",
+    "ID": 100,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "capsule",
+    "DESCRIPTION": "Erases all Aura Particles from battlefield."
+  },
+  "B1 00": {
+    "NAME": "Particle Convert",
+    "ID": 101,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "capsule",
+    "DESCRIPTION": "Converts all capsules on battle field to Aura Particles."
+  },
+  "09 01": {
+    "NAME": "Meltdown",
+    "ID": 102,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Reduces everyone's Level by 2 for each of their Aura Particles on battlefield."
+  },
+  "18 01": {
+    "NAME": "Quantum Decay",
+    "ID": 103,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Reduces everyone's Level by 50%."
+  },
+  "9F 00": {
+    "NAME": "Disintegrate",
+    "ID": 104,
+    "SCHOOL": "Optical",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole] Reduces everyone's Level to 0."
+  },
+  "BC 00": {
+    "NAME": "Holy Ray",
+    "ID": 105,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Reduces damage of everyone's attack by 1."
+  },
+  "EA 00": {
+    "NAME": "Reduce Entropy",
+    "ID": 106,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prohibits skills with Aura cost of 3 or more (or X)."
+  },
+  "16 01": {
+    "NAME": "Accelerate",
+    "ID": 107,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Skill capsule spawn twice as fast."
+  },
+  "C1 00": {
+    "NAME": "Backdraft",
+    "ID": 108,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Causes everyone to lose 1 Health for each skill use."
+  },
+  "C2 00": {
+    "NAME": "Optimization",
+    "ID": 109,
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Reduces Aura cost for all skills by 50%."
+  },
+  "F5 00": {
+    "NAME": "Scientism",
+    "ID": 110,
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prevents everyone from using Faith skills for 1 min."
+  },
+  "F8 00": {
+    "NAME": "Quiet Days",
+    "ID": 111,
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Everyone's skill capsules take twice as long to spawn."
+  },
+  "D0 00": {
+    "NAME": "Paralyze",
+    "ID": 112,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Prevents target from moving for 3 sec."
+  },
+  "D8 00": {
+    "NAME": "Doze",
+    "ID": 113,
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduces damage of target's attack by 1."
+  },
+  "E9 00": {
+    "NAME": "Gravity Mine",
+    "ID": 114,
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when anyone enters blast area; reduces movement speed by 90%."
+  },
+  "D4 00": {
+    "NAME": "Optical Camo",
+    "ID": 115,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Add: Invisibility; no one can lock onto you for 15 sec."
+  },
+  "0D 01": {
+    "NAME": "Level Berserk",
+    "ID": 116,
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Doubles target's Level."
+  },
+  "0E 01": {
+    "NAME": "Level Amp",
+    "ID": 117,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Increases your level by 2."
+  },
+  "0A 01": {
+    "NAME": "Relearn",
+    "ID": 118,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Automatically captures last skill consumed."
+  },
+  "F6 00": {
+    "NAME": "Recall",
+    "ID": 119,
+    "SCHOOL": "Optical",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Restores 5 random consumed skills to your arsenal. Requires: Level >10"
+  },
+  "0F 01": {
+    "NAME": "Level Boost",
+    "ID": 120,
+    "SCHOOL": "Optical",
+    "DAMAGE": 7,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Doubles your Level. Requires: Level >10"
+  },
+  "09 00": {
+    "NAME": "Ice Sword",
+    "ID": 121,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Freezes target's skill button for 10 sec. Penalty: Aura cost +1 per use."
+  },
+  "08 00": {
+    "NAME": "Lightning Sword",
+    "ID": 122,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Erases 1 equipped defensive skill from target. Penalty: Aura cost +1 per use."
+  },
+  "0A 00": {
+    "NAME": "Flame Sword",
+    "ID": 123,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "0B 00": {
+    "NAME": "Blazing Sword",
+    "ID": 124,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: Health 15 or higher"
+  },
+  "0C 00": {
+    "NAME": "Vacuum Slash",
+    "ID": 125,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 7,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Pierce effect"
+  },
+  "3B 00": {
+    "NAME": "Sonic Boom",
+    "ID": 126,
+    "SCHOOL": "Nature",
+    "DAMAGE": 1,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Arc]"
+  },
+  "1D 01": {
+    "NAME": "Piece of Ice",
+    "ID": 127,
+    "SCHOOL": "Nature",
+    "DAMAGE": 0,
+    "COST": 2,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Freezes target's skill buttons for 10 sec."
+  },
+  "1E 01": {
+    "NAME": "Piece of Thunder",
+    "ID": 128,
+    "SCHOOL": "Nature",
+    "DAMAGE": 0,
+    "COST": 2,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Erases 1 defensive skill from target's equipped skills."
+  },
+  "1C 01": {
+    "NAME": "Piece of Fire",
+    "ID": 129,
+    "SCHOOL": "Nature",
+    "DAMAGE": 0,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "3D 00": {
+    "NAME": "Bullet of Fire",
+    "ID": 130,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "3E 00": {
+    "NAME": "Blazing Bullet",
+    "ID": 131,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Requires: Health 15 or higher"
+  },
+  "43 00": {
+    "NAME": "Scar of Battles",
+    "ID": 132,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = number of consumed attack skills."
+  },
+  "3C 00": {
+    "NAME": "Ice Lance",
+    "ID": 133,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Freezes target's skill buttons for 10 sec. Penalty: Aura cost +1 per use."
+  },
+  "40 00": {
+    "NAME": "Storm Blade",
+    "ID": 134,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Erases 1 equipped attack skill from target. Penalty: Aura cost +1 per use."
+  },
+  "3F 00": {
+    "NAME": "Lightning Blade",
+    "ID": 135,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Erases 1 equipped defensive skill from target. Penalty: Aura cost +1 per use."
+  },
+  "44 00": {
+    "NAME": "Memory of Battle",
+    "ID": 136,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = number of consumed attack skills."
+  },
+  "1B 01": {
+    "NAME": "Crystallization",
+    "ID": 137,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = STR of all your equipped Piece skills."
+  },
+  "41 00": {
+    "NAME": "Root of Tree",
+    "ID": 138,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "long",
+    "DESCRIPTION": "[Crawl] Add: Pierce effect"
+  },
+  "42 00": {
+    "NAME": "Fang of Tree",
+    "ID": 139,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 8,
+    "USAGE": 1,
+    "RANGE": "long",
+    "DESCRIPTION": "[Crawl] Add: Pierce effect"
+  },
+  "6F 00": {
+    "NAME": "Twister",
+    "ID": 140,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Move]"
+  },
+  "70 00": {
+    "NAME": "Whirlwind",
+    "ID": 141,
+    "SCHOOL": "Nature",
+    "DAMAGE": 7,
+    "COST": 7,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Move]"
+  },
+  "66 00": {
+    "NAME": "Lightning Bolt",
+    "ID": 142,
+    "SCHOOL": "Nature",
+    "DAMAGE": 1,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] Add: Erases 1 equipped defensive skill from target."
+  },
+  "68 00": {
+    "NAME": "Ice Storm",
+    "ID": 143,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] Add: Freezes target's skill button for 10 sec."
+  },
+  "69 00": {
+    "NAME": "Fire Storm",
+    "ID": 144,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain]"
+  },
+  "67 00": {
+    "NAME": "Thunder Storm",
+    "ID": 145,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] Add: Erases all equipped defensive skills from target."
+  },
+  "6A 00": {
+    "NAME": "Blazing Storm",
+    "ID": 146,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] Requires: Health 15 or higher"
+  },
+  "1F 01": {
+    "NAME": "Tremor",
+    "ID": 147,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole]"
+  },
+  "5E 00": {
+    "NAME": "Massive Quake",
+    "ID": 148,
+    "SCHOOL": "Nature",
+    "DAMAGE": 6,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole]"
+  },
+  "7B 00": {
+    "NAME": "Glacial Wall",
+    "ID": 149,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Freezes target's skill button for 10 sec."
+  },
+  "7C 00": {
+    "NAME": "Wall of Current",
+    "ID": 150,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Erases any short-range attack it blocks."
+  },
+  "7D 00": {
+    "NAME": "Wall of Fire",
+    "ID": 151,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier]"
+  },
+  "7E 00": {
+    "NAME": "Cyclone",
+    "ID": 152,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 8,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Erases any attack skill it blocks."
+  },
+  "8D 00": {
+    "NAME": "Vacuum Wall",
+    "ID": 153,
+    "SCHOOL": "Nature",
+    "DAMAGE": 6,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Erases any attack skill it blocks."
+  },
+  "83 00": {
+    "NAME": "Guard of Water",
+    "ID": 154,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Automatically projects when attacked. Add: Erases any short-range attack skill it blocks."
+  },
+  "84 00": {
+    "NAME": "Fortress of Iron",
+    "ID": 155,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": 7,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Add: Erases any short-range attack skill it blocks."
+  },
+  "95 00": {
+    "NAME": "Gust",
+    "ID": 156,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Course]"
+  },
+  "A0 00": {
+    "NAME": "Wind Pressure",
+    "ID": 157,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases all of target's equipped non-attack and non-defensive skills."
+  },
+  "AE 00": {
+    "NAME": "Abyss",
+    "ID": 158,
+    "SCHOOL": "Nature",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "capsule",
+    "DESCRIPTION": "Erases capsule you are touching."
+  },
+  "B2 00": {
+    "NAME": "Starting Point",
+    "ID": 159,
+    "SCHOOL": "Nature",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Erases Environmental crystals from battlefield."
+  },
+  "BA 00": {
+    "NAME": "Return to Nature",
+    "ID": 160,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Cancels Environmental effects and resets everyone's status and attributes to their initial state."
+  },
+  "A6 00": {
+    "NAME": "Turbulence",
+    "ID": 161,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Erases everyone's equipped non-attack and non-defensive skills."
+  },
+  "B6 00": {
+    "NAME": "Purify",
+    "ID": 162,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "all",
+    "DESCRIPTION": "Resets everyone's status and attributes to their initial state."
+  },
+  "BB 00": {
+    "NAME": "Desertification",
+    "ID": 163,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Slows everyone's Aura recovery speed by 30%."
+  },
+  "C3 00": {
+    "NAME": "Nature Blessing",
+    "ID": 164,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Everyone gains +1 Health for each Aura Particle they capture."
+  },
+  "C5 00": {
+    "NAME": "Forest Sanctuary",
+    "ID": 165,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prohibits use of attack skills that deal >3 damage or STR = X."
+  },
+  "C0 00": {
+    "NAME": "Dense Fog",
+    "ID": 166,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Reduces everyone's homing accuracy by 30%"
+  },
+  "C4 00": {
+    "NAME": "Berserk",
+    "ID": 167,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "All attack skills gain Pierce effect."
+  },
+  "C6 00": {
+    "NAME": "Commandments",
+    "ID": 168,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prevents everyone from using Erase skills for 1 min."
+  },
+  "05 01": {
+    "NAME": "Providence",
+    "ID": 169,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prevents everyone from using Psycho skills for 1 min."
+  },
+  "E7 00": {
+    "NAME": "Frostbite",
+    "ID": 170,
+    "SCHOOL": "Nature",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Prevents target from using skill assigned to the same button."
+  },
+  "D7 00": {
+    "NAME": "Friendship",
+    "ID": 171,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Incrases by 1 damage delt by target"
+  },
+  "D5 00": {
+    "NAME": "Decoy",
+    "ID": 172,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Target can only lock on to you for 15 sec."
+  },
+  "D1 00": {
+    "NAME": "Entangle",
+    "ID": 173,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Crawl] Prevents target from moving or using skills for 3 sec."
+  },
+  "D9 00": {
+    "NAME": "Curse of Earth",
+    "ID": 174,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Crawl] Reduces damage of target's attack by 1."
+  },
+  "DA 00": {
+    "NAME": "Heat",
+    "ID": 175,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Increases damage of your attacks by 1. Decreases your Aura recovery speed by 10%"
+  },
+  "DB 00": {
+    "NAME": "Stimulate",
+    "ID": 176,
+    "SCHOOL": "Nature",
+    "DAMAGE": 7,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Increases damage of your attacks by 2. Decreases your Aura recovery speed by 30%."
+  },
+  "F1 00": {
+    "NAME": "Blessed Water",
+    "ID": 177,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Target gains 5 Health."
+  },
+  "F0 00": {
+    "NAME": "Graceful Woods",
+    "ID": 178,
+    "SCHOOL": "Nature",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Restores Aura to maximum."
+  },
+  "EF 00": {
+    "NAME": "Healing Water",
+    "ID": 179,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Restores 5 Health."
+  },
+  "1A 01": {
+    "NAME": "Orb",
+    "ID": 180,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Automatically negates any Erase skill used. Can't by erased or overwritten."
+  },
+  "0D 00": {
+    "NAME": "Empty Hand",
+    "ID": 181,
+    "SCHOOL": "Ki",
+    "DAMAGE": 1,
+    "COST": 2,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Auto-Capture effect"
+  },
+  "24 01": {
+    "NAME": "Swift Kick",
+    "ID": 182,
+    "SCHOOL": "Ki",
+    "DAMAGE": 1,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: Level 2 or lower"
+  },
+  "11 00": {
+    "NAME": "Leg Throw",
+    "ID": 183,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 0,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Knocks down target."
+  },
+  "10 00": {
+    "NAME": "Tiger Kick",
+    "ID": 184,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 1,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Erases 1 equipped attack skill from target."
+  },
+  "0E 00": {
+    "NAME": "High-speed Punch",
+    "ID": 185,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "12 00": {
+    "NAME": "Hyperkick",
+    "ID": 186,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "0F 00": {
+    "NAME": "Dragon Punch",
+    "ID": 187,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Erases 1 equipped defensive skill from target."
+  },
+  "13 00": {
+    "NAME": "Hyperpunch",
+    "ID": 188,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Auto-Capture effect"
+  },
+  "25 01": {
+    "NAME": "Swift Punch",
+    "ID": 189,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: Level 2 or lower"
+  },
+  "17 00": {
+    "NAME": "Splashdown",
+    "ID": 190,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "23 01": {
+    "NAME": "Swift Blow",
+    "ID": 191,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 7,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: Level 2 or lower"
+  },
+  "14 00": {
+    "NAME": "Dance of Death",
+    "ID": 192,
+    "SCHOOL": "Ki",
+    "DAMAGE": 5,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR = STR of all equipped short-ranged Ki attack."
+  },
+  "18 00": {
+    "NAME": "Aura Leak",
+    "ID": 193,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR = 50% of target's Aura."
+  },
+  "19 00": {
+    "NAME": "Aura Backflow",
+    "ID": 194,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR = target's Aura."
+  },
+  "EB 00": {
+    "NAME": "Ki Palm",
+    "ID": 195,
+    "SCHOOL": "Ki",
+    "DAMAGE": "X",
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR = Aura spent on this skill. Hold button to charge."
+  },
+  "15 00": {
+    "NAME": "Sky Pursuit",
+    "ID": 196,
+    "SCHOOL": "Ki",
+    "DAMAGE": 0,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: Knocked down target. Add: Auto-Capture effect."
+  },
+  "16 00": {
+    "NAME": "Pursuit",
+    "ID": 197,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Requires: Knocked down target"
+  },
+  "45 00": {
+    "NAME": "Snap",
+    "ID": 198,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 0,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Knocks down target."
+  },
+  "48 00": {
+    "NAME": "Ki Lance",
+    "ID": 199,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Pierce effect"
+  },
+  "46 00": {
+    "NAME": "Ki Bullet",
+    "ID": 200,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Knocks down target."
+  },
+  "5B 00": {
+    "NAME": "Heat from Void",
+    "ID": 201,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = double target's unassigned skill buttons."
+  },
+  "49 00": {
+    "NAME": "Hyper Ki Lance",
+    "ID": 202,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": 7,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Pierce effect"
+  },
+  "47 00": {
+    "NAME": "Hyper Ki Bullet",
+    "ID": 203,
+    "SCHOOL": "Ki",
+    "DAMAGE": 5,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Knocks down target."
+  },
+  "4A 00": {
+    "NAME": "Ki Cannon",
+    "ID": 204,
+    "SCHOOL": "Ki",
+    "DAMAGE": "X",
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = Aura spent on this skill. Hold button to charge."
+  },
+  "72 00": {
+    "NAME": "Copy",
+    "ID": 205,
+    "SCHOOL": "Ki",
+    "DAMAGE": 0,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "-",
+    "DESCRIPTION": "Duplicates last attack skill that inflicted damage on you."
+  },
+  "71 00": {
+    "NAME": "Recollection",
+    "ID": 206,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "X",
+    "USAGE": 1,
+    "RANGE": "-",
+    "DESCRIPTION": "Duplicates last attack skill you used."
+  },
+  "85 00": {
+    "NAME": "Iron Skin",
+    "ID": 207,
+    "SCHOOL": "Ki",
+    "DAMAGE": 1,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Add: Erases any short-range attack skill it blocks."
+  },
+  "86 00": {
+    "NAME": "Mind's Eye",
+    "ID": 208,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Automatically projects when attacked."
+  },
+  "96 00": {
+    "NAME": "Block",
+    "ID": 209,
+    "SCHOOL": "Ki",
+    "DAMAGE": 0,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Brush]"
+  },
+  "97 00": {
+    "NAME": "Protect",
+    "ID": 210,
+    "SCHOOL": "Ki",
+    "DAMAGE": 1,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Brush]"
+  },
+  "98 00": {
+    "NAME": "Guard",
+    "ID": 211,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Brush]"
+  },
+  "8E 00": {
+    "NAME": "Absorb Energy",
+    "ID": 212,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Absorb] Add: Aura increase = Aura cost of attack skill blocked."
+  },
+  "8F 00": {
+    "NAME": "Learning",
+    "ID": 213,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Absorb] Add: Captures attack skill it blocks."
+  },
+  "90 00": {
+    "NAME": "Digestion",
+    "ID": 214,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Absorb] Add: Health increase = damaged blocked."
+  },
+  "22 01": {
+    "NAME": "Disrupt",
+    "ID": 215,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Erases all of target's equipped attack skills."
+  },
+  "A1 00": {
+    "NAME": "Tiger Slayer",
+    "ID": 216,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases 1 of target's equipped attack skills."
+  },
+  "A2 00": {
+    "NAME": "Dragon Slayer",
+    "ID": 217,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases 1 of target's equipped defensive skills. Penetrates defensive skills."
+  },
+  "A3 00": {
+    "NAME": "Giant Slayer",
+    "ID": 218,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases target's equipped skill with highest Aura cost."
+  },
+  "B4 00": {
+    "NAME": "Neutralization",
+    "ID": 219,
+    "SCHOOL": "Ki",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Resets target's status and attributes to their initial state."
+  },
+  "0B 01": {
+    "NAME": "Steal Power",
+    "ID": 220,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Absorbs all target's Aura."
+  },
+  "A4 00": {
+    "NAME": "Lack",
+    "ID": 221,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases all of target's equipped unlimited-use skills."
+  },
+  "9D 00": {
+    "NAME": "Exhaust",
+    "ID": 222,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduces target's Level by 50%."
+  },
+  "B8 00": {
+    "NAME": "Refresh",
+    "ID": 223,
+    "SCHOOL": "Ki",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Resets your status and attributes to their initial state."
+  },
+  "C7 00": {
+    "NAME": "Fatigue",
+    "ID": 224,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Everyone's Aura recovery ceases while moving."
+  },
+  "C9 00": {
+    "NAME": "Irregular Rhythm",
+    "ID": 225,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Doubles Aura cost for all skills."
+  },
+  "CA 00": {
+    "NAME": "Memory Lapse",
+    "ID": 226,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "All skills become single-use."
+  },
+  "C8 00": {
+    "NAME": "Soul Cage",
+    "ID": 227,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Everyone loses 1 Health for each capsule they capture."
+  },
+  "20 01": {
+    "NAME": "Chaos",
+    "ID": 228,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prohibits skills with Aura cost of 2 or lower (or X)."
+  },
+  "21 01": {
+    "NAME": "Stagnant Air",
+    "ID": 229,
+    "SCHOOL": "Ki",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prevents everyone from using Nature skills for 1 min."
+  },
+  "D2 00": {
+    "NAME": "Pin Down",
+    "ID": 230,
+    "SCHOOL": "Ki",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Hole] Prevents target from moving or using skills for 3 sec."
+  },
+  "EC 00": {
+    "NAME": "Mind Reading",
+    "ID": 231,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Listen in on target team's conversation."
+  },
+  "DC 00": {
+    "NAME": "Tiger's Strength",
+    "ID": 232,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Increases damage of your attacks by 2 for 15 sec."
+  },
+  "E1 00": {
+    "NAME": "Lightning Speed",
+    "ID": 233,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Increases your movement speed by 50% for 15 sec."
+  },
+  "D6 00": {
+    "NAME": "Meditation",
+    "ID": 234,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Increases Aura recovery speed by 20%."
+  },
+  "EE 00": {
+    "NAME": "Void",
+    "ID": 235,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Immunity to attack damage for 15 sec."
+  },
+  "07 01": {
+    "NAME": "Trigger",
+    "ID": 236,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Forces target to use equipped skill assigned to same button."
+  },
+  "FB 00": {
+    "NAME": "Change the World",
+    "ID": 237,
+    "SCHOOL": "Ki",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "capsule",
+    "DESCRIPTION": "Respawns new capsules for everyone."
+  },
+  "F2 00": {
+    "NAME": "Regenerate",
+    "ID": 238,
+    "SCHOOL": "Ki",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Regenerates Health while immobile."
+  },
+  "01 01": {
+    "NAME": "Jump",
+    "ID": 239,
+    "SCHOOL": "Ki",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 5,
+    "RANGE": "self",
+    "DESCRIPTION": "Jump 30 ft."
+  },
+  "26 01": {
+    "NAME": "Dash",
+    "ID": 240,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Dash 30 ft."
+  },
+  "1A 00": {
+    "NAME": "Dhampir Claw",
+    "ID": 241,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Health increase = damage dealt."
+  },
+  "1B 00": {
+    "NAME": "Dhampir Fang",
+    "ID": 242,
+    "SCHOOL": "Faith",
+    "DAMAGE": 6,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Health increase = damage dealt."
+  },
+  "1C 00": {
+    "NAME": "Song of Succubus",
+    "ID": 243,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Level increase = damage dealt. Target's Level decreases by same number."
+  },
+  "1D 00": {
+    "NAME": "Succubus Tempt",
+    "ID": 244,
+    "SCHOOL": "Faith",
+    "DAMAGE": 6,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Level increase = damage dealt. Target's Level decreases by same number."
+  },
+  "1E 00": {
+    "NAME": "Muramasa Blade",
+    "ID": 245,
+    "SCHOOL": "Faith",
+    "DAMAGE": 6,
+    "COST": 10,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Penalty: 2 Health"
+  },
+  "58 00": {
+    "NAME": "Lingering Flame",
+    "ID": 246,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Requires: Health 7 or lower"
+  },
+  "4B 00": {
+    "NAME": "Scream of Evil",
+    "ID": 247,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penetrates obstacles. Penalty: 2 Health"
+  },
+  "4E 00": {
+    "NAME": "Greedy Spirit",
+    "ID": 248,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 2,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Reduces target's Aura to 0."
+  },
+  "59 00": {
+    "NAME": "Agonies of Death",
+    "ID": 249,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Penetrates obstacles. Requires: Health 7 or lower."
+  },
+  "55 00": {
+    "NAME": "Seal of Death",
+    "ID": 250,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Can't be erased or overwritten. Penalty: 1 Health."
+  },
+  "54 00": {
+    "NAME": "Demon's Fire",
+    "ID": 251,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penalty: 1 Health"
+  },
+  "29 01": {
+    "NAME": "Reincarnation",
+    "ID": 252,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Retain if you have enough Aura to use again."
+  },
+  "57 00": {
+    "NAME": "Hell's Fire",
+    "ID": 253,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penalty: 2 Health"
+  },
+  "56 00": {
+    "NAME": "Vampire Bat",
+    "ID": 254,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: Health increase = damage dealt."
+  },
+  "4F 00": {
+    "NAME": "Swarm of Moths",
+    "ID": 255,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage."
+  },
+  "51 00": {
+    "NAME": "Fire of Gehenna",
+    "ID": 256,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penalty: 2 Health"
+  },
+  "4D 00": {
+    "NAME": "Judge of Anubis",
+    "ID": 257,
+    "SCHOOL": "Faith",
+    "DAMAGE": 8,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = (target's Health - yours) x 2. Effective when target's Health > yours. Penalty: 3 Health."
+  },
+  "52 00": {
+    "NAME": "Venom Fang",
+    "ID": 258,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage."
+  },
+  "53 00": {
+    "NAME": "Crawlers",
+    "ID": 259,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Crawl]"
+  },
+  "CC 00": {
+    "NAME": "Spore Schism",
+    "ID": 260,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": 8,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Crawl] Explodes upon contact with target or any object."
+  },
+  "5F 00": {
+    "NAME": "Thor's Hammer",
+    "ID": 261,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Fall] Penetrates obstacles."
+  },
+  "50 00": {
+    "NAME": "Arrow of Artemis",
+    "ID": 262,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Fall] Add: Retain if you have enough Aura to use again. Requires: Health 7 or lower."
+  },
+  "2B 01": {
+    "NAME": "Demon's Venom",
+    "ID": 263,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Fall] Add: For 10 sec, target's button presses cause 1 damage."
+  },
+  "2A 01": {
+    "NAME": "Sign of Saints",
+    "ID": 264,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Fall] STR = double your unassigned skill buttons. Can't be erased or overwritten."
+  },
+  "4C 00": {
+    "NAME": "Lucifer's Arrow",
+    "ID": 265,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] Penetrates obstacles. Requires: Health 7 or lower."
+  },
+  "6C 00": {
+    "NAME": "Binding Needle",
+    "ID": 266,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] STR = double target's unassigned skill buttons."
+  },
+  "6B 00": {
+    "NAME": "Celestial Ship",
+    "ID": 267,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": 10,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Rain] Penalty: 2 Health"
+  },
+  "7F 00": {
+    "NAME": "Shield of Ruin",
+    "ID": 268,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Penalty: 2 Health"
+  },
+  "80 00": {
+    "NAME": "Shield of Aegis",
+    "ID": 269,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier]"
+  },
+  "88 00": {
+    "NAME": "Guardian Angel",
+    "ID": 270,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 5,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Automatically projects when attacked. Penalty: 2 Health."
+  },
+  "87 00": {
+    "NAME": "Protect Circle",
+    "ID": 271,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter]"
+  },
+  "99 00": {
+    "NAME": "Devil's Arm",
+    "ID": 272,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Brush] Add: Erases any short-range attack skill it blocks. Penalty: 1 Health."
+  },
+  "9A 00": {
+    "NAME": "Angel's Wing",
+    "ID": 273,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Brush] Add: Erases any short-range attack skill it blocks."
+  },
+  "91 00": {
+    "NAME": "Flash Hole",
+    "ID": 274,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Absorb] Add: Erases any attack skill it blocks."
+  },
+  "92 00": {
+    "NAME": "Dark Hole",
+    "ID": 275,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Absorb] Add: Erases any attack skill it blocks. Penalty: 1 Health."
+  },
+  "9E 00": {
+    "NAME": "Bloody Ritual",
+    "ID": 276,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Reduces target's Level by 50%. Penalty: 3 Health."
+  },
+  "A5 00": {
+    "NAME": "Hungry Demon",
+    "ID": 277,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases target's equipped skill assigned to same button. Penalty: 1 Health."
+  },
+  "28 01": {
+    "NAME": "Thieving Imp",
+    "ID": 278,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "capsule",
+    "DESCRIPTION": "Captures capsule you are touching."
+  },
+  "AF 00": {
+    "NAME": "Diabolical Trick",
+    "ID": 279,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "capsule",
+    "DESCRIPTION": "Erases capsule you are touching."
+  },
+  "0C 01": {
+    "NAME": "Vicious Balance",
+    "ID": 280,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Everyone's Level decreases to player's lowest Level. Penalty: 2 Health"
+  },
+  "A8 00": {
+    "NAME": "Fairy Ring",
+    "ID": 281,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "all",
+    "DESCRIPTION": "Reduces everyone's Aura to 0. Penalty: 1 Health."
+  },
+  "B3 00": {
+    "NAME": "Judgment",
+    "ID": 282,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "all",
+    "DESCRIPTION": "Erases Environmental crystals from battlefield. Penalty: 1 Health"
+  },
+  "A7 00": {
+    "NAME": "Calamity",
+    "ID": 283,
+    "SCHOOL": "Faith",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole] Erases everyone's equipped skills."
+  },
+  "B0 00": {
+    "NAME": "Violent Change",
+    "ID": 284,
+    "SCHOOL": "Faith",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "capsule",
+    "DESCRIPTION": "Erases all capsules from battlefield."
+  },
+  "B9 00": {
+    "NAME": "Angel Tears",
+    "ID": 285,
+    "SCHOOL": "Faith",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Resets your status and attributes to their initial state. Add: 1 Level."
+  },
+  "BD 00": {
+    "NAME": "Lunar Force",
+    "ID": 286,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Increases damage of everyone's attack by 1."
+  },
+  "CB 00": {
+    "NAME": "Necronomicon",
+    "ID": 287,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Everyone's attack skills lose all bonuses, restrictions, and penalties."
+  },
+  "CD 00": {
+    "NAME": "Athena's Command",
+    "ID": 288,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prohibits use of attack skills that deal <3 damage or STR = x."
+  },
+  "27 01": {
+    "NAME": "Spiritual World",
+    "ID": 289,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "Prevents everyone from using Ki skills for 1 min."
+  },
+  "DD 00": {
+    "NAME": "Trance",
+    "ID": 290,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Increases damage of your attacks by 2 for 15 sec. Penalty: 1 Health."
+  },
+  "E2 00": {
+    "NAME": "Doppelganger",
+    "ID": 291,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Sets your attributes to match target's."
+  },
+  "E6 00": {
+    "NAME": "Demon's Wing",
+    "ID": 292,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Levitate 7 ft in air for 15 sec. Add: Invisibility; no one can lock onto you for 15 sec."
+  },
+  "B5 00": {
+    "NAME": "Angel's Breath",
+    "ID": 293,
+    "SCHOOL": "Faith",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Reverses target's attributes (Speed +2 becomes Speed -2)."
+  },
+  "F3 00": {
+    "NAME": "Fusion",
+    "ID": 294,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Your Health and target's are averaged."
+  },
+  "08 01": {
+    "NAME": "Annoying Gift",
+    "ID": 295,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Forces target to capture your equipped skills."
+  },
+  "ED 00": {
+    "NAME": "Armaros",
+    "ID": 296,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Reverses everyone's attributes (Speed +2 becomes Speed -2)."
+  },
+  "2C 01": {
+    "NAME": "Rebirth",
+    "ID": 297,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Restores 10 Health. Penalty: Reduces level to 0."
+  },
+  "F4 00": {
+    "NAME": "Invulnerability",
+    "ID": 298,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Immune to damage while immobile."
+  },
+  "06 01": {
+    "NAME": "Amulet",
+    "ID": 299,
+    "SCHOOL": "Faith",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": 3,
+    "RANGE": "self",
+    "DESCRIPTION": "Automatically reverses effects of last Erase skill that hit you."
+  },
+  "03 01": {
+    "NAME": "Mephisto's Pact",
+    "ID": 300,
+    "SCHOOL": "Faith",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "Immediately captures an unconsumed skill from your arsenal. Penalty: 3 Health."
+  },
+  "2D 01": {
+    "NAME": "Delay Bomb",
+    "ID": 301,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] Explodes on impact."
+  },
+  "2E 01": {
+    "NAME": "Mini-Meteor",
+    "ID": 302,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Fall]"
+  },
+  "2F 01": {
+    "NAME": "Antigravity Trap",
+    "ID": 303,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when target enters blast area. Levitates target 10ft in the air for 3 sec."
+  },
+  "30 01": {
+    "NAME": "Charge",
+    "ID": 304,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Teleports you to target's start point."
+  },
+  "31 01": {
+    "NAME": "Aura Cannon",
+    "ID": 305,
+    "SCHOOL": "Optical",
+    "DAMAGE": 6,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "Requires: Maximum Aura"
+  },
+  "32 01": {
+    "NAME": "Throttle Blaster",
+    "ID": 306,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "33 01": {
+    "NAME": "Boost Mine",
+    "ID": 307,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "mine",
+    "DESCRIPTION": "Increases your level by 2"
+  },
+  "34 01": {
+    "NAME": "Quantum Amp",
+    "ID": 308,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Gives everyone 2 levels"
+  },
+  "35 01": {
+    "NAME": "Piece of Wind",
+    "ID": 309,
+    "SCHOOL": "Nature",
+    "DAMAGE": 0,
+    "COST": 1,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Arc] Add: Erase 1 equipped attack skill from target"
+  },
+  "36 01": {
+    "NAME": "Throttle Fireball",
+    "ID": 310,
+    "SCHOOL": "Nature",
+    "DAMAGE": 1,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "37 01": {
+    "NAME": "Tornado",
+    "ID": 311,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Move]"
+  },
+  "38 01": {
+    "NAME": "Earthquake",
+    "ID": 312,
+    "SCHOOL": "Nature",
+    "DAMAGE": 5,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole]"
+  },
+  "39 01": {
+    "NAME": "Vacuum Palm",
+    "ID": 313,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR = double target's unassigned skill buttons."
+  },
+  "3A 01": {
+    "NAME": "Backdraft Bullet",
+    "ID": 314,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Requires: effective only against knocked down targets."
+  },
+  "3B 01": {
+    "NAME": "Lost Dragon",
+    "ID": 315,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Erase all of target's equipped defense skills"
+  },
+  "3C 01": {
+    "NAME": "Disremember",
+    "ID": 316,
+    "SCHOOL": "Ki",
+    "DAMAGE": 8,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Erases target's equipped lowest cost Aura skill"
+  },
+  "3D 01": {
+    "NAME": "True Muramasa",
+    "ID": 317,
+    "SCHOOL": "Faith",
+    "DAMAGE": 6,
+    "COST": 6,
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Lose one life"
+  },
+  "3E 01": {
+    "NAME": "Will-o'-the-Wisp",
+    "ID": 318,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "3F 01": {
+    "NAME": "Jackpot",
+    "ID": 319,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "all",
+    "DESCRIPTION": "[Hole] STR randomly 0, 3, or 6"
+  },
+  "40 01": {
+    "NAME": "Joke of Anubis",
+    "ID": 320,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "STR = your Health - target's. Effective when your Health > target's. Penalty: 2 Health"
+  },
+  "41 01": {
+    "NAME": "Excaliber",
+    "ID": 321,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "STR randomly 0, 3, or 6"
+  },
+  "42 01": {
+    "NAME": "Knife Grind",
+    "ID": 322,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": 3,
+    "RANGE": "short",
+    "DESCRIPTION": "Aura cost -1 per use"
+  },
+  "43 01": {
+    "NAME": "Fast Bomb",
+    "ID": 323,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Sets then detonates."
+  },
+  "44 01": {
+    "NAME": "Shield Breaker",
+    "ID": 324,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Pierces through defenses."
+  },
+  "45 01": {
+    "NAME": "Fast Wave",
+    "ID": 325,
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "mine",
+    "DESCRIPTION": "Explodes around self."
+  },
+  "46 01": {
+    "NAME": "Twist Laser",
+    "ID": 326,
+    "SCHOOL": "Optical",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Arc]"
+  },
+  "47 01": {
+    "NAME": "Erase Shell",
+    "ID": 327,
+    "SCHOOL": "Optical",
+    "DAMAGE": 6,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Shetler] Add: Erases any attack skill it blocks"
+  },
+  "48 01": {
+    "NAME": "Level Baton",
+    "ID": 328,
+    "SCHOOL": "Optical",
+    "DAMAGE": 0,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Increases target's Level by 1. Penalty: 1 Level."
+  },
+  "49 01": {
+    "NAME": "Arc of Fire",
+    "ID": 329,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Arc]"
+  },
+  "4A 01": {
+    "NAME": "Chill Breeze",
+    "ID": 330,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Freezes everyone's skill buttons for 10 seconds."
+  },
+  "4B 01": {
+    "NAME": "Blessed Rain",
+    "ID": 331,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "Everyone gains +5 health"
+  },
+  "4C 01": {
+    "NAME": "Unison",
+    "ID": 332,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": ""
+  },
+  "4D 01": {
+    "NAME": "Crawling Bullet",
+    "ID": 333,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Crawl] Knocks down target"
+  },
+  "4E 01": {
+    "NAME": "Dragon Bullet",
+    "ID": 334,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": ""
+  },
+  "4F 01": {
+    "NAME": "Ethos Inspiration",
+    "ID": 335,
+    "SCHOOL": "Ki",
+    "DAMAGE": 2,
+    "COST": 0,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Increases target's aura recovery speed by 20%"
+  },
+  "50 01": {
+    "NAME": "Vacuum Bullet",
+    "ID": 336,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penetrates defensive skills."
+  },
+  "51 01": {
+    "NAME": "Dance of Moths",
+    "ID": 337,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage."
+  },
+  "52 01": {
+    "NAME": "Illusion of Death",
+    "ID": 338,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": 5,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "Penetrates defense skills. Penalty: 2 Health"
+  },
+  "53 01": {
+    "NAME": "Particle Mortar",
+    "ID": 350,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Parabola] Penetrates obstacles."
+  },
+  "54 01": {
+    "NAME": "Armaros Watch",
+    "ID": 340,
+    "SCHOOL": "Faith",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Reverses target's attributes (Speed +2 becomes Speed -2)"
+  },
+  "67 01": {
+    "NAME": "Impact Burst",
+    "ID": 341,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": 6,
+    "USAGE": 1,
+    "RANGE": "long",
+    "DESCRIPTION": "Explodes on impact. Ricochets off objects."
+  },
+  "62 01": {
+    "NAME": "Vast Mayhem",
+    "ID": 342,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "For 15 sec, inverts everyone's directional controls."
+  },
+  "6A 01": {
+    "NAME": "Vapor Cloud",
+    "ID": 343,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Press once to set. Detonates when anyone enters blast area. Freezes target?s skill buttons for 3 sec."
+  },
+  "5B 01": {
+    "NAME": "Freeze Shot",
+    "ID": 344,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "For 10 sec, prevents target from using same button."
+  },
+  "59 01": {
+    "NAME": "Mobilize",
+    "ID": 345,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "All players are teleported to your start point."
+  },
+  "5C 01": {
+    "NAME": "Teleportrap",
+    "ID": 346,
+    "SCHOOL": "Psycho",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 3,
+    "RANGE": "mine",
+    "DESCRIPTION": "Press once to set. Detonates when anyone enters blast area. Teleports target to your start point."
+  },
+  "56 01": {
+    "NAME": "EL Bomb",
+    "ID": 347,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": 2,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Penalty: 1 Level."
+  },
+  "6D 01": {
+    "NAME": "Poison Blur",
+    "ID": 361,
+    "SCHOOL": "Nature",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "mine",
+    "DESCRIPTION": "Detonates when anyone enters blast area. For 10 sec, target's button presses cause 1 damage."
+  },
+  "66 01": {
+    "NAME": "Ground Laser",
+    "ID": 349,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": 1,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "[Crawl]"
+  },
+  "5F 01": {
+    "NAME": "Cooling",
+    "ID": 351,
+    "SCHOOL": "Optical",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 3,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Parabola] Reduces target's Level by 1."
+  },
+  "65 01": {
+    "NAME": "Young White Dragon",
+    "ID": 363,
+    "SCHOOL": "Ki",
+    "DAMAGE": "X",
+    "COST": "X",
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "[Crawl] STR = Aura spent on skill. Hold button to charge."
+  },
+  "64 01": {
+    "NAME": "Place of Invisibility",
+    "ID": 353,
+    "SCHOOL": "Optical",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "For 15 sec, no one can be locked onto."
+  },
+  "69 01": {
+    "NAME": "Downcast",
+    "ID": 354,
+    "SCHOOL": "Optical",
+    "DAMAGE": 1,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "Penalty: 1 Level."
+  },
+  "57 01": {
+    "NAME": "Life-Giving Sword",
+    "ID": 355,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": 2,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: Health increase = damage dealt."
+  },
+  "61 01": {
+    "NAME": "Geyser Impact",
+    "ID": 356,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 4,
+    "USAGE": 1,
+    "RANGE": "medium",
+    "DESCRIPTION": "[Hole] Effective against downed opponents."
+  },
+  "6C 01": {
+    "NAME": "Rafflesia Fang",
+    "ID": 357,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Add: Health increase = damage blocked. Anti-Pierce"
+  },
+  "6E 01": {
+    "NAME": "Failing Wall",
+    "ID": 358,
+    "SCHOOL": "Nature",
+    "DAMAGE": 2,
+    "COST": 7,
+    "USAGE": "∞",
+    "RANGE": "self",
+    "DESCRIPTION": "[Barrier] Reduces defensive strength each time used."
+  },
+  "60 01": {
+    "NAME": "Protecting Air",
+    "ID": 359,
+    "SCHOOL": "Nature",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Automatically projects when attacked."
+  },
+  "6B 01": {
+    "NAME": "Heat Devil",
+    "ID": 360,
+    "SCHOOL": "Nature",
+    "DAMAGE": 7,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "For 5 sec, no one can lock onto you; speed of movement increased by 90%."
+  },
+  "58 01": {
+    "NAME": "Pursuit Stopper",
+    "ID": 362,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": 3,
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": ""
+  },
+  "6F 01": {
+    "NAME": "Tiger Prevails",
+    "ID": 364,
+    "SCHOOL": "Ki",
+    "DAMAGE": 7,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "short",
+    "DESCRIPTION": "Erases 1 of target's attack skills. Penetrates defensive skills."
+  },
+  "70 01": {
+    "NAME": "Martial Arts Scroll",
+    "ID": 365,
+    "SCHOOL": "Ki",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "self",
+    "DESCRIPTION": "For 5 sec, increases damage of your attacks by 3 . Aura recovery speed is increased by 90%."
+  },
+  "68 01": {
+    "NAME": "Play Dead",
+    "ID": 366,
+    "SCHOOL": "Ki",
+    "DAMAGE": 5,
+    "COST": "-",
+    "USAGE": 3,
+    "RANGE": "self",
+    "DESCRIPTION": "Health recovers while immobile . For 30 sec, movement speed is reduced by 50%."
+  },
+  "71 01": {
+    "NAME": "Sword Slap",
+    "ID": 367,
+    "SCHOOL": "Ki",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": "∞",
+    "RANGE": "short",
+    "DESCRIPTION": "Briefly stops target's movement"
+  },
+  "5E 01": {
+    "NAME": "Wings of Hope",
+    "ID": 368,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": 3,
+    "USAGE": "∞",
+    "RANGE": "medium",
+    "DESCRIPTION": "Requires: Health 3 or lower. Add: Health increase = damage dealt."
+  },
+  "5A 01": {
+    "NAME": "Arms of the Curse",
+    "ID": 369,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": 2,
+    "USAGE": 3,
+    "RANGE": "short",
+    "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage."
+  },
+  "74 01": {
+    "NAME": "Dark Protection",
+    "ID": 370,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": 3,
+    "USAGE": 5,
+    "RANGE": "self",
+    "DESCRIPTION": "[Shelter] Add: Protective power increases each time used."
+  },
+  "73 01": {
+    "NAME": "Traveling Thought",
+    "ID": 371,
+    "SCHOOL": "Faith",
+    "DAMAGE": 3,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "env",
+    "DESCRIPTION": "For 1 min, homing accuracy is increased by 50%."
+  },
+  "72 01": {
+    "NAME": "Withering Curse",
+    "ID": 372,
+    "SCHOOL": "Faith",
+    "DAMAGE": 2,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "mine",
+    "DESCRIPTION": "Press once to set. Detonates when apporoached. For 10 sec, button presses cause 1 damage."
+  },
+  "75 01": {
+    "NAME": "Venom Drip",
+    "ID": 373,
+    "SCHOOL": "Faith",
+    "DAMAGE": 4,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "For 15 sec, button presses cause 1 damage."
+  },
+  "76 01": {
+    "NAME": "Phantom Dust",
+    "ID": 374,
+    "SCHOOL": "Faith",
+    "DAMAGE": 99,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "???"
+  }
+}

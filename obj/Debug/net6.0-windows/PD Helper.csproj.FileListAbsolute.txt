@@ -17,3 +17,5 @@ C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\refi
 C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\PD Helper.pdb
 C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\PD Helper.genruntimeconfig.cache
 C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\ref\PD Helper.dll
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\PD_Helper.Properties.Resources.resources
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
