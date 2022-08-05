@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KCbUMT3oS/NWaxXcav1BO0wl0oiSJeliBM0qsYAbLL88SL4MbytvCnZF/cTLKNcElSu8X+0pBx6kELl+s09aGw==",
+  "dgSpecHash": "Dn+8V5fTF5guGE0cND3IbiBueMXoacom5QJWqIM1RLjMZB77f2PhEzYDg3LHKVmx+l97VDQbE6VJeyaAUzIWaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zer0\\.nuget\\packages\\memory.dll.x64\\1.2.24\\memory.dll.x64.1.2.24.nupkg.sha512",
+    "C:\\Users\\Zer0\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Zer0\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.5\\microsoft.netcore.app.runtime.win-x64.6.0.5.nupkg.sha512",
     "C:\\Users\\Zer0\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.5.nupkg.sha512",
     "C:\\Users\\Zer0\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.5\\microsoft.aspnetcore.app.runtime.win-x64.6.0.5.nupkg.sha512",

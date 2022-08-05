@@ -79,11 +79,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zer0\\Documents\\GitHub\\PDHelper\\PD Helper\\PD Helper.csproj",
+      "projectUniqueName": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
       "projectName": "PD Helper",
-      "projectPath": "C:\\Users\\Zer0\\Documents\\GitHub\\PDHelper\\PD Helper\\PD Helper.csproj",
+      "projectPath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
       "packagesPath": "C:\\Users\\Zer0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zer0\\Documents\\GitHub\\PDHelper\\PD Helper\\obj\\",
+      "outputPath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Zer0\\AppData\\Roaming\\NuGet\\NuGet.Config",

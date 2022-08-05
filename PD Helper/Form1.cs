@@ -13,6 +13,21 @@ using Memory;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
+/* ERROR CODES
+ * ERROR01: You didn't select a skill in your Arsenal.
+ * ERROR02: You didn't select a skill in the Arsenal Editor.
+ * ERROR03: You didn't select a skill in your Arsenal and in the Arsenal Editor.
+ * ERROR04: You didn't select an Arsenal in the Arsenal List.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 
 namespace PD_Helper
 {
@@ -56,6 +71,8 @@ namespace PD_Helper
 
         bool ProcOpen = false;
         public Mem m = new Mem();
+        public ListBox allSkills = new ListBox();
+
 
         private void ListProcesses()
         {
@@ -123,7 +140,7 @@ namespace PD_Helper
             // Load up Arsenal
             groupBox4.Enabled = true;
             groupBox6.Enabled = true;
-            groupBox7.Enabled = true;
+            arsenalListBox.Enabled = true;
 
             // Read amount of school set
             string[] offsetsSchool = { "54", "B8", "11C", "180", "1E4", "248", "2AC", "310", "374", "3D8", "43C", "4A0", "504", "568", "5CC", "630" };
@@ -138,21 +155,16 @@ namespace PD_Helper
             Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 60);
             string loadDeckHex = BitConverter.ToString(loadDeck);
             //add cards to list
-            deckListBox.Items.Clear();
-            for (int i = 0; i < 60; i+=2)
-            {
-                Byte[] currentByte = { loadDeck[i], loadDeck[i + 1] };
-                String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
-                deckListBox.Items.Add(cardDef[currentHexString].NAME);
-            }
-
-            // no clue why but deckList.Box.Item.Add() breaks if its not inside a 60 loop :/
             loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF" };
+            deckListBox.Items.Clear();
+            int o = 0;
             for (int i = 0; i < 30; i++)
             {
-                Byte[] currentByte = { loadDeck[i], loadDeck[i + 1] };
+                Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
                 String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
+                deckListBox.Items.Add(cardDef[currentHexString].NAME);
                 loadedDeck[i] = currentHexString;
+                o += 2;
             }
             //System.Diagnostics.Debug.WriteLine(loadedDeck);
 
@@ -162,30 +174,139 @@ namespace PD_Helper
                 foreach (var item in cardDef)
                 {
                     editorList.Items.Add(item.Value.NAME);
+                    allSkills.Items.Add(item.Value.NAME);
                 }
+                
             }
-            
+
+            //add each arsenal file to the list
+            savedArsenalListBox.Items.Clear();
+            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
+
+            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
+            string str = "";
+             
+            foreach (FileInfo file in Files)
+            {
+                string currentDeck = file.Name;
+                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
+                savedArsenalListBox.Items.Add(currentDeck);
+            }
         }
 
         private void btnSaveToPDH_Click(object sender, EventArgs e)
         {
-            string path = @"Arsenals\" + loadedDeckName + ".txt";
+            string path = @"Arsenals\" + loadedDeckName + ".arsenal";
             string str = "";
             for (int i = 0; i < 30; i++)
             {
-                //str += loadedDeck[i] + '","';
+                str += loadedDeck[i] + ",";
             }
             using (StreamWriter sw = File.CreateText(path))
             {
                 sw.WriteLine(str);
+                for (int i = 0; i < 30; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine(loadedDeck[i]);
+                }
+                
                 sw.Close();
             }
+            // only add new name to list if its a unique new deck, update the old one otherwise
+            if (!savedArsenalListBox.Items.Contains(loadedDeckName) == true) {
+                savedArsenalListBox.Items.Add(loadedDeckName);
+            }
+
             
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            if (editorList.SelectedIndex != -1 && deckListBox.SelectedIndex != -1)
+            {
 
+                //set loaded deck card change
+                string currentHex = cardDef[cardDef.ElementAt(editorList.SelectedIndex).Key].HEX;
+                loadedDeck[deckListBox.SelectedIndex] = currentHex;
+                //set loaded deck visual
+                deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
+            }
+            //error handling
+            else if (editorList.SelectedIndex != -1){MessageBox.Show("ERROR01: You didn't select a skill in your Arsenal.");}
+            else if (deckListBox.SelectedIndex != -1){MessageBox.Show("ERROR02: You didn't select a skill in the Arsenal Editor.");}
+            else{MessageBox.Show("ERROR03: You didn't select a skill in your Arsenal and in the Arsenal Editor.");}
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (deckListBox.SelectedIndex != -1)
+            {
+
+                //set loaded deck card change
+                string currentHex = "FF FF";
+                loadedDeck[deckListBox.SelectedIndex] = currentHex;
+                //set loaded deck visual
+                deckListBox.Items[deckListBox.SelectedIndex] = "Aura Particle";
+            }
+            //error handling
+            else { MessageBox.Show("You didn't select a skill in your Arsenal."); }
+        }
+
+        private void arsenalNameBox_TextChanged(object sender, EventArgs e)
+        {
+            loadedDeckName = arsenalNameBox.Text;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //search for value in editorList
+            if (textBox1.Text != "")
+            {
+                editorList.Items.Clear();
+                foreach (var item in allSkills.Items)
+                {
+                    if (item.ToString().Contains(textBox1.Text,StringComparison.OrdinalIgnoreCase))
+                    {
+                        editorList.Items.Add(item.ToString());
+                    }
+                }
+            } else
+            {
+                editorList.Items.Clear();
+                foreach (var item in allSkills.Items)
+                {
+                    editorList.Items.Add(item);
+                }
+            }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (savedArsenalListBox.SelectedIndex != -1)
+            {
+                string path = @"Arsenals\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
+                string file = File.ReadAllText(path);
+                string[] deckStrings = file.Split(',');
+                deckListBox.Items.Clear();
+                for (int i = 0; i < 30; i++)
+                {
+                    loadedDeck[i] = deckStrings[i];
+                    deckListBox.Items.Add(cardDef[deckStrings[i]].NAME);
+                }
+            }
+            else { MessageBox.Show("ERROR04: You didn't select an Arsenal in the Arsenal List."); }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete Arsenal: " + savedArsenalListBox.SelectedItem.ToString() + "?", "Arsenal Deletion Check", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                string path = @"Arsenals\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
+                File.Delete(path);
+                savedArsenalListBox.Items.Remove(savedArsenalListBox.SelectedItem);
+            } 
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -260,6 +381,9 @@ namespace PD_Helper
             
         }
 
+        private void label16_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
