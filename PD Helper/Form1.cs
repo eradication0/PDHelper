@@ -31,11 +31,13 @@ using Newtonsoft.Json;
 
 namespace PD_Helper
 {
+    //timer value 7FF7D096C8C0
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+
         }
 
         //Class for PDCard
@@ -60,19 +62,20 @@ namespace PD_Helper
             public string RANGE { get; set; }
             [JsonProperty("DESCRIPTION")]
             public string DESCRIPTION { get; set; }
+            [JsonProperty("TYPE")]
+            public string TYPE { get; set; }
         }
 
         // Load card definitions
         //PDCard cardDef = JsonConvert.DeserializeObject<PDCard>(File.ReadAllText("SkillDB.json"));
         Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
-        string[] loadedDeck = {"FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF" };
+        string[] loadedDeck = {"FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
         string loadedDeckName = "";
 
 
         bool ProcOpen = false;
         public Mem m = new Mem();
         public ListBox allSkills = new ListBox();
-
 
         private void ListProcesses()
         {
@@ -137,25 +140,25 @@ namespace PD_Helper
 
         private void loadArsenalNameButton_Click(object sender, EventArgs e)
         {
+            if (m.ReadByte("base+003ED688,9") == 1)
+            {
+                partnerLock.Checked = true;
+            }
+            
             // Load up Arsenal
             groupBox4.Enabled = true;
             groupBox6.Enabled = true;
             arsenalListBox.Enabled = true;
-
-            // Read amount of school set
-            string[] offsetsSchool = { "54", "B8", "11C", "180", "1E4", "248", "2AC", "310", "374", "3D8", "43C", "4A0", "504", "568", "5CC", "630" };
-            schoolNumeric.Value = m.ReadByte("base+003ED6B8," + offsetsSchool[arsenalDropdown.SelectedIndex]);
-            arsenalNameBox.Text = arsenalDropdown.SelectedItem.ToString();
-            loadedDeckName = arsenalDropdown.SelectedItem.ToString();
+            
             //System.Diagnostics.Debug.WriteLine(o1);
 
             // List of fist cards per deck
             string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
             // Load all cards
-            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 60);
+            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
             string loadDeckHex = BitConverter.ToString(loadDeck);
             //add cards to list
-            loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF" };
+            loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF","00 00" };
             deckListBox.Items.Clear();
             int o = 0;
             for (int i = 0; i < 30; i++)
@@ -166,7 +169,16 @@ namespace PD_Helper
                 loadedDeck[i] = currentHexString;
                 o += 2;
             }
-            //System.Diagnostics.Debug.WriteLine(loadedDeck);
+            //manual write school amount
+            Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
+            String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
+            loadedDeck[30] = currentHexStringFix;
+            string loadSchoolAmount = currentHexStringFix.Remove(currentHexStringFix.Length - 3);
+            schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
+            arsenalNameBox.Text = arsenalDropdown.SelectedItem.ToString();
+            loadedDeckName = arsenalDropdown.SelectedItem.ToString();
+
+            //System.Diagnostics.Debug.WriteLine(loadSchoolAmount);
 
             //load arsenal editor
             if (editorList.Items.Count == 0)
@@ -198,18 +210,13 @@ namespace PD_Helper
         {
             string path = @"Arsenals\" + loadedDeckName + ".arsenal";
             string str = "";
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 31; i++)
             {
                 str += loadedDeck[i] + ",";
             }
             using (StreamWriter sw = File.CreateText(path))
             {
                 sw.WriteLine(str);
-                for (int i = 0; i < 30; i++)
-                {
-                    System.Diagnostics.Debug.WriteLine(loadedDeck[i]);
-                }
-                
                 sw.Close();
             }
             // only add new name to list if its a unique new deck, update the old one otherwise
@@ -226,10 +233,16 @@ namespace PD_Helper
             {
 
                 //set loaded deck card change
-                string currentHex = cardDef[cardDef.ElementAt(editorList.SelectedIndex).Key].HEX;
-                loadedDeck[deckListBox.SelectedIndex] = currentHex;
-                //set loaded deck visual
-                deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
+                foreach (PDCard pair in cardDef.Values)
+                {
+                    if (pair.NAME == editorList.SelectedItem.ToString())
+                    {
+                        string currentHex = pair.HEX;
+                        loadedDeck[deckListBox.SelectedIndex] = currentHex;
+                        //set loaded deck visual
+                        deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
+                    }
+                }
             }
             //error handling
             else if (editorList.SelectedIndex != -1){MessageBox.Show("ERROR01: You didn't select a skill in your Arsenal.");}
@@ -294,6 +307,13 @@ namespace PD_Helper
                     loadedDeck[i] = deckStrings[i];
                     deckListBox.Items.Add(cardDef[deckStrings[i]].NAME);
                 }
+                //manual write schools
+                loadedDeck[30] = deckStrings[30];
+                string loadSchoolAmount = loadedDeck[30].Remove(loadedDeck[30].Length - 3);
+                schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
+
+                //write name
+                arsenalNameBox.Text = savedArsenalListBox.SelectedItem.ToString();
             }
             else { MessageBox.Show("ERROR04: You didn't select an Arsenal in the Arsenal List."); }
         }
@@ -309,9 +329,102 @@ namespace PD_Helper
             } 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void partnerLock_CheckedChanged(object sender, EventArgs e)
         {
+            if (partnerLock.Checked)
+            {
+                m.WriteMemory("base+003ED688,9", "byte", "01");
+            }
+            else
+            {
+                m.WriteMemory("base+003ED688,9", "byte", "00");
+            }
+        }
 
+        private void editorList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (editorList.SelectedIndex != -1)
+            {
+                foreach (PDCard pair in cardDef.Values)
+                {
+                    if (pair.NAME == editorList.SelectedItem.ToString())
+                    {
+                        labelSkillCost.Text = pair.COST;
+                        labelSkillDescription.Text = pair.DESCRIPTION;
+                        labelSkillID.Text = pair.ID.ToString();
+                        labelSkillName.Text = pair.NAME;
+                        labelSkilLRange.Text = pair.RANGE;
+                        labelSkillSchool.Text = pair.SCHOOL;
+                        labelSkillStrength.Text = pair.DAMAGE;
+                        labelSkillUse.Text = pair.USAGE;
+                        switch (pair.TYPE)
+                        {
+                            case "Attack":
+                                
+                                labelSkillID.ForeColor = Color.FromArgb(251, 152, 152);
+                                labelSkillName.ForeColor = Color.FromArgb(251, 152, 152);
+                                labelSkillSchool.ForeColor = Color.FromArgb(251, 152, 152);
+                                break;
+                            case "Defense":
+                                labelSkillID.ForeColor = Color.FromArgb(152, 181, 251);
+                                labelSkillName.ForeColor = Color.FromArgb(152, 181, 251);
+                                labelSkillSchool.ForeColor = Color.FromArgb(152, 181, 251);
+                                break;
+                            case "Erase":
+                                labelSkillID.ForeColor = Color.FromArgb(241, 152, 251);
+                                labelSkillName.ForeColor = Color.FromArgb(241, 152, 251);
+                                labelSkillSchool.ForeColor = Color.FromArgb(241, 152, 251);
+                                break;
+                            case "Environment":
+                                labelSkillID.ForeColor = Color.FromArgb(152, 251, 251);
+                                labelSkillName.ForeColor = Color.FromArgb(152, 251, 251);
+                                labelSkillSchool.ForeColor = Color.FromArgb(152, 251, 251);
+                                break;
+                            case "Status":
+                                labelSkillID.ForeColor = Color.FromArgb(152, 251, 152);
+                                labelSkillName.ForeColor = Color.FromArgb(152, 251, 152);
+                                labelSkillSchool.ForeColor = Color.FromArgb(152, 251, 152);
+                                break;
+                            case "Special":
+                                labelSkillID.ForeColor = Color.FromArgb(251, 244, 152);
+                                labelSkillName.ForeColor = Color.FromArgb(251, 244, 152);
+                                labelSkillSchool.ForeColor = Color.FromArgb(251, 244, 152);
+                                break;
+                        }
+                    }
+                }
+
+            }
+            
+        }
+
+        private void saveToPDbtn_Click(object sender, EventArgs e)
+        {
+            //writing the name
+            byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
+            string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
+            m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
+
+            // writing the cards + school
+            string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
+            byte[] dataToWrite = {};
+            Array.Resize(ref dataToWrite, 62);
+            int o = 0;
+            for (int i = 0; i < loadedDeck.Length; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(dataToWrite[o]);
+                System.Diagnostics.Debug.WriteLine(dataToWrite[o + 1]);
+                dataToWrite[o] = Convert.ToByte(loadedDeck[i].Remove(2), 16);
+                dataToWrite[o+1] = Convert.ToByte(loadedDeck[i].Remove(0,3), 16);
+                o += 2;
+            }
+            
+            m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
+        }
+
+        private void schoolNumeric_ValueChanged(object sender, EventArgs e)
+        {
+            loadedDeck[30] = "0" + schoolNumeric.Value.ToString() + " 00";
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -376,14 +489,28 @@ namespace PD_Helper
 
         }
 
-        private void saveToPDbtn_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void label16_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void arsenalListBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
