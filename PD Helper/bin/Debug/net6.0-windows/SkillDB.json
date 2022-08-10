@@ -8,7 +8,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Adds one Aura",
-    "TYPE": "Aura"
+    "TYPE": "Aura",
+    "HEX": "FF FF"
   },
   "01 00": {
     "NAME": "Psycho Wave",
@@ -19,7 +20,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "STR = target's Level",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "01 00"
   },
   "02 00": {
     "NAME": "Psycho Burst",
@@ -30,7 +32,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR = target's Level",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "02 00"
   },
   "03 00": {
     "NAME": "Psycho Knife",
@@ -41,7 +44,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "03 00"
   },
   "04 00": {
     "NAME": "Psycho Blade",
@@ -52,7 +56,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "04 00"
   },
   "05 00": {
     "NAME": "Excalibur",
@@ -63,7 +68,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Requires: 7 or fewer skills left in arsenal",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "05 00"
   },
   "23 00": {
     "NAME": "Debris Bullet",
@@ -74,7 +80,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] STR randomly 0,2,or 4.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "23 00"
   },
   "25 00": {
     "NAME": "Stone Shot",
@@ -85,7 +92,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "25 00"
   },
   "26 00": {
     "NAME": "Rock Shot",
@@ -96,7 +104,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "26 00"
   },
   "28 00": {
     "NAME": "Psycho Spear",
@@ -107,7 +116,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] Add: Pierce effect.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "28 00"
   },
   "1F 00": {
     "NAME": "Bomb",
@@ -118,7 +128,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] Explodes on impact.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1F 00"
   },
   "21 00": {
     "NAME": "Cluster Bomb",
@@ -129,7 +140,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] Explodes on impact. Requires: 7 or fewer skills left in arsenal.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "21 00"
   },
   "20 00": {
     "NAME": "Big Bomb",
@@ -140,7 +152,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] Explodes on impact.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "20 00"
   },
   "24 00": {
     "NAME": "Throwing Stone",
@@ -151,7 +164,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Parabola]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "24 00"
   },
   "27 00": {
     "NAME": "Rail Gun",
@@ -162,7 +176,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Requires: 7 or fewer skills left in arsenal.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "27 00"
   },
   "22 00": {
     "NAME": "Psycho Sniper",
@@ -173,7 +188,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "22 00"
   },
   "04 01": {
     "NAME": "Bomb Shot",
@@ -184,7 +200,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "Explodes on impact.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "04 01"
   },
   "12 01": {
     "NAME": "Power",
@@ -195,7 +212,8 @@
     "USAGE": 3,
     "RANGE": "medium",
     "DESCRIPTION": "[Object] Throws nearby object; STR depends on object. Requires: Available object.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "12 01"
   },
   "29 00": {
     "NAME": "Psycho Kinesis",
@@ -206,7 +224,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Object] Throws nearby object; STR depends on object. Requires: Available object.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "29 00"
   },
   "5C 00": {
     "NAME": "Meteor",
@@ -217,7 +236,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Fall] Add: Pierce effect.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5C 00"
   },
   "62 00": {
     "NAME": "Rain of Stones",
@@ -228,7 +248,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Rain]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "62 00"
   },
   "63 00": {
     "NAME": "Rain of Rocks",
@@ -239,7 +260,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Rain]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "63 00"
   },
   "5D 00": {
     "NAME": "Gravity Press",
@@ -250,7 +272,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Hole] Effective against downed opponents.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5D 00"
   },
   "61 00": {
     "NAME": "Timer Mine",
@@ -261,7 +284,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Press once to set. Explodes automatically 5 sec later.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "61 00"
   },
   "10 01": {
     "NAME": "Sensor Mine",
@@ -272,7 +296,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when anyone enters blast area.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "10 01"
   },
   "60 00": {
     "NAME": "Remote Mine",
@@ -283,7 +308,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Press once to set and again to detonate.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "60 00"
   },
   "73 00": {
     "NAME": "Crystal Wall",
@@ -294,7 +320,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Anti-Pierce; protects from damage regardless of STR.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "73 00"
   },
   "74 00": {
     "NAME": "Wall",
@@ -305,7 +332,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Anti-Pierce; protects from damage regardless of STR.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "74 00"
   },
   "75 00": {
     "NAME": "Psychic Wall",
@@ -316,7 +344,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Anti-Pierce; protects from damage regardless of STR.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "75 00"
   },
   "11 01": {
     "NAME": "Power Shell",
@@ -327,7 +356,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Add: Anti-Pierce; protects from damage regardless of STR.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "11 01"
   },
   "81 00": {
     "NAME": "Psycho Shell",
@@ -338,7 +368,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Add: Anti-Pierce; protects from damage regardless of STR.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "81 00"
   },
   "93 00": {
     "NAME": "Bend",
@@ -349,7 +380,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Course]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "93 00"
   },
   "94 00": {
     "NAME": "Change Course",
@@ -360,7 +392,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Course]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "94 00"
   },
   "89 00": {
     "NAME": "About Face",
@@ -371,7 +404,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Course]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "89 00"
   },
   "8A 00": {
     "NAME": "Reverse",
@@ -382,7 +416,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Course]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "8A 00"
   },
   "AA 00": {
     "NAME": "Confusion Gas",
@@ -393,7 +428,8 @@
     "USAGE": 1,
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when target enters blast area; erases 1 equipped skill.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "AA 00"
   },
   "A9 00": {
     "NAME": "Shatter",
@@ -404,7 +440,8 @@
     "USAGE": "∞",
     "RANGE": "capsule",
     "DESCRIPTION": "Erases capsule you are touching (not Aura).",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A9 00"
   },
   "14 01": {
     "NAME": "Crush",
@@ -415,7 +452,8 @@
     "USAGE": "∞",
     "RANGE": "all",
     "DESCRIPTION": "Erases Environmental crystals from battlefield.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "14 01"
   },
   "BE 00": {
     "NAME": "Reduce Gravity",
@@ -426,7 +464,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Increases everyone's movement speed by 20%.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "BE 00"
   },
   "BF 00": {
     "NAME": "Abnormal Gravity",
@@ -437,7 +476,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Reduces everyone's movement speed by 20%.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "BF 00"
   },
   "15 01": {
     "NAME": "Confused Gravity",
@@ -448,7 +488,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Inverts everyone's directional controls.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "15 01"
   },
   "13 01": {
     "NAME": "Vanishing Light",
@@ -459,7 +500,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prevents everyone from using Optical skills for 1 min.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "13 01"
   },
   "CE 00": {
     "NAME": "Pressure",
@@ -470,7 +512,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Prevents target from moving or using skills for 3 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "CE 00"
   },
   "CF 00": {
     "NAME": "Lift Up",
@@ -481,7 +524,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Levitates target 10 ft in air for 3 sec. Prevents target from moving or using skills.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "CF 00"
   },
   "DE 00": {
     "NAME": "Alleviate",
@@ -492,7 +536,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Increases target's movement speed by 30%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "DE 00"
   },
   "E8 00": {
     "NAME": "Brain Concussion",
@@ -503,7 +548,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Inverts target's directional controls for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E8 00"
   },
   "E3 00": {
     "NAME": "Magnetic Field",
@@ -514,7 +560,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Reduces target's homing accuracy by 30%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E3 00"
   },
   "DF 00": {
     "NAME": "Burden",
@@ -525,7 +572,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Reduces target's movement speed by 20%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "DF 00"
   },
   "B7 00": {
     "NAME": "Freeze Gas",
@@ -536,7 +584,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when target enters blast area; freezes target's skill button for 10 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "B7 00"
   },
   "E0 00": {
     "NAME": "Speed Up",
@@ -547,7 +596,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Increases your movement speed by 20%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E0 00"
   },
   "E4 00": {
     "NAME": "Acquisition",
@@ -558,7 +608,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Increases your homing accuracy by 20%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E4 00"
   },
   "E5 00": {
     "NAME": "Skywalk",
@@ -569,7 +620,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Levitate 15 ft in air for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E5 00"
   },
   "5A 00": {
     "NAME": "Frighten",
@@ -580,7 +632,8 @@
     "USAGE": "∞",
     "RANGE": "auto",
     "DESCRIPTION": "Briefly stops target's movement.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "5A 00"
   },
   "FC 00": {
     "NAME": "Teleportation",
@@ -591,7 +644,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Teleports target to your start point.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "FC 00"
   },
   "F7 00": {
     "NAME": "Dazzle",
@@ -602,7 +656,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Scrambles target's skill buttons for 10 sec.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F7 00"
   },
   "02 01": {
     "NAME": "Bravery Decision",
@@ -613,7 +668,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Erases all Aura Particles from your arsenal.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "02 01"
   },
   "FE 00": {
     "NAME": "Levitate",
@@ -624,7 +680,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Levitate 30 ft in air for 3 sec.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "FE 00"
   },
   "FF 00": {
     "NAME": "Return",
@@ -635,7 +692,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Teleports you to your start point.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "FF 00"
   },
   "FD 00": {
     "NAME": "Surprise Attack",
@@ -646,7 +704,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Teleports you to target's start point.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "FD 00"
   },
   "F9 00": {
     "NAME": "Call",
@@ -657,7 +716,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Sets capsule spawn point to current location for duration of battle.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F9 00"
   },
   "FA 00": {
     "NAME": "Retreat",
@@ -668,7 +728,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Teleports you to one of your capsule spawn points.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "FA 00"
   },
   "07 00": {
     "NAME": "Mist Blade",
@@ -679,7 +740,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Penalty: 1 Level",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "07 00"
   },
   "06 00": {
     "NAME": "Laser Blade",
@@ -690,7 +752,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "06 00"
   },
   "6D 00": {
     "NAME": "Photon Wave",
@@ -701,7 +764,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Explodes around self.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "6D 00"
   },
   "6E 00": {
     "NAME": "Photon Burst",
@@ -712,7 +776,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Explodes around self.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "6E 00"
   },
   "2A 00": {
     "NAME": "Laser",
@@ -723,7 +788,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2A 00"
   },
   "2B 00": {
     "NAME": "Slide Laser",
@@ -734,7 +800,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2B 00"
   },
   "33 00": {
     "NAME": "Vibration Laser",
@@ -745,7 +812,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc] Requires: Level 10 or higher.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "33 00"
   },
   "2C 00": {
     "NAME": "Mist Laser",
@@ -756,7 +824,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc] Penalty: 1 Level",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2C 00"
   },
   "2D 00": {
     "NAME": "Double Lasers",
@@ -767,7 +836,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc] Shoots 2 lasers simultaneously",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2D 00"
   },
   "D3 00": {
     "NAME": "Triple Lasers",
@@ -778,7 +848,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc] Fires 3 lasers simultaneously",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "D3 00"
   },
   "19 01": {
     "NAME": "Octolaser",
@@ -789,7 +860,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc] Fires 8 lasers simultaneously",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "19 01"
   },
   "34 00": {
     "NAME": "Trench Mortar",
@@ -800,7 +872,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Parabola]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "34 00"
   },
   "39 00": {
     "NAME": "Gungnir",
@@ -811,7 +884,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] STR = Aura spent on skill. Hold button to charge.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "39 00"
   },
   "3A 00": {
     "NAME": "Finisher",
@@ -822,7 +896,8 @@
     "USAGE": 1,
     "RANGE": "long",
     "DESCRIPTION": "STR = double your level. Penalty: Level reduced to 0 Requires: maximum Aura",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3A 00"
   },
   "30 00": {
     "NAME": "Rapid Cannon",
@@ -833,7 +908,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "30 00"
   },
   "31 00": {
     "NAME": "Charged Particle",
@@ -844,7 +920,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "Penetrates obstacles. Penalty: 1 Level",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "31 00"
   },
   "32 00": {
     "NAME": "Ricochet Laser",
@@ -855,7 +932,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "Shoots 4 lasers that ricochet off objects.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "32 00"
   },
   "37 00": {
     "NAME": "Bundled laser",
@@ -866,7 +944,8 @@
     "USAGE": 1,
     "RANGE": "long",
     "DESCRIPTION": "STR = STR of all equipped laser",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "37 00"
   },
   "2F 00": {
     "NAME": "Mist Blaster",
@@ -877,7 +956,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penalty: 1 Level",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2F 00"
   },
   "35 00": {
     "NAME": "Blaster",
@@ -888,7 +968,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "35 00"
   },
   "36 00": {
     "NAME": "Vibration Blaster",
@@ -899,7 +980,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Requires: Level 10 or higher",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "36 00"
   },
   "38 00": {
     "NAME": "Bundled Blaster",
@@ -910,7 +992,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "STR = STR of all equipped Blaster",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "38 00"
   },
   "17 01": {
     "NAME": "Compressor",
@@ -921,7 +1004,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = the number of consumed defensive skills.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "17 01"
   },
   "64 00": {
     "NAME": "Photon Shower",
@@ -932,7 +1016,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Rain]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "64 00"
   },
   "65 00": {
     "NAME": "Killer Satellite",
@@ -943,7 +1028,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Rain]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "65 00"
   },
   "00 01": {
     "NAME": "Overheat",
@@ -954,7 +1040,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "[Hole] STR = total Aura Particles on battlefield.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "00 01"
   },
   "77 00": {
     "NAME": "Flash Barrier",
@@ -965,7 +1052,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "77 00"
   },
   "76 00": {
     "NAME": "Laser Barrier",
@@ -976,7 +1064,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "76 00"
   },
   "79 00": {
     "NAME": "Eraser",
@@ -987,7 +1076,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Erases any attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "79 00"
   },
   "7A 00": {
     "NAME": "Photon Barrier",
@@ -998,7 +1088,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Retain if you have Aura to use again.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "7A 00"
   },
   "78 00": {
     "NAME": "Paralyze Barrier",
@@ -1009,7 +1100,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Target can't move for 3 sec.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "78 00"
   },
   "8B 00": {
     "NAME": "Reflect Barrier",
@@ -1020,7 +1112,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Reflect]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "8B 00"
   },
   "8C 00": {
     "NAME": "Reflect Mirror",
@@ -1031,7 +1124,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Reflect]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "8C 00"
   },
   "82 00": {
     "NAME": "Laser Shell",
@@ -1042,7 +1136,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "82 00"
   },
   "2E 00": {
     "NAME": "Auto Shell",
@@ -1053,7 +1148,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Automatically projects when attacked.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "2E 00"
   },
   "9B 00": {
     "NAME": "Interference",
@@ -1064,7 +1160,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Reduce target's level by 2.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "9B 00"
   },
   "9C 00": {
     "NAME": "Restrain",
@@ -1075,7 +1172,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Reduces target's Level by 1. Penalty: 1 level.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "9C 00"
   },
   "AC 00": {
     "NAME": "Panic Gas",
@@ -1086,7 +1184,8 @@
     "USAGE": 1,
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when target enters blast area; reduces target's Level by 50%.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "AC 00"
   },
   "AB 00": {
     "NAME": "Eliminate",
@@ -1097,7 +1196,8 @@
     "USAGE": "∞",
     "RANGE": "capsule",
     "DESCRIPTION": "Erases Aura Particle you are touching.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "AB 00"
   },
   "AD 00": {
     "NAME": "Evaporate",
@@ -1108,7 +1208,8 @@
     "USAGE": 1,
     "RANGE": "capsule",
     "DESCRIPTION": "Erases all Aura Particles from battlefield.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "AD 00"
   },
   "B1 00": {
     "NAME": "Particle Convert",
@@ -1119,7 +1220,8 @@
     "USAGE": 1,
     "RANGE": "capsule",
     "DESCRIPTION": "Converts all capsules on battle field to Aura Particles.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B1 00"
   },
   "09 01": {
     "NAME": "Meltdown",
@@ -1130,7 +1232,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Reduces everyone's Level by 2 for each of their Aura Particles on battlefield.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "09 01"
   },
   "18 01": {
     "NAME": "Quantum Decay",
@@ -1141,7 +1244,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Reduces everyone's Level by 50%.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "18 01"
   },
   "9F 00": {
     "NAME": "Disintegrate",
@@ -1152,7 +1256,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "[Hole] Reduces everyone's Level to 0.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "9F 00"
   },
   "BC 00": {
     "NAME": "Holy Ray",
@@ -1163,7 +1268,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Reduces damage of everyone's attack by 1.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "BC 00"
   },
   "EA 00": {
     "NAME": "Reduce Entropy",
@@ -1174,7 +1280,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prohibits skills with Aura cost of 3 or more (or X).",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "EA 00"
   },
   "16 01": {
     "NAME": "Accelerate",
@@ -1185,7 +1292,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Skill capsule spawn twice as fast.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "16 01"
   },
   "C1 00": {
     "NAME": "Backdraft",
@@ -1196,7 +1304,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Causes everyone to lose 1 Health for each skill use.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C1 00"
   },
   "C2 00": {
     "NAME": "Optimization",
@@ -1207,7 +1316,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Reduces Aura cost for all skills by 50%.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C2 00"
   },
   "F5 00": {
     "NAME": "Scientism",
@@ -1218,7 +1328,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prevents everyone from using Faith skills for 1 min.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "F5 00"
   },
   "F8 00": {
     "NAME": "Quiet Days",
@@ -1229,7 +1340,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Everyone's skill capsules take twice as long to spawn.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "F8 00"
   },
   "D0 00": {
     "NAME": "Paralyze",
@@ -1240,7 +1352,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Prevents target from moving for 3 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D0 00"
   },
   "D8 00": {
     "NAME": "Doze",
@@ -1251,7 +1364,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Reduces damage of target's attack by 1.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D8 00"
   },
   "E9 00": {
     "NAME": "Gravity Mine",
@@ -1262,7 +1376,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when anyone enters blast area; reduces movement speed by 90%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E9 00"
   },
   "D4 00": {
     "NAME": "Optical Camo",
@@ -1273,7 +1388,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Add: Invisibility; no one can lock onto you for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D4 00"
   },
   "0D 01": {
     "NAME": "Level Berserk",
@@ -1284,7 +1400,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Doubles target's Level.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "0D 01"
   },
   "0E 01": {
     "NAME": "Level Amp",
@@ -1295,7 +1412,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Increases your level by 2.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "0E 01"
   },
   "0A 01": {
     "NAME": "Relearn",
@@ -1306,7 +1424,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Automatically captures last skill consumed.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "0A 01"
   },
   "F6 00": {
     "NAME": "Recall",
@@ -1317,7 +1436,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Restores 5 random consumed skills to your arsenal. Requires: Level >10",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F6 00"
   },
   "0F 01": {
     "NAME": "Level Boost",
@@ -1328,7 +1448,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Doubles your Level. Requires: Level >10",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "0F 01"
   },
   "09 00": {
     "NAME": "Ice Sword",
@@ -1339,7 +1460,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Add: Freezes target's skill button for 10 sec. Penalty: Aura cost +1 per use.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "09 00"
   },
   "08 00": {
     "NAME": "Lightning Sword",
@@ -1350,7 +1472,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Add: Erases 1 equipped defensive skill from target. Penalty: Aura cost +1 per use.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "08 00"
   },
   "0A 00": {
     "NAME": "Flame Sword",
@@ -1361,7 +1484,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "0A 00"
   },
   "0B 00": {
     "NAME": "Blazing Sword",
@@ -1372,7 +1496,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Requires: Health 15 or higher",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "0B 00"
   },
   "0C 00": {
     "NAME": "Vacuum Slash",
@@ -1383,7 +1508,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Pierce effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "0C 00"
   },
   "3B 00": {
     "NAME": "Sonic Boom",
@@ -1394,7 +1520,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Arc]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3B 00"
   },
   "1D 01": {
     "NAME": "Piece of Ice",
@@ -1405,7 +1532,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Freezes target's skill buttons for 10 sec.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1D 01"
   },
   "1E 01": {
     "NAME": "Piece of Thunder",
@@ -1416,7 +1544,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Erases 1 defensive skill from target's equipped skills.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1E 01"
   },
   "1C 01": {
     "NAME": "Piece of Fire",
@@ -1427,7 +1556,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1C 01"
   },
   "3D 00": {
     "NAME": "Bullet of Fire",
@@ -1438,7 +1568,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3D 00"
   },
   "3E 00": {
     "NAME": "Blazing Bullet",
@@ -1449,7 +1580,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Requires: Health 15 or higher",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3E 00"
   },
   "43 00": {
     "NAME": "Scar of Battles",
@@ -1460,7 +1592,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "STR = number of consumed attack skills.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "43 00"
   },
   "3C 00": {
     "NAME": "Ice Lance",
@@ -1471,7 +1604,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Add: Freezes target's skill buttons for 10 sec. Penalty: Aura cost +1 per use.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3C 00"
   },
   "40 00": {
     "NAME": "Storm Blade",
@@ -1482,7 +1616,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Add: Erases 1 equipped attack skill from target. Penalty: Aura cost +1 per use.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "40 00"
   },
   "3F 00": {
     "NAME": "Lightning Blade",
@@ -1493,7 +1628,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Add: Erases 1 equipped defensive skill from target. Penalty: Aura cost +1 per use.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3F 00"
   },
   "44 00": {
     "NAME": "Memory of Battle",
@@ -1504,7 +1640,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = number of consumed attack skills.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "44 00"
   },
   "1B 01": {
     "NAME": "Crystallization",
@@ -1515,7 +1652,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = STR of all your equipped Piece skills.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1B 01"
   },
   "41 00": {
     "NAME": "Root of Tree",
@@ -1526,7 +1664,8 @@
     "USAGE": 1,
     "RANGE": "long",
     "DESCRIPTION": "[Crawl] Add: Pierce effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "41 00"
   },
   "42 00": {
     "NAME": "Fang of Tree",
@@ -1537,7 +1676,8 @@
     "USAGE": 1,
     "RANGE": "long",
     "DESCRIPTION": "[Crawl] Add: Pierce effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "42 00"
   },
   "6F 00": {
     "NAME": "Twister",
@@ -1548,7 +1688,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Move]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "6F 00"
   },
   "70 00": {
     "NAME": "Whirlwind",
@@ -1559,7 +1700,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Move]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "70 00"
   },
   "66 00": {
     "NAME": "Lightning Bolt",
@@ -1570,7 +1712,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] Add: Erases 1 equipped defensive skill from target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "66 00"
   },
   "68 00": {
     "NAME": "Ice Storm",
@@ -1581,7 +1724,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] Add: Freezes target's skill button for 10 sec.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "68 00"
   },
   "69 00": {
     "NAME": "Fire Storm",
@@ -1592,7 +1736,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Rain]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "69 00"
   },
   "67 00": {
     "NAME": "Thunder Storm",
@@ -1603,7 +1748,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] Add: Erases all equipped defensive skills from target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "67 00"
   },
   "6A 00": {
     "NAME": "Blazing Storm",
@@ -1614,7 +1760,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] Requires: Health 15 or higher",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "6A 00"
   },
   "1F 01": {
     "NAME": "Tremor",
@@ -1625,7 +1772,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "[Hole]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1F 01"
   },
   "5E 00": {
     "NAME": "Massive Quake",
@@ -1636,7 +1784,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "[Hole]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5E 00"
   },
   "7B 00": {
     "NAME": "Glacial Wall",
@@ -1647,7 +1796,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Freezes target's skill button for 10 sec.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "7B 00"
   },
   "7C 00": {
     "NAME": "Wall of Current",
@@ -1658,7 +1808,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Erases any short-range attack it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "7C 00"
   },
   "7D 00": {
     "NAME": "Wall of Fire",
@@ -1669,7 +1820,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "7D 00"
   },
   "7E 00": {
     "NAME": "Cyclone",
@@ -1680,7 +1832,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Erases any attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "7E 00"
   },
   "8D 00": {
     "NAME": "Vacuum Wall",
@@ -1691,7 +1844,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Erases any attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "8D 00"
   },
   "83 00": {
     "NAME": "Guard of Water",
@@ -1702,7 +1856,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Automatically projects when attacked. Add: Erases any short-range attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "83 00"
   },
   "84 00": {
     "NAME": "Fortress of Iron",
@@ -1713,7 +1868,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Add: Erases any short-range attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "84 00"
   },
   "95 00": {
     "NAME": "Gust",
@@ -1724,7 +1880,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Course]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "95 00"
   },
   "A0 00": {
     "NAME": "Wind Pressure",
@@ -1735,7 +1892,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Erases all of target's equipped non-attack and non-defensive skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A0 00"
   },
   "AE 00": {
     "NAME": "Abyss",
@@ -1746,7 +1904,8 @@
     "USAGE": 1,
     "RANGE": "capsule",
     "DESCRIPTION": "Erases capsule you are touching.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "AE 00"
   },
   "B2 00": {
     "NAME": "Starting Point",
@@ -1757,7 +1916,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Erases Environmental crystals from battlefield.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B2 00"
   },
   "BA 00": {
     "NAME": "Return to Nature",
@@ -1768,7 +1928,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Cancels Environmental effects and resets everyone's status and attributes to their initial state.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "BA 00"
   },
   "A6 00": {
     "NAME": "Turbulence",
@@ -1779,7 +1940,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Erases everyone's equipped non-attack and non-defensive skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A6 00"
   },
   "B6 00": {
     "NAME": "Purify",
@@ -1790,7 +1952,8 @@
     "USAGE": "∞",
     "RANGE": "all",
     "DESCRIPTION": "Resets everyone's status and attributes to their initial state.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B6 00"
   },
   "BB 00": {
     "NAME": "Desertification",
@@ -1801,7 +1964,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Slows everyone's Aura recovery speed by 30%.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "BB 00"
   },
   "C3 00": {
     "NAME": "Nature Blessing",
@@ -1812,7 +1976,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Everyone gains +1 Health for each Aura Particle they capture.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C3 00"
   },
   "C5 00": {
     "NAME": "Forest Sanctuary",
@@ -1823,7 +1988,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prohibits use of attack skills that deal >3 damage or STR = X.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C5 00"
   },
   "C0 00": {
     "NAME": "Dense Fog",
@@ -1834,7 +2000,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Reduces everyone's homing accuracy by 30%",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C0 00"
   },
   "C4 00": {
     "NAME": "Berserk",
@@ -1845,7 +2012,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "All attack skills gain Pierce effect.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C4 00"
   },
   "C6 00": {
     "NAME": "Commandments",
@@ -1856,7 +2024,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prevents everyone from using Erase skills for 1 min.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C6 00"
   },
   "05 01": {
     "NAME": "Providence",
@@ -1867,7 +2036,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prevents everyone from using Psycho skills for 1 min.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "05 01"
   },
   "E7 00": {
     "NAME": "Frostbite",
@@ -1878,7 +2048,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Prevents target from using skill assigned to the same button.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E7 00"
   },
   "D7 00": {
     "NAME": "Friendship",
@@ -1889,7 +2060,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Incrases by 1 damage delt by target",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D7 00"
   },
   "D5 00": {
     "NAME": "Decoy",
@@ -1900,7 +2072,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Target can only lock on to you for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D5 00"
   },
   "D1 00": {
     "NAME": "Entangle",
@@ -1911,7 +2084,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Crawl] Prevents target from moving or using skills for 3 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D1 00"
   },
   "D9 00": {
     "NAME": "Curse of Earth",
@@ -1922,7 +2096,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Crawl] Reduces damage of target's attack by 1.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D9 00"
   },
   "DA 00": {
     "NAME": "Heat",
@@ -1933,7 +2108,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Increases damage of your attacks by 1. Decreases your Aura recovery speed by 10%",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "DA 00"
   },
   "DB 00": {
     "NAME": "Stimulate",
@@ -1944,7 +2120,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Increases damage of your attacks by 2. Decreases your Aura recovery speed by 30%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "DB 00"
   },
   "F1 00": {
     "NAME": "Blessed Water",
@@ -1955,7 +2132,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Target gains 5 Health.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F1 00"
   },
   "F0 00": {
     "NAME": "Graceful Woods",
@@ -1966,7 +2144,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Restores Aura to maximum.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F0 00"
   },
   "EF 00": {
     "NAME": "Healing Water",
@@ -1977,7 +2156,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Restores 5 Health.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "EF 00"
   },
   "1A 01": {
     "NAME": "Orb",
@@ -1988,7 +2168,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Automatically negates any Erase skill used. Can't by erased or overwritten.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "1A 01"
   },
   "0D 00": {
     "NAME": "Empty Hand",
@@ -1999,7 +2180,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Auto-Capture effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "0D 00"
   },
   "24 01": {
     "NAME": "Swift Kick",
@@ -2010,7 +2192,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Requires: Level 2 or lower",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "24 01"
   },
   "11 00": {
     "NAME": "Leg Throw",
@@ -2021,7 +2204,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Knocks down target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "11 00"
   },
   "10 00": {
     "NAME": "Tiger Kick",
@@ -2032,7 +2216,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Erases 1 equipped attack skill from target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "10 00"
   },
   "0E 00": {
     "NAME": "High-speed Punch",
@@ -2043,7 +2228,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "0E 00"
   },
   "12 00": {
     "NAME": "Hyperkick",
@@ -2054,7 +2240,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "12 00"
   },
   "0F 00": {
     "NAME": "Dragon Punch",
@@ -2065,7 +2252,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Erases 1 equipped defensive skill from target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "0F 00"
   },
   "13 00": {
     "NAME": "Hyperpunch",
@@ -2076,7 +2264,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Auto-Capture effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "13 00"
   },
   "25 01": {
     "NAME": "Swift Punch",
@@ -2087,7 +2276,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Requires: Level 2 or lower",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "25 01"
   },
   "17 00": {
     "NAME": "Splashdown",
@@ -2098,7 +2288,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "17 00"
   },
   "23 01": {
     "NAME": "Swift Blow",
@@ -2109,7 +2300,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Requires: Level 2 or lower",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "23 01"
   },
   "14 00": {
     "NAME": "Dance of Death",
@@ -2120,7 +2312,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR = STR of all equipped short-ranged Ki attack.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "14 00"
   },
   "18 00": {
     "NAME": "Aura Leak",
@@ -2131,7 +2324,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR = 50% of target's Aura.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "18 00"
   },
   "19 00": {
     "NAME": "Aura Backflow",
@@ -2142,7 +2336,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR = target's Aura.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "19 00"
   },
   "EB 00": {
     "NAME": "Ki Palm",
@@ -2153,7 +2348,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR = Aura spent on this skill. Hold button to charge.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "EB 00"
   },
   "15 00": {
     "NAME": "Sky Pursuit",
@@ -2164,7 +2360,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Requires: Knocked down target. Add: Auto-Capture effect.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "15 00"
   },
   "16 00": {
     "NAME": "Pursuit",
@@ -2175,7 +2372,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Requires: Knocked down target",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "16 00"
   },
   "45 00": {
     "NAME": "Snap",
@@ -2186,7 +2384,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Knocks down target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "45 00"
   },
   "48 00": {
     "NAME": "Ki Lance",
@@ -2197,7 +2396,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Pierce effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "48 00"
   },
   "46 00": {
     "NAME": "Ki Bullet",
@@ -2208,7 +2408,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Knocks down target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "46 00"
   },
   "5B 00": {
     "NAME": "Heat from Void",
@@ -2219,7 +2420,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = double target's unassigned skill buttons.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5B 00"
   },
   "49 00": {
     "NAME": "Hyper Ki Lance",
@@ -2230,7 +2432,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Pierce effect",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "49 00"
   },
   "47 00": {
     "NAME": "Hyper Ki Bullet",
@@ -2241,7 +2444,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Knocks down target.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "47 00"
   },
   "4A 00": {
     "NAME": "Ki Cannon",
@@ -2252,7 +2456,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = Aura spent on this skill. Hold button to charge.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4A 00"
   },
   "72 00": {
     "NAME": "Copy",
@@ -2263,7 +2468,8 @@
     "USAGE": 1,
     "RANGE": "-",
     "DESCRIPTION": "Duplicates last attack skill that inflicted damage on you.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "72 00"
   },
   "71 00": {
     "NAME": "Recollection",
@@ -2274,7 +2480,8 @@
     "USAGE": 1,
     "RANGE": "-",
     "DESCRIPTION": "Duplicates last attack skill you used.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "71 00"
   },
   "85 00": {
     "NAME": "Iron Skin",
@@ -2285,7 +2492,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Add: Erases any short-range attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "85 00"
   },
   "86 00": {
     "NAME": "Mind's Eye",
@@ -2296,7 +2504,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Automatically projects when attacked.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "86 00"
   },
   "96 00": {
     "NAME": "Block",
@@ -2307,7 +2516,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Brush]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "96 00"
   },
   "97 00": {
     "NAME": "Protect",
@@ -2318,7 +2528,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Brush]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "97 00"
   },
   "98 00": {
     "NAME": "Guard",
@@ -2329,7 +2540,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Brush]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "98 00"
   },
   "8E 00": {
     "NAME": "Absorb Energy",
@@ -2340,7 +2552,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Absorb] Add: Aura increase = Aura cost of attack skill blocked.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "8E 00"
   },
   "8F 00": {
     "NAME": "Learning",
@@ -2351,7 +2564,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Absorb] Add: Captures attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "8F 00"
   },
   "90 00": {
     "NAME": "Digestion",
@@ -2362,7 +2576,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Absorb] Add: Health increase = damaged blocked.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "90 00"
   },
   "22 01": {
     "NAME": "Disrupt",
@@ -2373,7 +2588,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Erases all of target's equipped attack skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "22 01"
   },
   "A1 00": {
     "NAME": "Tiger Slayer",
@@ -2384,7 +2600,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Erases 1 of target's equipped attack skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A1 00"
   },
   "A2 00": {
     "NAME": "Dragon Slayer",
@@ -2395,7 +2612,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Erases 1 of target's equipped defensive skills. Penetrates defensive skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A2 00"
   },
   "A3 00": {
     "NAME": "Giant Slayer",
@@ -2406,7 +2624,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Erases target's equipped skill with highest Aura cost.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A3 00"
   },
   "B4 00": {
     "NAME": "Neutralization",
@@ -2417,7 +2636,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Resets target's status and attributes to their initial state.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B4 00"
   },
   "0B 01": {
     "NAME": "Steal Power",
@@ -2428,7 +2648,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Absorbs all target's Aura.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "0B 01"
   },
   "A4 00": {
     "NAME": "Lack",
@@ -2439,7 +2660,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Erases all of target's equipped unlimited-use skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A4 00"
   },
   "9D 00": {
     "NAME": "Exhaust",
@@ -2450,7 +2672,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Reduces target's Level by 50%.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "9D 00"
   },
   "B8 00": {
     "NAME": "Refresh",
@@ -2461,7 +2684,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Resets your status and attributes to their initial state.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B8 00"
   },
   "C7 00": {
     "NAME": "Fatigue",
@@ -2472,7 +2696,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Everyone's Aura recovery ceases while moving.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C7 00"
   },
   "C9 00": {
     "NAME": "Irregular Rhythm",
@@ -2483,7 +2708,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Doubles Aura cost for all skills.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C9 00"
   },
   "CA 00": {
     "NAME": "Memory Lapse",
@@ -2494,7 +2720,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "All skills become single-use.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "CA 00"
   },
   "C8 00": {
     "NAME": "Soul Cage",
@@ -2505,7 +2732,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Everyone loses 1 Health for each capsule they capture.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "C8 00"
   },
   "20 01": {
     "NAME": "Chaos",
@@ -2516,7 +2744,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prohibits skills with Aura cost of 2 or lower (or X).",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "20 01"
   },
   "21 01": {
     "NAME": "Stagnant Air",
@@ -2527,7 +2756,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prevents everyone from using Nature skills for 1 min.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "21 01"
   },
   "D2 00": {
     "NAME": "Pin Down",
@@ -2538,7 +2768,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Hole] Prevents target from moving or using skills for 3 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D2 00"
   },
   "EC 00": {
     "NAME": "Mind Reading",
@@ -2549,7 +2780,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Listen in on target team's conversation.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "EC 00"
   },
   "DC 00": {
     "NAME": "Tiger's Strength",
@@ -2560,7 +2792,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Increases damage of your attacks by 2 for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "DC 00"
   },
   "E1 00": {
     "NAME": "Lightning Speed",
@@ -2571,7 +2804,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Increases your movement speed by 50% for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E1 00"
   },
   "D6 00": {
     "NAME": "Meditation",
@@ -2582,7 +2816,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Increases Aura recovery speed by 20%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "D6 00"
   },
   "EE 00": {
     "NAME": "Void",
@@ -2593,7 +2828,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Immunity to attack damage for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "EE 00"
   },
   "07 01": {
     "NAME": "Trigger",
@@ -2604,7 +2840,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Forces target to use equipped skill assigned to same button.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "07 01"
   },
   "FB 00": {
     "NAME": "Change the World",
@@ -2615,7 +2852,8 @@
     "USAGE": 1,
     "RANGE": "capsule",
     "DESCRIPTION": "Respawns new capsules for everyone.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "FB 00"
   },
   "F2 00": {
     "NAME": "Regenerate",
@@ -2626,7 +2864,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Regenerates Health while immobile.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F2 00"
   },
   "01 01": {
     "NAME": "Jump",
@@ -2637,7 +2876,8 @@
     "USAGE": 5,
     "RANGE": "self",
     "DESCRIPTION": "Jump 30 ft.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "01 01"
   },
   "26 01": {
     "NAME": "Dash",
@@ -2648,7 +2888,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Dash 30 ft.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "26 01"
   },
   "1A 00": {
     "NAME": "Dhampir Claw",
@@ -2659,7 +2900,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Add: Health increase = damage dealt.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1A 00"
   },
   "1B 00": {
     "NAME": "Dhampir Fang",
@@ -2670,7 +2912,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Add: Health increase = damage dealt.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1B 00"
   },
   "1C 00": {
     "NAME": "Song of Succubus",
@@ -2681,7 +2924,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Level increase = damage dealt. Target's Level decreases by same number.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1C 00"
   },
   "1D 00": {
     "NAME": "Succubus Tempt",
@@ -2692,7 +2936,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Add: Level increase = damage dealt. Target's Level decreases by same number.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1D 00"
   },
   "1E 00": {
     "NAME": "Muramasa Blade",
@@ -2703,7 +2948,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "1E 00"
   },
   "58 00": {
     "NAME": "Lingering Flame",
@@ -2714,7 +2960,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Requires: Health 7 or lower",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "58 00"
   },
   "4B 00": {
     "NAME": "Scream of Evil",
@@ -2725,7 +2972,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penetrates obstacles. Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4B 00"
   },
   "4E 00": {
     "NAME": "Greedy Spirit",
@@ -2736,7 +2984,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Reduces target's Aura to 0.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4E 00"
   },
   "59 00": {
     "NAME": "Agonies of Death",
@@ -2747,7 +2996,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Penetrates obstacles. Requires: Health 7 or lower.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "59 00"
   },
   "55 00": {
     "NAME": "Seal of Death",
@@ -2758,7 +3008,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Can't be erased or overwritten. Penalty: 1 Health.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "55 00"
   },
   "54 00": {
     "NAME": "Demon's Fire",
@@ -2769,7 +3020,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penalty: 1 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "54 00"
   },
   "29 01": {
     "NAME": "Reincarnation",
@@ -2780,7 +3032,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Retain if you have enough Aura to use again.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "29 01"
   },
   "57 00": {
     "NAME": "Hell's Fire",
@@ -2791,7 +3044,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "57 00"
   },
   "56 00": {
     "NAME": "Vampire Bat",
@@ -2802,7 +3056,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: Health increase = damage dealt.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "56 00"
   },
   "4F 00": {
     "NAME": "Swarm of Moths",
@@ -2813,7 +3068,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4F 00"
   },
   "51 00": {
     "NAME": "Fire of Gehenna",
@@ -2824,7 +3080,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "51 00"
   },
   "4D 00": {
     "NAME": "Judge of Anubis",
@@ -2835,7 +3092,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = (target's Health - yours) x 2. Effective when target's Health > yours. Penalty: 3 Health.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4D 00"
   },
   "52 00": {
     "NAME": "Venom Fang",
@@ -2846,7 +3104,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "52 00"
   },
   "53 00": {
     "NAME": "Crawlers",
@@ -2857,7 +3116,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Crawl]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "53 00"
   },
   "CC 00": {
     "NAME": "Spore Schism",
@@ -2868,7 +3128,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Crawl] Explodes upon contact with target or any object.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "CC 00"
   },
   "5F 00": {
     "NAME": "Thor's Hammer",
@@ -2879,7 +3140,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Fall] Penetrates obstacles.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5F 00"
   },
   "50 00": {
     "NAME": "Arrow of Artemis",
@@ -2890,7 +3152,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Fall] Add: Retain if you have enough Aura to use again. Requires: Health 7 or lower.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "50 00"
   },
   "2B 01": {
     "NAME": "Demon's Venom",
@@ -2901,7 +3164,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Fall] Add: For 10 sec, target's button presses cause 1 damage.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2B 01"
   },
   "2A 01": {
     "NAME": "Sign of Saints",
@@ -2912,7 +3176,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Fall] STR = double your unassigned skill buttons. Can't be erased or overwritten.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2A 01"
   },
   "4C 00": {
     "NAME": "Lucifer's Arrow",
@@ -2923,7 +3188,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] Penetrates obstacles. Requires: Health 7 or lower.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4C 00"
   },
   "6C 00": {
     "NAME": "Binding Needle",
@@ -2934,7 +3200,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] STR = double target's unassigned skill buttons.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "6C 00"
   },
   "6B 00": {
     "NAME": "Celestial Ship",
@@ -2945,7 +3212,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Rain] Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "6B 00"
   },
   "7F 00": {
     "NAME": "Shield of Ruin",
@@ -2956,7 +3224,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Penalty: 2 Health",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "7F 00"
   },
   "80 00": {
     "NAME": "Shield of Aegis",
@@ -2967,7 +3236,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "80 00"
   },
   "88 00": {
     "NAME": "Guardian Angel",
@@ -2978,7 +3248,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Automatically projects when attacked. Penalty: 2 Health.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "88 00"
   },
   "87 00": {
     "NAME": "Protect Circle",
@@ -2989,7 +3260,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shelter]",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "87 00"
   },
   "99 00": {
     "NAME": "Devil's Arm",
@@ -3000,7 +3272,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Brush] Add: Erases any short-range attack skill it blocks. Penalty: 1 Health.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "99 00"
   },
   "9A 00": {
     "NAME": "Angel's Wing",
@@ -3011,7 +3284,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Brush] Add: Erases any short-range attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "9A 00"
   },
   "91 00": {
     "NAME": "Flash Hole",
@@ -3022,7 +3296,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Absorb] Add: Erases any attack skill it blocks.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "91 00"
   },
   "92 00": {
     "NAME": "Dark Hole",
@@ -3033,7 +3308,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Absorb] Add: Erases any attack skill it blocks. Penalty: 1 Health.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "92 00"
   },
   "9E 00": {
     "NAME": "Bloody Ritual",
@@ -3044,7 +3320,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Reduces target's Level by 50%. Penalty: 3 Health.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "9E 00"
   },
   "A5 00": {
     "NAME": "Hungry Demon",
@@ -3055,7 +3332,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Erases target's equipped skill assigned to same button. Penalty: 1 Health.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A5 00"
   },
   "28 01": {
     "NAME": "Thieving Imp",
@@ -3066,7 +3344,8 @@
     "USAGE": 1,
     "RANGE": "capsule",
     "DESCRIPTION": "Captures capsule you are touching.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "28 01"
   },
   "AF 00": {
     "NAME": "Diabolical Trick",
@@ -3077,7 +3356,8 @@
     "USAGE": "∞",
     "RANGE": "capsule",
     "DESCRIPTION": "Erases capsule you are touching.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "AF 00"
   },
   "0C 01": {
     "NAME": "Vicious Balance",
@@ -3088,7 +3368,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Everyone's Level decreases to player's lowest Level. Penalty: 2 Health",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "0C 01"
   },
   "A8 00": {
     "NAME": "Fairy Ring",
@@ -3099,7 +3380,8 @@
     "USAGE": "∞",
     "RANGE": "all",
     "DESCRIPTION": "Reduces everyone's Aura to 0. Penalty: 1 Health.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A8 00"
   },
   "B3 00": {
     "NAME": "Judgment",
@@ -3110,7 +3392,8 @@
     "USAGE": "∞",
     "RANGE": "all",
     "DESCRIPTION": "Erases Environmental crystals from battlefield. Penalty: 1 Health",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B3 00"
   },
   "A7 00": {
     "NAME": "Calamity",
@@ -3121,7 +3404,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "[Hole] Erases everyone's equipped skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "A7 00"
   },
   "B0 00": {
     "NAME": "Violent Change",
@@ -3132,7 +3416,8 @@
     "USAGE": 1,
     "RANGE": "capsule",
     "DESCRIPTION": "Erases all capsules from battlefield.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B0 00"
   },
   "B9 00": {
     "NAME": "Angel Tears",
@@ -3143,7 +3428,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Resets your status and attributes to their initial state. Add: 1 Level.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "B9 00"
   },
   "BD 00": {
     "NAME": "Lunar Force",
@@ -3154,7 +3440,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Increases damage of everyone's attack by 1.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "BD 00"
   },
   "CB 00": {
     "NAME": "Necronomicon",
@@ -3165,7 +3452,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Everyone's attack skills lose all bonuses, restrictions, and penalties.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "CB 00"
   },
   "CD 00": {
     "NAME": "Athena's Command",
@@ -3176,7 +3464,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prohibits use of attack skills that deal <3 damage or STR = x.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "CD 00"
   },
   "27 01": {
     "NAME": "Spiritual World",
@@ -3187,7 +3476,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "Prevents everyone from using Ki skills for 1 min.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "27 01"
   },
   "DD 00": {
     "NAME": "Trance",
@@ -3198,7 +3488,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Increases damage of your attacks by 2 for 15 sec. Penalty: 1 Health.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "DD 00"
   },
   "E2 00": {
     "NAME": "Doppelganger",
@@ -3209,7 +3500,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Sets your attributes to match target's.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E2 00"
   },
   "E6 00": {
     "NAME": "Demon's Wing",
@@ -3220,7 +3512,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Levitate 7 ft in air for 15 sec. Add: Invisibility; no one can lock onto you for 15 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "E6 00"
   },
   "B5 00": {
     "NAME": "Angel's Breath",
@@ -3231,7 +3524,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Reverses target's attributes (Speed +2 becomes Speed -2).",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "B5 00"
   },
   "F3 00": {
     "NAME": "Fusion",
@@ -3242,7 +3536,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Your Health and target's are averaged.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F3 00"
   },
   "08 01": {
     "NAME": "Annoying Gift",
@@ -3253,7 +3548,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Forces target to capture your equipped skills.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "08 01"
   },
   "ED 00": {
     "NAME": "Armaros",
@@ -3264,7 +3560,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Reverses everyone's attributes (Speed +2 becomes Speed -2).",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "ED 00"
   },
   "2C 01": {
     "NAME": "Rebirth",
@@ -3275,7 +3572,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Restores 10 Health. Penalty: Reduces level to 0.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "2C 01"
   },
   "F4 00": {
     "NAME": "Invulnerability",
@@ -3286,7 +3584,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Immune to damage while immobile.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "F4 00"
   },
   "06 01": {
     "NAME": "Amulet",
@@ -3297,7 +3596,8 @@
     "USAGE": 3,
     "RANGE": "self",
     "DESCRIPTION": "Automatically reverses effects of last Erase skill that hit you.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "06 01"
   },
   "03 01": {
     "NAME": "Mephisto's Pact",
@@ -3308,7 +3608,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "Immediately captures an unconsumed skill from your arsenal. Penalty: 3 Health.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "03 01"
   },
   "2D 01": {
     "NAME": "Delay Bomb",
@@ -3319,7 +3620,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] Explodes on impact.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2D 01"
   },
   "2E 01": {
     "NAME": "Mini-Meteor",
@@ -3330,7 +3632,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Fall]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "2E 01"
   },
   "2F 01": {
     "NAME": "Antigravity Trap",
@@ -3341,7 +3644,8 @@
     "USAGE": 1,
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when target enters blast area. Levitates target 10ft in the air for 3 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "2F 01"
   },
   "30 01": {
     "NAME": "Charge",
@@ -3352,7 +3656,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Teleports you to target's start point.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "30 01"
   },
   "31 01": {
     "NAME": "Aura Cannon",
@@ -3363,7 +3668,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "Requires: Maximum Aura",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "31 01"
   },
   "32 01": {
     "NAME": "Throttle Blaster",
@@ -3374,7 +3680,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "32 01"
   },
   "33 01": {
     "NAME": "Boost Mine",
@@ -3385,7 +3692,8 @@
     "USAGE": 1,
     "RANGE": "mine",
     "DESCRIPTION": "Increases your level by 2",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "33 01"
   },
   "34 01": {
     "NAME": "Quantum Amp",
@@ -3396,7 +3704,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Gives everyone 2 levels",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "34 01"
   },
   "35 01": {
     "NAME": "Piece of Wind",
@@ -3407,7 +3716,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Arc] Add: Erase 1 equipped attack skill from target",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "35 01"
   },
   "36 01": {
     "NAME": "Throttle Fireball",
@@ -3418,7 +3728,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "36 01"
   },
   "37 01": {
     "NAME": "Tornado",
@@ -3429,7 +3740,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Move]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "37 01"
   },
   "38 01": {
     "NAME": "Earthquake",
@@ -3440,7 +3752,8 @@
     "USAGE": "∞",
     "RANGE": "all",
     "DESCRIPTION": "[Hole]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "38 01"
   },
   "39 01": {
     "NAME": "Vacuum Palm",
@@ -3451,7 +3764,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR = double target's unassigned skill buttons.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "39 01"
   },
   "3A 01": {
     "NAME": "Backdraft Bullet",
@@ -3462,7 +3776,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Requires: effective only against knocked down targets.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3A 01"
   },
   "3B 01": {
     "NAME": "Lost Dragon",
@@ -3473,7 +3788,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Erase all of target's equipped defense skills",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "3B 01"
   },
   "3C 01": {
     "NAME": "Disremember",
@@ -3484,7 +3800,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Erases target's equipped lowest cost Aura skill",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "3C 01"
   },
   "3D 01": {
     "NAME": "True Muramasa",
@@ -3495,7 +3812,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Lose one life",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3D 01"
   },
   "3E 01": {
     "NAME": "Will-o'-the-Wisp",
@@ -3506,7 +3824,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3E 01"
   },
   "3F 01": {
     "NAME": "Jackpot",
@@ -3517,7 +3836,8 @@
     "USAGE": "∞",
     "RANGE": "all",
     "DESCRIPTION": "[Hole] STR randomly 0, 3, or 6",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "3F 01"
   },
   "40 01": {
     "NAME": "Joke of Anubis",
@@ -3528,7 +3848,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "STR = your Health - target's. Effective when your Health > target's. Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "40 01"
   },
   "41 01": {
     "NAME": "Excaliber",
@@ -3539,7 +3860,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "STR randomly 0, 3, or 6",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "41 01"
   },
   "42 01": {
     "NAME": "Knife Grind",
@@ -3550,7 +3872,8 @@
     "USAGE": 3,
     "RANGE": "short",
     "DESCRIPTION": "Aura cost -1 per use",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "42 01"
   },
   "43 01": {
     "NAME": "Fast Bomb",
@@ -3561,7 +3884,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Sets then detonates.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "43 01"
   },
   "44 01": {
     "NAME": "Shield Breaker",
@@ -3572,7 +3896,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Pierces through defenses.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "44 01"
   },
   "45 01": {
     "NAME": "Fast Wave",
@@ -3583,7 +3908,8 @@
     "USAGE": 1,
     "RANGE": "mine",
     "DESCRIPTION": "Explodes around self.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "45 01"
   },
   "46 01": {
     "NAME": "Twist Laser",
@@ -3594,7 +3920,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Arc]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "46 01"
   },
   "47 01": {
     "NAME": "Erase Shell",
@@ -3605,7 +3932,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Shetler] Add: Erases any attack skill it blocks",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "47 01"
   },
   "48 01": {
     "NAME": "Level Baton",
@@ -3616,7 +3944,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Increases target's Level by 1. Penalty: 1 Level.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "48 01"
   },
   "49 01": {
     "NAME": "Arc of Fire",
@@ -3627,7 +3956,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Arc]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "49 01"
   },
   "4A 01": {
     "NAME": "Chill Breeze",
@@ -3638,7 +3968,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Freezes everyone's skill buttons for 10 seconds.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "4A 01"
   },
   "4B 01": {
     "NAME": "Blessed Rain",
@@ -3649,7 +3980,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Everyone gains +5 health",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "4B 01"
   },
   "4C 01": {
     "NAME": "Unison",
@@ -3660,7 +3992,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "4C 01"
   },
   "4D 01": {
     "NAME": "Crawling Bullet",
@@ -3671,7 +4004,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Crawl] Knocks down target",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4D 01"
   },
   "4E 01": {
     "NAME": "Dragon Bullet",
@@ -3682,7 +4016,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "4E 01"
   },
   "4F 01": {
     "NAME": "Ethos Inspiration",
@@ -3693,7 +4028,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Increases target's aura recovery speed by 20%",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "4F 01"
   },
   "50 01": {
     "NAME": "Vacuum Bullet",
@@ -3704,7 +4040,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penetrates defensive skills.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "50 01"
   },
   "51 01": {
     "NAME": "Dance of Moths",
@@ -3715,7 +4052,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "51 01"
   },
   "52 01": {
     "NAME": "Illusion of Death",
@@ -3726,7 +4064,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "Penetrates defense skills. Penalty: 2 Health",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "52 01"
   },
   "53 01": {
     "NAME": "Judge of Ares",
@@ -3737,7 +4076,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "Erases everyone's equiped defensive skill. Penalty: 3 Health",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "53 01"
   },
   "54 01": {
     "NAME": "Armaros Watch",
@@ -3748,7 +4088,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Reverses target's attributes (Speed +2 becomes Speed -2)",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "54 01"
   },
   "67 01": {
     "NAME": "Impact Burst",
@@ -3759,7 +4100,8 @@
     "USAGE": 1,
     "RANGE": "long",
     "DESCRIPTION": "Explodes on impact. Ricochets off objects.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "67 01"
   },
   "62 01": {
     "NAME": "Vast Mayhem",
@@ -3770,7 +4112,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "For 15 sec, inverts everyone's directional controls.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "62 01"
   },
   "6A 01": {
     "NAME": "Vapor Cloud",
@@ -3781,7 +4124,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Press once to set. Detonates when anyone enters blast area. Freezes target?s skill buttons for 3 sec.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "6A 01"
   },
   "5B 01": {
     "NAME": "Freeze Shot",
@@ -3792,7 +4136,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "For 10 sec, prevents target from using same button.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "5B 01"
   },
   "59 01": {
     "NAME": "Mobilize",
@@ -3803,7 +4148,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "All players are teleported to your start point.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "59 01"
   },
   "5C 01": {
     "NAME": "Teleportrap",
@@ -3814,7 +4160,8 @@
     "USAGE": 3,
     "RANGE": "mine",
     "DESCRIPTION": "Press once to set. Detonates when anyone enters blast area. Teleports target to your start point.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "5C 01"
   },
   "56 01": {
     "NAME": "EL Bomb",
@@ -3825,7 +4172,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Penalty: 1 Level.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "56 01"
   },
   "6D 01": {
     "NAME": "Poison Blur",
@@ -3836,7 +4184,8 @@
     "USAGE": "∞",
     "RANGE": "mine",
     "DESCRIPTION": "Detonates when anyone enters blast area. For 10 sec, target's button presses cause 1 damage.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "6D 01"
   },
   "66 01": {
     "NAME": "Ground Laser",
@@ -3847,7 +4196,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Crawl]",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "66 01"
   },
   "63 01": {
     "NAME": "Particle Mortar",
@@ -3858,7 +4208,8 @@
     "USAGE": "∞",
     "RANGE": "long",
     "DESCRIPTION": "[Parabola] Penetrates obstacles.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "63 01"
   },
   "5F 01": {
     "NAME": "Cooling",
@@ -3869,7 +4220,8 @@
     "USAGE": 3,
     "RANGE": "medium",
     "DESCRIPTION": "[Parabola] Reduces target's Level by 1.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "5F 01"
   },
   "65 01": {
     "NAME": "Young White Dragon",
@@ -3880,7 +4232,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "[Crawl] STR = Aura spent on skill. Hold button to charge.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "65 01"
   },
   "64 01": {
     "NAME": "Place of Invisibility",
@@ -3891,7 +4244,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "For 15 sec, no one can be locked onto.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "64 01"
   },
   "69 01": {
     "NAME": "Downcast",
@@ -3902,7 +4256,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "Penalty: 1 Level.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "69 01"
   },
   "57 01": {
     "NAME": "Life-Giving Sword",
@@ -3913,7 +4268,8 @@
     "USAGE": 2,
     "RANGE": "short",
     "DESCRIPTION": "Add: Health increase = damage dealt.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "57 01"
   },
   "61 01": {
     "NAME": "Geyser Impact",
@@ -3924,7 +4280,8 @@
     "USAGE": 1,
     "RANGE": "medium",
     "DESCRIPTION": "[Hole] Effective against downed opponents.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "61 01"
   },
   "6C 01": {
     "NAME": "Rafflesia Fang",
@@ -3935,7 +4292,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Add: Health increase = damage blocked. Anti-Pierce",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "6C 01"
   },
   "6E 01": {
     "NAME": "Failing Wall",
@@ -3946,7 +4304,8 @@
     "USAGE": "∞",
     "RANGE": "self",
     "DESCRIPTION": "[Barrier] Reduces defensive strength each time used.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "6E 01"
   },
   "60 01": {
     "NAME": "Protecting Air",
@@ -3957,7 +4316,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Automatically projects when attacked.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "60 01"
   },
   "6B 01": {
     "NAME": "Heat Devil",
@@ -3968,7 +4328,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "For 5 sec, no one can lock onto you; speed of movement increased by 90%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "6B 01"
   },
   "58 01": {
     "NAME": "Pursuit Stopper",
@@ -3979,7 +4340,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "58 01"
   },
   "6F 01": {
     "NAME": "Tiger Prevails",
@@ -3990,7 +4352,8 @@
     "USAGE": 1,
     "RANGE": "short",
     "DESCRIPTION": "Erases 1 of target's attack skills. Penetrates defensive skills.",
-    "TYPE": "Erase"
+    "TYPE": "Erase",
+    "HEX": "6F 01"
   },
   "70 01": {
     "NAME": "Martial Arts Scroll",
@@ -4001,7 +4364,8 @@
     "USAGE": 1,
     "RANGE": "self",
     "DESCRIPTION": "For 5 sec, increases damage of your attacks by 3 . Aura recovery speed is increased by 90%.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "70 01"
   },
   "68 01": {
     "NAME": "Play Dead",
@@ -4012,7 +4376,8 @@
     "USAGE": 3,
     "RANGE": "self",
     "DESCRIPTION": "Health recovers while immobile . For 30 sec, movement speed is reduced by 50%.",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "68 01"
   },
   "71 01": {
     "NAME": "Sword Slap",
@@ -4023,7 +4388,8 @@
     "USAGE": "∞",
     "RANGE": "short",
     "DESCRIPTION": "Briefly stops target's movement",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "71 01"
   },
   "5E 01": {
     "NAME": "Wings of Hope",
@@ -4034,7 +4400,8 @@
     "USAGE": "∞",
     "RANGE": "medium",
     "DESCRIPTION": "Requires: Health 3 or lower. Add: Health increase = damage dealt.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5E 01"
   },
   "5A 01": {
     "NAME": "Arms of the Curse",
@@ -4045,7 +4412,8 @@
     "USAGE": 3,
     "RANGE": "short",
     "DESCRIPTION": "Add: For 10 sec, target's button presses cause 1 damage.",
-    "TYPE": "Attack"
+    "TYPE": "Attack",
+    "HEX": "5A 01"
   },
   "74 01": {
     "NAME": "Dark Protection",
@@ -4056,7 +4424,8 @@
     "USAGE": 5,
     "RANGE": "self",
     "DESCRIPTION": "[Shelter] Add: Protective power increases each time used.",
-    "TYPE": "Defense"
+    "TYPE": "Defense",
+    "HEX": "74 01"
   },
   "73 01": {
     "NAME": "Traveling Thought",
@@ -4067,7 +4436,8 @@
     "USAGE": 1,
     "RANGE": "env",
     "DESCRIPTION": "For 1 min, homing accuracy is increased by 50%.",
-    "TYPE": "Environment"
+    "TYPE": "Environment",
+    "HEX": "73 01"
   },
   "72 01": {
     "NAME": "Withering Curse",
@@ -4078,7 +4448,8 @@
     "USAGE": 1,
     "RANGE": "mine",
     "DESCRIPTION": "Press once to set. Detonates when apporoached. For 10 sec, button presses cause 1 damage.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "72 01"
   },
   "75 01": {
     "NAME": "Venom Drip",
@@ -4089,7 +4460,8 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "For 15 sec, button presses cause 1 damage.",
-    "TYPE": "Status"
+    "TYPE": "Status",
+    "HEX": "75 01"
   },
   "76 01": {
     "NAME": "Phantom Dust",
@@ -4100,6 +4472,7 @@
     "USAGE": 1,
     "RANGE": "all",
     "DESCRIPTION": "???",
-    "TYPE": "Special"
+    "TYPE": "Special",
+    "HEX": "76 01"
   }
 }

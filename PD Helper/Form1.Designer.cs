@@ -42,14 +42,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.arsenalDropdown = new System.Windows.Forms.ComboBox();
             this.infoBox = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.schoolNumeric = new System.Windows.Forms.NumericUpDown();
@@ -58,10 +56,9 @@
             this.btnSaveToPDH = new System.Windows.Forms.Button();
             this.saveToPDbtn = new System.Windows.Forms.Button();
             this.deckListBox = new System.Windows.Forms.ListBox();
-            this.loadDeckNameButton = new System.Windows.Forms.Button();
             this.arsenalListBox = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.partnerLock = new System.Windows.Forms.CheckBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.savedArsenalListBox = new System.Windows.Forms.ListBox();
@@ -82,7 +79,6 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.editorList = new System.Windows.Forms.ListBox();
-            this.arsenalDropdown = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -98,12 +94,12 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.button1.ForeColor = System.Drawing.Color.Orange;
             this.button1.Location = new System.Drawing.Point(6, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Attach";
+            this.button1.Text = "Load Profile";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -135,20 +131,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Orange;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 15);
+            this.label1.Size = new System.Drawing.Size(115, 15);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Attach the process";
+            this.label1.Text = "1. Load Profile Data";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
+            this.label2.Size = new System.Drawing.Size(88, 15);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Not Attached Yet";
+            this.label2.Text = "Not Loaded Yet";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -239,42 +237,63 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.arsenalDropdown);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 95);
+            this.groupBox2.Size = new System.Drawing.Size(307, 141);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Setup";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(6, 94);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(156, 15);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Change Arsenal Slot to Edit";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label18.Location = new System.Drawing.Point(123, 41);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(135, 15);
+            this.label18.Size = new System.Drawing.Size(126, 15);
             this.label18.TabIndex = 6;
             this.label18.Text = "Open your Profile first!";
+            // 
+            // arsenalDropdown
+            // 
+            this.arsenalDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.arsenalDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.arsenalDropdown.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.arsenalDropdown.FormattingEnabled = true;
+            this.arsenalDropdown.Location = new System.Drawing.Point(6, 112);
+            this.arsenalDropdown.MaxDropDownItems = 16;
+            this.arsenalDropdown.Name = "arsenalDropdown";
+            this.arsenalDropdown.Size = new System.Drawing.Size(295, 23);
+            this.arsenalDropdown.TabIndex = 31;
+            this.arsenalDropdown.SelectedIndexChanged += new System.EventHandler(this.arsenalDropdown_SelectedIndexChanged);
             // 
             // infoBox
             // 
             this.infoBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.infoBox.Controls.Add(this.label17);
             this.infoBox.Controls.Add(this.label16);
-            this.infoBox.Controls.Add(this.label15);
-            this.infoBox.Controls.Add(this.label14);
-            this.infoBox.Controls.Add(this.label13);
-            this.infoBox.Controls.Add(this.label12);
             this.infoBox.Enabled = false;
             this.infoBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.infoBox.Location = new System.Drawing.Point(12, 278);
+            this.infoBox.Location = new System.Drawing.Point(12, 324);
             this.infoBox.Name = "infoBox";
-            this.infoBox.Size = new System.Drawing.Size(307, 148);
+            this.infoBox.Size = new System.Drawing.Size(307, 102);
             this.infoBox.TabIndex = 16;
             this.infoBox.TabStop = false;
             this.infoBox.Text = "Info";
@@ -283,7 +302,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label17.Location = new System.Drawing.Point(3, 111);
+            this.label17.Location = new System.Drawing.Point(6, 63);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(203, 30);
             this.label17.TabIndex = 10;
@@ -294,57 +313,13 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label16.Location = new System.Drawing.Point(6, 64);
+            this.label16.Location = new System.Drawing.Point(6, 19);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(259, 30);
             this.label16.TabIndex = 6;
             this.label16.Text = "Check the folder \"Arsenals\" to manually backup\r\nyour Arsenals in File form\r\n";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label15.Location = new System.Drawing.Point(86, 36);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(151, 15);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Backups Arsenal To The List";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label14.Location = new System.Drawing.Point(6, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 15);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "Green Buttons";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label13.Location = new System.Drawing.Point(78, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(186, 15);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Saves Arsenals To Your Game Save";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label12.Location = new System.Drawing.Point(6, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 15);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Blue Buttons";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
@@ -358,7 +333,7 @@
             this.groupBox4.Controls.Add(this.deckListBox);
             this.groupBox4.Enabled = false;
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.groupBox4.Location = new System.Drawing.Point(325, 52);
+            this.groupBox4.Location = new System.Drawing.Point(318, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(447, 239);
             this.groupBox4.TabIndex = 17;
@@ -463,60 +438,46 @@
             this.deckListBox.TabIndex = 1;
             this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
             // 
-            // loadDeckNameButton
-            // 
-            this.loadDeckNameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.loadDeckNameButton.Enabled = false;
-            this.loadDeckNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadDeckNameButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.loadDeckNameButton.ForeColor = System.Drawing.Color.MediumPurple;
-            this.loadDeckNameButton.Location = new System.Drawing.Point(325, 23);
-            this.loadDeckNameButton.Name = "loadDeckNameButton";
-            this.loadDeckNameButton.Size = new System.Drawing.Size(327, 23);
-            this.loadDeckNameButton.TabIndex = 16;
-            this.loadDeckNameButton.Text = "Load Arsenal";
-            this.loadDeckNameButton.UseVisualStyleBackColor = false;
-            this.loadDeckNameButton.Click += new System.EventHandler(this.loadArsenalNameButton_Click);
-            // 
             // arsenalListBox
             // 
             this.arsenalListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.arsenalListBox.Controls.Add(this.button2);
             this.arsenalListBox.Controls.Add(this.partnerLock);
-            this.arsenalListBox.Controls.Add(this.button9);
             this.arsenalListBox.Controls.Add(this.button6);
             this.arsenalListBox.Controls.Add(this.button5);
             this.arsenalListBox.Controls.Add(this.savedArsenalListBox);
             this.arsenalListBox.Enabled = false;
             this.arsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.arsenalListBox.Location = new System.Drawing.Point(778, 12);
+            this.arsenalListBox.Location = new System.Drawing.Point(764, 12);
             this.arsenalListBox.Name = "arsenalListBox";
             this.arsenalListBox.Size = new System.Drawing.Size(433, 562);
-            this.arsenalListBox.TabIndex = 20;
+            this.arsenalListBox.TabIndex = 1;
             this.arsenalListBox.TabStop = false;
             this.arsenalListBox.Text = "Arsenal List";
             this.arsenalListBox.Enter += new System.EventHandler(this.arsenalListBox_Enter);
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.button2.Location = new System.Drawing.Point(240, 499);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 23);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Open Arsenal Folder";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // partnerLock
             // 
             this.partnerLock.AutoSize = true;
-            this.partnerLock.Location = new System.Drawing.Point(240, 81);
+            this.partnerLock.Location = new System.Drawing.Point(240, 51);
             this.partnerLock.Name = "partnerLock";
             this.partnerLock.Size = new System.Drawing.Size(146, 19);
             this.partnerLock.TabIndex = 25;
             this.partnerLock.Text = "Enable Partner LockOn";
             this.partnerLock.UseVisualStyleBackColor = true;
             this.partnerLock.CheckedChanged += new System.EventHandler(this.partnerLock_CheckedChanged);
-            // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.SkyBlue;
-            this.button9.Location = new System.Drawing.Point(240, 52);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(187, 23);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "Quick Write Arsenal To Save 1";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -575,9 +536,9 @@
             this.groupBox6.Enabled = false;
             this.groupBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.groupBox6.Location = new System.Drawing.Point(325, 297);
+            this.groupBox6.Location = new System.Drawing.Point(318, 247);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(447, 277);
+            this.groupBox6.Size = new System.Drawing.Size(447, 327);
             this.groupBox6.TabIndex = 27;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Arsenal Editor";
@@ -628,6 +589,7 @@
             this.labelSkillCost.TabIndex = 39;
             this.labelSkillCost.Text = "00";
             this.labelSkillCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelSkillCost.Click += new System.EventHandler(this.labelSkillCost_Click);
             // 
             // labelSkilLRange
             // 
@@ -765,21 +727,9 @@
             this.editorList.ItemHeight = 15;
             this.editorList.Location = new System.Drawing.Point(8, 22);
             this.editorList.Name = "editorList";
-            this.editorList.Size = new System.Drawing.Size(204, 244);
+            this.editorList.Size = new System.Drawing.Size(204, 289);
             this.editorList.TabIndex = 27;
             this.editorList.SelectedIndexChanged += new System.EventHandler(this.editorList_SelectedIndexChanged);
-            // 
-            // arsenalDropdown
-            // 
-            this.arsenalDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.arsenalDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.arsenalDropdown.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.arsenalDropdown.FormattingEnabled = true;
-            this.arsenalDropdown.Location = new System.Drawing.Point(658, 23);
-            this.arsenalDropdown.MaxDropDownItems = 16;
-            this.arsenalDropdown.Name = "arsenalDropdown";
-            this.arsenalDropdown.Size = new System.Drawing.Size(114, 23);
-            this.arsenalDropdown.TabIndex = 31;
             // 
             // label7
             // 
@@ -799,7 +749,7 @@
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.groupBox3.Location = new System.Drawing.Point(12, 113);
+            this.groupBox3.Location = new System.Drawing.Point(12, 159);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(307, 159);
             this.groupBox3.TabIndex = 17;
@@ -811,12 +761,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1227, 590);
+            this.ClientSize = new System.Drawing.Size(1210, 587);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.arsenalDropdown);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.arsenalListBox);
-            this.Controls.Add(this.loadDeckNameButton);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.infoBox);
             this.Controls.Add(this.groupBox2);
@@ -826,7 +774,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Nuion\'s PD Helper Extended V2.0";
+            this.Text = "Nuion\'s PD Helper Extended V2.3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -866,19 +814,13 @@
         private GroupBox infoBox;
         private GroupBox groupBox4;
         private GroupBox arsenalListBox;
-        private Button loadDeckNameButton;
         private ListBox deckListBox;
-        private Button button9;
         private Button button6;
         private Button button5;
         private ListBox savedArsenalListBox;
         private GroupBox groupBox6;
         private Button button13;
         private ListBox editorList;
-        private Label label12;
-        private Label label15;
-        private Label label14;
-        private Label label13;
         private Button button12;
         private ComboBox arsenalDropdown;
         private TextBox textBox1;
@@ -890,7 +832,6 @@
         private TextBox arsenalNameBox;
         private Label label11;
         private Label label16;
-        private Label label18;
         private Label label17;
         private Label label7;
         private GroupBox groupBox3;
@@ -906,5 +847,8 @@
         private Label labelSkillSchool;
         private Label labelSkillID;
         private RichTextBox labelSkillDescription;
+        private Button button2;
+        private Label label12;
+        private Label label18;
     }
 }

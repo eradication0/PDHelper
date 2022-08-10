@@ -1,0 +1,2 @@
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\PD Helper.pdb
+C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\PD Helper.exe
