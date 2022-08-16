@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Memory;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 /* ERROR CODES
  * ERROR01: You didn't select a skill in your Arsenal.
@@ -21,9 +22,9 @@ using Newtonsoft.Json;
  * ERROR05: This Arsenal has skills from too many schools. You are limited to: X schools
  * ERROR06: The loaded Arsenal loaded is not set to 1,2 or 3 Schools.
  * ERROR07: The Profile has no Arsenals, please create at least one in-game Arsenal to be able to load/write/edit them.
- * 
- * 
- * 
+ * ERROR08: The arsenal name contains banned characters (\ / : * ? "" < > |)
+ * ERROR09: A Skill from your loaded arsenal does not exist in the game and could not be loaded. The arsenal has been tampered with or was corrupted. Please try loading another arsenal.
+ * ERROR10: The arsenal does not contain a valid amount of cards. The arsenal has been tampered with or is corrupted. Please try loading another arsenal.
  * 
  * 
  * 
@@ -218,7 +219,17 @@ namespace PD_Helper
 
         private void arsenalNameBox_TextChanged(object sender, EventArgs e)
         {
-            loadedDeckName = arsenalNameBox.Text;
+            var textToWrite = arsenalNameBox.Text;
+            var regex = new Regex(@"[\\\/\:\*\?\""\<\>\|]");
+            if (!regex.IsMatch(textToWrite))
+            { 
+                loadedDeckName = arsenalNameBox.Text;
+            } else
+            {
+                arsenalNameBox.Text = arsenalNameBox.Text.Remove(arsenalNameBox.Text.Length - 1, 1);
+                arsenalNameBox.SelectionStart = arsenalNameBox.TextLength;
+            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -249,31 +260,56 @@ namespace PD_Helper
         {
             if (savedArsenalListBox.SelectedIndex != -1)
             {
-                string path = @"Arsenals\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
-                string file = File.ReadAllText(path);
-                string[] deckStrings = file.Split(',');
-                //manual write schools
-                
-                string loadSchoolAmount = deckStrings[30].Remove(deckStrings[30].Length - 3);
-                if (loadSchoolAmount == "01" || loadSchoolAmount == "02" || loadSchoolAmount == "03")
+                var regex = new Regex(@"[\\\/\:\*\?\""\<\>\|]");
+                if (regex.IsMatch(savedArsenalListBox.SelectedItem.ToString()))
                 {
-                    schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
-                    loadedDeck[30] = deckStrings[30];
-                    deckListBox.Items.Clear();
-                    for (int i = 0; i < 30; i++)
-                    {
-                        loadedDeck[i] = deckStrings[i];
-                        deckListBox.Items.Add(cardDef[deckStrings[i]].NAME);
-                    }
-
-
-                    //write name
-                    arsenalNameBox.Text = savedArsenalListBox.SelectedItem.ToString();
+                    MessageBox.Show(@"ERROR08: The arsenal name contains banned characters (\ / : * ? \ < > |)");
                 }
                 else
                 {
-                    MessageBox.Show("ERROR06: The loaded Arsenal loaded is not set to 1,2 or 3 Schools.");
+                    string path = @"Arsenals\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
+                    string file = File.ReadAllText(path);
+                    string[] deckStrings = file.Split(',');
+                    if (deckStrings.Length < 30)
+                    {
+                        MessageBox.Show(@"ERROR10: The arsenal does not contain a valid amount of cards. The arsenal has been tampered with or is corrupted. Please try loading another arsenal.");
+                    } else
+                    {
+                        //manual write schools
+
+                        string loadSchoolAmount = deckStrings[30].Remove(deckStrings[30].Length - 3);
+                        if (loadSchoolAmount == "01" || loadSchoolAmount == "02" || loadSchoolAmount == "03")
+                        {
+                            schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
+                            loadedDeck[30] = deckStrings[30];
+                            deckListBox.Items.Clear();
+                            for (int i = 0; i < 30; i++)
+                            {
+                                if (!cardDef.ContainsKey(deckStrings[i]))
+                                {
+                                    MessageBox.Show("ERROR09: A Skill from your loaded arsenal does not exist in the game and could not be loaded. The arsenal has been tampered with or was corrupted. Please try loading another arsenal.");
+                                    break;
+                                }
+                                else
+                                {
+                                    loadedDeck[i] = deckStrings[i];
+                                    deckListBox.Items.Add(cardDef[deckStrings[i]].NAME);
+                                }
+
+                            }
+
+
+                            //write name
+                            arsenalNameBox.Text = savedArsenalListBox.SelectedItem.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR06: The loaded Arsenal loaded is not set to 1,2 or 3 Schools.");
+                        }
+                    }
+                    
                 }
+                
 
             }
             else { MessageBox.Show("ERROR04: You didn't select an Arsenal in the Arsenal List."); }
@@ -440,7 +476,7 @@ namespace PD_Helper
             {
                 //writing the name
                 byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
-                Array.Resize(ref deckNameToWrite, 16);
+                Array.Resize(ref deckNameToWrite, 15);
                 string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
                 m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
 
@@ -457,7 +493,7 @@ namespace PD_Helper
                     System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(0, 3), 16);
                     o += 2;
                 }
-                arsenalDropdown.SelectedItem = deckNameToWrite;
+                arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text;
                 m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
             }
         }
@@ -469,6 +505,76 @@ namespace PD_Helper
         private void button2_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("explorer.exe", @"Arsenals\");
+        }
+
+
+        private void arsenalDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (m.ReadByte("base+003ED688,9") == 1)
+            {
+                partnerLock.Checked = true;
+            }
+
+            // Load up Arsenal
+            groupBox4.Enabled = true;
+            groupBox6.Enabled = true;
+            arsenalListBox.Enabled = true;
+
+            //System.Diagnostics.Debug.WriteLine(o1);
+
+            // List of fist cards per deck
+            string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
+            // Load all cards
+            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
+            string loadDeckHex = BitConverter.ToString(loadDeck);
+            //add cards to list
+            loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
+            deckListBox.Items.Clear();
+            int o = 0;
+
+            for (int i = 0; i < 30; i++)
+            {
+                Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
+                String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
+                deckListBox.Items.Add(cardDef[currentHexString].NAME);
+                loadedDeck[i] = currentHexString;
+                o += 2;
+            }
+            //manual write school amount
+            Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
+            String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
+            loadedDeck[30] = currentHexStringFix;
+            string loadSchoolAmount = currentHexStringFix.Remove(currentHexStringFix.Length - 3);
+            schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
+            arsenalNameBox.Text = arsenalDropdown.SelectedItem.ToString();
+            loadedDeckName = arsenalDropdown.SelectedItem.ToString();
+
+            //System.Diagnostics.Debug.WriteLine(loadSchoolAmount);
+
+            //load arsenal editor
+            if (editorList.Items.Count == 0)
+            {
+                foreach (var item in cardDef)
+                {
+                    editorList.Items.Add(item.Value.NAME);
+                    allSkills.Items.Add(item.Value.NAME);
+                }
+
+            }
+
+            //add each arsenal file to the list
+            savedArsenalListBox.Items.Clear();
+            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
+
+            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
+            string str = "";
+
+            foreach (FileInfo file in Files)
+            {
+                string currentDeck = file.Name;
+                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
+                savedArsenalListBox.Items.Add(currentDeck);
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -555,74 +661,6 @@ namespace PD_Helper
 
         }
 
-        private void arsenalDropdown_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (m.ReadByte("base+003ED688,9") == 1)
-            {
-                partnerLock.Checked = true;
-            }
-
-            // Load up Arsenal
-            groupBox4.Enabled = true;
-            groupBox6.Enabled = true;
-            arsenalListBox.Enabled = true;
-
-            //System.Diagnostics.Debug.WriteLine(o1);
-
-            // List of fist cards per deck
-            string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
-            // Load all cards
-            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
-            string loadDeckHex = BitConverter.ToString(loadDeck);
-            //add cards to list
-            loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
-            deckListBox.Items.Clear();
-            int o = 0;
-
-            for (int i = 0; i < 30; i++)
-            {
-                Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
-                String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
-                deckListBox.Items.Add(cardDef[currentHexString].NAME);
-                loadedDeck[i] = currentHexString;
-                o += 2;
-            }
-            //manual write school amount
-            Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
-            String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
-            loadedDeck[30] = currentHexStringFix;
-            string loadSchoolAmount = currentHexStringFix.Remove(currentHexStringFix.Length - 3);
-            schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
-            arsenalNameBox.Text = arsenalDropdown.SelectedItem.ToString();
-            loadedDeckName = arsenalDropdown.SelectedItem.ToString();
-
-            //System.Diagnostics.Debug.WriteLine(loadSchoolAmount);
-
-            //load arsenal editor
-            if (editorList.Items.Count == 0)
-            {
-                foreach (var item in cardDef)
-                {
-                    editorList.Items.Add(item.Value.NAME);
-                    allSkills.Items.Add(item.Value.NAME);
-                }
-
-            }
-
-            //add each arsenal file to the list
-            savedArsenalListBox.Items.Clear();
-            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
-
-            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
-            string str = "";
-
-            foreach (FileInfo file in Files)
-            {
-                string currentDeck = file.Name;
-                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
-                savedArsenalListBox.Items.Add(currentDeck);
-            }
-        }
 
         private void labelSkillCost_Click(object sender, EventArgs e)
         {

@@ -5,19 +5,27 @@
       "Memory.dll.x64/1.2.24": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Memory.dll": {}
+          "lib/netstandard2.0/Memory.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Memory.dll": {}
+          "lib/netstandard2.0/Memory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -79,18 +87,18 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
+      "projectUniqueName": "E:\\PDHelper\\PDHelper\\PD Helper\\PD Helper.csproj",
       "projectName": "PD Helper",
-      "projectPath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\PD Helper.csproj",
+      "projectPath": "E:\\PDHelper\\PDHelper\\PD Helper\\PD Helper.csproj",
       "packagesPath": "C:\\Users\\Zer0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zer0\\source\\PD Helper\\PD Helper\\PD Helper\\obj\\",
+      "outputPath": "E:\\PDHelper\\PDHelper\\PD Helper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Zer0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -127,7 +135,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -139,7 +148,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
