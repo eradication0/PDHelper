@@ -1,0 +1,6 @@
+E:\PDHelper\PDHelper\PD Helper\bin\publish\D3DCompiler_47_cor3.dll
+E:\PDHelper\PDHelper\PD Helper\bin\publish\PenImc_cor3.dll
+E:\PDHelper\PDHelper\PD Helper\bin\publish\PresentationNative_cor3.dll
+E:\PDHelper\PDHelper\PD Helper\bin\publish\vcruntime140_cor3.dll
+E:\PDHelper\PDHelper\PD Helper\bin\publish\wpfgfx_cor3.dll
+E:\PDHelper\PDHelper\PD Helper\bin\publish\PD Helper.exe

@@ -81,6 +81,7 @@
             this.editorList = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.infoBox.SuspendLayout();
@@ -283,6 +284,7 @@
             this.arsenalDropdown.Size = new System.Drawing.Size(295, 23);
             this.arsenalDropdown.TabIndex = 31;
             this.arsenalDropdown.SelectedIndexChanged += new System.EventHandler(this.arsenalDropdown_SelectedIndexChanged);
+            this.arsenalDropdown.SelectionChangeCommitted += new System.EventHandler(this.arsenalDropdown_SelectionChangeCommitted);
             // 
             // infoBox
             // 
@@ -441,6 +443,7 @@
             // arsenalListBox
             // 
             this.arsenalListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.arsenalListBox.Controls.Add(this.button7);
             this.arsenalListBox.Controls.Add(this.button2);
             this.arsenalListBox.Controls.Add(this.partnerLock);
             this.arsenalListBox.Controls.Add(this.button6);
@@ -756,6 +759,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Disclaimer";
             // 
+            // button7
+            // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.button7.Location = new System.Drawing.Point(240, 470);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(187, 23);
+            this.button7.TabIndex = 27;
+            this.button7.Text = "Refresh Arsenal List";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -774,7 +789,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Nuion\'s PD Helper Extended V2.4";
+            this.Text = "Nuion\'s PD Helper Extended V2.5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -850,5 +865,6 @@
         private Button button2;
         private Label label12;
         private Label label18;
+        private Button button7;
     }
 }

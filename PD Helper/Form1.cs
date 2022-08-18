@@ -37,8 +37,9 @@ namespace PD_Helper
     {
         public Form1()
         {
+            
             InitializeComponent();
-
+            //deckListBox.Scale(1);
         }
 
         //Class for PDCard
@@ -68,7 +69,7 @@ namespace PD_Helper
         }
 
         // Load card definitions
-        //PDCard cardDef = JsonConvert.DeserializeObject<PDCard>(File.ReadAllText("SkillDB.json"));
+        //Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
         Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
         string[] loadedDeck = {"FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
         string loadedDeckName = "";
@@ -101,7 +102,7 @@ namespace PD_Helper
                     {
                         string setup = "base+003ED6B8," + offsets[o];
                         string currentName = m.ReadString(setup, "", 16, true);
-                        System.Diagnostics.Debug.WriteLine(currentName);
+                        //System.Diagnostics.Debug.WriteLine(currentName);
                         if (currentName.Length > 0)
                         {
                             arsenalDropdown.Items.Add(m.ReadString(setup, "", 16, true));
@@ -493,8 +494,9 @@ namespace PD_Helper
                     System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(0, 3), 16);
                     o += 2;
                 }
-                arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text;
+                
                 m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
+                arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text.ToString();
             }
         }
 
@@ -575,6 +577,7 @@ namespace PD_Helper
                 currentDeck = currentDeck.Remove(currentDeck.Length - 8);
                 savedArsenalListBox.Items.Add(currentDeck);
             }
+            arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -665,6 +668,29 @@ namespace PD_Helper
         private void labelSkillCost_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void arsenalDropdown_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //add each arsenal file to the list
+            savedArsenalListBox.Items.Clear();
+            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
+
+            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
+            string str = "";
+
+            foreach (FileInfo file in Files)
+            {
+                string currentDeck = file.Name;
+                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
+                savedArsenalListBox.Items.Add(currentDeck);
+            }
+            arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
         }
     }
 }

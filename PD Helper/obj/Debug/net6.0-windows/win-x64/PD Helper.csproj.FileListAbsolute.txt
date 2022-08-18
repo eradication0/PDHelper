@@ -517,3 +517,22 @@ C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\win-
 C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.pdb
 C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.genruntimeconfig.cache
 C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\obj\Debug\net6.0-windows\win-x64\ref\PD Helper.dll
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\win-x64\PD Helper.exe
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\win-x64\PD Helper.deps.json
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\win-x64\PD Helper.runtimeconfig.json
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\win-x64\PD Helper.dll
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.csproj.AssemblyReference.cache
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD_Helper.Form1.resources
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD_Helper.Properties.Resources.resources
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.csproj.GenerateResource.cache
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.GeneratedMSBuildEditorConfig.editorconfig
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.AssemblyInfoInputs.cache
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.AssemblyInfo.cs
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.csproj.CoreCompileInputs.cache
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.csproj.Fody.CopyLocal.cache
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.dll
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\refint\PD Helper.dll
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\PD Helper.genruntimeconfig.cache
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\win-x64\ref\PD Helper.dll
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\win-x64\PD Helper.dll.config
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\win-x64\SkillDB.json

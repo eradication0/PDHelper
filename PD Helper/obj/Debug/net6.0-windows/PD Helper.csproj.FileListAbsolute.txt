@@ -23,9 +23,6 @@ E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\PD Helper.exe
 E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\PD Helper.deps.json
 E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\PD Helper.runtimeconfig.json
 E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\PD Helper.dll
-E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\PD Helper.pdb
-E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\Memory.dll
-E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.csproj.AssemblyReference.cache
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD_Helper.Form1.resources
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD_Helper.Properties.Resources.resources
@@ -34,9 +31,10 @@ E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.GeneratedMSBui
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.AssemblyInfoInputs.cache
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.AssemblyInfo.cs
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.csproj.CoreCompileInputs.cache
-E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.csproj.CopyComplete
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.dll
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\refint\PD Helper.dll
-E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.pdb
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.genruntimeconfig.cache
 E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\ref\PD Helper.dll
+E:\PDHelper\PDHelper\PD Helper\obj\Debug\net6.0-windows\PD Helper.csproj.Fody.CopyLocal.cache
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\PD Helper.dll.config
+E:\PDHelper\PDHelper\PD Helper\bin\Debug\net6.0-windows\SkillDB.json
