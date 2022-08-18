@@ -24,5 +24,5 @@ Basically im using a library called [memory.dll](https://github.com/erfg12/memor
 ## Made by Nuion
 check out [phatomdust.online](https://phantomdust.online/) for everything Phantom Dust related
   
-Thanks to the testing group helping to find bugs
+Thanks to the testing group helping to find bugs  
 Fatnerd, Xanxus, Inflim, MysticNinja, Show, SnowRyze, Toaf, Treat, TripL, Algol, Bregan and Esper28
