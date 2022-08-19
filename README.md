@@ -14,22 +14,22 @@ The app will not connect to anything that is not Phantom Dust, so no random edit
 [Download .NET (6.0.5)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.5-windows-x64-installer)
   
 # Arsenal Features
-**Save Arsenals** directly into the game  
-**Backup Arsenals** as a file to store infinite Arsenals that can be loaded at any time  
-**Share Arsenals** via just sending the file, no more recreating Arsenal via screenshot  
-**Edit Arsenals** between games to optimize Arsenals on the fly  
-**Change Arsenal Case Type** directly, no more need to delete and buy a new case  
-**Reorder Arsenals** so you can keep it nice and tidy  
-**Rename Arsenal**s directly, allowing more special characters than in-game  
+- **Save Arsenals** directly into the game  
+- **Backup Arsenals** as a file to store infinite Arsenals that can be loaded at any time  
+- **Share Arsenals** via just sending the file, no more recreating Arsenal via screenshot  
+- **Edit Arsenals** between games to optimize Arsenals on the fly  
+- **Change Arsenal Case Type** directly, no more need to delete and buy a new case  
+- **Reorder Arsenals** so you can keep it nice and tidy  
+- **Rename Arsenal**s directly, allowing more special characters than in-game  
   
 # Other Features  
-**Max out credits and skills** to make the game a even playing field for everyone  
-**Toggle Team Lock-On** even during a match to make support decks more viable  
-**Anti Cheat Mechanisms** are in place to prevent creating normally impossible arsenals    
-**Bugfixes** have been done over the last 2 weeks to ensure the app runs stable and does not break anything, thanks to the testing team for that  
+- **Max out credits and skills** to make the game a even playing field for everyone  
+- **Toggle Team Lock-On** even during a match to make support decks more viable  
+- **Anti Cheat Mechanisms** are in place to prevent creating normally impossible arsenals    
+- **Bugfixes** have been done over the last 2 weeks to ensure the app runs stable and does not break anything, thanks to the testing team for that  
   
 # False Positives
-Since the app writes directly into the Phantom Dust process memory, some anti-viruses detect it as unwanted/malicious
+Since the app writes directly into the Phantom Dust process memory, some anti-virus-software detect it as a false positive. The app is open source and many Veterans/ActivePlayers have been using PDHelper for weeks now!
 [VirusTotal Scan](https://www.virustotal.com/gui/file/d6ce7f94256864e6edac26b0356d5b0b8156c2ce42c69c8694eaf7dda2ec6db5?nocache=1)
 
 # How it works 
