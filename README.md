@@ -3,6 +3,13 @@ A simple app to edit the memory of Phantom Dust to give max out credits/skills a
 The app will not connect to anything that is not Phantom Dust, so no random edits on any other process can occur.  
 [Download V2.5 (latest)](https://github.com/eradication0/PDHelper/releases/download/Release/PDHelper_Extended_V2.5.zip)
   
+# Disclaimer
+- Use this software on your own risk!  
+- PDHelper is not perfect! (yet)  
+- I recommend backing up all your arsenals first!  
+- Worst case scenario you will lose your profile and everything associated with it like hours played, creation date and Singleplayer Progress  
+- If you value that, use this software on a secondary profile  
+  
 # How To Use  
 [Youtube Tutorial (6min)](https://www.youtube.com/watch?v=uSrHAq2tW78)
 1. Load Profile to load data in
