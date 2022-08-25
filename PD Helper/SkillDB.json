@@ -4235,7 +4235,7 @@
     "TYPE": "Erase",
     "HEX": "5F 01"
   },
-  "65 01": {
+  "55 01": {
     "NAME": "Still Moment",
     "ID": 352,
     "SCHOOL": "Optical",

@@ -92,7 +92,6 @@ namespace PD_Helper
                     ProcOpen = m.OpenProcess(processCollection[i].Id, out string error);
                     label2.ForeColor = Color.Green;
                     groupBox1.Enabled = true;
-                    infoBox.Enabled = true;
 
                     //Read all names of Arsenals
                     string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
@@ -691,6 +690,11 @@ namespace PD_Helper
                 savedArsenalListBox.Items.Add(currentDeck);
             }
             arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
+        }
+
+        private void label12_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
