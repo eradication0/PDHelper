@@ -47,7 +47,7 @@
     "TYPE": "Attack",
     "HEX": "03 00"
   },
-  "04 00": {
+  "05 00": {
     "NAME": "Psycho Blade",
     "ID": "004",
     "SCHOOL": "Psycho",
@@ -57,9 +57,9 @@
     "RANGE": "short",
     "DESCRIPTION": "",
     "TYPE": "Attack",
-    "HEX": "04 00"
+    "HEX": "05 00"
   },
-  "05 00": {
+  "04 00": {
     "NAME": "Excalibur",
     "ID": "005",
     "SCHOOL": "Psycho",
@@ -69,7 +69,7 @@
     "RANGE": "short",
     "DESCRIPTION": "Requires: 7 or fewer skills left in arsenal",
     "TYPE": "Attack",
-    "HEX": "05 00"
+    "HEX": "04 00"
   },
   "23 00": {
     "NAME": "Debris Bullet",
@@ -4175,6 +4175,18 @@
     "TYPE": "Attack",
     "HEX": "56 01"
   },
+  "5D 01": {
+    "NAME": "Giga Ruin",
+    "ID": 348,
+    "SCHOOL": "Optical",
+    "DAMAGE": 7,
+    "COST": 4,
+    "USAGE": "∞",
+    "RANGE": "long",
+    "DESCRIPTION": "Penetrates obstacles.",
+    "TYPE": "Attack",
+    "HEX": "56 01"
+  },
   "6D 01": {
     "NAME": "Poison Blur",
     "ID": 361,
@@ -4222,6 +4234,18 @@
     "DESCRIPTION": "[Parabola] Reduces target's Level by 1.",
     "TYPE": "Erase",
     "HEX": "5F 01"
+  },
+  "65 01": {
+    "NAME": "Still Moment",
+    "ID": 352,
+    "SCHOOL": "Optical",
+    "DAMAGE": 6,
+    "COST": "-",
+    "USAGE": 1,
+    "RANGE": "all",
+    "DESCRIPTION": "For 5 sec, everyone is immobilized. Penalty: 2 Levels.",
+    "TYPE": "Status",
+    "HEX": "65 01"
   },
   "65 01": {
     "NAME": "Young White Dragon",
