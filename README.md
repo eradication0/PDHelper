@@ -1,31 +1,51 @@
 # PDHelper  
-A simple app to edit the memory of Phantom Dust to give max out spells and credits.  
+A simple app to edit the memory of Phantom Dust to give max out credits/skills aswell as load/edit/backup any arsenal you want.  
 The app will not connect to anything that is not Phantom Dust, so no random edits on any other process can occur.  
-Download: https://github.com/eradication0/PDHelper/releases/download/Release/PD-Helper-v1.1.exe  
+[Download V2.5 (latest)](https://github.com/eradication0/PDHelper/releases/download/Release/PDHelper_Extended_V2.5.zip)
+  
+# Disclaimer
+- Use this software on your own risk!  
+- PDHelper is not perfect! (yet)  
+- I recommend backing up all your arsenals first!  
+- Worst case scenario you will lose your profile and everything associated with it like hours played, creation date and Singleplayer Progress  
+- If you value that, use this software on a secondary profile  
   
 # How To Use  
-Everything is explained inside the application, still here is how it works
-1. Open the app while the game is running
-2. Click "Attach" to attach the Phantom Dust process
-3. Click either "Max Skills" and/or "Max Credits"
-4. (optional) if a graphical bug happens in the LAB tab, sell a single "Phantom Dust" skill in the shop to fix it
+[Youtube Tutorial (6min)](https://www.youtube.com/watch?v=uSrHAq2tW78)
+1. Load Profile to load data in
+2. Use the blue button to save it to Phantom Dust
+3. Use the green button to back it up to the PDHelper
  
-## Requirements
-### .NET 6.0.5 x64
-Download from [Microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.5-windows-x64-installer)
+# Requirements
+.NET 6.0.5 x64
+[Download .NET (6.0.5)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.5-windows-x64-installer)
+  
+# Arsenal Features
+- **Save Arsenals** directly into the game  
+- **Backup Arsenals** as a file to store infinite Arsenals that can be loaded at any time  
+- **Share Arsenals** via just sending the file, no more recreating Arsenal via screenshot  
+- **Edit Arsenals** between games to optimize Arsenals on the fly  
+- **Change Arsenal Case Type** directly, no more need to delete and buy a new case  
+- **Reorder Arsenals** so you can keep it nice and tidy  
+- **Rename Arsenal**s directly, allowing more special characters than in-game  
+  
+# Other Features  
+- **Max out credits and skills** to make the game a even playing field for everyone  
+- **Toggle Team Lock-On** even during a match to make support decks more viable  
+- **Anti Cheat Mechanisms** are in place to prevent creating normally impossible arsenals    
+- **Bugfixes** have been done over the last 2 weeks to ensure the app runs stable and does not break anything, thanks to the testing team for that  
+  
+# False Positives
+Since the app writes directly into the Phantom Dust process memory, some anti-virus-software detect it as a false positive. The app is open source and many Veterans/ActivePlayers have been using PDHelper for weeks now!
+[VirusTotal Scan](https://www.virustotal.com/gui/file/d6ce7f94256864e6edac26b0356d5b0b8156c2ce42c69c8694eaf7dda2ec6db5?nocache=1)
 
 # How it works 
 Basically im using a library called [memory.dll](https://github.com/erfg12/memory.dll) it allows to read, search and write memory directly into applications. The rest of all the files/code just comes with VisualStudio and their .net library stuff. 
-
-## Max Credits
-Its simple, I just edit a single byte that represents the highest number of the credit value.  
-Memory Pointer: ``base+003ED640`` with an offset of ``13B``  
-## Max Skills
-Same thing, just this time I loop through a list of 374 bytes to set the inventory to 99 on each one.  
-Memory Pointer: ``base+003ED6B8`` with an offset of ``644`` to ``7BA``  
   
 # Credits
 ## Made by Nuion
-check out [phatomdust.online](https://phantomdust.online/) for everything Phantom Dust related  
+check out [phatomdust.online](https://phantomdust.online/) for everything Phantom Dust related
   
-thanks to guild "Octo Dazzle" for helping out
+Thanks to the testing group helping to find bugs  
+Fatnerd, Xanxus, Inflim, MysticNinja, Show, SnowRyze, Toaf, Treat, TripL, Algol, Bregan and Esper28
+ 
