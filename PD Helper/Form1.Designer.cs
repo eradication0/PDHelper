@@ -403,7 +403,7 @@
             // partnerLock
             // 
             this.partnerLock.AutoSize = true;
-            this.partnerLock.Location = new System.Drawing.Point(240, 51);
+            this.partnerLock.Location = new System.Drawing.Point(240, 58);
             this.partnerLock.Name = "partnerLock";
             this.partnerLock.Size = new System.Drawing.Size(146, 19);
             this.partnerLock.TabIndex = 25;
@@ -427,7 +427,7 @@
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.button5.Location = new System.Drawing.Point(240, 22);
+            this.button5.Location = new System.Drawing.Point(240, 29);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(187, 23);
             this.button5.TabIndex = 23;
@@ -441,9 +441,9 @@
             this.savedArsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.savedArsenalListBox.FormattingEnabled = true;
             this.savedArsenalListBox.ItemHeight = 15;
-            this.savedArsenalListBox.Location = new System.Drawing.Point(6, 22);
+            this.savedArsenalListBox.Location = new System.Drawing.Point(6, 29);
             this.savedArsenalListBox.Name = "savedArsenalListBox";
-            this.savedArsenalListBox.Size = new System.Drawing.Size(228, 454);
+            this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
             this.savedArsenalListBox.TabIndex = 0;
             // 
             // groupBox6
