@@ -1,7 +1,0 @@
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\PD Helper.pdb
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\D3DCompiler_47_cor3.dll
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\PenImc_cor3.dll
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\PresentationNative_cor3.dll
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\vcruntime140_cor3.dll
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\wpfgfx_cor3.dll
-C:\Users\Zer0\source\PD Helper\PD Helper\PD Helper\bin\Release\net6.0-windows\publish\win-x64\V2\PD Helper.exe
