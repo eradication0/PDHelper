@@ -1,0 +1,6 @@
+# VS cache / settings
+.vs/
+
+# Compiler output, backslash is used to accomadate the space in the folder name
+PD\ Helper/bin
+PD\ Helper/obj
