@@ -51,6 +51,8 @@
             this.saveToPDbtn = new System.Windows.Forms.Button();
             this.deckListBox = new System.Windows.Forms.ListBox();
             this.arsenalListBox = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.partnerLock = new System.Windows.Forms.CheckBox();
@@ -74,6 +76,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.editorList = new System.Windows.Forms.ListBox();
+            this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -360,6 +363,8 @@
             // arsenalListBox
             // 
             this.arsenalListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.arsenalListBox.Controls.Add(this.label6);
+            this.arsenalListBox.Controls.Add(this.label1);
             this.arsenalListBox.Controls.Add(this.button7);
             this.arsenalListBox.Controls.Add(this.button2);
             this.arsenalListBox.Controls.Add(this.partnerLock);
@@ -375,6 +380,27 @@
             this.arsenalListBox.TabStop = false;
             this.arsenalListBox.Text = "Arsenal List";
             this.arsenalListBox.Enter += new System.EventHandler(this.arsenalListBox_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(240, 95);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 15);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Click Right Stick on Gamepad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(240, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Hotkey \"T\" on Keyboard OR";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button7
             // 
@@ -473,7 +499,7 @@
             this.groupBox6.Size = new System.Drawing.Size(447, 245);
             this.groupBox6.TabIndex = 27;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Arsenal Editor";
+            this.groupBox6.Text = "Quick Arsenal Editor";
             // 
             // labelSkillDescription
             // 
@@ -663,6 +689,10 @@
             this.editorList.TabIndex = 27;
             this.editorList.SelectedIndexChanged += new System.EventHandler(this.editorList_SelectedIndexChanged);
             // 
+            // GamepadWorker
+            // 
+            this.GamepadWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GamepadWorker_DoWork_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -680,7 +710,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.RightToLeftLayout = true;
-            this.Text = "Nuion\'s PD Helper Extended V2.6";
+            this.Text = "Nuion\'s PD Helper Extended V2.7 (HotkeyUpdate)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -745,5 +775,8 @@
         private Button button2;
         private Label label12;
         private Button button7;
+        private System.ComponentModel.BackgroundWorker GamepadWorker;
+        private Label label1;
+        private Label label6;
     }
 }

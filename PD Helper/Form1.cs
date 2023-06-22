@@ -13,7 +13,9 @@ using Memory;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
-
+using System.Runtime.InteropServices;
+//xbox input
+using SharpDX.XInput;
 /* ERROR CODES
  * ERROR01: You didn't select a skill in your Arsenal.
  * ERROR02: You didn't select a skill in the Arsenal Editor.
@@ -35,11 +37,19 @@ namespace PD_Helper
     //timer value 7FF7D096C8C0
     public partial class Form1 : Form
     {
+        // 2. Import the RegisterHotKey Method
+        [DllImport("user32.dll")]
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
         public Form1()
         {
             
             InitializeComponent();
-            //deckListBox.Scale(1);
+            int UniqueHotkeyId = 1;
+            int HotKeyCode = (int)Keys.T;
+            // Register "Control" hotkey
+            Boolean ControlKey = RegisterHotKey(
+                this.Handle, UniqueHotkeyId, 0x0000, HotKeyCode
+            );
         }
 
         //Class for PDCard
@@ -68,12 +78,13 @@ namespace PD_Helper
             public string HEX { get; set; }
         }
 
+        private Controller _controller;
+
         // Load card definitions
         //Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
         Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
         string[] loadedDeck = {"FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
         string loadedDeckName = "";
-
 
         bool ProcOpen = false;
         public Mem m = new Mem();
@@ -83,10 +94,17 @@ namespace PD_Helper
         {
             Process[] processCollection = Process.GetProcesses();
             arsenalDropdown.Items.Clear();
+
+            //start input worker
+            _controller = new Controller(UserIndex.One);
+            GamepadWorker.RunWorkerAsync();
+
             for (int i = 0; i < processCollection.Length; i++)
             {
                 if (processCollection[i].ProcessName == "PDUWP")
                 {
+
+
                     //Get Processes and check for Phantom Dust, attach and enable Arsenal Loading
                     label2.Text = "Found the process! ID: " + processCollection[i].Id.ToString();
                     ProcOpen = m.OpenProcess(processCollection[i].Id, out string error);
@@ -101,7 +119,6 @@ namespace PD_Helper
                     {
                         string setup = "base+003ED6B8," + offsets[o];
                         string currentName = m.ReadString(setup, "", 16, true);
-                        //System.Diagnostics.Debug.WriteLine(currentName);
                         if (currentName.Length > 0)
                         {
                             arsenalDropdown.Items.Add(m.ReadString(setup, "", 16, true));
@@ -120,7 +137,7 @@ namespace PD_Helper
                 } else if (i == processCollection.Length - 1)
                 {
                     label2.ForeColor = Color.Red;
-                    label2.Text = "Could not find Game. Re/Start Phantom Dust!";
+                    label2.Text = "No Game Found. Start Phantom Dust First!";
                 }
             }
         }
@@ -693,6 +710,43 @@ namespace PD_Helper
         }
 
         private void label12_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GamepadWorker_DoWork_1(object sender, DoWorkEventArgs e)
+        {
+            // previous state tracking
+            string previousState = "null";
+            while (_controller.IsConnected)
+            {
+                //making sure previous state is not same to prevent flicker
+                if (_controller.GetState().Gamepad.Buttons.ToString() == "RightThumb" & previousState != "RightThumb")
+                {
+                    partnerLock.Invoke((MethodInvoker)(() => partnerLock.Checked = !partnerLock.Checked));
+                }
+                previousState = _controller.GetState().Gamepad.Buttons.ToString();
+                //System.Diagnostics.Debug.WriteLine(_controller.GetState().Gamepad);
+            }
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            // Catch when a HotKey is pressed
+            if (m.Msg == 0x0312)
+            {
+                int id = m.WParam.ToInt32();
+
+                if (id == 1)
+                {
+                    partnerLock.Invoke((MethodInvoker)(() => partnerLock.Checked = !partnerLock.Checked));
+                }
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
