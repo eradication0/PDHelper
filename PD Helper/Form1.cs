@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,20 +18,20 @@ using System.Runtime.InteropServices;
 //xbox input
 using SharpDX.XInput;
 /* ERROR CODES
- * ERROR01: You didn't select a skill in your Arsenal.
- * ERROR02: You didn't select a skill in the Arsenal Editor.
- * ERROR03: You didn't select a skill in your Arsenal and in the Arsenal Editor.
- * ERROR04: You didn't select an Arsenal in the Arsenal List.
- * ERROR05: This Arsenal has skills from too many schools. You are limited to: X schools
- * ERROR06: The loaded Arsenal loaded is not set to 1,2 or 3 Schools.
- * ERROR07: The Profile has no Arsenals, please create at least one in-game Arsenal to be able to load/write/edit them.
- * ERROR08: The arsenal name contains banned characters (\ / : * ? "" < > |)
- * ERROR09: A Skill from your loaded arsenal does not exist in the game and could not be loaded. The arsenal has been tampered with or was corrupted. Please try loading another arsenal.
- * ERROR10: The arsenal does not contain a valid amount of cards. The arsenal has been tampered with or is corrupted. Please try loading another arsenal.
- * 
- * 
- * 
- */
+* ERROR01: You didn't select a skill in your Arsenal.
+* ERROR02: You didn't select a skill in the Arsenal Editor.
+* ERROR03: You didn't select a skill in your Arsenal and in the Arsenal Editor.
+* ERROR04: You didn't select an Arsenal in the Arsenal List.
+* ERROR05: This Arsenal has skills from too many schools. You are limited to: X schools
+* ERROR06: The loaded Arsenal loaded is not set to 1,2 or 3 Schools.
+* ERROR07: The Profile has no Arsenals, please create at least one in-game Arsenal to be able to load/write/edit them.
+* ERROR08: The arsenal name contains banned characters (\ / : * ? "" < > |)
+* ERROR09: A Skill from your loaded arsenal does not exist in the game and could not be loaded. The arsenal has been tampered with or was corrupted. Please try loading another arsenal.
+* ERROR10: The arsenal does not contain a valid amount of cards. The arsenal has been tampered with or is corrupted. Please try loading another arsenal.
+* 
+* 
+* 
+*/
 
 namespace PD_Helper
 {
@@ -54,8 +55,58 @@ namespace PD_Helper
 
         //Class for PDCard
         // Root myDeserializedClass = JsonConvert.DeserializeObject<List<PDCard>>(myJsonResponse);
-        public class PDCard
+        public class PDCard : IComparable
         {
+            // Comparator(s)
+            private class SortTypeHelper : IComparer<PDCard>
+            {
+				int IComparer<PDCard>.Compare(PDCard a, PDCard b)
+                {
+                    int typeIntA = a.typeToInt();
+                    int typeIntB = b.typeToInt();
+
+                    if (typeIntA > typeIntB) return 1;
+                    else if (typeIntA < typeIntB) return -1;
+                    else return string.Compare(a.HEX, b.HEX);
+                }
+            }
+
+            // Default Comparison
+            int IComparable.CompareTo(object? obj)
+            {
+                PDCard card = (PDCard)obj;
+                return string.Compare(this.HEX, card.HEX);
+            }
+
+            // Return Comparators
+            public static IComparer<PDCard> SortType()
+            {
+                return new SortTypeHelper();
+            }
+
+            // Type to int for the purpose of ordering
+            public int typeToInt()
+            {
+                switch (TYPE)
+                {
+                    case "Attack":
+                        return 0;
+                    case "Defense":
+                        return 1;
+                    case "Erase":
+                        return 2;
+                    case "Status":
+                        return 3;
+                    case "Special":
+                        return 4;
+                    case "Environment":
+                        return 5;
+                    default:
+                        return 6;
+                }
+            }
+
+            // JSON Properties
             [JsonProperty("NAME")]
             public string NAME { get; set; }
             [JsonProperty("ID")]
@@ -589,19 +640,31 @@ namespace PD_Helper
             // Load all cards
             Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
             string loadDeckHex = BitConverter.ToString(loadDeck);
+            
             //add cards to list
             loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
-            deckListBox.Items.Clear();
+            List<PDCard> cardList = new List<PDCard>();
             int o = 0;
 
             for (int i = 0; i < 30; i++)
             {
                 Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
                 String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
-                deckListBox.Items.Add(cardDef[currentHexString].NAME);
+                cardList.Add(cardDef[currentHexString]);
                 loadedDeck[i] = currentHexString;
                 o += 2;
             }
+
+            // Sort the list
+            cardList.Sort(PDCard.SortType());
+
+            // Enter card to the list box
+            deckListBox.Items.Clear();
+			foreach (PDCard card in cardList)
+			{
+                deckListBox.Items.Add(card.NAME);
+            }
+
             //manual write school amount
             Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
             String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
