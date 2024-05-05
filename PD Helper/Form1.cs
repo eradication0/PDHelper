@@ -638,45 +638,40 @@ namespace PD_Helper
             {
                 displayEditorSkill(deckListBox.SelectedItem.ToString());
             }
+        }
 
+        private void skillList_DrawItem(object sender, DrawItemEventArgs e, ListBox listBox)
+        {
+            if (e.Index < 0) return;
+
+            // Get the skill name and back color
+            string skillName = listBox.Items[e.Index].ToString();
+            Color backColor = colorFromName(skillName);
+
+            // Draw the background of the ListBox control for each item.
+            e.DrawBackground();
+
+            // Set back color
+            e.Graphics.FillRectangle(new SolidBrush(backColor), e.Bounds);
+            
+            // Draw the fill color
+            //e.Graphics.FillRectangle(new SolidBrush(fillColor), e.Bounds);
+
+            // Draw the current item text
+            e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
+
+            // If the ListBox has focus, draw a focus rectangle around the selected item.
+            e.DrawFocusRectangle();
         }
 
         private void deckListBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (e.Index < 0) return;
-
-            // Draw the background of the ListBox control for each item.
-            e.DrawBackground();
-
-            // Draw the fill color
-            string skillName = deckListBox.Items[e.Index].ToString();
-            Color fillColor = colorFromName(skillName);
-            e.Graphics.FillRectangle(new SolidBrush(fillColor), e.Bounds);
-
-            // Draw the current item text
-            e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
-
-            // If the ListBox has focus, draw a focus rectangle around the selected item.
-            e.DrawFocusRectangle();
+            skillList_DrawItem(sender, e, deckListBox);
         }
 
         private void editorList_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (e.Index < 0) return;
-
-            // Draw the background of the ListBox control for each item.
-            e.DrawBackground();
-
-            // Draw the fill color
-            string skillName = editorList.Items[e.Index].ToString();
-            Color fillColor = colorFromName(skillName);
-            e.Graphics.FillRectangle(new SolidBrush(fillColor), e.Bounds);
-
-            // Draw the current item text
-            e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
-
-            // If the ListBox has focus, draw a focus rectangle around the selected item.
-            e.DrawFocusRectangle();
+            skillList_DrawItem(sender, e, editorList);
         }
 
         private void groupBox5_Enter(object sender, EventArgs e)
