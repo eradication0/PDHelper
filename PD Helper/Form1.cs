@@ -355,38 +355,72 @@ namespace PD_Helper
             }
         }
 
-        private Color colorFromType(string type)
+        private Color lightColorFromType(string type)
         {
             switch (type)
             {
                 case "Attack":
-                    return Color.FromArgb(251, 152, 152);
+                    return Color.FromArgb(239, 144, 107);
                 case "Defense":
-                    return Color.FromArgb(152, 181, 251);
+                    return Color.FromArgb(112, 135, 239);
                 case "Erase":
-                    return Color.FromArgb(241, 152, 251);
+                    return Color.FromArgb(208, 112, 239);
                 case "Environment":
-                    return Color.FromArgb(152, 251, 251);
+                    return Color.FromArgb(112, 239, 239);
                 case "Status":
-                    return Color.FromArgb(152, 251, 152);
+                    return Color.FromArgb(152, 239, 118);
                 case "Special":
-                    return Color.FromArgb(251, 244, 152);
+                    return Color.FromArgb(239, 239, 112);
                 default:
-                    return Color.FromArgb(200, 200, 200);
+                    return Color.FromArgb(165, 215, 187);
             }
         }
 
-        private Color colorFromName(string name)
+        private Color lightColorFromName(string name)
         {
             foreach (PDCard pair in cardDef.Values)
             {
                 if (pair.NAME == name)
                 {
-                    return colorFromType(pair.TYPE);
+                    return lightColorFromType(pair.TYPE);
                 }
             }
 
-            return Color.FromArgb(200, 200, 200); // Default
+            return Color.FromArgb(165, 215, 187); // Default
+        }
+
+        private Color darkColorFromType(string type)
+        {
+            switch (type)
+            {
+                case "Attack":
+                    return Color.FromArgb(220, 107, 69);
+                case "Defense":
+                    return Color.FromArgb(75, 97, 220);
+                case "Erase":
+                    return Color.FromArgb(171, 75, 220);
+                case "Environment":
+                    return Color.FromArgb(75, 220, 218);
+                case "Status":
+                    return Color.FromArgb(114, 220, 81);
+                case "Special":
+                    return Color.FromArgb(220, 218, 75);
+                default:
+                    return Color.FromArgb(127, 177, 150);
+            }
+        }
+
+        private Color darkColorFromName(string name)
+        {
+            foreach (PDCard pair in cardDef.Values)
+            {
+                if (pair.NAME == name)
+                {
+                    return darkColorFromType(pair.TYPE);
+                }
+            }
+
+            return Color.FromArgb(127, 177, 150); // Default
         }
 
         private void displayEditorSkill(object cardName)
@@ -404,7 +438,7 @@ namespace PD_Helper
                     labelSkillStrength.Text = pair.COST;
                     labelSkillUse.Text = pair.USAGE;
 
-                    Color textColor = colorFromType(pair.TYPE);
+                    Color textColor = lightColorFromType(pair.TYPE);
                     labelSkillID.ForeColor = textColor;
                     labelSkillName.ForeColor = textColor;
                     labelSkillSchool.ForeColor = textColor;
@@ -644,18 +678,24 @@ namespace PD_Helper
         {
             if (e.Index < 0) return;
 
-            // Get the skill name and back color
-            string skillName = listBox.Items[e.Index].ToString();
-            Color backColor = colorFromName(skillName);
-
             // Draw the background of the ListBox control for each item.
             e.DrawBackground();
 
             // Set back color
+            string skillName = listBox.Items[e.Index].ToString();
+            Color backColor;
+
+            bool selected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+            if (selected)
+			{
+                backColor = lightColorFromName(skillName);
+            }
+			else
+			{
+                backColor = darkColorFromName(skillName);
+            }
+
             e.Graphics.FillRectangle(new SolidBrush(backColor), e.Bounds);
-            
-            // Draw the fill color
-            //e.Graphics.FillRectangle(new SolidBrush(fillColor), e.Bounds);
 
             // Draw the current item text
             e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
