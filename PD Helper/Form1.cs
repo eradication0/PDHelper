@@ -623,6 +623,59 @@ namespace PD_Helper
 
         private void deckListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Make the editor select the new skill
+            if (deckListBox.SelectedIndex != -1)
+            {
+                foreach (PDCard pair in cardDef.Values)
+                {
+                    if (pair.NAME == deckListBox.SelectedItem.ToString())
+                    {
+                        labelSkillCost.Text = pair.DAMAGE;
+                        labelSkillDescription.Text = pair.DESCRIPTION;
+                        labelSkillID.Text = pair.ID.ToString();
+                        labelSkillName.Text = pair.NAME;
+                        labelSkilLRange.Text = pair.RANGE;
+                        labelSkillSchool.Text = pair.SCHOOL;
+                        labelSkillStrength.Text = pair.COST;
+                        labelSkillUse.Text = pair.USAGE;
+                        switch (pair.TYPE)
+                        {
+                            case "Attack":
+
+                                labelSkillID.ForeColor = Color.FromArgb(251, 152, 152);
+                                labelSkillName.ForeColor = Color.FromArgb(251, 152, 152);
+                                labelSkillSchool.ForeColor = Color.FromArgb(251, 152, 152);
+                                break;
+                            case "Defense":
+                                labelSkillID.ForeColor = Color.FromArgb(152, 181, 251);
+                                labelSkillName.ForeColor = Color.FromArgb(152, 181, 251);
+                                labelSkillSchool.ForeColor = Color.FromArgb(152, 181, 251);
+                                break;
+                            case "Erase":
+                                labelSkillID.ForeColor = Color.FromArgb(241, 152, 251);
+                                labelSkillName.ForeColor = Color.FromArgb(241, 152, 251);
+                                labelSkillSchool.ForeColor = Color.FromArgb(241, 152, 251);
+                                break;
+                            case "Environment":
+                                labelSkillID.ForeColor = Color.FromArgb(152, 251, 251);
+                                labelSkillName.ForeColor = Color.FromArgb(152, 251, 251);
+                                labelSkillSchool.ForeColor = Color.FromArgb(152, 251, 251);
+                                break;
+                            case "Status":
+                                labelSkillID.ForeColor = Color.FromArgb(152, 251, 152);
+                                labelSkillName.ForeColor = Color.FromArgb(152, 251, 152);
+                                labelSkillSchool.ForeColor = Color.FromArgb(152, 251, 152);
+                                break;
+                            case "Special":
+                                labelSkillID.ForeColor = Color.FromArgb(251, 244, 152);
+                                labelSkillName.ForeColor = Color.FromArgb(251, 244, 152);
+                                labelSkillSchool.ForeColor = Color.FromArgb(251, 244, 152);
+                                break;
+                        }
+                    }
+                }
+
+            }
 
         }
 
