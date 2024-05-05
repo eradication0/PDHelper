@@ -651,7 +651,7 @@ namespace PD_Helper
                 Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
                 String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
                 cardList.Add(cardDef[currentHexString]);
-                loadedDeck[i] = currentHexString;
+                //loadedDeck[i] = currentHexString;
                 o += 2;
             }
 
@@ -660,9 +660,10 @@ namespace PD_Helper
 
             // Enter card to the list box
             deckListBox.Items.Clear();
-			foreach (PDCard card in cardList)
-			{
-                deckListBox.Items.Add(card.NAME);
+            for (int i = 0; i < 30; i++)
+            {
+                loadedDeck[i] = cardList[i].HEX;
+                deckListBox.Items.Add(cardList[i].NAME);
             }
 
             //manual write school amount
