@@ -1,4 +1,6 @@
-﻿namespace PD_Helper
+﻿using System.Drawing;
+
+namespace PD_Helper
 {
     partial class Form1
     {
@@ -737,6 +739,7 @@
 			this.environmentalRadioButton.Text = "Environmental";
 			this.environmentalRadioButton.UseVisualStyleBackColor = true;
 			this.environmentalRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
+			this.environmentalRadioButton.ForeColor = Color.FromArgb(112, 239, 239);
 			// 
 			// specialRadioButton
 			// 
@@ -748,6 +751,7 @@
 			this.specialRadioButton.Text = "Special";
 			this.specialRadioButton.UseVisualStyleBackColor = true;
 			this.specialRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
+			this.specialRadioButton.ForeColor = Color.FromArgb(239, 239, 112);
 			// 
 			// statusRadioButton
 			// 
@@ -759,6 +763,7 @@
 			this.statusRadioButton.Text = "Status";
 			this.statusRadioButton.UseVisualStyleBackColor = true;
 			this.statusRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
+			this.statusRadioButton.ForeColor = Color.FromArgb(152, 239, 118);
 			// 
 			// eraseRadioButton
 			// 
@@ -770,6 +775,7 @@
 			this.eraseRadioButton.Text = "Erase";
 			this.eraseRadioButton.UseVisualStyleBackColor = true;
 			this.eraseRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
+			this.eraseRadioButton.ForeColor = Color.FromArgb(208, 112, 239);
 			// 
 			// defenseRadioButton
 			// 
@@ -781,6 +787,7 @@
 			this.defenseRadioButton.Text = "Defense";
 			this.defenseRadioButton.UseVisualStyleBackColor = true;
 			this.defenseRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
+			this.defenseRadioButton.ForeColor = Color.FromArgb(112, 135, 239);
 			// 
 			// attackRadioButton
 			// 
@@ -792,6 +799,7 @@
 			this.attackRadioButton.Text = "Attack";
 			this.attackRadioButton.UseVisualStyleBackColor = true;
 			this.attackRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
+			this.attackRadioButton.ForeColor = Color.FromArgb(239, 144, 107);
 			// 
 			// allSkillsRadioButton
 			// 
