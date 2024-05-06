@@ -962,5 +962,12 @@ namespace PD_Helper
         {
             updateEditorList();
         }
+
+		private void colorProfileButton_Click(object sender, EventArgs e)
+		{
+            // Open new form for setting colors
+            var colorForm = new ColorProfileForm();
+            colorForm.ShowDialog();
+		}
 	}
 }
