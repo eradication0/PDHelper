@@ -1,4 +1,6 @@
-﻿namespace PD_Helper
+﻿using System.Drawing;
+
+namespace PD_Helper
 {
     partial class Form1
     {
@@ -77,12 +79,23 @@
 			this.button12 = new System.Windows.Forms.Button();
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.environmentalRadioButton = new System.Windows.Forms.RadioButton();
+			this.specialRadioButton = new System.Windows.Forms.RadioButton();
+			this.statusRadioButton = new System.Windows.Forms.RadioButton();
+			this.eraseRadioButton = new System.Windows.Forms.RadioButton();
+			this.defenseRadioButton = new System.Windows.Forms.RadioButton();
+			this.attackRadioButton = new System.Windows.Forms.RadioButton();
+			this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
+			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
+			this.skillCountLabel = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.schoolNumeric)).BeginInit();
 			this.arsenalListBox.SuspendLayout();
 			this.groupBox6.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -246,6 +259,7 @@
 			// groupBox4
 			// 
 			this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.groupBox4.Controls.Add(this.skillCountLabel);
 			this.groupBox4.Controls.Add(this.label10);
 			this.groupBox4.Controls.Add(this.schoolNumeric);
 			this.groupBox4.Controls.Add(this.arsenalNameLabel);
@@ -350,6 +364,7 @@
 			this.deckListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.deckListBox.ColumnWidth = 140;
 			this.deckListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.deckListBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.deckListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.deckListBox.FormattingEnabled = true;
 			this.deckListBox.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -377,7 +392,7 @@
 			this.arsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.arsenalListBox.Location = new System.Drawing.Point(458, 98);
 			this.arsenalListBox.Name = "arsenalListBox";
-			this.arsenalListBox.Size = new System.Drawing.Size(433, 477);
+			this.arsenalListBox.Size = new System.Drawing.Size(433, 651);
 			this.arsenalListBox.TabIndex = 1;
 			this.arsenalListBox.TabStop = false;
 			this.arsenalListBox.Text = "Arsenal List";
@@ -408,7 +423,7 @@
 			// 
 			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button7.Location = new System.Drawing.Point(240, 386);
+			this.button7.Location = new System.Drawing.Point(240, 564);
 			this.button7.Name = "button7";
 			this.button7.Size = new System.Drawing.Size(187, 23);
 			this.button7.TabIndex = 27;
@@ -420,7 +435,7 @@
 			// 
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button2.Location = new System.Drawing.Point(240, 415);
+			this.button2.Location = new System.Drawing.Point(240, 593);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(187, 23);
 			this.button2.TabIndex = 26;
@@ -443,7 +458,7 @@
 			// 
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-			this.button6.Location = new System.Drawing.Point(240, 444);
+			this.button6.Location = new System.Drawing.Point(240, 622);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(187, 23);
 			this.button6.TabIndex = 24;
@@ -471,7 +486,7 @@
 			this.savedArsenalListBox.ItemHeight = 15;
 			this.savedArsenalListBox.Location = new System.Drawing.Point(6, 29);
 			this.savedArsenalListBox.Name = "savedArsenalListBox";
-			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
+			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 619);
 			this.savedArsenalListBox.TabIndex = 0;
 			// 
 			// groupBox6
@@ -682,6 +697,7 @@
 			this.editorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.editorList.ColumnWidth = 140;
 			this.editorList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.editorList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.editorList.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.editorList.FormattingEnabled = true;
 			this.editorList.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -697,12 +713,144 @@
 			// 
 			this.GamepadWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GamepadWorker_DoWork_1);
 			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.environmentalRadioButton);
+			this.groupBox3.Controls.Add(this.specialRadioButton);
+			this.groupBox3.Controls.Add(this.statusRadioButton);
+			this.groupBox3.Controls.Add(this.eraseRadioButton);
+			this.groupBox3.Controls.Add(this.defenseRadioButton);
+			this.groupBox3.Controls.Add(this.attackRadioButton);
+			this.groupBox3.Controls.Add(this.allSkillsRadioButton);
+			this.groupBox3.Controls.Add(this.schoolFilterCheckedListBox);
+			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.groupBox3.Location = new System.Drawing.Point(12, 581);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(440, 168);
+			this.groupBox3.TabIndex = 28;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Filter Settings";
+			// 
+			// environmentalRadioButton
+			// 
+			this.environmentalRadioButton.AutoSize = true;
+			this.environmentalRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+			this.environmentalRadioButton.Location = new System.Drawing.Point(161, 98);
+			this.environmentalRadioButton.Name = "environmentalRadioButton";
+			this.environmentalRadioButton.Size = new System.Drawing.Size(102, 19);
+			this.environmentalRadioButton.TabIndex = 12;
+			this.environmentalRadioButton.Text = "Environmental";
+			this.environmentalRadioButton.UseVisualStyleBackColor = true;
+			this.environmentalRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			// 
+			// specialRadioButton
+			// 
+			this.specialRadioButton.AutoSize = true;
+			this.specialRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(112)))));
+			this.specialRadioButton.Location = new System.Drawing.Point(96, 98);
+			this.specialRadioButton.Name = "specialRadioButton";
+			this.specialRadioButton.Size = new System.Drawing.Size(62, 19);
+			this.specialRadioButton.TabIndex = 11;
+			this.specialRadioButton.Text = "Special";
+			this.specialRadioButton.UseVisualStyleBackColor = true;
+			this.specialRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			// 
+			// statusRadioButton
+			// 
+			this.statusRadioButton.AutoSize = true;
+			this.statusRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(239)))), ((int)(((byte)(118)))));
+			this.statusRadioButton.Location = new System.Drawing.Point(161, 73);
+			this.statusRadioButton.Name = "statusRadioButton";
+			this.statusRadioButton.Size = new System.Drawing.Size(57, 19);
+			this.statusRadioButton.TabIndex = 10;
+			this.statusRadioButton.Text = "Status";
+			this.statusRadioButton.UseVisualStyleBackColor = true;
+			this.statusRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			// 
+			// eraseRadioButton
+			// 
+			this.eraseRadioButton.AutoSize = true;
+			this.eraseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(112)))), ((int)(((byte)(239)))));
+			this.eraseRadioButton.Location = new System.Drawing.Point(96, 73);
+			this.eraseRadioButton.Name = "eraseRadioButton";
+			this.eraseRadioButton.Size = new System.Drawing.Size(52, 19);
+			this.eraseRadioButton.TabIndex = 9;
+			this.eraseRadioButton.Text = "Erase";
+			this.eraseRadioButton.UseVisualStyleBackColor = true;
+			this.eraseRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			// 
+			// defenseRadioButton
+			// 
+			this.defenseRadioButton.AutoSize = true;
+			this.defenseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(135)))), ((int)(((byte)(239)))));
+			this.defenseRadioButton.Location = new System.Drawing.Point(161, 48);
+			this.defenseRadioButton.Name = "defenseRadioButton";
+			this.defenseRadioButton.Size = new System.Drawing.Size(67, 19);
+			this.defenseRadioButton.TabIndex = 8;
+			this.defenseRadioButton.Text = "Defense";
+			this.defenseRadioButton.UseVisualStyleBackColor = true;
+			this.defenseRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			// 
+			// attackRadioButton
+			// 
+			this.attackRadioButton.AutoSize = true;
+			this.attackRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(144)))), ((int)(((byte)(107)))));
+			this.attackRadioButton.Location = new System.Drawing.Point(96, 48);
+			this.attackRadioButton.Name = "attackRadioButton";
+			this.attackRadioButton.Size = new System.Drawing.Size(59, 19);
+			this.attackRadioButton.TabIndex = 7;
+			this.attackRadioButton.Text = "Attack";
+			this.attackRadioButton.UseVisualStyleBackColor = true;
+			this.attackRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			// 
+			// allSkillsRadioButton
+			// 
+			this.allSkillsRadioButton.AutoSize = true;
+			this.allSkillsRadioButton.Checked = true;
+			this.allSkillsRadioButton.Location = new System.Drawing.Point(96, 23);
+			this.allSkillsRadioButton.Name = "allSkillsRadioButton";
+			this.allSkillsRadioButton.Size = new System.Drawing.Size(68, 19);
+			this.allSkillsRadioButton.TabIndex = 6;
+			this.allSkillsRadioButton.TabStop = true;
+			this.allSkillsRadioButton.Text = "All Skills";
+			this.allSkillsRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// schoolFilterCheckedListBox
+			// 
+			this.schoolFilterCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.schoolFilterCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.schoolFilterCheckedListBox.CheckOnClick = true;
+			this.schoolFilterCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.schoolFilterCheckedListBox.FormattingEnabled = true;
+			this.schoolFilterCheckedListBox.Items.AddRange(new object[] {
+            "Psycho",
+            "Optical",
+            "Nature",
+            "Ki",
+            "Faith"});
+			this.schoolFilterCheckedListBox.Location = new System.Drawing.Point(7, 22);
+			this.schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
+			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(86, 90);
+			this.schoolFilterCheckedListBox.TabIndex = 0;
+			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
+			// 
+			// skillCountLabel
+			// 
+			this.skillCountLabel.AutoSize = true;
+			this.skillCountLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.skillCountLabel.Location = new System.Drawing.Point(294, 21);
+			this.skillCountLabel.Name = "skillCountLabel";
+			this.skillCountLabel.Size = new System.Drawing.Size(31, 15);
+			this.skillCountLabel.TabIndex = 35;
+			this.skillCountLabel.Text = "-/30";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.ClientSize = new System.Drawing.Size(904, 587);
+			this.ClientSize = new System.Drawing.Size(904, 761);
+			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox6);
 			this.Controls.Add(this.arsenalListBox);
 			this.Controls.Add(this.groupBox4);
@@ -727,6 +875,8 @@
 			this.arsenalListBox.PerformLayout();
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -782,5 +932,15 @@
         private System.ComponentModel.BackgroundWorker GamepadWorker;
         private Label label1;
         private Label label6;
-    }
+		private GroupBox groupBox3;
+		private CheckedListBox schoolFilterCheckedListBox;
+		private RadioButton attackRadioButton;
+		private RadioButton allSkillsRadioButton;
+		private RadioButton specialRadioButton;
+		private RadioButton statusRadioButton;
+		private RadioButton eraseRadioButton;
+		private RadioButton defenseRadioButton;
+		private RadioButton environmentalRadioButton;
+		private Label skillCountLabel;
+	}
 }

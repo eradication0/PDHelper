@@ -51,6 +51,12 @@ namespace PD_Helper
             Boolean ControlKey = RegisterHotKey(
                 this.Handle, UniqueHotkeyId, 0x0000, HotKeyCode
             );
+
+            // Set default checkmarks
+            for (int i = 0; i < 5; i++)
+            {
+                schoolFilterCheckedListBox.SetItemChecked(i, true);
+            }
         }
 
         //Class for PDCard
@@ -261,6 +267,14 @@ namespace PD_Helper
 
                         //set loaded deck visual
                         deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
+
+                        // Recount skills
+                        int auraCount = 0;
+						foreach (var item in deckListBox.Items)
+						{
+                            if (item.ToString() == "Aura Particle") auraCount++;
+						}
+                        skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
                     }
                 }
             }
@@ -280,6 +294,14 @@ namespace PD_Helper
                 loadedDeck[deckListBox.SelectedIndex] = currentHex;
                 //set loaded deck visual
                 deckListBox.Items[deckListBox.SelectedIndex] = "Aura Particle";
+
+                // Recount skills
+                int auraCount = 0;
+                foreach (var item in deckListBox.Items)
+                {
+                    if (item.ToString() == "Aura Particle") auraCount++;
+                }
+                skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
             }
             //error handling
             else { MessageBox.Show("You didn't select a skill in your Arsenal."); }
@@ -300,28 +322,144 @@ namespace PD_Helper
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void updateEditorList()
         {
-            //search for value in editorList
+			// Use the current array of checkmarks
+			bool[] schoolFilter = new bool[5];
+
+			for (int i = 0; i < 5; i++)
+			{
+				schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+			}
+
+            updateEditorList(schoolFilter);
+        }
+
+        private void updateEditorList(bool[] schoolFilter)
+        {
+			// Check the filter
+            if (schoolFilter == null || schoolFilter.Length != 5)
+			{
+                throw new FormatException("'schoolFilter' needs to not be null and have length 5.");
+			}
+
+            // Step 0: Prepare the list of skills to consider for filtering
+            List<string> consideredSkills = new List<string>();
+			foreach (var item in allSkills.Items)
+			{
+                consideredSkills.Add(item.ToString());
+			}
+
+            // Step 1: Only consider the skills matching the school filter
+            List<string> filterSkills = new List<string>();
+			foreach (var item in consideredSkills)
+			{
+                string school = schoolFromName(item);
+                bool toKeep = true;
+                switch (school)
+				{
+                    case "Psycho":
+                        toKeep = schoolFilter[0];
+                        break;
+                    case "Optical":
+                        toKeep = schoolFilter[1];
+                        break;
+                    case "Nature":
+                        toKeep = schoolFilter[2];
+                        break;
+                    case "Ki":
+                        toKeep = schoolFilter[3];
+                        break;
+                    case "Faith":
+                        toKeep = schoolFilter[4];
+                        break;
+                    default:
+						break;
+				}
+				if (toKeep)
+				{
+                    filterSkills.Add(item);
+				}
+			}
+            consideredSkills = filterSkills;
+
+			// Step 2: Now filter by type if necessary
+			if (!allSkillsRadioButton.Checked)
+			{
+                filterSkills = new List<string>();
+                foreach (var item in consideredSkills)
+                {
+                    // Get type
+                    string type = null;
+                    foreach (PDCard pair in cardDef.Values)
+                    {
+                        if (pair.NAME == item)
+                        {
+                            type = pair.TYPE;
+                            break;
+                        }
+                    }
+                    if (type == null)
+                    {
+                        throw new FormatException("Skill not found");
+                    }
+
+                    // Match with the type marked
+                    bool toKeep = false;
+                    switch (type)
+                    {
+                        case "Attack":
+                            toKeep = attackRadioButton.Checked;
+                            break;
+                        case "Defense":
+                            toKeep = defenseRadioButton.Checked;
+                            break;
+                        case "Erase":
+                            toKeep = eraseRadioButton.Checked;
+                            break;
+                        case "Status":
+                            toKeep = statusRadioButton.Checked;
+                            break;
+                        case "Special":
+                            toKeep = specialRadioButton.Checked;
+                            break;
+                        case "Environment":
+                            toKeep = environmentalRadioButton.Checked;
+                            break;
+                    }
+                    if (toKeep)
+                    {
+                        filterSkills.Add(item);
+                    }
+                }
+                consideredSkills = filterSkills;
+            }
+
+            // Step 3: search for value in editorList
             if (textBox1.Text != "")
             {
                 editorList.Items.Clear();
-                foreach (var item in allSkills.Items)
+                foreach (var item in consideredSkills)
                 {
                     if (item.ToString().Contains(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                     {
                         editorList.Items.Add(item.ToString());
                     }
                 }
-            } else
+            }
+            else
             {
                 editorList.Items.Clear();
-                foreach (var item in allSkills.Items)
+                foreach (var item in consideredSkills)
                 {
                     editorList.Items.Add(item);
                 }
             }
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            updateEditorList();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -658,13 +796,18 @@ namespace PD_Helper
             // Sort the list
             cardList.Sort(PDCard.SortType());
 
-            // Enter card to the list box
+            // Enter card to the list box. Also count aura
+            int auraCount = 0;
             deckListBox.Items.Clear();
             for (int i = 0; i < 30; i++)
             {
                 loadedDeck[i] = cardList[i].HEX;
                 deckListBox.Items.Add(cardList[i].NAME);
+                if (cardList[i].TYPE == "Aura") auraCount++;
             }
+
+            // Set the skill count
+            skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
 
             //manual write school amount
             Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
@@ -925,5 +1068,24 @@ namespace PD_Helper
         {
 
         }
-    }
+
+		private void schoolFilterCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+		{
+            // Use the current array of checkmarks but with the updated checkmark value instead
+            bool[] schoolFilter = new bool[5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (i != e.Index) schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+                else schoolFilter[e.Index] = e.NewValue == CheckState.Checked;
+            }
+
+            updateEditorList(schoolFilter);
+        }
+
+        private void filterRadioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            updateEditorList();
+        }
+	}
 }
