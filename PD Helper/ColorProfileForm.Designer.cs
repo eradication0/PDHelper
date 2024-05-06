@@ -58,14 +58,14 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.list1 = new PD_Helper.list(this.components);
 			this.savedColorProfileListBox = new System.Windows.Forms.ListBox();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.loadColorProfileButton = new System.Windows.Forms.Button();
-			this.refreshColorProfileButton = new System.Windows.Forms.Button();
-			this.openColorProfileFolderButton = new System.Windows.Forms.Button();
-			this.deleteColorProfileButton = new System.Windows.Forms.Button();
+			this.colorProfileListBox = new System.Windows.Forms.GroupBox();
 			this.useColorProfileButton = new System.Windows.Forms.Button();
+			this.deleteColorProfileButton = new System.Windows.Forms.Button();
+			this.openColorProfileFolderButton = new System.Windows.Forms.Button();
+			this.refreshColorProfileButton = new System.Windows.Forms.Button();
+			this.loadColorProfileButton = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
+			this.colorProfileListBox.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -368,76 +368,80 @@
 			this.savedColorProfileListBox.Size = new System.Drawing.Size(143, 289);
 			this.savedColorProfileListBox.TabIndex = 1;
 			// 
-			// groupBox2
+			// colorProfileListBox
 			// 
-			this.groupBox2.Controls.Add(this.useColorProfileButton);
-			this.groupBox2.Controls.Add(this.deleteColorProfileButton);
-			this.groupBox2.Controls.Add(this.openColorProfileFolderButton);
-			this.groupBox2.Controls.Add(this.refreshColorProfileButton);
-			this.groupBox2.Controls.Add(this.loadColorProfileButton);
-			this.groupBox2.Controls.Add(this.savedColorProfileListBox);
-			this.groupBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.groupBox2.Location = new System.Drawing.Point(197, 12);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(349, 314);
-			this.groupBox2.TabIndex = 2;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Color Profile List";
-			// 
-			// loadColorProfileButton
-			// 
-			this.loadColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.loadColorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.loadColorProfileButton.Location = new System.Drawing.Point(155, 51);
-			this.loadColorProfileButton.Name = "loadColorProfileButton";
-			this.loadColorProfileButton.Size = new System.Drawing.Size(187, 23);
-			this.loadColorProfileButton.TabIndex = 24;
-			this.loadColorProfileButton.Text = "Load Color Profile";
-			this.loadColorProfileButton.UseVisualStyleBackColor = true;
-			// 
-			// refreshColorProfileButton
-			// 
-			this.refreshColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.refreshColorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.refreshColorProfileButton.Location = new System.Drawing.Point(155, 80);
-			this.refreshColorProfileButton.Name = "refreshColorProfileButton";
-			this.refreshColorProfileButton.Size = new System.Drawing.Size(187, 26);
-			this.refreshColorProfileButton.TabIndex = 28;
-			this.refreshColorProfileButton.Text = "Refresh Color Profile List";
-			this.refreshColorProfileButton.UseVisualStyleBackColor = true;
-			// 
-			// openColorProfileFolderButton
-			// 
-			this.openColorProfileFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.openColorProfileFolderButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.openColorProfileFolderButton.Location = new System.Drawing.Point(155, 112);
-			this.openColorProfileFolderButton.Name = "openColorProfileFolderButton";
-			this.openColorProfileFolderButton.Size = new System.Drawing.Size(187, 26);
-			this.openColorProfileFolderButton.TabIndex = 27;
-			this.openColorProfileFolderButton.Text = "Open Color Profile Folder";
-			this.openColorProfileFolderButton.UseVisualStyleBackColor = true;
-			// 
-			// deleteColorProfileButton
-			// 
-			this.deleteColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.deleteColorProfileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-			this.deleteColorProfileButton.Location = new System.Drawing.Point(155, 284);
-			this.deleteColorProfileButton.Name = "deleteColorProfileButton";
-			this.deleteColorProfileButton.Size = new System.Drawing.Size(187, 26);
-			this.deleteColorProfileButton.TabIndex = 29;
-			this.deleteColorProfileButton.Text = "Delete Color Profile";
-			this.deleteColorProfileButton.UseVisualStyleBackColor = true;
+			this.colorProfileListBox.Controls.Add(this.useColorProfileButton);
+			this.colorProfileListBox.Controls.Add(this.deleteColorProfileButton);
+			this.colorProfileListBox.Controls.Add(this.openColorProfileFolderButton);
+			this.colorProfileListBox.Controls.Add(this.refreshColorProfileButton);
+			this.colorProfileListBox.Controls.Add(this.loadColorProfileButton);
+			this.colorProfileListBox.Controls.Add(this.savedColorProfileListBox);
+			this.colorProfileListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.colorProfileListBox.Location = new System.Drawing.Point(197, 12);
+			this.colorProfileListBox.Name = "colorProfileListBox";
+			this.colorProfileListBox.Size = new System.Drawing.Size(349, 314);
+			this.colorProfileListBox.TabIndex = 2;
+			this.colorProfileListBox.TabStop = false;
+			this.colorProfileListBox.Text = "Color Profile List";
 			// 
 			// useColorProfileButton
 			// 
 			this.useColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.useColorProfileButton.ForeColor = System.Drawing.Color.SkyBlue;
-			this.useColorProfileButton.Location = new System.Drawing.Point(156, 22);
+			this.useColorProfileButton.Location = new System.Drawing.Point(155, 285);
 			this.useColorProfileButton.Name = "useColorProfileButton";
 			this.useColorProfileButton.Size = new System.Drawing.Size(187, 23);
 			this.useColorProfileButton.TabIndex = 28;
 			this.useColorProfileButton.Text = "Use Color Profile in Editor";
 			this.useColorProfileButton.UseVisualStyleBackColor = true;
+			// 
+			// deleteColorProfileButton
+			// 
+			this.deleteColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.deleteColorProfileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+			this.deleteColorProfileButton.Location = new System.Drawing.Point(155, 115);
+			this.deleteColorProfileButton.Name = "deleteColorProfileButton";
+			this.deleteColorProfileButton.Size = new System.Drawing.Size(187, 26);
+			this.deleteColorProfileButton.TabIndex = 29;
+			this.deleteColorProfileButton.Text = "Delete Color Profile";
+			this.deleteColorProfileButton.UseVisualStyleBackColor = true;
+			this.deleteColorProfileButton.Click += new System.EventHandler(this.deleteColorProfileButton_Click);
+			// 
+			// openColorProfileFolderButton
+			// 
+			this.openColorProfileFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.openColorProfileFolderButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.openColorProfileFolderButton.Location = new System.Drawing.Point(155, 83);
+			this.openColorProfileFolderButton.Name = "openColorProfileFolderButton";
+			this.openColorProfileFolderButton.Size = new System.Drawing.Size(187, 26);
+			this.openColorProfileFolderButton.TabIndex = 27;
+			this.openColorProfileFolderButton.Text = "Open Color Profile Folder";
+			this.openColorProfileFolderButton.UseVisualStyleBackColor = true;
+			this.openColorProfileFolderButton.Click += new System.EventHandler(this.openColorProfileFolderButton_Click);
+			// 
+			// refreshColorProfileButton
+			// 
+			this.refreshColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.refreshColorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.refreshColorProfileButton.Location = new System.Drawing.Point(155, 51);
+			this.refreshColorProfileButton.Name = "refreshColorProfileButton";
+			this.refreshColorProfileButton.Size = new System.Drawing.Size(187, 26);
+			this.refreshColorProfileButton.TabIndex = 28;
+			this.refreshColorProfileButton.Text = "Refresh Color Profile List";
+			this.refreshColorProfileButton.UseVisualStyleBackColor = true;
+			this.refreshColorProfileButton.Click += new System.EventHandler(this.refreshColorProfileButton_Click);
+			// 
+			// loadColorProfileButton
+			// 
+			this.loadColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.loadColorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.loadColorProfileButton.Location = new System.Drawing.Point(155, 22);
+			this.loadColorProfileButton.Name = "loadColorProfileButton";
+			this.loadColorProfileButton.Size = new System.Drawing.Size(187, 23);
+			this.loadColorProfileButton.TabIndex = 24;
+			this.loadColorProfileButton.Text = "Load Color Profile";
+			this.loadColorProfileButton.UseVisualStyleBackColor = true;
+			this.loadColorProfileButton.Click += new System.EventHandler(this.loadColorProfileButton_Click);
 			// 
 			// ColorProfileForm
 			// 
@@ -445,13 +449,13 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.ClientSize = new System.Drawing.Size(558, 339);
-			this.Controls.Add(this.groupBox2);
+			this.Controls.Add(this.colorProfileListBox);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "ColorProfileForm";
 			this.Text = "Color Profile Settings";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
+			this.colorProfileListBox.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -487,7 +491,7 @@
 		private list list1;
 		private Button btnSaveToPDH;
 		private ListBox savedColorProfileListBox;
-		private GroupBox groupBox2;
+		private GroupBox colorProfileListBox;
 		private Button loadColorProfileButton;
 		private Button refreshColorProfileButton;
 		private Button openColorProfileFolderButton;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace PD_Helper
 {
@@ -156,6 +157,71 @@ namespace PD_Helper
 			// Write the JSON
 			string path = @"Color_Profiles\" + profile + ".json";
 			System.IO.File.WriteAllText(path, json);
+		}
+
+		private void loadColorProfileButton_Click(object sender, EventArgs e)
+		{
+			if (savedColorProfileListBox.SelectedIndex != -1)
+			{
+				// Get the profile name
+				string profile = savedColorProfileListBox.SelectedItem.ToString();
+
+				// Set button colors
+				attackLightColorButton.BackColor = getColor("Attack", true, profile);
+				attackDarkColorButton.BackColor = getColor("Attack", false, profile);
+				defenseLightColorButton.BackColor = getColor("Defense", true, profile);
+				defenseDarkColorButton.BackColor = getColor("Defense", false, profile);
+				eraseLightColorButton.BackColor = getColor("Erase", true, profile);
+				eraseDarkColorButton.BackColor = getColor("Erase", false, profile);
+				environmentalLightColorButton.BackColor = getColor("Environment", true, profile);
+				environmentalDarkColorButton.BackColor = getColor("Environment", false, profile);
+				statusLightColorButton.BackColor = getColor("Status", true, profile);
+				statusDarkColorButton.BackColor = getColor("Status", false, profile);
+				specialLightColorButton.BackColor = getColor("Special", true, profile);
+				specialDarkColorButton.BackColor = getColor("Special", false, profile);
+				auraLightColorButton.BackColor = getColor("Aura", true, profile);
+				auraDarkColorButton.BackColor = getColor("Aura", false, profile);
+			}
+		}
+
+		private void refreshColorProfileButton_Click(object sender, EventArgs e)
+		{
+			//add each color profile file to the list
+			savedColorProfileListBox.Items.Clear();
+			DirectoryInfo directory = new DirectoryInfo(@"Color_Profiles\");
+
+			FileInfo[] Files = directory.GetFiles("*.json"); // Getting JSON files
+			string str = "";
+
+			foreach (FileInfo file in Files)
+			{
+				// Get Profile name
+				string currentProfile = file.Name;
+				currentProfile = currentProfile.Remove(currentProfile.Length - 5);
+
+				// If the name is "CURRENT", skip it.
+				if (currentProfile == "CURRENT") continue;
+				
+				// Add to list
+				savedColorProfileListBox.Items.Add(currentProfile);
+			}
+			colorProfileListBox.Text = "Color Profile List (" + savedColorProfileListBox.Items.Count + ")";
+		}
+
+		private void openColorProfileFolderButton_Click(object sender, EventArgs e)
+		{
+			Process.Start("explorer.exe", @"Color_Profiles\");
+		}
+
+		private void deleteColorProfileButton_Click(object sender, EventArgs e)
+		{
+			DialogResult dr = MessageBox.Show("Are you sure you want to delete color profile: " + savedColorProfileListBox.SelectedItem.ToString() + "?", "Color Profile Deletion Check", MessageBoxButtons.YesNo);
+			if (dr == DialogResult.Yes)
+			{
+				string path = @"Color_Profiles\" + savedColorProfileListBox.SelectedItem.ToString() + ".json";
+				File.Delete(path);
+				savedColorProfileListBox.Items.Remove(savedColorProfileListBox.SelectedItem);
+			}
 		}
 	}
 }
