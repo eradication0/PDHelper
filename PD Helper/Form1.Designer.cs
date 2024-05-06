@@ -77,6 +77,7 @@
 			this.button12 = new System.Windows.Forms.Button();
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
@@ -377,7 +378,7 @@
 			this.arsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.arsenalListBox.Location = new System.Drawing.Point(458, 98);
 			this.arsenalListBox.Name = "arsenalListBox";
-			this.arsenalListBox.Size = new System.Drawing.Size(433, 477);
+			this.arsenalListBox.Size = new System.Drawing.Size(433, 651);
 			this.arsenalListBox.TabIndex = 1;
 			this.arsenalListBox.TabStop = false;
 			this.arsenalListBox.Text = "Arsenal List";
@@ -408,7 +409,7 @@
 			// 
 			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button7.Location = new System.Drawing.Point(240, 386);
+			this.button7.Location = new System.Drawing.Point(240, 564);
 			this.button7.Name = "button7";
 			this.button7.Size = new System.Drawing.Size(187, 23);
 			this.button7.TabIndex = 27;
@@ -420,7 +421,7 @@
 			// 
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button2.Location = new System.Drawing.Point(240, 415);
+			this.button2.Location = new System.Drawing.Point(240, 593);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(187, 23);
 			this.button2.TabIndex = 26;
@@ -443,7 +444,7 @@
 			// 
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-			this.button6.Location = new System.Drawing.Point(240, 444);
+			this.button6.Location = new System.Drawing.Point(240, 622);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(187, 23);
 			this.button6.TabIndex = 24;
@@ -471,7 +472,7 @@
 			this.savedArsenalListBox.ItemHeight = 15;
 			this.savedArsenalListBox.Location = new System.Drawing.Point(6, 29);
 			this.savedArsenalListBox.Name = "savedArsenalListBox";
-			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
+			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 619);
 			this.savedArsenalListBox.TabIndex = 0;
 			// 
 			// groupBox6
@@ -697,12 +698,23 @@
 			// 
 			this.GamepadWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GamepadWorker_DoWork_1);
 			// 
+			// groupBox3
+			// 
+			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.groupBox3.Location = new System.Drawing.Point(12, 581);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(440, 168);
+			this.groupBox3.TabIndex = 28;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Filter Settings";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.ClientSize = new System.Drawing.Size(904, 587);
+			this.ClientSize = new System.Drawing.Size(904, 761);
+			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox6);
 			this.Controls.Add(this.arsenalListBox);
 			this.Controls.Add(this.groupBox4);
@@ -782,5 +794,6 @@
         private System.ComponentModel.BackgroundWorker GamepadWorker;
         private Label label1;
         private Label label6;
-    }
+		private GroupBox groupBox3;
+	}
 }
