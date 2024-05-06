@@ -78,12 +78,14 @@
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.schoolNumeric)).BeginInit();
 			this.arsenalListBox.SuspendLayout();
 			this.groupBox6.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -702,13 +704,32 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.schoolFilterCheckedListBox);
 			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.groupBox3.Location = new System.Drawing.Point(12, 581);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(440, 168);
+			this.groupBox3.Size = new System.Drawing.Size(440, 165);
 			this.groupBox3.TabIndex = 28;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Filter Settings";
+			// 
+			// schoolFilterCheckedListBox
+			// 
+			this.schoolFilterCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.schoolFilterCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.schoolFilterCheckedListBox.CheckOnClick = true;
+			this.schoolFilterCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.schoolFilterCheckedListBox.FormattingEnabled = true;
+			this.schoolFilterCheckedListBox.Items.AddRange(new object[] {
+            "Psycho",
+            "Optical",
+            "Nature",
+            "Ki",
+            "Faith"});
+			this.schoolFilterCheckedListBox.Location = new System.Drawing.Point(7, 22);
+			this.schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
+			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(86, 90);
+			this.schoolFilterCheckedListBox.TabIndex = 0;
 			// 
 			// Form1
 			// 
@@ -741,6 +762,7 @@
 			this.arsenalListBox.PerformLayout();
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -797,5 +819,6 @@
         private Label label1;
         private Label label6;
 		private GroupBox groupBox3;
+		private CheckedListBox schoolFilterCheckedListBox;
 	}
 }

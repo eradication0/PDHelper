@@ -51,6 +51,12 @@ namespace PD_Helper
             Boolean ControlKey = RegisterHotKey(
                 this.Handle, UniqueHotkeyId, 0x0000, HotKeyCode
             );
+
+            // Set default checkmarks
+            for (int i = 0; i < 5; i++)
+            {
+                schoolFilterCheckedListBox.SetItemChecked(i, true);
+            }
         }
 
         //Class for PDCard
