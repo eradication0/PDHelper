@@ -287,5 +287,16 @@ namespace PD_Helper
 			// Close the form
 			Close();
 		}
+
+		private void applyColorProfileButton_Click(object sender, EventArgs e)
+		{
+			// Write the JSON
+			string path = @"Color_Profiles\CURRENT.json";
+			string json = getJSONFromColors();
+			File.WriteAllText(path, json);
+
+			// Refresh
+			((Form1)Owner).refreshView();
+		}
 	}
 }

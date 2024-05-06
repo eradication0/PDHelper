@@ -59,6 +59,7 @@
 			this.list1 = new PD_Helper.list(this.components);
 			this.savedColorProfileListBox = new System.Windows.Forms.ListBox();
 			this.colorProfileListBox = new System.Windows.Forms.GroupBox();
+			this.applyColorProfileButton = new System.Windows.Forms.Button();
 			this.useColorProfileButton = new System.Windows.Forms.Button();
 			this.deleteColorProfileButton = new System.Windows.Forms.Button();
 			this.openColorProfileFolderButton = new System.Windows.Forms.Button();
@@ -121,7 +122,6 @@
 			this.colorProfileNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.colorProfileNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.colorProfileNameBox.Location = new System.Drawing.Point(6, 255);
-			this.colorProfileNameBox.MaxLength = 16;
 			this.colorProfileNameBox.Name = "colorProfileNameBox";
 			this.colorProfileNameBox.Size = new System.Drawing.Size(161, 23);
 			this.colorProfileNameBox.TabIndex = 33;
@@ -370,6 +370,7 @@
 			// 
 			// colorProfileListBox
 			// 
+			this.colorProfileListBox.Controls.Add(this.applyColorProfileButton);
 			this.colorProfileListBox.Controls.Add(this.useColorProfileButton);
 			this.colorProfileListBox.Controls.Add(this.deleteColorProfileButton);
 			this.colorProfileListBox.Controls.Add(this.openColorProfileFolderButton);
@@ -383,6 +384,18 @@
 			this.colorProfileListBox.TabIndex = 2;
 			this.colorProfileListBox.TabStop = false;
 			this.colorProfileListBox.Text = "Color Profile List";
+			// 
+			// applyColorProfileButton
+			// 
+			this.applyColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.applyColorProfileButton.ForeColor = System.Drawing.Color.Orange;
+			this.applyColorProfileButton.Location = new System.Drawing.Point(155, 256);
+			this.applyColorProfileButton.Name = "applyColorProfileButton";
+			this.applyColorProfileButton.Size = new System.Drawing.Size(188, 23);
+			this.applyColorProfileButton.TabIndex = 30;
+			this.applyColorProfileButton.Text = "Apply Color Profile";
+			this.applyColorProfileButton.UseVisualStyleBackColor = true;
+			this.applyColorProfileButton.Click += new System.EventHandler(this.applyColorProfileButton_Click);
 			// 
 			// useColorProfileButton
 			// 
@@ -498,5 +511,6 @@
 		private Button openColorProfileFolderButton;
 		private Button deleteColorProfileButton;
 		private Button useColorProfileButton;
+		private Button applyColorProfileButton;
 	}
 }
