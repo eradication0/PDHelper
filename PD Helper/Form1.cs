@@ -738,6 +738,19 @@ namespace PD_Helper
             }
         }
 
+        private string schoolFromName(string name)
+        {
+            foreach (PDCard pair in cardDef.Values)
+            {
+                if (pair.NAME == name)
+                {
+                    return pair.SCHOOL;
+                }
+            }
+
+            throw new Exception("Could not identify card");
+        }
+
         private void skillList_DrawItem(object sender, DrawItemEventArgs e, ListBox listBox)
         {
             if (e.Index < 0) return;
@@ -763,6 +776,16 @@ namespace PD_Helper
 
             // Draw the current item text
             e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
+
+            // Get the school of the skill and its associate image path
+            string school = schoolFromName(skillName);
+            string path = @"School_Icons\" + school + ".png";
+            Image schoolIcon = Image.FromFile(path);
+
+            // Draw the school icon [HEIGHT IS 15]
+            e.Graphics.DrawImageUnscaled(schoolIcon, 
+                x: e.Bounds.Right - 28,
+                y: e.Bounds.Top);
 
             // If the ListBox has focus, draw a focus rectangle around the selected item.
             e.DrawFocusRectangle();
