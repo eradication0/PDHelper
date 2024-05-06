@@ -52,6 +52,8 @@ namespace PD_Helper
 			statusDarkColorButton.BackColor = getColor("Status", false);
 			specialLightColorButton.BackColor = getColor("Special", true);
 			specialDarkColorButton.BackColor = getColor("Special", false);
+			auraLightColorButton.BackColor = getColor("Aura", true);
+			auraDarkColorButton.BackColor = getColor("Aura", false);
 		}
 
 		public static Color getColor(string type, bool isLight) => getColor(type, isLight, "CURRENT");
