@@ -151,8 +151,6 @@ namespace PD_Helper
             {
                 if (processCollection[i].ProcessName == "PDUWP")
                 {
-
-
                     //Get Processes and check for Phantom Dust, attach and enable Arsenal Loading
                     label2.Text = "Found the process! ID: " + processCollection[i].Id.ToString();
                     ProcOpen = m.OpenProcess(processCollection[i].Id, out string error);
@@ -532,6 +530,9 @@ namespace PD_Helper
 
         private Color lightColorFromType(string type)
         {
+            return ColorProfileForm.getColor(type, true);
+            
+            /*
             switch (type)
             {
                 case "Attack":
@@ -548,7 +549,7 @@ namespace PD_Helper
                     return Color.FromArgb(239, 239, 112);
                 default:
                     return Color.FromArgb(165, 215, 187);
-            }
+            }*/
         }
 
         private Color lightColorFromName(string name)
@@ -566,6 +567,9 @@ namespace PD_Helper
 
         private Color darkColorFromType(string type)
         {
+            return ColorProfileForm.getColor(type, false);
+
+            /*
             switch (type)
             {
                 case "Attack":
@@ -582,7 +586,7 @@ namespace PD_Helper
                     return Color.FromArgb(220, 218, 75);
                 default:
                     return Color.FromArgb(127, 177, 150);
-            }
+            }*/
         }
 
         private Color darkColorFromName(string name)
