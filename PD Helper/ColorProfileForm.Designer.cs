@@ -30,6 +30,9 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnSaveToPDH = new System.Windows.Forms.Button();
+			this.colorProfileNameBox = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
 			this.auraDarkColorButton = new System.Windows.Forms.Button();
 			this.auraLightColorButton = new System.Windows.Forms.Button();
 			this.label9 = new System.Windows.Forms.Label();
@@ -53,11 +56,16 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
 			this.list1 = new PD_Helper.list(this.components);
-			this.colorProfileNameBox = new System.Windows.Forms.TextBox();
-			this.btnSaveToPDH = new System.Windows.Forms.Button();
+			this.savedColorProfileListBox = new System.Windows.Forms.ListBox();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.loadColorProfileButton = new System.Windows.Forms.Button();
+			this.refreshColorProfileButton = new System.Windows.Forms.Button();
+			this.openColorProfileFolderButton = new System.Windows.Forms.Button();
+			this.deleteColorProfileButton = new System.Windows.Forms.Button();
+			this.useColorProfileButton = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -95,6 +103,38 @@
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Skill Color Picker";
+			// 
+			// btnSaveToPDH
+			// 
+			this.btnSaveToPDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSaveToPDH.ForeColor = System.Drawing.Color.PaleGreen;
+			this.btnSaveToPDH.Location = new System.Drawing.Point(6, 284);
+			this.btnSaveToPDH.Name = "btnSaveToPDH";
+			this.btnSaveToPDH.Size = new System.Drawing.Size(161, 23);
+			this.btnSaveToPDH.TabIndex = 29;
+			this.btnSaveToPDH.Text = "Save To PDHelper";
+			this.btnSaveToPDH.UseVisualStyleBackColor = true;
+			this.btnSaveToPDH.Click += new System.EventHandler(this.btnSaveToPDH_Click);
+			// 
+			// colorProfileNameBox
+			// 
+			this.colorProfileNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.colorProfileNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.colorProfileNameBox.Location = new System.Drawing.Point(6, 255);
+			this.colorProfileNameBox.MaxLength = 16;
+			this.colorProfileNameBox.Name = "colorProfileNameBox";
+			this.colorProfileNameBox.Size = new System.Drawing.Size(161, 23);
+			this.colorProfileNameBox.TabIndex = 33;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label10.Location = new System.Drawing.Point(6, 237);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(115, 15);
+			this.label10.TabIndex = 23;
+			this.label10.Text = "Color Profile Name:";
 			// 
 			// auraDarkColorButton
 			// 
@@ -317,49 +357,101 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Attack";
 			// 
-			// label10
+			// savedColorProfileListBox
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label10.Location = new System.Drawing.Point(6, 237);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(115, 15);
-			this.label10.TabIndex = 23;
-			this.label10.Text = "Color Profile Name:";
+			this.savedColorProfileListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.savedColorProfileListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.savedColorProfileListBox.FormattingEnabled = true;
+			this.savedColorProfileListBox.ItemHeight = 15;
+			this.savedColorProfileListBox.Location = new System.Drawing.Point(6, 22);
+			this.savedColorProfileListBox.Name = "savedColorProfileListBox";
+			this.savedColorProfileListBox.Size = new System.Drawing.Size(143, 289);
+			this.savedColorProfileListBox.TabIndex = 1;
 			// 
-			// colorProfileNameBox
+			// groupBox2
 			// 
-			this.colorProfileNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.colorProfileNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.colorProfileNameBox.Location = new System.Drawing.Point(6, 255);
-			this.colorProfileNameBox.MaxLength = 16;
-			this.colorProfileNameBox.Name = "colorProfileNameBox";
-			this.colorProfileNameBox.Size = new System.Drawing.Size(161, 23);
-			this.colorProfileNameBox.TabIndex = 33;
+			this.groupBox2.Controls.Add(this.useColorProfileButton);
+			this.groupBox2.Controls.Add(this.deleteColorProfileButton);
+			this.groupBox2.Controls.Add(this.openColorProfileFolderButton);
+			this.groupBox2.Controls.Add(this.refreshColorProfileButton);
+			this.groupBox2.Controls.Add(this.loadColorProfileButton);
+			this.groupBox2.Controls.Add(this.savedColorProfileListBox);
+			this.groupBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.groupBox2.Location = new System.Drawing.Point(197, 12);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(349, 314);
+			this.groupBox2.TabIndex = 2;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Color Profile List";
 			// 
-			// btnSaveToPDH
+			// loadColorProfileButton
 			// 
-			this.btnSaveToPDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSaveToPDH.ForeColor = System.Drawing.Color.PaleGreen;
-			this.btnSaveToPDH.Location = new System.Drawing.Point(6, 284);
-			this.btnSaveToPDH.Name = "btnSaveToPDH";
-			this.btnSaveToPDH.Size = new System.Drawing.Size(161, 23);
-			this.btnSaveToPDH.TabIndex = 29;
-			this.btnSaveToPDH.Text = "Save To PDHelper";
-			this.btnSaveToPDH.UseVisualStyleBackColor = true;
-			this.btnSaveToPDH.Click += new System.EventHandler(this.btnSaveToPDH_Click);
+			this.loadColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.loadColorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.loadColorProfileButton.Location = new System.Drawing.Point(155, 51);
+			this.loadColorProfileButton.Name = "loadColorProfileButton";
+			this.loadColorProfileButton.Size = new System.Drawing.Size(187, 23);
+			this.loadColorProfileButton.TabIndex = 24;
+			this.loadColorProfileButton.Text = "Load Color Profile";
+			this.loadColorProfileButton.UseVisualStyleBackColor = true;
+			// 
+			// refreshColorProfileButton
+			// 
+			this.refreshColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.refreshColorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.refreshColorProfileButton.Location = new System.Drawing.Point(155, 80);
+			this.refreshColorProfileButton.Name = "refreshColorProfileButton";
+			this.refreshColorProfileButton.Size = new System.Drawing.Size(187, 26);
+			this.refreshColorProfileButton.TabIndex = 28;
+			this.refreshColorProfileButton.Text = "Refresh Color Profile List";
+			this.refreshColorProfileButton.UseVisualStyleBackColor = true;
+			// 
+			// openColorProfileFolderButton
+			// 
+			this.openColorProfileFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.openColorProfileFolderButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.openColorProfileFolderButton.Location = new System.Drawing.Point(155, 112);
+			this.openColorProfileFolderButton.Name = "openColorProfileFolderButton";
+			this.openColorProfileFolderButton.Size = new System.Drawing.Size(187, 26);
+			this.openColorProfileFolderButton.TabIndex = 27;
+			this.openColorProfileFolderButton.Text = "Open Color Profile Folder";
+			this.openColorProfileFolderButton.UseVisualStyleBackColor = true;
+			// 
+			// deleteColorProfileButton
+			// 
+			this.deleteColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.deleteColorProfileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+			this.deleteColorProfileButton.Location = new System.Drawing.Point(155, 284);
+			this.deleteColorProfileButton.Name = "deleteColorProfileButton";
+			this.deleteColorProfileButton.Size = new System.Drawing.Size(187, 26);
+			this.deleteColorProfileButton.TabIndex = 29;
+			this.deleteColorProfileButton.Text = "Delete Color Profile";
+			this.deleteColorProfileButton.UseVisualStyleBackColor = true;
+			// 
+			// useColorProfileButton
+			// 
+			this.useColorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.useColorProfileButton.ForeColor = System.Drawing.Color.SkyBlue;
+			this.useColorProfileButton.Location = new System.Drawing.Point(156, 22);
+			this.useColorProfileButton.Name = "useColorProfileButton";
+			this.useColorProfileButton.Size = new System.Drawing.Size(187, 23);
+			this.useColorProfileButton.TabIndex = 28;
+			this.useColorProfileButton.Text = "Use Color Profile in Editor";
+			this.useColorProfileButton.UseVisualStyleBackColor = true;
 			// 
 			// ColorProfileForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(558, 339);
+			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "ColorProfileForm";
 			this.Text = "Color Profile Settings";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -394,5 +486,12 @@
 		private TextBox colorProfileNameBox;
 		private list list1;
 		private Button btnSaveToPDH;
+		private ListBox savedColorProfileListBox;
+		private GroupBox groupBox2;
+		private Button loadColorProfileButton;
+		private Button refreshColorProfileButton;
+		private Button openColorProfileFolderButton;
+		private Button deleteColorProfileButton;
+		private Button useColorProfileButton;
 	}
 }

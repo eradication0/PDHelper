@@ -112,7 +112,7 @@ namespace PD_Helper
 			string profile = colorProfileNameBox.Text;
 			
 			// Double check we are not rewriting the DEFAULT or CURRENT profiles
-			if (profile == "DEFAULT" || profile == "CURRENT")
+			if (profile == "DEFAULT" || profile == "CURRENT" || profile == "" || profile == null)
 			{
 				// TODO: Throw popup warning against the name
 				return;
