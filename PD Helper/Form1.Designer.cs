@@ -730,6 +730,7 @@
 			this.schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
 			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(86, 90);
 			this.schoolFilterCheckedListBox.TabIndex = 0;
+			this.schoolFilterCheckedListBox.ItemCheck += new ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
 			// 
 			// Form1
 			// 

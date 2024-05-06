@@ -306,28 +306,106 @@ namespace PD_Helper
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void updateEditorList()
         {
-            //search for value in editorList
+			// Use the current array of checkmarks
+			bool[] schoolFilter = new bool[5];
+
+			for (int i = 0; i < 5; i++)
+			{
+				schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+			}
+
+            updateEditorList(schoolFilter);
+        }
+
+        private void updateEditorList(int index, CheckState newValue)
+        {
+            // Use the current array of checkmarks but with the updated checkmark value instead
+            bool[] schoolFilter = new bool[5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (i != index) schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+                else schoolFilter[index] = newValue == CheckState.Checked;
+            }
+
+            updateEditorList(schoolFilter);
+        }
+
+        private void updateEditorList(bool[] schoolFilter)
+        {
+			// Check the filter
+            if (schoolFilter == null || schoolFilter.Length != 5)
+			{
+                throw new FormatException("'schoolFilter' needs to not be null and have length 5.");
+			}
+
+            // Step 0: Prepare the list of skills to consider for filtering
+            List<string> consideredSkills = new List<string>();
+			foreach (var item in allSkills.Items)
+			{
+                consideredSkills.Add(item.ToString());
+			}
+
+            // Step 1: Only consider the skills matching the school filter
+            List<string> filterSkills = new List<string>();
+			foreach (var item in consideredSkills)
+			{
+                string school = schoolFromName(item);
+                bool toKeep = true;
+                switch (school)
+				{
+                    case "Psycho":
+                        toKeep = schoolFilter[0];
+                        break;
+                    case "Optical":
+                        toKeep = schoolFilter[1];
+                        break;
+                    case "Nature":
+                        toKeep = schoolFilter[2];
+                        break;
+                    case "Ki":
+                        toKeep = schoolFilter[3];
+                        break;
+                    case "Faith":
+                        toKeep = schoolFilter[4];
+                        break;
+                    default:
+						break;
+				}
+				if (toKeep)
+				{
+                    filterSkills.Add(item);
+				}
+			}
+            consideredSkills = filterSkills;
+
+            // Step 2: search for value in editorList
             if (textBox1.Text != "")
             {
                 editorList.Items.Clear();
-                foreach (var item in allSkills.Items)
+                foreach (var item in consideredSkills)
                 {
                     if (item.ToString().Contains(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                     {
                         editorList.Items.Add(item.ToString());
                     }
                 }
-            } else
+            }
+            else
             {
                 editorList.Items.Clear();
-                foreach (var item in allSkills.Items)
+                foreach (var item in consideredSkills)
                 {
                     editorList.Items.Add(item);
                 }
             }
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            updateEditorList();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -931,5 +1009,10 @@ namespace PD_Helper
         {
 
         }
-    }
+
+		private void schoolFilterCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+		{
+            updateEditorList(e.Index, e.NewValue);
+		}
+	}
 }
