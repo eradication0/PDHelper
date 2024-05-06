@@ -137,6 +137,7 @@ namespace PD_Helper
         string loadedDeckName = "";
 
         bool ProcOpen = false;
+        bool gamepadOn = false;
         public Mem m = new Mem();
         public ListBox allSkills = new ListBox();
 
@@ -145,9 +146,13 @@ namespace PD_Helper
             Process[] processCollection = Process.GetProcesses();
             arsenalDropdown.Items.Clear();
 
-            //start input worker
-            _controller = new Controller(UserIndex.One);
-            GamepadWorker.RunWorkerAsync();
+			//start input worker (if it hasn't yet)
+			if (!gamepadOn)
+			{
+                _controller = new Controller(UserIndex.One);
+                GamepadWorker.RunWorkerAsync();
+                gamepadOn = true;
+            }
 
             for (int i = 0; i < processCollection.Length; i++)
             {
