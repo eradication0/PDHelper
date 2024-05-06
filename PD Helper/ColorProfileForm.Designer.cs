@@ -29,26 +29,26 @@
 		private void InitializeComponent()
 		{
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.attackLightColorButton = new System.Windows.Forms.Button();
-			this.label7 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.defenseLightColorButton = new System.Windows.Forms.Button();
-			this.eraseLightColorButton = new System.Windows.Forms.Button();
-			this.statusLightColorButton = new System.Windows.Forms.Button();
-			this.specialLightColorButton = new System.Windows.Forms.Button();
-			this.environmentalLightColorButton = new System.Windows.Forms.Button();
 			this.environmentalDarkColorButton = new System.Windows.Forms.Button();
 			this.specialDarkColorButton = new System.Windows.Forms.Button();
 			this.statusDarkColorButton = new System.Windows.Forms.Button();
 			this.eraseDarkColorButton = new System.Windows.Forms.Button();
 			this.defenseDarkColorButton = new System.Windows.Forms.Button();
 			this.attackDarkColorButton = new System.Windows.Forms.Button();
+			this.environmentalLightColorButton = new System.Windows.Forms.Button();
+			this.specialLightColorButton = new System.Windows.Forms.Button();
+			this.statusLightColorButton = new System.Windows.Forms.Button();
+			this.eraseLightColorButton = new System.Windows.Forms.Button();
+			this.defenseLightColorButton = new System.Windows.Forms.Button();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.attackLightColorButton = new System.Windows.Forms.Button();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -81,6 +81,144 @@
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Skill Color Picker";
+			// 
+			// environmentalDarkColorButton
+			// 
+			this.environmentalDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.environmentalDarkColorButton.Location = new System.Drawing.Point(144, 182);
+			this.environmentalDarkColorButton.Name = "environmentalDarkColorButton";
+			this.environmentalDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.environmentalDarkColorButton.TabIndex = 19;
+			this.environmentalDarkColorButton.UseVisualStyleBackColor = true;
+			this.environmentalDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// specialDarkColorButton
+			// 
+			this.specialDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.specialDarkColorButton.Location = new System.Drawing.Point(144, 153);
+			this.specialDarkColorButton.Name = "specialDarkColorButton";
+			this.specialDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.specialDarkColorButton.TabIndex = 18;
+			this.specialDarkColorButton.UseVisualStyleBackColor = true;
+			this.specialDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// statusDarkColorButton
+			// 
+			this.statusDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.statusDarkColorButton.Location = new System.Drawing.Point(144, 124);
+			this.statusDarkColorButton.Name = "statusDarkColorButton";
+			this.statusDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.statusDarkColorButton.TabIndex = 17;
+			this.statusDarkColorButton.UseVisualStyleBackColor = true;
+			this.statusDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// eraseDarkColorButton
+			// 
+			this.eraseDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.eraseDarkColorButton.Location = new System.Drawing.Point(144, 95);
+			this.eraseDarkColorButton.Name = "eraseDarkColorButton";
+			this.eraseDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.eraseDarkColorButton.TabIndex = 16;
+			this.eraseDarkColorButton.UseVisualStyleBackColor = true;
+			this.eraseDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// defenseDarkColorButton
+			// 
+			this.defenseDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.defenseDarkColorButton.Location = new System.Drawing.Point(144, 66);
+			this.defenseDarkColorButton.Name = "defenseDarkColorButton";
+			this.defenseDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.defenseDarkColorButton.TabIndex = 15;
+			this.defenseDarkColorButton.UseVisualStyleBackColor = true;
+			this.defenseDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// attackDarkColorButton
+			// 
+			this.attackDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.attackDarkColorButton.Location = new System.Drawing.Point(144, 37);
+			this.attackDarkColorButton.Name = "attackDarkColorButton";
+			this.attackDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.attackDarkColorButton.TabIndex = 14;
+			this.attackDarkColorButton.UseVisualStyleBackColor = true;
+			this.attackDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// environmentalLightColorButton
+			// 
+			this.environmentalLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.environmentalLightColorButton.Location = new System.Drawing.Point(96, 182);
+			this.environmentalLightColorButton.Name = "environmentalLightColorButton";
+			this.environmentalLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.environmentalLightColorButton.TabIndex = 13;
+			this.environmentalLightColorButton.UseVisualStyleBackColor = true;
+			this.environmentalLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// specialLightColorButton
+			// 
+			this.specialLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.specialLightColorButton.Location = new System.Drawing.Point(96, 153);
+			this.specialLightColorButton.Name = "specialLightColorButton";
+			this.specialLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.specialLightColorButton.TabIndex = 12;
+			this.specialLightColorButton.UseVisualStyleBackColor = true;
+			this.specialLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// statusLightColorButton
+			// 
+			this.statusLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.statusLightColorButton.Location = new System.Drawing.Point(96, 124);
+			this.statusLightColorButton.Name = "statusLightColorButton";
+			this.statusLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.statusLightColorButton.TabIndex = 11;
+			this.statusLightColorButton.UseVisualStyleBackColor = true;
+			this.statusLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// eraseLightColorButton
+			// 
+			this.eraseLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.eraseLightColorButton.Location = new System.Drawing.Point(96, 95);
+			this.eraseLightColorButton.Name = "eraseLightColorButton";
+			this.eraseLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.eraseLightColorButton.TabIndex = 10;
+			this.eraseLightColorButton.UseVisualStyleBackColor = true;
+			this.eraseLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// defenseLightColorButton
+			// 
+			this.defenseLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.defenseLightColorButton.Location = new System.Drawing.Point(96, 66);
+			this.defenseLightColorButton.Name = "defenseLightColorButton";
+			this.defenseLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.defenseLightColorButton.TabIndex = 9;
+			this.defenseLightColorButton.UseVisualStyleBackColor = true;
+			this.defenseLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(136, 19);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(31, 15);
+			this.label8.TabIndex = 8;
+			this.label8.Text = "Dark";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(96, 19);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(34, 15);
+			this.label7.TabIndex = 7;
+			this.label7.Text = "Light";
+			// 
+			// attackLightColorButton
+			// 
+			this.attackLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.attackLightColorButton.Location = new System.Drawing.Point(96, 37);
+			this.attackLightColorButton.Name = "attackLightColorButton";
+			this.attackLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.attackLightColorButton.TabIndex = 6;
+			this.attackLightColorButton.UseVisualStyleBackColor = true;
+			this.attackLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
 			// 
 			// label6
 			// 
@@ -135,120 +273,6 @@
 			this.label1.Size = new System.Drawing.Size(41, 15);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Attack";
-			// 
-			// attackLightColorButton
-			// 
-			this.attackLightColorButton.Location = new System.Drawing.Point(96, 37);
-			this.attackLightColorButton.Name = "attackLightColorButton";
-			this.attackLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.attackLightColorButton.TabIndex = 6;
-			this.attackLightColorButton.UseVisualStyleBackColor = true;
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(96, 19);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(34, 15);
-			this.label7.TabIndex = 7;
-			this.label7.Text = "Light";
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(136, 19);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(31, 15);
-			this.label8.TabIndex = 8;
-			this.label8.Text = "Dark";
-			// 
-			// defenseLightColorButton
-			// 
-			this.defenseLightColorButton.Location = new System.Drawing.Point(96, 66);
-			this.defenseLightColorButton.Name = "defenseLightColorButton";
-			this.defenseLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.defenseLightColorButton.TabIndex = 9;
-			this.defenseLightColorButton.UseVisualStyleBackColor = true;
-			// 
-			// eraseLightColorButton
-			// 
-			this.eraseLightColorButton.Location = new System.Drawing.Point(96, 95);
-			this.eraseLightColorButton.Name = "eraseLightColorButton";
-			this.eraseLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.eraseLightColorButton.TabIndex = 10;
-			this.eraseLightColorButton.UseVisualStyleBackColor = true;
-			// 
-			// statusLightColorButton
-			// 
-			this.statusLightColorButton.Location = new System.Drawing.Point(96, 124);
-			this.statusLightColorButton.Name = "statusLightColorButton";
-			this.statusLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.statusLightColorButton.TabIndex = 11;
-			this.statusLightColorButton.UseVisualStyleBackColor = true;
-			// 
-			// specialLightColorButton
-			// 
-			this.specialLightColorButton.Location = new System.Drawing.Point(96, 153);
-			this.specialLightColorButton.Name = "specialLightColorButton";
-			this.specialLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.specialLightColorButton.TabIndex = 12;
-			this.specialLightColorButton.UseVisualStyleBackColor = true;
-			// 
-			// environmentalLightColorButton
-			// 
-			this.environmentalLightColorButton.Location = new System.Drawing.Point(96, 182);
-			this.environmentalLightColorButton.Name = "environmentalLightColorButton";
-			this.environmentalLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.environmentalLightColorButton.TabIndex = 13;
-			this.environmentalLightColorButton.UseVisualStyleBackColor = true;
-			// 
-			// environmentalDarkColorButton
-			// 
-			this.environmentalDarkColorButton.Location = new System.Drawing.Point(144, 182);
-			this.environmentalDarkColorButton.Name = "environmentalDarkColorButton";
-			this.environmentalDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.environmentalDarkColorButton.TabIndex = 19;
-			this.environmentalDarkColorButton.UseVisualStyleBackColor = true;
-			// 
-			// specialDarkColorButton
-			// 
-			this.specialDarkColorButton.Location = new System.Drawing.Point(144, 153);
-			this.specialDarkColorButton.Name = "specialDarkColorButton";
-			this.specialDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.specialDarkColorButton.TabIndex = 18;
-			this.specialDarkColorButton.UseVisualStyleBackColor = true;
-			// 
-			// statusDarkColorButton
-			// 
-			this.statusDarkColorButton.Location = new System.Drawing.Point(144, 124);
-			this.statusDarkColorButton.Name = "statusDarkColorButton";
-			this.statusDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.statusDarkColorButton.TabIndex = 17;
-			this.statusDarkColorButton.UseVisualStyleBackColor = true;
-			// 
-			// eraseDarkColorButton
-			// 
-			this.eraseDarkColorButton.Location = new System.Drawing.Point(144, 95);
-			this.eraseDarkColorButton.Name = "eraseDarkColorButton";
-			this.eraseDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.eraseDarkColorButton.TabIndex = 16;
-			this.eraseDarkColorButton.UseVisualStyleBackColor = true;
-			// 
-			// defenseDarkColorButton
-			// 
-			this.defenseDarkColorButton.Location = new System.Drawing.Point(144, 66);
-			this.defenseDarkColorButton.Name = "defenseDarkColorButton";
-			this.defenseDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.defenseDarkColorButton.TabIndex = 15;
-			this.defenseDarkColorButton.UseVisualStyleBackColor = true;
-			// 
-			// attackDarkColorButton
-			// 
-			this.attackDarkColorButton.Location = new System.Drawing.Point(144, 37);
-			this.attackDarkColorButton.Name = "attackDarkColorButton";
-			this.attackDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.attackDarkColorButton.TabIndex = 14;
-			this.attackDarkColorButton.UseVisualStyleBackColor = true;
 			// 
 			// ColorProfileForm
 			// 
