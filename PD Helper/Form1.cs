@@ -972,6 +972,10 @@ namespace PD_Helper
             // Open new form for setting colors
             var colorForm = new ColorProfileForm();
             colorForm.ShowDialog();
+            
+            // Refresh the two editor views
+            deckListBox.Refresh();
+            editorList.Refresh();
 		}
 	}
 }

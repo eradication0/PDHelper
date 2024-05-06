@@ -74,6 +74,27 @@ namespace PD_Helper
 			specialDarkColorButton.BackColor = getColor("Special", false);
 			auraLightColorButton.BackColor = getColor("Aura", true);
 			auraDarkColorButton.BackColor = getColor("Aura", false);
+
+			// Add each color profile file to the list
+			savedColorProfileListBox.Items.Clear();
+			DirectoryInfo directory = new DirectoryInfo(@"Color_Profiles\");
+
+			FileInfo[] Files = directory.GetFiles("*.json"); // Getting JSON files
+			string str = "";
+
+			foreach (FileInfo file in Files)
+			{
+				// Get Profile name
+				string currentProfile = file.Name;
+				currentProfile = currentProfile.Remove(currentProfile.Length - 5);
+
+				// If the name is "CURRENT", skip it.
+				if (currentProfile == "CURRENT") continue;
+
+				// Add to list
+				savedColorProfileListBox.Items.Add(currentProfile);
+			}
+			colorProfileListBox.Text = "Color Profile List (" + savedColorProfileListBox.Items.Count + ")";
 		}
 
 		public static Color getColor(string type, bool isLight) => getColor(type, isLight, "CURRENT");
@@ -160,6 +181,27 @@ namespace PD_Helper
 			string path = @"Color_Profiles\" + profile + ".json";
 			string json = getJSONFromColors();
 			File.WriteAllText(path, json);
+
+			// Add each color profile file to the list
+			savedColorProfileListBox.Items.Clear();
+			DirectoryInfo directory = new DirectoryInfo(@"Color_Profiles\");
+
+			FileInfo[] Files = directory.GetFiles("*.json"); // Getting JSON files
+			string str = "";
+
+			foreach (FileInfo file in Files)
+			{
+				// Get Profile name
+				string currentProfile = file.Name;
+				currentProfile = currentProfile.Remove(currentProfile.Length - 5);
+
+				// If the name is "CURRENT", skip it.
+				if (currentProfile == "CURRENT") continue;
+
+				// Add to list
+				savedColorProfileListBox.Items.Add(currentProfile);
+			}
+			colorProfileListBox.Text = "Color Profile List (" + savedColorProfileListBox.Items.Count + ")";
 		}
 
 		private void loadColorProfileButton_Click(object sender, EventArgs e)
@@ -218,10 +260,18 @@ namespace PD_Helper
 
 		private void deleteColorProfileButton_Click(object sender, EventArgs e)
 		{
-			DialogResult dr = MessageBox.Show("Are you sure you want to delete color profile: " + savedColorProfileListBox.SelectedItem.ToString() + "?", "Color Profile Deletion Check", MessageBoxButtons.YesNo);
+			// Get the profile name to delete
+			string profile = savedColorProfileListBox.SelectedItem.ToString();
+			if (profile == "DEFAULT")
+			{
+				// TODO: Tell the user they cannot delete the default color profile.
+				return;
+			}
+			
+			DialogResult dr = MessageBox.Show("Are you sure you want to delete color profile: " + profile + "?", "Color Profile Deletion Check", MessageBoxButtons.YesNo);
 			if (dr == DialogResult.Yes)
 			{
-				string path = @"Color_Profiles\" + savedColorProfileListBox.SelectedItem.ToString() + ".json";
+				string path = @"Color_Profiles\" + profile + ".json";
 				File.Delete(path);
 				savedColorProfileListBox.Items.Remove(savedColorProfileListBox.SelectedItem);
 			}
