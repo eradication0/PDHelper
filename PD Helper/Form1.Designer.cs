@@ -78,6 +78,13 @@
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.environmentalRadioButton = new System.Windows.Forms.RadioButton();
+			this.specialRadioButton = new System.Windows.Forms.RadioButton();
+			this.statusRadioButton = new System.Windows.Forms.RadioButton();
+			this.eraseRadioButton = new System.Windows.Forms.RadioButton();
+			this.defenseRadioButton = new System.Windows.Forms.RadioButton();
+			this.attackRadioButton = new System.Windows.Forms.RadioButton();
+			this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
 			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -704,14 +711,93 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.environmentalRadioButton);
+			this.groupBox3.Controls.Add(this.specialRadioButton);
+			this.groupBox3.Controls.Add(this.statusRadioButton);
+			this.groupBox3.Controls.Add(this.eraseRadioButton);
+			this.groupBox3.Controls.Add(this.defenseRadioButton);
+			this.groupBox3.Controls.Add(this.attackRadioButton);
+			this.groupBox3.Controls.Add(this.allSkillsRadioButton);
 			this.groupBox3.Controls.Add(this.schoolFilterCheckedListBox);
 			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.groupBox3.Location = new System.Drawing.Point(12, 581);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(440, 165);
+			this.groupBox3.Size = new System.Drawing.Size(440, 168);
 			this.groupBox3.TabIndex = 28;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Filter Settings";
+			// 
+			// environmentalRadioButton
+			// 
+			this.environmentalRadioButton.AutoSize = true;
+			this.environmentalRadioButton.Location = new System.Drawing.Point(161, 98);
+			this.environmentalRadioButton.Name = "environmentalRadioButton";
+			this.environmentalRadioButton.Size = new System.Drawing.Size(102, 19);
+			this.environmentalRadioButton.TabIndex = 12;
+			this.environmentalRadioButton.Text = "Environmental";
+			this.environmentalRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// specialRadioButton
+			// 
+			this.specialRadioButton.AutoSize = true;
+			this.specialRadioButton.Location = new System.Drawing.Point(96, 98);
+			this.specialRadioButton.Name = "specialRadioButton";
+			this.specialRadioButton.Size = new System.Drawing.Size(62, 19);
+			this.specialRadioButton.TabIndex = 11;
+			this.specialRadioButton.Text = "Special";
+			this.specialRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// statusRadioButton
+			// 
+			this.statusRadioButton.AutoSize = true;
+			this.statusRadioButton.Location = new System.Drawing.Point(161, 73);
+			this.statusRadioButton.Name = "statusRadioButton";
+			this.statusRadioButton.Size = new System.Drawing.Size(57, 19);
+			this.statusRadioButton.TabIndex = 10;
+			this.statusRadioButton.Text = "Status";
+			this.statusRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// eraseRadioButton
+			// 
+			this.eraseRadioButton.AutoSize = true;
+			this.eraseRadioButton.Location = new System.Drawing.Point(96, 73);
+			this.eraseRadioButton.Name = "eraseRadioButton";
+			this.eraseRadioButton.Size = new System.Drawing.Size(52, 19);
+			this.eraseRadioButton.TabIndex = 9;
+			this.eraseRadioButton.Text = "Erase";
+			this.eraseRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// defenseRadioButton
+			// 
+			this.defenseRadioButton.AutoSize = true;
+			this.defenseRadioButton.Location = new System.Drawing.Point(161, 48);
+			this.defenseRadioButton.Name = "defenseRadioButton";
+			this.defenseRadioButton.Size = new System.Drawing.Size(67, 19);
+			this.defenseRadioButton.TabIndex = 8;
+			this.defenseRadioButton.Text = "Defense";
+			this.defenseRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// attackRadioButton
+			// 
+			this.attackRadioButton.AutoSize = true;
+			this.attackRadioButton.Location = new System.Drawing.Point(96, 48);
+			this.attackRadioButton.Name = "attackRadioButton";
+			this.attackRadioButton.Size = new System.Drawing.Size(59, 19);
+			this.attackRadioButton.TabIndex = 7;
+			this.attackRadioButton.Text = "Attack";
+			this.attackRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// allSkillsRadioButton
+			// 
+			this.allSkillsRadioButton.AutoSize = true;
+			this.allSkillsRadioButton.Checked = true;
+			this.allSkillsRadioButton.Location = new System.Drawing.Point(96, 23);
+			this.allSkillsRadioButton.Name = "allSkillsRadioButton";
+			this.allSkillsRadioButton.Size = new System.Drawing.Size(68, 19);
+			this.allSkillsRadioButton.TabIndex = 6;
+			this.allSkillsRadioButton.TabStop = true;
+			this.allSkillsRadioButton.Text = "All Skills";
+			this.allSkillsRadioButton.UseVisualStyleBackColor = true;
 			// 
 			// schoolFilterCheckedListBox
 			// 
@@ -730,7 +816,7 @@
 			this.schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
 			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(86, 90);
 			this.schoolFilterCheckedListBox.TabIndex = 0;
-			this.schoolFilterCheckedListBox.ItemCheck += new ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
+			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
 			// 
 			// Form1
 			// 
@@ -764,6 +850,7 @@
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -821,5 +908,12 @@
         private Label label6;
 		private GroupBox groupBox3;
 		private CheckedListBox schoolFilterCheckedListBox;
+		private RadioButton attackRadioButton;
+		private RadioButton allSkillsRadioButton;
+		private RadioButton specialRadioButton;
+		private RadioButton statusRadioButton;
+		private RadioButton eraseRadioButton;
+		private RadioButton defenseRadioButton;
+		private RadioButton environmentalRadioButton;
 	}
 }
