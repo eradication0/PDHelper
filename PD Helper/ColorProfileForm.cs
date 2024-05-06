@@ -22,6 +22,23 @@ namespace PD_Helper
             [JsonProperty("Dark")]
             public string Dark { get; set; }
 
+			public TypeColors()
+			{
+				// Empty
+			}
+
+			public TypeColors(string light, string dark)
+			{
+				Light = light;
+				Dark = dark;
+			}
+
+			public TypeColors(Color light, Color dark)
+			{
+				Light = colorToHex(light);
+				Dark = colorToHex(dark);
+			}
+
 			public static Color hexToColor(string hex)
 			{
 				hex = hex.Replace("#", string.Empty);
@@ -31,8 +48,10 @@ namespace PD_Helper
 				return Color.FromArgb(r, g, b);
 			}
 
-			public Color getLightColor => hexToColor(Light);
-			public Color getDarkColor => hexToColor(Dark);
+			public static string colorToHex(Color color) => string.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B);
+
+			public Color getLightColor() => hexToColor(Light);
+			public Color getDarkColor() => hexToColor(Dark);
 		}
 		
 		public ColorProfileForm()
@@ -68,8 +87,8 @@ namespace PD_Helper
 			Dictionary<string, TypeColors> colorProfile = JsonConvert.DeserializeObject<Dictionary<string, TypeColors>>(fileText);
 
 			// Return color
-			if (isLight) return colorProfile[type].getLightColor;
-			else return colorProfile[type].getDarkColor;
+			if (isLight) return colorProfile[type].getLightColor();
+			else return colorProfile[type].getDarkColor();
 		}
 
 		private void colorButtonClick(object sender, EventArgs e)
@@ -85,6 +104,58 @@ namespace PD_Helper
 			{
 				button.BackColor = colorDialog.Color;
 			}
+		}
+
+		private void btnSaveToPDH_Click(object sender, EventArgs e)
+		{
+			// Get the profile name
+			string profile = colorProfileNameBox.Text;
+			
+			// Double check we are not rewriting the DEFAULT or CURRENT profiles
+			if (profile == "DEFAULT" || profile == "CURRENT")
+			{
+				// TODO: Throw popup warning against the name
+				return;
+			}
+
+			// Create a TypeColors for each type
+			//TypeColors[] typeColors = new TypeColors[7];
+			Dictionary<string, TypeColors> typeColors = new Dictionary<string, TypeColors>();
+			typeColors["Attack"] = new TypeColors(
+				attackLightColorButton.BackColor,
+				attackDarkColorButton.BackColor
+				);
+			typeColors["Defense"] = new TypeColors(
+				defenseLightColorButton.BackColor,
+				defenseDarkColorButton.BackColor
+				);
+			typeColors["Erase"] = new TypeColors(
+				eraseLightColorButton.BackColor,
+				eraseDarkColorButton.BackColor
+				);
+			typeColors["Environment"] = new TypeColors(
+				environmentalLightColorButton.BackColor,
+				environmentalDarkColorButton.BackColor
+				);
+			typeColors["Status"] = new TypeColors(
+				statusLightColorButton.BackColor,
+				statusDarkColorButton.BackColor
+				);
+			typeColors["Special"] = new TypeColors(
+				specialLightColorButton.BackColor,
+				specialDarkColorButton.BackColor
+				);
+			typeColors["Aura"] = new TypeColors(
+				auraLightColorButton.BackColor,
+				auraDarkColorButton.BackColor
+				);
+
+			// Create JSON string
+			string json = JsonConvert.SerializeObject(typeColors, Formatting.Indented);
+
+			// Write the JSON
+			string path = @"Color_Profiles\" + profile + ".json";
+			System.IO.File.WriteAllText(path, json);
 		}
 	}
 }

@@ -28,7 +28,11 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.auraDarkColorButton = new System.Windows.Forms.Button();
+			this.auraLightColorButton = new System.Windows.Forms.Button();
+			this.label9 = new System.Windows.Forms.Label();
 			this.environmentalDarkColorButton = new System.Windows.Forms.Button();
 			this.specialDarkColorButton = new System.Windows.Forms.Button();
 			this.statusDarkColorButton = new System.Windows.Forms.Button();
@@ -49,14 +53,18 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.auraLightColorButton = new System.Windows.Forms.Button();
-			this.auraDarkColorButton = new System.Windows.Forms.Button();
+			this.label10 = new System.Windows.Forms.Label();
+			this.list1 = new PD_Helper.list(this.components);
+			this.colorProfileNameBox = new System.Windows.Forms.TextBox();
+			this.btnSaveToPDH = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.btnSaveToPDH);
+			this.groupBox1.Controls.Add(this.colorProfileNameBox);
+			this.groupBox1.Controls.Add(this.label10);
 			this.groupBox1.Controls.Add(this.auraDarkColorButton);
 			this.groupBox1.Controls.Add(this.auraLightColorButton);
 			this.groupBox1.Controls.Add(this.label9);
@@ -83,10 +91,39 @@
 			this.groupBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(179, 284);
+			this.groupBox1.Size = new System.Drawing.Size(179, 314);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Skill Color Picker";
+			// 
+			// auraDarkColorButton
+			// 
+			this.auraDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.auraDarkColorButton.Location = new System.Drawing.Point(144, 211);
+			this.auraDarkColorButton.Name = "auraDarkColorButton";
+			this.auraDarkColorButton.Size = new System.Drawing.Size(23, 23);
+			this.auraDarkColorButton.TabIndex = 22;
+			this.auraDarkColorButton.UseVisualStyleBackColor = true;
+			this.auraDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// auraLightColorButton
+			// 
+			this.auraLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.auraLightColorButton.Location = new System.Drawing.Point(96, 211);
+			this.auraLightColorButton.Name = "auraLightColorButton";
+			this.auraLightColorButton.Size = new System.Drawing.Size(23, 23);
+			this.auraLightColorButton.TabIndex = 21;
+			this.auraLightColorButton.UseVisualStyleBackColor = true;
+			this.auraLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(6, 215);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(32, 15);
+			this.label9.TabIndex = 20;
+			this.label9.Text = "Aura";
 			// 
 			// environmentalDarkColorButton
 			// 
@@ -280,34 +317,37 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Attack";
 			// 
-			// label9
+			// label10
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(6, 215);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(32, 15);
-			this.label9.TabIndex = 20;
-			this.label9.Text = "Aura";
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label10.Location = new System.Drawing.Point(6, 237);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(115, 15);
+			this.label10.TabIndex = 23;
+			this.label10.Text = "Color Profile Name:";
 			// 
-			// auraLightColorButton
+			// colorProfileNameBox
 			// 
-			this.auraLightColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.auraLightColorButton.Location = new System.Drawing.Point(96, 211);
-			this.auraLightColorButton.Name = "auraLightColorButton";
-			this.auraLightColorButton.Size = new System.Drawing.Size(23, 23);
-			this.auraLightColorButton.TabIndex = 21;
-			this.auraLightColorButton.UseVisualStyleBackColor = true;
-			this.auraLightColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			this.colorProfileNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.colorProfileNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.colorProfileNameBox.Location = new System.Drawing.Point(6, 255);
+			this.colorProfileNameBox.MaxLength = 16;
+			this.colorProfileNameBox.Name = "colorProfileNameBox";
+			this.colorProfileNameBox.Size = new System.Drawing.Size(161, 23);
+			this.colorProfileNameBox.TabIndex = 33;
 			// 
-			// auraDarkColorButton
+			// btnSaveToPDH
 			// 
-			this.auraDarkColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.auraDarkColorButton.Location = new System.Drawing.Point(144, 211);
-			this.auraDarkColorButton.Name = "auraDarkColorButton";
-			this.auraDarkColorButton.Size = new System.Drawing.Size(23, 23);
-			this.auraDarkColorButton.TabIndex = 22;
-			this.auraDarkColorButton.UseVisualStyleBackColor = true;
-			this.auraDarkColorButton.Click += new System.EventHandler(this.colorButtonClick);
+			this.btnSaveToPDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSaveToPDH.ForeColor = System.Drawing.Color.PaleGreen;
+			this.btnSaveToPDH.Location = new System.Drawing.Point(6, 284);
+			this.btnSaveToPDH.Name = "btnSaveToPDH";
+			this.btnSaveToPDH.Size = new System.Drawing.Size(161, 23);
+			this.btnSaveToPDH.TabIndex = 29;
+			this.btnSaveToPDH.Text = "Save To PDHelper";
+			this.btnSaveToPDH.UseVisualStyleBackColor = true;
+			this.btnSaveToPDH.Click += new System.EventHandler(this.btnSaveToPDH_Click);
 			// 
 			// ColorProfileForm
 			// 
@@ -350,5 +390,9 @@
 		private Button auraDarkColorButton;
 		private Button auraLightColorButton;
 		private Label label9;
+		private Label label10;
+		private TextBox colorProfileNameBox;
+		private list list1;
+		private Button btnSaveToPDH;
 	}
 }
