@@ -107,20 +107,9 @@ namespace PD_Helper
 			}
 		}
 
-		private void btnSaveToPDH_Click(object sender, EventArgs e)
+		private string getJSONFromColors()
 		{
-			// Get the profile name
-			string profile = colorProfileNameBox.Text;
-			
-			// Double check we are not rewriting the DEFAULT or CURRENT profiles
-			if (profile == "DEFAULT" || profile == "CURRENT" || profile == "" || profile == null)
-			{
-				// TODO: Throw popup warning against the name
-				return;
-			}
-
 			// Create a TypeColors for each type
-			//TypeColors[] typeColors = new TypeColors[7];
 			Dictionary<string, TypeColors> typeColors = new Dictionary<string, TypeColors>();
 			typeColors["Attack"] = new TypeColors(
 				attackLightColorButton.BackColor,
@@ -152,11 +141,25 @@ namespace PD_Helper
 				);
 
 			// Create JSON string
-			string json = JsonConvert.SerializeObject(typeColors, Formatting.Indented);
+			return JsonConvert.SerializeObject(typeColors, Formatting.Indented);
+		}
+
+		private void btnSaveToPDH_Click(object sender, EventArgs e)
+		{
+			// Get the profile name
+			string profile = colorProfileNameBox.Text;
+			
+			// Double check we are not rewriting the DEFAULT or CURRENT profiles
+			if (profile == "DEFAULT" || profile == "CURRENT" || profile == "" || profile == null)
+			{
+				// TODO: Throw popup warning against the name
+				return;
+			}
 
 			// Write the JSON
 			string path = @"Color_Profiles\" + profile + ".json";
-			System.IO.File.WriteAllText(path, json);
+			string json = getJSONFromColors();
+			File.WriteAllText(path, json);
 		}
 
 		private void loadColorProfileButton_Click(object sender, EventArgs e)
@@ -222,6 +225,17 @@ namespace PD_Helper
 				File.Delete(path);
 				savedColorProfileListBox.Items.Remove(savedColorProfileListBox.SelectedItem);
 			}
+		}
+
+		private void useColorProfileButton_Click(object sender, EventArgs e)
+		{
+			// Write the JSON
+			string path = @"Color_Profiles\CURRENT.json";
+			string json = getJSONFromColors();
+			File.WriteAllText(path, json);
+
+			// Close the form
+			Close();
 		}
 	}
 }

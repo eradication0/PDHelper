@@ -394,6 +394,7 @@
 			this.useColorProfileButton.TabIndex = 28;
 			this.useColorProfileButton.Text = "Use Color Profile in Editor";
 			this.useColorProfileButton.UseVisualStyleBackColor = true;
+			this.useColorProfileButton.Click += new System.EventHandler(this.useColorProfileButton_Click);
 			// 
 			// deleteColorProfileButton
 			// 
