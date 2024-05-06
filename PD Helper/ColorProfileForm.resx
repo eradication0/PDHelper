@@ -60,4 +60,7 @@
   <metadata name="list1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label11.Text" xml:space="preserve">
+    <value>NOTE: The buttons below will only update the colors chosen on the left side. If you selected a profile from the list, make sure to press the load button so that it shows on the color picker before hitting apply.</value>
+  </data>
 </root>

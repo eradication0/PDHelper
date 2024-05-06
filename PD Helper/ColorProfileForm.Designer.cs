@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorProfileForm));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnSaveToPDH = new System.Windows.Forms.Button();
 			this.colorProfileNameBox = new System.Windows.Forms.TextBox();
@@ -65,6 +66,7 @@
 			this.openColorProfileFolderButton = new System.Windows.Forms.Button();
 			this.refreshColorProfileButton = new System.Windows.Forms.Button();
 			this.loadColorProfileButton = new System.Windows.Forms.Button();
+			this.label11 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.colorProfileListBox.SuspendLayout();
 			this.SuspendLayout();
@@ -370,6 +372,7 @@
 			// 
 			// colorProfileListBox
 			// 
+			this.colorProfileListBox.Controls.Add(this.label11);
 			this.colorProfileListBox.Controls.Add(this.applyColorProfileButton);
 			this.colorProfileListBox.Controls.Add(this.useColorProfileButton);
 			this.colorProfileListBox.Controls.Add(this.deleteColorProfileButton);
@@ -457,6 +460,14 @@
 			this.loadColorProfileButton.UseVisualStyleBackColor = true;
 			this.loadColorProfileButton.Click += new System.EventHandler(this.loadColorProfileButton_Click);
 			// 
+			// label11
+			// 
+			this.label11.Location = new System.Drawing.Point(155, 144);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(187, 108);
+			this.label11.TabIndex = 31;
+			this.label11.Text = resources.GetString("label11.Text");
+			// 
 			// ColorProfileForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -512,5 +523,6 @@
 		private Button deleteColorProfileButton;
 		private Button useColorProfileButton;
 		private Button applyColorProfileButton;
+		private Label label11;
 	}
 }
