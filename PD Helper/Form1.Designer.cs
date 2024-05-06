@@ -88,6 +88,7 @@ namespace PD_Helper
 			this.attackRadioButton = new System.Windows.Forms.RadioButton();
 			this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
 			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
+			this.skillCountLabel = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
@@ -258,6 +259,7 @@ namespace PD_Helper
 			// groupBox4
 			// 
 			this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.groupBox4.Controls.Add(this.skillCountLabel);
 			this.groupBox4.Controls.Add(this.label10);
 			this.groupBox4.Controls.Add(this.schoolNumeric);
 			this.groupBox4.Controls.Add(this.arsenalNameLabel);
@@ -732,74 +734,74 @@ namespace PD_Helper
 			// environmentalRadioButton
 			// 
 			this.environmentalRadioButton.AutoSize = true;
+			this.environmentalRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
 			this.environmentalRadioButton.Location = new System.Drawing.Point(161, 98);
 			this.environmentalRadioButton.Name = "environmentalRadioButton";
 			this.environmentalRadioButton.Size = new System.Drawing.Size(102, 19);
 			this.environmentalRadioButton.TabIndex = 12;
 			this.environmentalRadioButton.Text = "Environmental";
 			this.environmentalRadioButton.UseVisualStyleBackColor = true;
-			this.environmentalRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
-			this.environmentalRadioButton.ForeColor = Color.FromArgb(112, 239, 239);
+			this.environmentalRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
 			// 
 			// specialRadioButton
 			// 
 			this.specialRadioButton.AutoSize = true;
+			this.specialRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(112)))));
 			this.specialRadioButton.Location = new System.Drawing.Point(96, 98);
 			this.specialRadioButton.Name = "specialRadioButton";
 			this.specialRadioButton.Size = new System.Drawing.Size(62, 19);
 			this.specialRadioButton.TabIndex = 11;
 			this.specialRadioButton.Text = "Special";
 			this.specialRadioButton.UseVisualStyleBackColor = true;
-			this.specialRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
-			this.specialRadioButton.ForeColor = Color.FromArgb(239, 239, 112);
+			this.specialRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
 			// 
 			// statusRadioButton
 			// 
 			this.statusRadioButton.AutoSize = true;
+			this.statusRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(239)))), ((int)(((byte)(118)))));
 			this.statusRadioButton.Location = new System.Drawing.Point(161, 73);
 			this.statusRadioButton.Name = "statusRadioButton";
 			this.statusRadioButton.Size = new System.Drawing.Size(57, 19);
 			this.statusRadioButton.TabIndex = 10;
 			this.statusRadioButton.Text = "Status";
 			this.statusRadioButton.UseVisualStyleBackColor = true;
-			this.statusRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
-			this.statusRadioButton.ForeColor = Color.FromArgb(152, 239, 118);
+			this.statusRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
 			// 
 			// eraseRadioButton
 			// 
 			this.eraseRadioButton.AutoSize = true;
+			this.eraseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(112)))), ((int)(((byte)(239)))));
 			this.eraseRadioButton.Location = new System.Drawing.Point(96, 73);
 			this.eraseRadioButton.Name = "eraseRadioButton";
 			this.eraseRadioButton.Size = new System.Drawing.Size(52, 19);
 			this.eraseRadioButton.TabIndex = 9;
 			this.eraseRadioButton.Text = "Erase";
 			this.eraseRadioButton.UseVisualStyleBackColor = true;
-			this.eraseRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
-			this.eraseRadioButton.ForeColor = Color.FromArgb(208, 112, 239);
+			this.eraseRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
 			// 
 			// defenseRadioButton
 			// 
 			this.defenseRadioButton.AutoSize = true;
+			this.defenseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(135)))), ((int)(((byte)(239)))));
 			this.defenseRadioButton.Location = new System.Drawing.Point(161, 48);
 			this.defenseRadioButton.Name = "defenseRadioButton";
 			this.defenseRadioButton.Size = new System.Drawing.Size(67, 19);
 			this.defenseRadioButton.TabIndex = 8;
 			this.defenseRadioButton.Text = "Defense";
 			this.defenseRadioButton.UseVisualStyleBackColor = true;
-			this.defenseRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
-			this.defenseRadioButton.ForeColor = Color.FromArgb(112, 135, 239);
+			this.defenseRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
 			// 
 			// attackRadioButton
 			// 
 			this.attackRadioButton.AutoSize = true;
+			this.attackRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(144)))), ((int)(((byte)(107)))));
 			this.attackRadioButton.Location = new System.Drawing.Point(96, 48);
 			this.attackRadioButton.Name = "attackRadioButton";
 			this.attackRadioButton.Size = new System.Drawing.Size(59, 19);
 			this.attackRadioButton.TabIndex = 7;
 			this.attackRadioButton.Text = "Attack";
 			this.attackRadioButton.UseVisualStyleBackColor = true;
-			this.attackRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
-			this.attackRadioButton.ForeColor = Color.FromArgb(239, 144, 107);
+			this.attackRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
 			// 
 			// allSkillsRadioButton
 			// 
@@ -831,6 +833,16 @@ namespace PD_Helper
 			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(86, 90);
 			this.schoolFilterCheckedListBox.TabIndex = 0;
 			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
+			// 
+			// skillCountLabel
+			// 
+			this.skillCountLabel.AutoSize = true;
+			this.skillCountLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.skillCountLabel.Location = new System.Drawing.Point(294, 21);
+			this.skillCountLabel.Name = "skillCountLabel";
+			this.skillCountLabel.Size = new System.Drawing.Size(31, 15);
+			this.skillCountLabel.TabIndex = 35;
+			this.skillCountLabel.Text = "-/30";
 			// 
 			// Form1
 			// 
@@ -929,5 +941,6 @@ namespace PD_Helper
 		private RadioButton eraseRadioButton;
 		private RadioButton defenseRadioButton;
 		private RadioButton environmentalRadioButton;
+		private Label skillCountLabel;
 	}
 }

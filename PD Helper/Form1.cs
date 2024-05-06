@@ -267,6 +267,14 @@ namespace PD_Helper
 
                         //set loaded deck visual
                         deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
+
+                        // Recount skills
+                        int auraCount = 0;
+						foreach (var item in deckListBox.Items)
+						{
+                            if (item.ToString() == "Aura Particle") auraCount++;
+						}
+                        skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
                     }
                 }
             }
@@ -286,6 +294,14 @@ namespace PD_Helper
                 loadedDeck[deckListBox.SelectedIndex] = currentHex;
                 //set loaded deck visual
                 deckListBox.Items[deckListBox.SelectedIndex] = "Aura Particle";
+
+                // Recount skills
+                int auraCount = 0;
+                foreach (var item in deckListBox.Items)
+                {
+                    if (item.ToString() == "Aura Particle") auraCount++;
+                }
+                skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
             }
             //error handling
             else { MessageBox.Show("You didn't select a skill in your Arsenal."); }
@@ -780,13 +796,18 @@ namespace PD_Helper
             // Sort the list
             cardList.Sort(PDCard.SortType());
 
-            // Enter card to the list box
+            // Enter card to the list box. Also count aura
+            int auraCount = 0;
             deckListBox.Items.Clear();
             for (int i = 0; i < 30; i++)
             {
                 loadedDeck[i] = cardList[i].HEX;
                 deckListBox.Items.Add(cardList[i].NAME);
+                if (cardList[i].TYPE == "Aura") auraCount++;
             }
+
+            // Set the skill count
+            skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
 
             //manual write school amount
             Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
