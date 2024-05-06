@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.Text; 
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,20 +38,11 @@ namespace PD_Helper
     //timer value 7FF7D096C8C0
     public partial class Form1 : Form
     {
-        // 2. Import the RegisterHotKey Method
-        [DllImport("user32.dll")]
-        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
         public Form1()
         {
 
             InitializeComponent();
-            int UniqueHotkeyId = 1;
-            int HotKeyCode = (int)Keys.T;
-            // Register "Control" hotkey
-            Boolean ControlKey = RegisterHotKey(
-                this.Handle, UniqueHotkeyId, 0x0000, HotKeyCode
-            );
-
+            this.KeyPreview = true;
             // Set default checkmarks
             for (int i = 0; i < 5; i++)
             {
@@ -223,11 +214,6 @@ namespace PD_Helper
             //Set 3rd byte of credits to 30 -> around 800 mil
             m.WriteMemory("base+003ED640,13B", "byte", "30");
             button4.Enabled = false;
-        }
-
-        private void loadArsenalNameButton_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSaveToPDH_Click(object sender, EventArgs e)
@@ -847,31 +833,6 @@ namespace PD_Helper
             arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void deckListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Make the editor select the new skill
@@ -944,69 +905,9 @@ namespace PD_Helper
             skillList_DrawItem(sender, e, editorList);
         }
 
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-        
-        }
-
-
-
-        private void listBox2_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void arsenalListBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void labelSkillCost_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void arsenalDropdown_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        { // this should be the keypress T to toggle partner lock but its not working while not focused
+            //if (e.KeyData == Keys.T) { partnerLock.Invoke((MethodInvoker)(() => partnerLock.Checked = !partnerLock.Checked)); }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -1027,11 +928,6 @@ namespace PD_Helper
             arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
         }
 
-        private void label12_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void GamepadWorker_DoWork_1(object sender, DoWorkEventArgs e)
         {
             // previous state tracking
@@ -1046,27 +942,6 @@ namespace PD_Helper
                 previousState = _controller.GetState().Gamepad.Buttons.ToString();
                 //System.Diagnostics.Debug.WriteLine(_controller.GetState().Gamepad);
             }
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-            // Catch when a HotKey is pressed
-            if (m.Msg == 0x0312)
-            {
-                int id = m.WParam.ToInt32();
-
-                if (id == 1)
-                {
-                    partnerLock.Invoke((MethodInvoker)(() => partnerLock.Checked = !partnerLock.Checked));
-                }
-            }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
 		private void schoolFilterCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
