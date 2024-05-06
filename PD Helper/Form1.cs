@@ -319,20 +319,6 @@ namespace PD_Helper
             updateEditorList(schoolFilter);
         }
 
-        private void updateEditorList(int index, CheckState newValue)
-        {
-            // Use the current array of checkmarks but with the updated checkmark value instead
-            bool[] schoolFilter = new bool[5];
-
-            for (int i = 0; i < 5; i++)
-            {
-                if (i != index) schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
-                else schoolFilter[index] = newValue == CheckState.Checked;
-            }
-
-            updateEditorList(schoolFilter);
-        }
-
         private void updateEditorList(bool[] schoolFilter)
         {
 			// Check the filter
@@ -381,7 +367,59 @@ namespace PD_Helper
 			}
             consideredSkills = filterSkills;
 
-            // Step 2: search for value in editorList
+			// Step 2: Now filter by type if necessary
+			if (!allSkillsRadioButton.Checked)
+			{
+                filterSkills = new List<string>();
+                foreach (var item in consideredSkills)
+                {
+                    // Get type
+                    string type = null;
+                    foreach (PDCard pair in cardDef.Values)
+                    {
+                        if (pair.NAME == item)
+                        {
+                            type = pair.TYPE;
+                            break;
+                        }
+                    }
+                    if (type == null)
+                    {
+                        throw new FormatException("Skill not found");
+                    }
+
+                    // Match with the type marked
+                    bool toKeep = false;
+                    switch (type)
+                    {
+                        case "Attack":
+                            toKeep = attackRadioButton.Checked;
+                            break;
+                        case "Defense":
+                            toKeep = defenseRadioButton.Checked;
+                            break;
+                        case "Erase":
+                            toKeep = eraseRadioButton.Checked;
+                            break;
+                        case "Status":
+                            toKeep = statusRadioButton.Checked;
+                            break;
+                        case "Special":
+                            toKeep = specialRadioButton.Checked;
+                            break;
+                        case "Environment":
+                            toKeep = environmentalRadioButton.Checked;
+                            break;
+                    }
+                    if (toKeep)
+                    {
+                        filterSkills.Add(item);
+                    }
+                }
+                consideredSkills = filterSkills;
+            }
+
+            // Step 3: search for value in editorList
             if (textBox1.Text != "")
             {
                 editorList.Items.Clear();
@@ -1012,7 +1050,21 @@ namespace PD_Helper
 
 		private void schoolFilterCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
 		{
-            updateEditorList(e.Index, e.NewValue);
-		}
+            // Use the current array of checkmarks but with the updated checkmark value instead
+            bool[] schoolFilter = new bool[5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (i != e.Index) schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+                else schoolFilter[e.Index] = e.NewValue == CheckState.Checked;
+            }
+
+            updateEditorList(schoolFilter);
+        }
+
+        private void filterRadioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            updateEditorList();
+        }
 	}
 }

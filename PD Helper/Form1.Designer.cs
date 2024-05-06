@@ -736,6 +736,7 @@
 			this.environmentalRadioButton.TabIndex = 12;
 			this.environmentalRadioButton.Text = "Environmental";
 			this.environmentalRadioButton.UseVisualStyleBackColor = true;
+			this.environmentalRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
 			// 
 			// specialRadioButton
 			// 
@@ -746,6 +747,7 @@
 			this.specialRadioButton.TabIndex = 11;
 			this.specialRadioButton.Text = "Special";
 			this.specialRadioButton.UseVisualStyleBackColor = true;
+			this.specialRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
 			// 
 			// statusRadioButton
 			// 
@@ -756,6 +758,7 @@
 			this.statusRadioButton.TabIndex = 10;
 			this.statusRadioButton.Text = "Status";
 			this.statusRadioButton.UseVisualStyleBackColor = true;
+			this.statusRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
 			// 
 			// eraseRadioButton
 			// 
@@ -766,6 +769,7 @@
 			this.eraseRadioButton.TabIndex = 9;
 			this.eraseRadioButton.Text = "Erase";
 			this.eraseRadioButton.UseVisualStyleBackColor = true;
+			this.eraseRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
 			// 
 			// defenseRadioButton
 			// 
@@ -776,6 +780,7 @@
 			this.defenseRadioButton.TabIndex = 8;
 			this.defenseRadioButton.Text = "Defense";
 			this.defenseRadioButton.UseVisualStyleBackColor = true;
+			this.defenseRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
 			// 
 			// attackRadioButton
 			// 
@@ -786,6 +791,7 @@
 			this.attackRadioButton.TabIndex = 7;
 			this.attackRadioButton.Text = "Attack";
 			this.attackRadioButton.UseVisualStyleBackColor = true;
+			this.attackRadioButton.CheckedChanged += new EventHandler(filterRadioButtons_CheckedChanged);
 			// 
 			// allSkillsRadioButton
 			// 
