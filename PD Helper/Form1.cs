@@ -48,6 +48,8 @@ namespace PD_Helper
             {
                 schoolFilterCheckedListBox.SetItemChecked(i, true);
             }
+
+            refreshView();
         }
 
         //Class for PDCard
@@ -981,6 +983,19 @@ namespace PD_Helper
             // Refresh the two editor views
             deckListBox.Refresh();
             editorList.Refresh();
+
+            // Set the color on the radio button text
+            attackRadioButton.ForeColor = lightColorFromType("Attack");
+            attackRadioButton.Refresh();
+            defenseRadioButton.ForeColor = lightColorFromType("Defense");
+            defenseRadioButton.Refresh();
+            eraseRadioButton.ForeColor = lightColorFromType("Erase");
+            eraseRadioButton.Refresh();
+            environmentalRadioButton.ForeColor = lightColorFromType("Environment");
+            environmentalRadioButton.Refresh();
+            statusRadioButton.ForeColor = lightColorFromType("Status");
+            statusRadioButton.Refresh();
+            specialRadioButton.ForeColor = lightColorFromType("Special");
         }
 	}
 }
