@@ -351,6 +351,7 @@
 			this.deckListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.deckListBox.ColumnWidth = 140;
 			this.deckListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.deckListBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.deckListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.deckListBox.FormattingEnabled = true;
 			this.deckListBox.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -683,6 +684,7 @@
 			this.editorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.editorList.ColumnWidth = 140;
 			this.editorList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.editorList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.editorList.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.editorList.FormattingEnabled = true;
 			this.editorList.ImeMode = System.Windows.Forms.ImeMode.Off;
