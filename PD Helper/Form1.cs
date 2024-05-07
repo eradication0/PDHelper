@@ -342,12 +342,6 @@ namespace PD_Helper
 
         private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter, bool[] miscNumberFilter)
         {
-			// Check the filter
-            if (schoolFilter == null || schoolFilter.Length != 5)
-			{
-                throw new FormatException("'schoolFilter' needs to not be null and have length 5.");
-			}
-
             // Step 0: Prepare the list of skills to consider for filtering
             List<string> consideredSkills = new List<string>();
 			foreach (var item in allSkills.Items)

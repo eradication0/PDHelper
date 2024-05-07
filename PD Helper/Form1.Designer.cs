@@ -433,7 +433,7 @@ namespace PD_Helper
 			// 
 			this.colorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.colorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.colorProfileButton.Location = new System.Drawing.Point(240, 174);
+			this.colorProfileButton.Location = new System.Drawing.Point(240, 346);
 			this.colorProfileButton.Name = "colorProfileButton";
 			this.colorProfileButton.Size = new System.Drawing.Size(187, 26);
 			this.colorProfileButton.TabIndex = 30;
