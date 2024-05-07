@@ -82,6 +82,19 @@ namespace PD_Helper
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.costMaxNumeric = new System.Windows.Forms.NumericUpDown();
+			this.costMinNumeric = new System.Windows.Forms.NumericUpDown();
+			this.label15 = new System.Windows.Forms.Label();
+			this.miscNumberCheckedListBox = new System.Windows.Forms.CheckedListBox();
+			this.useMaxNumeric = new System.Windows.Forms.NumericUpDown();
+			this.defMaxNumeric = new System.Windows.Forms.NumericUpDown();
+			this.useMinNumeric = new System.Windows.Forms.NumericUpDown();
+			this.defMinNumeric = new System.Windows.Forms.NumericUpDown();
+			this.strMaxNumeric = new System.Windows.Forms.NumericUpDown();
+			this.strMinNumeric = new System.Windows.Forms.NumericUpDown();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.rangeFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
 			this.environmentalRadioButton = new System.Windows.Forms.RadioButton();
 			this.specialRadioButton = new System.Windows.Forms.RadioButton();
@@ -98,6 +111,14 @@ namespace PD_Helper
 			this.arsenalListBox.SuspendLayout();
 			this.groupBox6.SuspendLayout();
 			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.costMaxNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.costMinNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.useMaxNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.defMaxNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.useMinNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.defMinNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.strMaxNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.strMinNumeric)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -735,6 +756,19 @@ namespace PD_Helper
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.costMaxNumeric);
+			this.groupBox3.Controls.Add(this.costMinNumeric);
+			this.groupBox3.Controls.Add(this.label15);
+			this.groupBox3.Controls.Add(this.miscNumberCheckedListBox);
+			this.groupBox3.Controls.Add(this.useMaxNumeric);
+			this.groupBox3.Controls.Add(this.defMaxNumeric);
+			this.groupBox3.Controls.Add(this.useMinNumeric);
+			this.groupBox3.Controls.Add(this.defMinNumeric);
+			this.groupBox3.Controls.Add(this.strMaxNumeric);
+			this.groupBox3.Controls.Add(this.strMinNumeric);
+			this.groupBox3.Controls.Add(this.label14);
+			this.groupBox3.Controls.Add(this.label13);
+			this.groupBox3.Controls.Add(this.label7);
 			this.groupBox3.Controls.Add(this.rangeFilterCheckedListBox);
 			this.groupBox3.Controls.Add(this.environmentalRadioButton);
 			this.groupBox3.Controls.Add(this.specialRadioButton);
@@ -747,10 +781,228 @@ namespace PD_Helper
 			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.groupBox3.Location = new System.Drawing.Point(12, 572);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(879, 119);
+			this.groupBox3.Size = new System.Drawing.Size(879, 129);
 			this.groupBox3.TabIndex = 28;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Filter Settings";
+			// 
+			// costMaxNumeric
+			// 
+			this.costMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.costMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.costMaxNumeric.Location = new System.Drawing.Point(463, 100);
+			this.costMaxNumeric.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+			this.costMaxNumeric.Name = "costMaxNumeric";
+			this.costMaxNumeric.Size = new System.Drawing.Size(36, 23);
+			this.costMaxNumeric.TabIndex = 45;
+			this.costMaxNumeric.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+			this.costMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// costMinNumeric
+			// 
+			this.costMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.costMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.costMinNumeric.Location = new System.Drawing.Point(421, 99);
+			this.costMinNumeric.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+			this.costMinNumeric.Name = "costMinNumeric";
+			this.costMinNumeric.Size = new System.Drawing.Size(36, 23);
+			this.costMinNumeric.TabIndex = 44;
+			this.costMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label15.Location = new System.Drawing.Point(381, 101);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(37, 15);
+			this.label15.TabIndex = 43;
+			this.label15.Text = "COST";
+			// 
+			// miscNumberCheckedListBox
+			// 
+			this.miscNumberCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.miscNumberCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.miscNumberCheckedListBox.CheckOnClick = true;
+			this.miscNumberCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.miscNumberCheckedListBox.FormattingEnabled = true;
+			this.miscNumberCheckedListBox.Items.AddRange(new object[] {
+            "X STR",
+            "- DEF",
+            "∞ USE",
+            "X COST"});
+			this.miscNumberCheckedListBox.Location = new System.Drawing.Point(505, 12);
+			this.miscNumberCheckedListBox.Name = "miscNumberCheckedListBox";
+			this.miscNumberCheckedListBox.Size = new System.Drawing.Size(63, 72);
+			this.miscNumberCheckedListBox.TabIndex = 42;
+			this.miscNumberCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.miscNumberCheckedListBox_ItemCheck);
+			// 
+			// useMaxNumeric
+			// 
+			this.useMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.useMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.useMaxNumeric.Location = new System.Drawing.Point(463, 70);
+			this.useMaxNumeric.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.useMaxNumeric.Name = "useMaxNumeric";
+			this.useMaxNumeric.Size = new System.Drawing.Size(36, 23);
+			this.useMaxNumeric.TabIndex = 41;
+			this.useMaxNumeric.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.useMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// defMaxNumeric
+			// 
+			this.defMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.defMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.defMaxNumeric.Location = new System.Drawing.Point(463, 41);
+			this.defMaxNumeric.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+			this.defMaxNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.defMaxNumeric.Name = "defMaxNumeric";
+			this.defMaxNumeric.Size = new System.Drawing.Size(36, 23);
+			this.defMaxNumeric.TabIndex = 40;
+			this.defMaxNumeric.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+			this.defMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// useMinNumeric
+			// 
+			this.useMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.useMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.useMinNumeric.Location = new System.Drawing.Point(421, 70);
+			this.useMinNumeric.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.useMinNumeric.Name = "useMinNumeric";
+			this.useMinNumeric.Size = new System.Drawing.Size(36, 23);
+			this.useMinNumeric.TabIndex = 39;
+			this.useMinNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.useMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// defMinNumeric
+			// 
+			this.defMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.defMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.defMinNumeric.Location = new System.Drawing.Point(421, 41);
+			this.defMinNumeric.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+			this.defMinNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.defMinNumeric.Name = "defMinNumeric";
+			this.defMinNumeric.Size = new System.Drawing.Size(36, 23);
+			this.defMinNumeric.TabIndex = 38;
+			this.defMinNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.defMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// strMaxNumeric
+			// 
+			this.strMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.strMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.strMaxNumeric.Location = new System.Drawing.Point(463, 12);
+			this.strMaxNumeric.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.strMaxNumeric.Name = "strMaxNumeric";
+			this.strMaxNumeric.Size = new System.Drawing.Size(36, 23);
+			this.strMaxNumeric.TabIndex = 37;
+			this.strMaxNumeric.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.strMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// strMinNumeric
+			// 
+			this.strMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.strMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.strMinNumeric.Location = new System.Drawing.Point(421, 12);
+			this.strMinNumeric.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.strMinNumeric.Name = "strMinNumeric";
+			this.strMinNumeric.Size = new System.Drawing.Size(36, 23);
+			this.strMinNumeric.TabIndex = 36;
+			this.strMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label14.Location = new System.Drawing.Point(388, 72);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(29, 15);
+			this.label14.TabIndex = 16;
+			this.label14.Text = "USE";
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label13.Location = new System.Drawing.Point(388, 43);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(28, 15);
+			this.label13.TabIndex = 15;
+			this.label13.Text = "DEF";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label7.Location = new System.Drawing.Point(389, 14);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(29, 15);
+			this.label7.TabIndex = 14;
+			this.label7.Text = "STR";
 			// 
 			// rangeFilterCheckedListBox
 			// 
@@ -886,7 +1138,7 @@ namespace PD_Helper
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.ClientSize = new System.Drawing.Size(904, 695);
+			this.ClientSize = new System.Drawing.Size(904, 705);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox6);
 			this.Controls.Add(this.arsenalListBox);
@@ -915,6 +1167,14 @@ namespace PD_Helper
 			this.groupBox6.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.costMaxNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.costMinNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.useMaxNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.defMaxNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.useMinNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.defMinNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.strMaxNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.strMinNumeric)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -982,5 +1242,18 @@ namespace PD_Helper
         private Label label1;
 		private Button colorProfileButton;
 		private CheckedListBox rangeFilterCheckedListBox;
+		private NumericUpDown strMinNumeric;
+		private Label label14;
+		private Label label13;
+		private Label label7;
+		private CheckedListBox miscNumberCheckedListBox;
+		private NumericUpDown useMaxNumeric;
+		private NumericUpDown defMaxNumeric;
+		private NumericUpDown useMinNumeric;
+		private NumericUpDown defMinNumeric;
+		private NumericUpDown strMaxNumeric;
+		private NumericUpDown costMaxNumeric;
+		private NumericUpDown costMinNumeric;
+		private Label label15;
 	}
 }

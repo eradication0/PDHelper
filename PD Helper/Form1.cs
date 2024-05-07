@@ -52,6 +52,10 @@ namespace PD_Helper
 			{
                 rangeFilterCheckedListBox.SetItemChecked(i, true);
 			}
+			for (int i = 0; i < 4; i++)
+			{
+                miscNumberCheckedListBox.SetItemChecked(i, true);
+			}
 
             refreshView();
         }
@@ -327,11 +331,16 @@ namespace PD_Helper
             {
                 rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
             }
+            bool[] miscNumberFilter = new bool[4];
+            for (int i = 0; i < 4; i++)
+            {
+                miscNumberFilter[i] = miscNumberCheckedListBox.GetItemChecked(i);
+            }
 
-            updateEditorList(schoolFilter, rangeFilter);
+            updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
         }
 
-        private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter)
+        private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter, bool[] miscNumberFilter)
         {
 			// Check the filter
             if (schoolFilter == null || schoolFilter.Length != 5)
@@ -472,7 +481,39 @@ namespace PD_Helper
                 consideredSkills = filterSkills;
             }
 
-            // Step 4: search for value in editorList
+            // Step 4: Filter by the STR/DEF/USE/COST given
+            filterSkills = new List<string>();
+            string infty = getCard("Bomb").USAGE;
+            foreach (var item in consideredSkills)
+            {
+                PDCard card = getCard(item);
+                bool validSTR = (int.TryParse(card.DAMAGE, out int damage) 
+                        && damage >= (int)strMinNumeric.Value 
+                        && damage <= (int)strMaxNumeric.Value)
+                    || card.TYPE != "Attack" || (miscNumberFilter[0] && card.DAMAGE == "X");
+                bool validDEF = (int.TryParse(card.DAMAGE, out int defense)
+                        && defense >= (int)defMinNumeric.Value
+                        && defense <= (int)defMaxNumeric.Value)
+                    || card.TYPE != "Defense" || (miscNumberFilter[1] && card.DAMAGE == "-");
+                bool validUSE = (int.TryParse(card.USAGE, out int usage)
+                        && usage >= (int)useMinNumeric.Value
+                        && usage <= (int)useMaxNumeric.Value)
+                    || (miscNumberFilter[2] && card.USAGE == infty);
+                bool validCOST = (int.TryParse(card.COST, out int cost)
+                        && cost >= (int)costMinNumeric.Value
+                        && (cost <= (int)costMaxNumeric.Value
+                            || costMaxNumeric.Value == costMaxNumeric.Maximum)) // Handle Phantom Dust Skill
+                    || (miscNumberFilter[3] && card.COST == "X");
+                bool valid = validSTR && validDEF && validUSE && validCOST;
+
+				if (valid)
+				{
+                    filterSkills.Add(item);
+                }
+            }
+            consideredSkills = filterSkills;
+
+            // Step 5: search for value in editorList
             if (editorSearchTextBox.Text != "")
             {
                 editorList.Items.Clear();
@@ -918,8 +959,13 @@ namespace PD_Helper
             {
                 rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
             }
+            bool[] miscNumberFilter = new bool[4];
+            for (int i = 0; i < 4; i++)
+            {
+                miscNumberFilter[i] = miscNumberCheckedListBox.GetItemChecked(i);
+            }
 
-            updateEditorList(schoolFilter, rangeFilter);
+            updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
         }
 
         private void rangeFilterCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -936,8 +982,36 @@ namespace PD_Helper
                 if (i != e.Index) rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
                 else rangeFilter[e.Index] = e.NewValue == CheckState.Checked;
             }
+            bool[] miscNumberFilter = new bool[4];
+            for (int i = 0; i < 4; i++)
+            {
+                miscNumberFilter[i] = miscNumberCheckedListBox.GetItemChecked(i);
+            }
 
-            updateEditorList(schoolFilter, rangeFilter);
+            updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
+        }
+
+        private void miscNumberCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // Use the current array of checkmarks but with the updated checkmark value instead
+            bool[] schoolFilter = new bool[5];
+            for (int i = 0; i < 5; i++)
+            {
+                schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+            }
+            bool[] rangeFilter = new bool[rangeFilterCheckedListBox.Items.Count];
+            for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+            {
+                rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
+            }
+            bool[] miscNumberFilter = new bool[4];
+			for (int i = 0; i < 4; i++)
+			{
+                if (i != e.Index) miscNumberFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
+                else miscNumberFilter[e.Index] = e.NewValue == CheckState.Checked;
+            }
+
+            updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
         }
 
         private void filterRadioButtons_CheckedChanged(object sender, EventArgs e)
@@ -973,5 +1047,10 @@ namespace PD_Helper
             statusRadioButton.Refresh();
             specialRadioButton.ForeColor = lightColorFromType("Special");
         }
+
+		private void statisticNumeric_ValueChanged(object sender, EventArgs e)
+		{
+            updateEditorList();
+		}
 	}
 }
