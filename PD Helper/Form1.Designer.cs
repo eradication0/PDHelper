@@ -402,7 +402,7 @@ namespace PD_Helper
 			this.arsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.arsenalListBox.Location = new System.Drawing.Point(458, 98);
 			this.arsenalListBox.Name = "arsenalListBox";
-			this.arsenalListBox.Size = new System.Drawing.Size(433, 607);
+			this.arsenalListBox.Size = new System.Drawing.Size(433, 477);
 			this.arsenalListBox.TabIndex = 1;
 			this.arsenalListBox.TabStop = false;
 			this.arsenalListBox.Text = "Arsenal List";
@@ -411,7 +411,7 @@ namespace PD_Helper
 			// 
 			this.colorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.colorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.colorProfileButton.Location = new System.Drawing.Point(240, 485);
+			this.colorProfileButton.Location = new System.Drawing.Point(240, 174);
 			this.colorProfileButton.Name = "colorProfileButton";
 			this.colorProfileButton.Size = new System.Drawing.Size(187, 26);
 			this.colorProfileButton.TabIndex = 30;
@@ -445,7 +445,7 @@ namespace PD_Helper
 			// 
 			this.refreshArsenalListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.refreshArsenalListButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.refreshArsenalListButton.Location = new System.Drawing.Point(240, 517);
+			this.refreshArsenalListButton.Location = new System.Drawing.Point(240, 378);
 			this.refreshArsenalListButton.Name = "refreshArsenalListButton";
 			this.refreshArsenalListButton.Size = new System.Drawing.Size(187, 26);
 			this.refreshArsenalListButton.TabIndex = 27;
@@ -457,7 +457,7 @@ namespace PD_Helper
 			// 
 			this.openArsenalFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.openArsenalFolderButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.openArsenalFolderButton.Location = new System.Drawing.Point(240, 546);
+			this.openArsenalFolderButton.Location = new System.Drawing.Point(240, 410);
 			this.openArsenalFolderButton.Name = "openArsenalFolderButton";
 			this.openArsenalFolderButton.Size = new System.Drawing.Size(187, 26);
 			this.openArsenalFolderButton.TabIndex = 26;
@@ -480,7 +480,7 @@ namespace PD_Helper
 			// 
 			this.deleteArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.deleteArsenalButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-			this.deleteArsenalButton.Location = new System.Drawing.Point(240, 575);
+			this.deleteArsenalButton.Location = new System.Drawing.Point(240, 442);
 			this.deleteArsenalButton.Name = "deleteArsenalButton";
 			this.deleteArsenalButton.Size = new System.Drawing.Size(187, 26);
 			this.deleteArsenalButton.TabIndex = 24;
@@ -508,7 +508,7 @@ namespace PD_Helper
 			this.savedArsenalListBox.ItemHeight = 15;
 			this.savedArsenalListBox.Location = new System.Drawing.Point(6, 29);
 			this.savedArsenalListBox.Name = "savedArsenalListBox";
-			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 574);
+			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
 			this.savedArsenalListBox.TabIndex = 0;
 			// 
 			// groupBox6
@@ -743,9 +743,9 @@ namespace PD_Helper
 			this.groupBox3.Controls.Add(this.allSkillsRadioButton);
 			this.groupBox3.Controls.Add(this.schoolFilterCheckedListBox);
 			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.groupBox3.Location = new System.Drawing.Point(12, 581);
+			this.groupBox3.Location = new System.Drawing.Point(12, 572);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(440, 124);
+			this.groupBox3.Size = new System.Drawing.Size(879, 124);
 			this.groupBox3.TabIndex = 28;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Filter Settings";
@@ -754,7 +754,7 @@ namespace PD_Helper
 			// 
 			this.environmentalRadioButton.AutoSize = true;
 			this.environmentalRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-			this.environmentalRadioButton.Location = new System.Drawing.Point(161, 98);
+			this.environmentalRadioButton.Location = new System.Drawing.Point(142, 91);
 			this.environmentalRadioButton.Name = "environmentalRadioButton";
 			this.environmentalRadioButton.Size = new System.Drawing.Size(102, 19);
 			this.environmentalRadioButton.TabIndex = 12;
@@ -766,7 +766,7 @@ namespace PD_Helper
 			// 
 			this.specialRadioButton.AutoSize = true;
 			this.specialRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(112)))));
-			this.specialRadioButton.Location = new System.Drawing.Point(96, 98);
+			this.specialRadioButton.Location = new System.Drawing.Point(77, 91);
 			this.specialRadioButton.Name = "specialRadioButton";
 			this.specialRadioButton.Size = new System.Drawing.Size(62, 19);
 			this.specialRadioButton.TabIndex = 11;
@@ -778,7 +778,7 @@ namespace PD_Helper
 			// 
 			this.statusRadioButton.AutoSize = true;
 			this.statusRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(239)))), ((int)(((byte)(118)))));
-			this.statusRadioButton.Location = new System.Drawing.Point(161, 73);
+			this.statusRadioButton.Location = new System.Drawing.Point(142, 66);
 			this.statusRadioButton.Name = "statusRadioButton";
 			this.statusRadioButton.Size = new System.Drawing.Size(57, 19);
 			this.statusRadioButton.TabIndex = 10;
@@ -790,7 +790,7 @@ namespace PD_Helper
 			// 
 			this.eraseRadioButton.AutoSize = true;
 			this.eraseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(112)))), ((int)(((byte)(239)))));
-			this.eraseRadioButton.Location = new System.Drawing.Point(96, 73);
+			this.eraseRadioButton.Location = new System.Drawing.Point(77, 66);
 			this.eraseRadioButton.Name = "eraseRadioButton";
 			this.eraseRadioButton.Size = new System.Drawing.Size(52, 19);
 			this.eraseRadioButton.TabIndex = 9;
@@ -802,7 +802,7 @@ namespace PD_Helper
 			// 
 			this.defenseRadioButton.AutoSize = true;
 			this.defenseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(135)))), ((int)(((byte)(239)))));
-			this.defenseRadioButton.Location = new System.Drawing.Point(161, 48);
+			this.defenseRadioButton.Location = new System.Drawing.Point(142, 41);
 			this.defenseRadioButton.Name = "defenseRadioButton";
 			this.defenseRadioButton.Size = new System.Drawing.Size(67, 19);
 			this.defenseRadioButton.TabIndex = 8;
@@ -814,7 +814,7 @@ namespace PD_Helper
 			// 
 			this.attackRadioButton.AutoSize = true;
 			this.attackRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(144)))), ((int)(((byte)(107)))));
-			this.attackRadioButton.Location = new System.Drawing.Point(96, 48);
+			this.attackRadioButton.Location = new System.Drawing.Point(77, 41);
 			this.attackRadioButton.Name = "attackRadioButton";
 			this.attackRadioButton.Size = new System.Drawing.Size(59, 19);
 			this.attackRadioButton.TabIndex = 7;
@@ -826,7 +826,7 @@ namespace PD_Helper
 			// 
 			this.allSkillsRadioButton.AutoSize = true;
 			this.allSkillsRadioButton.Checked = true;
-			this.allSkillsRadioButton.Location = new System.Drawing.Point(96, 23);
+			this.allSkillsRadioButton.Location = new System.Drawing.Point(77, 16);
 			this.allSkillsRadioButton.Name = "allSkillsRadioButton";
 			this.allSkillsRadioButton.Size = new System.Drawing.Size(68, 19);
 			this.allSkillsRadioButton.TabIndex = 6;
@@ -849,7 +849,7 @@ namespace PD_Helper
             "Faith"});
 			this.schoolFilterCheckedListBox.Location = new System.Drawing.Point(7, 22);
 			this.schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
-			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(86, 90);
+			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(64, 90);
 			this.schoolFilterCheckedListBox.TabIndex = 0;
 			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
 			// 
