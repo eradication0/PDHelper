@@ -32,8 +32,8 @@ namespace PD_Helper
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.button1 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
+			this.maxSkillsButton = new System.Windows.Forms.Button();
+			this.maxCreditsButton = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -54,13 +54,14 @@ namespace PD_Helper
 			this.saveToPDbtn = new System.Windows.Forms.Button();
 			this.deckListBox = new System.Windows.Forms.ListBox();
 			this.arsenalListBox = new System.Windows.Forms.GroupBox();
+			this.colorProfileButton = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.button7 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.refreshArsenalListButton = new System.Windows.Forms.Button();
+			this.openArsenalFolderButton = new System.Windows.Forms.Button();
 			this.partnerLock = new System.Windows.Forms.CheckBox();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.deleteArsenalButton = new System.Windows.Forms.Button();
+			this.loadArsenalButton = new System.Windows.Forms.Button();
 			this.savedArsenalListBox = new System.Windows.Forms.ListBox();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.labelSkillDescription = new System.Windows.Forms.RichTextBox();
@@ -75,9 +76,9 @@ namespace PD_Helper
 			this.labelSkillID = new System.Windows.Forms.Label();
 			this.labelSkillName = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.button13 = new System.Windows.Forms.Button();
-			this.button12 = new System.Windows.Forms.Button();
+			this.editorSearchTextBox = new System.Windows.Forms.TextBox();
+			this.resetSelectedButton = new System.Windows.Forms.Button();
+			this.replaceSkillButton = new System.Windows.Forms.Button();
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -89,7 +90,6 @@ namespace PD_Helper
 			this.attackRadioButton = new System.Windows.Forms.RadioButton();
 			this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
 			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
-			this.colorProfileButton = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
@@ -111,29 +111,29 @@ namespace PD_Helper
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.loadGameData);
 			// 
-			// button3
+			// maxSkillsButton
 			// 
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button3.Location = new System.Drawing.Point(6, 52);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(97, 23);
-			this.button3.TabIndex = 2;
-			this.button3.Text = "Max Skills";
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.button3_Click);
+			this.maxSkillsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.maxSkillsButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.maxSkillsButton.Location = new System.Drawing.Point(6, 52);
+			this.maxSkillsButton.Name = "maxSkillsButton";
+			this.maxSkillsButton.Size = new System.Drawing.Size(97, 23);
+			this.maxSkillsButton.TabIndex = 2;
+			this.maxSkillsButton.Text = "Max Skills";
+			this.maxSkillsButton.UseVisualStyleBackColor = true;
+			this.maxSkillsButton.Click += new System.EventHandler(this.giveMaxSkills);
 			// 
-			// button4
+			// maxCreditsButton
 			// 
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button4.Location = new System.Drawing.Point(109, 52);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(97, 23);
-			this.button4.TabIndex = 3;
-			this.button4.Text = "Max Credits";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
+			this.maxCreditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.maxCreditsButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.maxCreditsButton.Location = new System.Drawing.Point(109, 52);
+			this.maxCreditsButton.Name = "maxCreditsButton";
+			this.maxCreditsButton.Size = new System.Drawing.Size(97, 23);
+			this.maxCreditsButton.TabIndex = 3;
+			this.maxCreditsButton.Text = "Max Credits";
+			this.maxCreditsButton.UseVisualStyleBackColor = true;
+			this.maxCreditsButton.Click += new System.EventHandler(this.giveMaxCredits);
 			// 
 			// label2
 			// 
@@ -205,9 +205,9 @@ namespace PD_Helper
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Controls.Add(this.button3);
+			this.groupBox1.Controls.Add(this.maxSkillsButton);
 			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.button4);
+			this.groupBox1.Controls.Add(this.maxCreditsButton);
 			this.groupBox1.Enabled = false;
 			this.groupBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.groupBox1.Location = new System.Drawing.Point(458, 12);
@@ -392,11 +392,11 @@ namespace PD_Helper
 			this.arsenalListBox.Controls.Add(this.colorProfileButton);
 			this.arsenalListBox.Controls.Add(this.label1);
 			this.arsenalListBox.Controls.Add(this.label6);
-			this.arsenalListBox.Controls.Add(this.button7);
-			this.arsenalListBox.Controls.Add(this.button2);
+			this.arsenalListBox.Controls.Add(this.refreshArsenalListButton);
+			this.arsenalListBox.Controls.Add(this.openArsenalFolderButton);
 			this.arsenalListBox.Controls.Add(this.partnerLock);
-			this.arsenalListBox.Controls.Add(this.button6);
-			this.arsenalListBox.Controls.Add(this.button5);
+			this.arsenalListBox.Controls.Add(this.deleteArsenalButton);
+			this.arsenalListBox.Controls.Add(this.loadArsenalButton);
 			this.arsenalListBox.Controls.Add(this.savedArsenalListBox);
 			this.arsenalListBox.Enabled = false;
 			this.arsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
@@ -406,6 +406,18 @@ namespace PD_Helper
 			this.arsenalListBox.TabIndex = 1;
 			this.arsenalListBox.TabStop = false;
 			this.arsenalListBox.Text = "Arsenal List";
+			// 
+			// colorProfileButton
+			// 
+			this.colorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.colorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.colorProfileButton.Location = new System.Drawing.Point(240, 485);
+			this.colorProfileButton.Name = "colorProfileButton";
+			this.colorProfileButton.Size = new System.Drawing.Size(187, 26);
+			this.colorProfileButton.TabIndex = 30;
+			this.colorProfileButton.Text = "Color Profile Settings";
+			this.colorProfileButton.UseVisualStyleBackColor = true;
+			this.colorProfileButton.Click += new System.EventHandler(this.colorProfileButton_Click);
 			// 
 			// label1
 			// 
@@ -429,29 +441,29 @@ namespace PD_Helper
 			this.label6.TabIndex = 28;
 			this.label6.Text = "Click Right Stick on Gamepad";
 			// 
-			// button7
+			// refreshArsenalListButton
 			// 
-			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button7.Location = new System.Drawing.Point(240, 517);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(187, 26);
-			this.button7.TabIndex = 27;
-			this.button7.Text = "Refresh Arsenal List";
-			this.button7.UseVisualStyleBackColor = true;
-			this.button7.Click += new System.EventHandler(this.button7_Click);
+			this.refreshArsenalListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.refreshArsenalListButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.refreshArsenalListButton.Location = new System.Drawing.Point(240, 517);
+			this.refreshArsenalListButton.Name = "refreshArsenalListButton";
+			this.refreshArsenalListButton.Size = new System.Drawing.Size(187, 26);
+			this.refreshArsenalListButton.TabIndex = 27;
+			this.refreshArsenalListButton.Text = "Refresh Arsenal List";
+			this.refreshArsenalListButton.UseVisualStyleBackColor = true;
+			this.refreshArsenalListButton.Click += new System.EventHandler(this.refreshArsenalList);
 			// 
-			// button2
+			// openArsenalFolderButton
 			// 
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button2.Location = new System.Drawing.Point(240, 546);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(187, 26);
-			this.button2.TabIndex = 26;
-			this.button2.Text = "Open Arsenal Folder";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
+			this.openArsenalFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.openArsenalFolderButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.openArsenalFolderButton.Location = new System.Drawing.Point(240, 546);
+			this.openArsenalFolderButton.Name = "openArsenalFolderButton";
+			this.openArsenalFolderButton.Size = new System.Drawing.Size(187, 26);
+			this.openArsenalFolderButton.TabIndex = 26;
+			this.openArsenalFolderButton.Text = "Open Arsenal Folder";
+			this.openArsenalFolderButton.UseVisualStyleBackColor = true;
+			this.openArsenalFolderButton.Click += new System.EventHandler(this.openArsenalFolder);
 			// 
 			// partnerLock
 			// 
@@ -464,29 +476,29 @@ namespace PD_Helper
 			this.partnerLock.UseVisualStyleBackColor = true;
 			this.partnerLock.CheckedChanged += new System.EventHandler(this.partnerLock_CheckedChanged);
 			// 
-			// button6
+			// deleteArsenalButton
 			// 
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-			this.button6.Location = new System.Drawing.Point(240, 575);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(187, 26);
-			this.button6.TabIndex = 24;
-			this.button6.Text = "Delete Arsenal";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
+			this.deleteArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.deleteArsenalButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+			this.deleteArsenalButton.Location = new System.Drawing.Point(240, 575);
+			this.deleteArsenalButton.Name = "deleteArsenalButton";
+			this.deleteArsenalButton.Size = new System.Drawing.Size(187, 26);
+			this.deleteArsenalButton.TabIndex = 24;
+			this.deleteArsenalButton.Text = "Delete Arsenal";
+			this.deleteArsenalButton.UseVisualStyleBackColor = true;
+			this.deleteArsenalButton.Click += new System.EventHandler(this.deleteArsenal);
 			// 
-			// button5
+			// loadArsenalButton
 			// 
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button5.Location = new System.Drawing.Point(240, 29);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(187, 23);
-			this.button5.TabIndex = 23;
-			this.button5.Text = "Load Arsenal";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
+			this.loadArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.loadArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.loadArsenalButton.Location = new System.Drawing.Point(240, 29);
+			this.loadArsenalButton.Name = "loadArsenalButton";
+			this.loadArsenalButton.Size = new System.Drawing.Size(187, 23);
+			this.loadArsenalButton.TabIndex = 23;
+			this.loadArsenalButton.Text = "Load Arsenal";
+			this.loadArsenalButton.UseVisualStyleBackColor = true;
+			this.loadArsenalButton.Click += new System.EventHandler(this.loadArsenal);
 			// 
 			// savedArsenalListBox
 			// 
@@ -514,9 +526,9 @@ namespace PD_Helper
 			this.groupBox6.Controls.Add(this.labelSkillID);
 			this.groupBox6.Controls.Add(this.labelSkillName);
 			this.groupBox6.Controls.Add(this.label11);
-			this.groupBox6.Controls.Add(this.textBox1);
-			this.groupBox6.Controls.Add(this.button13);
-			this.groupBox6.Controls.Add(this.button12);
+			this.groupBox6.Controls.Add(this.editorSearchTextBox);
+			this.groupBox6.Controls.Add(this.resetSelectedButton);
+			this.groupBox6.Controls.Add(this.replaceSkillButton);
 			this.groupBox6.Controls.Add(this.editorList);
 			this.groupBox6.Enabled = false;
 			this.groupBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -662,39 +674,39 @@ namespace PD_Helper
 			this.label11.TabIndex = 6;
 			this.label11.Text = "Search:";
 			// 
-			// textBox1
+			// editorSearchTextBox
 			// 
-			this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.textBox1.Location = new System.Drawing.Point(268, 81);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(173, 23);
-			this.textBox1.TabIndex = 31;
-			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.editorSearchTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.editorSearchTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.editorSearchTextBox.Location = new System.Drawing.Point(268, 81);
+			this.editorSearchTextBox.Name = "editorSearchTextBox";
+			this.editorSearchTextBox.Size = new System.Drawing.Size(173, 23);
+			this.editorSearchTextBox.TabIndex = 31;
+			this.editorSearchTextBox.TextChanged += new System.EventHandler(this.editorSearchTextBox_TextChanged);
 			// 
-			// button13
+			// resetSelectedButton
 			// 
-			this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button13.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button13.Location = new System.Drawing.Point(218, 51);
-			this.button13.Name = "button13";
-			this.button13.Size = new System.Drawing.Size(223, 23);
-			this.button13.TabIndex = 28;
-			this.button13.Text = "Reset Selected";
-			this.button13.UseVisualStyleBackColor = true;
-			this.button13.Click += new System.EventHandler(this.button13_Click);
+			this.resetSelectedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.resetSelectedButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.resetSelectedButton.Location = new System.Drawing.Point(218, 51);
+			this.resetSelectedButton.Name = "resetSelectedButton";
+			this.resetSelectedButton.Size = new System.Drawing.Size(223, 23);
+			this.resetSelectedButton.TabIndex = 28;
+			this.resetSelectedButton.Text = "Reset Selected";
+			this.resetSelectedButton.UseVisualStyleBackColor = true;
+			this.resetSelectedButton.Click += new System.EventHandler(this.resetSkill);
 			// 
-			// button12
+			// replaceSkillButton
 			// 
-			this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button12.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.button12.Location = new System.Drawing.Point(218, 22);
-			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(223, 23);
-			this.button12.TabIndex = 27;
-			this.button12.Text = "Replace Skill";
-			this.button12.UseVisualStyleBackColor = true;
-			this.button12.Click += new System.EventHandler(this.button12_Click);
+			this.replaceSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.replaceSkillButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.replaceSkillButton.Location = new System.Drawing.Point(218, 22);
+			this.replaceSkillButton.Name = "replaceSkillButton";
+			this.replaceSkillButton.Size = new System.Drawing.Size(223, 23);
+			this.replaceSkillButton.TabIndex = 27;
+			this.replaceSkillButton.Text = "Replace Skill";
+			this.replaceSkillButton.UseVisualStyleBackColor = true;
+			this.replaceSkillButton.Click += new System.EventHandler(this.replaceSkill);
 			// 
 			// editorList
 			// 
@@ -841,18 +853,6 @@ namespace PD_Helper
 			this.schoolFilterCheckedListBox.TabIndex = 0;
 			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
 			// 
-			// colorProfileButton
-			// 
-			this.colorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.colorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.colorProfileButton.Location = new System.Drawing.Point(240, 485);
-			this.colorProfileButton.Name = "colorProfileButton";
-			this.colorProfileButton.Size = new System.Drawing.Size(187, 26);
-			this.colorProfileButton.TabIndex = 30;
-			this.colorProfileButton.Text = "Color Profile Settings";
-			this.colorProfileButton.UseVisualStyleBackColor = true;
-			this.colorProfileButton.Click += new System.EventHandler(this.colorProfileButton_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -895,8 +895,8 @@ namespace PD_Helper
         #endregion
 
         private Button button1;
-        private Button button3;
-        private Button button4;
+        private Button maxSkillsButton;
+        private Button maxCreditsButton;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -908,15 +908,15 @@ namespace PD_Helper
         private GroupBox groupBox4;
         private GroupBox arsenalListBox;
         private ListBox deckListBox;
-        private Button button6;
-        private Button button5;
+        private Button deleteArsenalButton;
+        private Button loadArsenalButton;
         private ListBox savedArsenalListBox;
         private GroupBox groupBox6;
-        private Button button13;
+        private Button resetSelectedButton;
         private ListBox editorList;
-        private Button button12;
+        private Button replaceSkillButton;
         private ComboBox arsenalDropdown;
-        private TextBox textBox1;
+        private TextBox editorSearchTextBox;
         private Button btnSaveToPDH;
         private Button saveToPDbtn;
         private Label label10;
@@ -936,9 +936,9 @@ namespace PD_Helper
         private Label labelSkillSchool;
         private Label labelSkillID;
         private RichTextBox labelSkillDescription;
-        private Button button2;
+        private Button openArsenalFolderButton;
         private Label label12;
-        private Button button7;
+        private Button refreshArsenalListButton;
         private System.ComponentModel.BackgroundWorker GamepadWorker;
         private Label label6;
 		private GroupBox groupBox3;
