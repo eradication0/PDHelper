@@ -116,9 +116,9 @@ namespace PD_Helper
             public int? ID { get; set; }
             [JsonProperty("SCHOOL")]
             public string SCHOOL { get; set; }
-            [JsonProperty("COST")]
-            public string DAMAGE { get; set; }
             [JsonProperty("DAMAGE")]
+            public string DAMAGE { get; set; }
+            [JsonProperty("COST")]
             public string COST { get; set; }
             [JsonProperty("USAGE")]
             public string USAGE { get; set; }
