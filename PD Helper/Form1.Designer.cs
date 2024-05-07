@@ -383,7 +383,7 @@ namespace PD_Helper
 			this.deckListBox.Name = "deckListBox";
 			this.deckListBox.Size = new System.Drawing.Size(434, 154);
 			this.deckListBox.TabIndex = 1;
-			this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.deckListBox1_DrawItem);
+			this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
 			this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
 			// 
 			// arsenalListBox
@@ -725,7 +725,7 @@ namespace PD_Helper
 			this.editorList.Name = "editorList";
 			this.editorList.Size = new System.Drawing.Size(205, 214);
 			this.editorList.TabIndex = 27;
-			this.editorList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.editorList_DrawItem);
+			this.editorList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
 			this.editorList.SelectedIndexChanged += new System.EventHandler(this.editorList_SelectedIndexChanged);
 			// 
 			// GamepadWorker

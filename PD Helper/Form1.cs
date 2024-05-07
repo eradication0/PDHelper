@@ -813,9 +813,12 @@ namespace PD_Helper
             throw new Exception("Could not identify card");
         }
 
-        private void skillList_DrawItem(object sender, DrawItemEventArgs e, ListBox listBox)
+        private void skillList_DrawItem(object sender, DrawItemEventArgs e)
         {
             if (e.Index < 0) return;
+
+            // Get the list box
+            ListBox listBox = (ListBox)sender;
 
             // Draw the background of the ListBox control for each item.
             e.DrawBackground();
@@ -851,16 +854,6 @@ namespace PD_Helper
 
             // If the ListBox has focus, draw a focus rectangle around the selected item.
             e.DrawFocusRectangle();
-        }
-
-        private void deckListBox1_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            skillList_DrawItem(sender, e, deckListBox);
-        }
-
-        private void editorList_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            skillList_DrawItem(sender, e, editorList);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
