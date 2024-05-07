@@ -116,9 +116,9 @@ namespace PD_Helper
             public int? ID { get; set; }
             [JsonProperty("SCHOOL")]
             public string SCHOOL { get; set; }
-            [JsonProperty("DAMAGE")]
-            public string DAMAGE { get; set; }
             [JsonProperty("COST")]
+            public string DAMAGE { get; set; }
+            [JsonProperty("DAMAGE")]
             public string COST { get; set; }
             [JsonProperty("USAGE")]
             public string USAGE { get; set; }
@@ -593,13 +593,13 @@ namespace PD_Helper
         {
             PDCard card = getCard(name);
             
-            labelSkillCost.Text = card.DAMAGE;
+            labelSkillCost.Text = card.COST;
             labelSkillDescription.Text = card.DESCRIPTION;
             labelSkillID.Text = card.ID.ToString();
             labelSkillName.Text = card.NAME;
             labelSkilLRange.Text = card.RANGE;
             labelSkillSchool.Text = card.SCHOOL;
-            labelSkillStrength.Text = card.COST;
+            labelSkillStrength.Text = card.DAMAGE;
             labelSkillUse.Text = card.USAGE;
 
             Color textColor = lightColorFromType(card.TYPE);
