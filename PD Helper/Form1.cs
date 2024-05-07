@@ -1052,5 +1052,10 @@ namespace PD_Helper
 		{
             updateEditorList();
 		}
+
+		private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
+		{
+            ((CheckedListBox)sender).ClearSelected();
+		}
 	}
 }

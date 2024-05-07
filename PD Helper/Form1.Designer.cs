@@ -848,6 +848,7 @@ namespace PD_Helper
 			this.miscNumberCheckedListBox.Size = new System.Drawing.Size(63, 72);
 			this.miscNumberCheckedListBox.TabIndex = 42;
 			this.miscNumberCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.miscNumberCheckedListBox_ItemCheck);
+			this.miscNumberCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
 			// 
 			// useMaxNumeric
 			// 
@@ -1029,6 +1030,7 @@ namespace PD_Helper
 			this.rangeFilterCheckedListBox.Size = new System.Drawing.Size(154, 90);
 			this.rangeFilterCheckedListBox.TabIndex = 13;
 			this.rangeFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.rangeFilterCheckedListBox_ItemCheck);
+			this.rangeFilterCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
 			// 
 			// environmentalRadioButton
 			// 
@@ -1132,6 +1134,7 @@ namespace PD_Helper
 			this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(64, 90);
 			this.schoolFilterCheckedListBox.TabIndex = 0;
 			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
+			this.schoolFilterCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
 			// 
 			// Form1
 			// 
