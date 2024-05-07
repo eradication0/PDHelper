@@ -82,6 +82,7 @@ namespace PD_Helper
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.rangeFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
 			this.environmentalRadioButton = new System.Windows.Forms.RadioButton();
 			this.specialRadioButton = new System.Windows.Forms.RadioButton();
 			this.statusRadioButton = new System.Windows.Forms.RadioButton();
@@ -734,6 +735,7 @@ namespace PD_Helper
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.rangeFilterCheckedListBox);
 			this.groupBox3.Controls.Add(this.environmentalRadioButton);
 			this.groupBox3.Controls.Add(this.specialRadioButton);
 			this.groupBox3.Controls.Add(this.statusRadioButton);
@@ -745,10 +747,36 @@ namespace PD_Helper
 			this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.groupBox3.Location = new System.Drawing.Point(12, 572);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(879, 124);
+			this.groupBox3.Size = new System.Drawing.Size(879, 119);
 			this.groupBox3.TabIndex = 28;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Filter Settings";
+			// 
+			// rangeFilterCheckedListBox
+			// 
+			this.rangeFilterCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.rangeFilterCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.rangeFilterCheckedListBox.CheckOnClick = true;
+			this.rangeFilterCheckedListBox.ColumnWidth = 75;
+			this.rangeFilterCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.rangeFilterCheckedListBox.FormattingEnabled = true;
+			this.rangeFilterCheckedListBox.Items.AddRange(new object[] {
+            "Short",
+            "Medium",
+            "Long",
+            "Mine",
+            "Capsule",
+            "[N/A]",
+            "Self",
+            "All",
+            "Auto",
+            "Env"});
+			this.rangeFilterCheckedListBox.Location = new System.Drawing.Point(250, 22);
+			this.rangeFilterCheckedListBox.MultiColumn = true;
+			this.rangeFilterCheckedListBox.Name = "rangeFilterCheckedListBox";
+			this.rangeFilterCheckedListBox.Size = new System.Drawing.Size(154, 90);
+			this.rangeFilterCheckedListBox.TabIndex = 13;
+			this.rangeFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.rangeFilterCheckedListBox_ItemCheck);
 			// 
 			// environmentalRadioButton
 			// 
@@ -858,7 +886,7 @@ namespace PD_Helper
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.ClientSize = new System.Drawing.Size(904, 720);
+			this.ClientSize = new System.Drawing.Size(904, 695);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox6);
 			this.Controls.Add(this.arsenalListBox);
@@ -953,5 +981,6 @@ namespace PD_Helper
 		private Label skillCountLabel;
         private Label label1;
 		private Button colorProfileButton;
+		private CheckedListBox rangeFilterCheckedListBox;
 	}
 }

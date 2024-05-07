@@ -40,14 +40,18 @@ namespace PD_Helper
     {
         public Form1()
         {
-
             InitializeComponent();
             this.KeyPreview = true;
+
             // Set default checkmarks
             for (int i = 0; i < 5; i++)
             {
                 schoolFilterCheckedListBox.SetItemChecked(i, true);
             }
+			for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+			{
+                rangeFilterCheckedListBox.SetItemChecked(i, true);
+			}
 
             refreshView();
         }
@@ -233,31 +237,40 @@ namespace PD_Helper
             }
         }
 
+        public PDCard getCard(string name)
+        {
+            foreach (PDCard pair in cardDef.Values)
+            {
+				if (pair.NAME == name)
+				{
+                    return pair;
+				}
+            }
+
+            return null;
+        }
+
         private void replaceSkill(object sender, EventArgs e)
         {
             if (editorList.SelectedIndex != -1 && deckListBox.SelectedIndex != -1)
             {
                 //set loaded deck card change
-                foreach (PDCard pair in cardDef.Values)
+                PDCard card = getCard(editorList.SelectedItem.ToString());
+
+                string currentHex = card.HEX;
+                loadedDeck[deckListBox.SelectedIndex] = currentHex;
+                Debug.WriteLine(card.HEX);
+
+                //set loaded deck visual
+                deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
+
+                // Recount skills
+                int auraCount = 0;
+                foreach (var item in deckListBox.Items)
                 {
-                    if (pair.NAME == editorList.SelectedItem.ToString())
-                    {
-                        string currentHex = pair.HEX;
-                        loadedDeck[deckListBox.SelectedIndex] = currentHex;
-                        Debug.WriteLine(pair.HEX);
-
-                        //set loaded deck visual
-                        deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
-
-                        // Recount skills
-                        int auraCount = 0;
-						foreach (var item in deckListBox.Items)
-						{
-                            if (item.ToString() == "Aura Particle") auraCount++;
-						}
-                        skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
-                    }
+                    if (item.ToString() == "Aura Particle") auraCount++;
                 }
+                skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
             }
             //error handling
             else if (editorList.SelectedIndex != -1) { MessageBox.Show("ERROR01: You didn't select a skill in your Arsenal."); }
@@ -305,16 +318,20 @@ namespace PD_Helper
         {
 			// Use the current array of checkmarks
 			bool[] schoolFilter = new bool[5];
-
 			for (int i = 0; i < 5; i++)
 			{
 				schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
 			}
+            bool[] rangeFilter = new bool[rangeFilterCheckedListBox.Items.Count];
+            for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+            {
+                rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
+            }
 
-            updateEditorList(schoolFilter);
+            updateEditorList(schoolFilter, rangeFilter);
         }
 
-        private void updateEditorList(bool[] schoolFilter)
+        private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter)
         {
 			// Check the filter
             if (schoolFilter == null || schoolFilter.Length != 5)
@@ -362,26 +379,67 @@ namespace PD_Helper
 			}
             consideredSkills = filterSkills;
 
-			// Step 2: Now filter by type if necessary
-			if (!allSkillsRadioButton.Checked)
+            // Step 2: Only consider the skills matching the range filter
+            filterSkills = new List<string>();
+            foreach (var item in consideredSkills)
+            {
+                string range = getCard(item.ToString()).RANGE;
+                bool toKeep = true;
+                switch (range)
+                {
+                    case "short":
+                        toKeep = rangeFilter[0];
+                        break;
+                    case "medium":
+                        toKeep = rangeFilter[1];
+                        break;
+                    case "long":
+                        toKeep = rangeFilter[2];
+                        break;
+                    case "mine":
+                        toKeep = rangeFilter[3];
+                        break;
+                    case "capsule":
+                        toKeep = rangeFilter[4];
+                        break;
+                    case "-":
+                        toKeep = rangeFilter[5];
+                        break;
+                    case "self":
+                        toKeep = rangeFilter[6];
+                        break;
+                    case "all":
+                        toKeep = rangeFilter[7];
+                        break;
+                    case "auto":
+                        toKeep = rangeFilter[8];
+                        break;
+                    case "env":
+                        toKeep = rangeFilter[9];
+                        break;
+                    default:
+                        break;
+                }
+                if (toKeep)
+                {
+                    filterSkills.Add(item);
+                }
+            }
+            consideredSkills = filterSkills;
+
+            // Step 3: Now filter by type if necessary
+            if (!allSkillsRadioButton.Checked)
 			{
                 filterSkills = new List<string>();
                 foreach (var item in consideredSkills)
                 {
                     // Get type
-                    string type = null;
-                    foreach (PDCard pair in cardDef.Values)
-                    {
-                        if (pair.NAME == item)
-                        {
-                            type = pair.TYPE;
-                            break;
-                        }
-                    }
-                    if (type == null)
+                    PDCard card = getCard(item);
+                    if (card == null)
                     {
                         throw new FormatException("Skill not found");
                     }
+                    string type = card.TYPE;
 
                     // Match with the type marked
                     bool toKeep = false;
@@ -414,7 +472,7 @@ namespace PD_Helper
                 consideredSkills = filterSkills;
             }
 
-            // Step 3: search for value in editorList
+            // Step 4: search for value in editorList
             if (editorSearchTextBox.Text != "")
             {
                 editorList.Items.Clear();
@@ -523,64 +581,31 @@ namespace PD_Helper
             }
         }
 
-        private Color lightColorFromType(string type)
+        private Color lightColorFromType(string type) => ColorProfileForm.getColor(type, true);
+
+        private Color lightColorFromName(string name) => lightColorFromType(getCard(name).TYPE);
+
+        private Color darkColorFromType(string type) => ColorProfileForm.getColor(type, false);
+
+        private Color darkColorFromName(string name) => darkColorFromType(getCard(name).TYPE);
+
+        private void displayEditorSkill(string name)
         {
-            return ColorProfileForm.getColor(type, true);
-        }
+            PDCard card = getCard(name);
+            
+            labelSkillCost.Text = card.DAMAGE;
+            labelSkillDescription.Text = card.DESCRIPTION;
+            labelSkillID.Text = card.ID.ToString();
+            labelSkillName.Text = card.NAME;
+            labelSkilLRange.Text = card.RANGE;
+            labelSkillSchool.Text = card.SCHOOL;
+            labelSkillStrength.Text = card.COST;
+            labelSkillUse.Text = card.USAGE;
 
-        private Color lightColorFromName(string name)
-        {
-            foreach (PDCard pair in cardDef.Values)
-            {
-                if (pair.NAME == name)
-                {
-                    return lightColorFromType(pair.TYPE);
-                }
-            }
-
-            return Color.FromArgb(165, 215, 187); // Default
-        }
-
-        private Color darkColorFromType(string type)
-        {
-            return ColorProfileForm.getColor(type, false);
-        }
-
-        private Color darkColorFromName(string name)
-        {
-            foreach (PDCard pair in cardDef.Values)
-            {
-                if (pair.NAME == name)
-                {
-                    return darkColorFromType(pair.TYPE);
-                }
-            }
-
-            return Color.FromArgb(127, 177, 150); // Default
-        }
-
-        private void displayEditorSkill(object cardName)
-        {
-            foreach (PDCard pair in cardDef.Values)
-            {
-                if (pair.NAME == cardName)
-                {
-                    labelSkillCost.Text = pair.DAMAGE;
-                    labelSkillDescription.Text = pair.DESCRIPTION;
-                    labelSkillID.Text = pair.ID.ToString();
-                    labelSkillName.Text = pair.NAME;
-                    labelSkilLRange.Text = pair.RANGE;
-                    labelSkillSchool.Text = pair.SCHOOL;
-                    labelSkillStrength.Text = pair.COST;
-                    labelSkillUse.Text = pair.USAGE;
-
-                    Color textColor = lightColorFromType(pair.TYPE);
-                    labelSkillID.ForeColor = textColor;
-                    labelSkillName.ForeColor = textColor;
-                    labelSkillSchool.ForeColor = textColor;
-                    break;
-                }
-            }
+            Color textColor = lightColorFromType(card.TYPE);
+            labelSkillID.ForeColor = textColor;
+            labelSkillName.ForeColor = textColor;
+            labelSkillSchool.ForeColor = textColor;
         }
 
         private void editorList_SelectedIndexChanged(object sender, EventArgs e)
@@ -603,13 +628,7 @@ namespace PD_Helper
             PDCard currentCard = new PDCard();
             foreach (var cardName in deckListBox.Items)
             {
-                foreach (PDCard pair in cardDef.Values)
-                {
-                    if (pair.NAME == cardName.ToString())
-                    {
-                        currentCard = pair;
-                    }
-                }
+                currentCard = getCard(cardName.ToString());
                 switch (currentCard.SCHOOL)
                 {
                     case "Psycho":
@@ -800,18 +819,7 @@ namespace PD_Helper
             }
         }
 
-        private string schoolFromName(string name)
-        {
-            foreach (PDCard pair in cardDef.Values)
-            {
-                if (pair.NAME == name)
-                {
-                    return pair.SCHOOL;
-                }
-            }
-
-            throw new Exception("Could not identify card");
-        }
+        private string schoolFromName(string name) => getCard(name).SCHOOL;
 
         private void skillList_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -900,14 +908,36 @@ namespace PD_Helper
 		{
             // Use the current array of checkmarks but with the updated checkmark value instead
             bool[] schoolFilter = new bool[5];
-
             for (int i = 0; i < 5; i++)
             {
                 if (i != e.Index) schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
                 else schoolFilter[e.Index] = e.NewValue == CheckState.Checked;
             }
+            bool[] rangeFilter = new bool[rangeFilterCheckedListBox.Items.Count];
+            for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+            {
+                rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
+            }
 
-            updateEditorList(schoolFilter);
+            updateEditorList(schoolFilter, rangeFilter);
+        }
+
+        private void rangeFilterCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // Use the current array of checkmarks but with the updated checkmark value instead
+            bool[] schoolFilter = new bool[5];
+            for (int i = 0; i < 5; i++)
+            {
+                schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+            }
+            bool[] rangeFilter = new bool[rangeFilterCheckedListBox.Items.Count];
+            for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+            {
+                if (i != e.Index) rangeFilter[i] = rangeFilterCheckedListBox.GetItemChecked(i);
+                else rangeFilter[e.Index] = e.NewValue == CheckState.Checked;
+            }
+
+            updateEditorList(schoolFilter, rangeFilter);
         }
 
         private void filterRadioButtons_CheckedChanged(object sender, EventArgs e)
