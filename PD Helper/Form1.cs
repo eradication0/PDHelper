@@ -141,7 +141,7 @@ namespace PD_Helper
         public Mem m = new Mem();
         public ListBox allSkills = new ListBox();
 
-        private void ListProcesses()
+        private void loadGameData(object sender, EventArgs e)
         {
             Process[] processCollection = Process.GetProcesses();
             arsenalDropdown.Items.Clear();
@@ -193,11 +193,6 @@ namespace PD_Helper
                     label2.Text = "No Game Found. Start Phantom Dust First!";
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ListProcesses();
         }
 
         private void button3_Click(object sender, EventArgs e)
