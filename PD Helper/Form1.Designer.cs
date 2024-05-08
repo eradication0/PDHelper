@@ -288,7 +288,6 @@ namespace PD_Helper
 			this.loadedArsenalGroupBox.Controls.Add(this.btnSaveToPDH);
 			this.loadedArsenalGroupBox.Controls.Add(this.saveToPDbtn);
 			this.loadedArsenalGroupBox.Controls.Add(this.deckListBox);
-			this.loadedArsenalGroupBox.Enabled = false;
 			this.loadedArsenalGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.loadedArsenalGroupBox.Location = new System.Drawing.Point(12, 98);
 			this.loadedArsenalGroupBox.Name = "loadedArsenalGroupBox";
@@ -420,7 +419,6 @@ namespace PD_Helper
 			this.arsenalListGroupBox.Controls.Add(this.deleteArsenalButton);
 			this.arsenalListGroupBox.Controls.Add(this.loadArsenalButton);
 			this.arsenalListGroupBox.Controls.Add(this.savedArsenalListBox);
-			this.arsenalListGroupBox.Enabled = false;
 			this.arsenalListGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.arsenalListGroupBox.Location = new System.Drawing.Point(458, 98);
 			this.arsenalListGroupBox.Name = "arsenalListGroupBox";
@@ -552,7 +550,6 @@ namespace PD_Helper
 			this.arsenalEditorGroupBox.Controls.Add(this.resetSelectedButton);
 			this.arsenalEditorGroupBox.Controls.Add(this.replaceSkillButton);
 			this.arsenalEditorGroupBox.Controls.Add(this.editorList);
-			this.arsenalEditorGroupBox.Enabled = false;
 			this.arsenalEditorGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.arsenalEditorGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.arsenalEditorGroupBox.Location = new System.Drawing.Point(12, 330);

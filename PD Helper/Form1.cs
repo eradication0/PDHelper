@@ -137,22 +137,16 @@ namespace PD_Helper
             {
                 schoolFilterCheckedListBox.SetItemChecked(i, true);
             }
-			for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
-			{
+            for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+            {
                 rangeFilterCheckedListBox.SetItemChecked(i, true);
-			}
-			for (int i = 0; i < 4; i++)
-			{
+            }
+            for (int i = 0; i < 4; i++)
+            {
                 miscNumberCheckedListBox.SetItemChecked(i, true);
-			}
-
-            // Load up Arsenal
-            loadedArsenalGroupBox.Enabled = true;
-            arsenalEditorGroupBox.Enabled = true;
-            arsenalListGroupBox.Enabled = true;
+            }
 
             loadArsenalList();
-
             refreshView();
         }
 
@@ -189,9 +183,9 @@ namespace PD_Helper
             Process[] processCollection = Process.GetProcesses();
             arsenalDropdown.Items.Clear();
 
-			//start input worker (if it hasn't yet)
+            //start input worker (if it hasn't yet)
             if (!gamepadOn)
-			{
+            {
                 _controller = new Controller(UserIndex.One);
                 GamepadWorker.RunWorkerAsync();
                 gamepadOn = true;
@@ -259,6 +253,13 @@ namespace PD_Helper
 
         private void btnSaveToPDH_Click(object sender, EventArgs e)
         {
+			// Only save if the name is given
+			if (loadedDeckName == "")
+			{
+                MessageBox.Show("Please enter a name for the arsenal to save.");
+                return;
+			}
+            
             string path = @"Arsenals\" + loadedDeckName + ".arsenal";
             string str = "";
             for (int i = 0; i < 31; i++)
@@ -280,10 +281,10 @@ namespace PD_Helper
         {
             foreach (PDCard pair in cardDef.Values)
             {
-				if (pair.NAME == name)
-				{
+                if (pair.NAME == name)
+                {
                     return pair;
-				}
+                }
             }
 
             return null;
@@ -355,12 +356,12 @@ namespace PD_Helper
 
         private void updateEditorList(object sender, EventArgs e)
         {
-			// Use the current array of checkmarks
-			bool[] schoolFilter = new bool[5];
-			for (int i = 0; i < 5; i++)
-			{
-				schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
-			}
+            // Use the current array of checkmarks
+            bool[] schoolFilter = new bool[5];
+            for (int i = 0; i < 5; i++)
+            {
+                schoolFilter[i] = schoolFilterCheckedListBox.GetItemChecked(i);
+            }
             bool[] rangeFilter = new bool[rangeFilterCheckedListBox.Items.Count];
             for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
             {
@@ -606,7 +607,7 @@ namespace PD_Helper
         private void displayEditorSkill(string name)
         {
             PDCard card = getCard(name);
-            
+
             labelSkillCost.Text = card.COST;
             labelSkillDescription.Text = card.DESCRIPTION;
             labelSkillID.Text = card.ID.ToString();
@@ -630,7 +631,7 @@ namespace PD_Helper
             }
         }
 
-        private void saveToPDbtn_Click(object sender, EventArgs e)
+        private bool validateArsenal()
         {
             //school limit checking
             int psy = 0;
@@ -669,12 +670,12 @@ namespace PD_Helper
             if (psy > 0) { schoolAmount++; }
             if (opt > 0) { schoolAmount++; }
             if (nat > 0) { schoolAmount++; }
-            if (ki  > 0) { schoolAmount++; }
+            if (ki > 0) { schoolAmount++; }
             if (fai > 0) { schoolAmount++; }
 
             //dupe limit checking
             bool isOverDupeLimit = false;
-            Dictionary<string,int> skillDupes = new Dictionary<string, int>();
+            Dictionary<string, int> skillDupes = new Dictionary<string, int>();
             for (int i = 0; i < 30; i++)
             {
                 if (skillDupes.ContainsKey(deckListBox.Items[i].ToString()))
@@ -683,7 +684,7 @@ namespace PD_Helper
                 }
                 else
                 {
-                    skillDupes.Add(deckListBox.Items[i].ToString(),1);
+                    skillDupes.Add(deckListBox.Items[i].ToString(), 1);
                 }
             }
             foreach (var item in skillDupes)
@@ -698,10 +699,19 @@ namespace PD_Helper
             if (schoolAmount > maxAllowedSchools)
             {
                 MessageBox.Show("ERROR05: This Arsenal has skills from too many schools. You are limited to: " + maxAllowedSchools.ToString() + " School(s)");
-            } else if (isOverDupeLimit)
+                return false;
+            }
+            else if (isOverDupeLimit)
             {
                 MessageBox.Show("ERROR06: You cannot have more than 3 of the same skill in an Arsenal");
-            } else
+                return false;
+            }
+            else return true;
+        }
+
+        private void saveToPDbtn_Click(object sender, EventArgs e)
+        {
+			if (validateArsenal())
             {
                 //writing the name
                 byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
@@ -743,11 +753,6 @@ namespace PD_Helper
             {
                 partnerLock.Checked = true;
             }
-
-            // Load up Arsenal
-            //loadedArsenalGroupBox.Enabled = true;
-            //arsenalEditorGroupBox.Enabled = true;
-            //arsenalListGroupBox.Enabled = true;
 
             //System.Diagnostics.Debug.WriteLine(o1);
 
