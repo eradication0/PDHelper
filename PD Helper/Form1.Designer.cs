@@ -704,7 +704,7 @@ namespace PD_Helper
 			this.editorSearchTextBox.Name = "editorSearchTextBox";
 			this.editorSearchTextBox.Size = new System.Drawing.Size(173, 23);
 			this.editorSearchTextBox.TabIndex = 31;
-			this.editorSearchTextBox.TextChanged += new System.EventHandler(this.editorSearchTextBox_TextChanged);
+			this.editorSearchTextBox.TextChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// resetSelectedButton
 			// 
@@ -804,7 +804,7 @@ namespace PD_Helper
             0,
             0,
             0});
-			this.costMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.costMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// costMinNumeric
 			// 
@@ -819,7 +819,7 @@ namespace PD_Helper
 			this.costMinNumeric.Name = "costMinNumeric";
 			this.costMinNumeric.Size = new System.Drawing.Size(36, 23);
 			this.costMinNumeric.TabIndex = 44;
-			this.costMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.costMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// label15
 			// 
@@ -868,7 +868,7 @@ namespace PD_Helper
             0,
             0,
             0});
-			this.useMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.useMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// defMaxNumeric
 			// 
@@ -893,7 +893,7 @@ namespace PD_Helper
             0,
             0,
             0});
-			this.defMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.defMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// useMinNumeric
 			// 
@@ -913,7 +913,7 @@ namespace PD_Helper
             0,
             0,
             0});
-			this.useMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.useMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// defMinNumeric
 			// 
@@ -938,7 +938,7 @@ namespace PD_Helper
             0,
             0,
             0});
-			this.defMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.defMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// strMaxNumeric
 			// 
@@ -958,7 +958,7 @@ namespace PD_Helper
             0,
             0,
             0});
-			this.strMaxNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.strMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// strMinNumeric
 			// 
@@ -973,7 +973,7 @@ namespace PD_Helper
 			this.strMinNumeric.Name = "strMinNumeric";
 			this.strMinNumeric.Size = new System.Drawing.Size(36, 23);
 			this.strMinNumeric.TabIndex = 36;
-			this.strMinNumeric.ValueChanged += new System.EventHandler(this.statisticNumeric_ValueChanged);
+			this.strMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// label14
 			// 
@@ -1042,7 +1042,7 @@ namespace PD_Helper
 			this.environmentalRadioButton.TabIndex = 12;
 			this.environmentalRadioButton.Text = "Environmental";
 			this.environmentalRadioButton.UseVisualStyleBackColor = true;
-			this.environmentalRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			this.environmentalRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// specialRadioButton
 			// 
@@ -1054,7 +1054,7 @@ namespace PD_Helper
 			this.specialRadioButton.TabIndex = 11;
 			this.specialRadioButton.Text = "Special";
 			this.specialRadioButton.UseVisualStyleBackColor = true;
-			this.specialRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			this.specialRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// statusRadioButton
 			// 
@@ -1066,7 +1066,7 @@ namespace PD_Helper
 			this.statusRadioButton.TabIndex = 10;
 			this.statusRadioButton.Text = "Status";
 			this.statusRadioButton.UseVisualStyleBackColor = true;
-			this.statusRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			this.statusRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// eraseRadioButton
 			// 
@@ -1078,7 +1078,7 @@ namespace PD_Helper
 			this.eraseRadioButton.TabIndex = 9;
 			this.eraseRadioButton.Text = "Erase";
 			this.eraseRadioButton.UseVisualStyleBackColor = true;
-			this.eraseRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			this.eraseRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// defenseRadioButton
 			// 
@@ -1090,7 +1090,7 @@ namespace PD_Helper
 			this.defenseRadioButton.TabIndex = 8;
 			this.defenseRadioButton.Text = "Defense";
 			this.defenseRadioButton.UseVisualStyleBackColor = true;
-			this.defenseRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			this.defenseRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// attackRadioButton
 			// 
@@ -1102,7 +1102,7 @@ namespace PD_Helper
 			this.attackRadioButton.TabIndex = 7;
 			this.attackRadioButton.Text = "Attack";
 			this.attackRadioButton.UseVisualStyleBackColor = true;
-			this.attackRadioButton.CheckedChanged += new System.EventHandler(this.filterRadioButtons_CheckedChanged);
+			this.attackRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// allSkillsRadioButton
 			// 

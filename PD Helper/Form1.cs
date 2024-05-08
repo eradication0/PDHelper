@@ -38,28 +38,6 @@ namespace PD_Helper
     //timer value 7FF7D096C8C0
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-            this.KeyPreview = true;
-
-            // Set default checkmarks
-            for (int i = 0; i < 5; i++)
-            {
-                schoolFilterCheckedListBox.SetItemChecked(i, true);
-            }
-			for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
-			{
-                rangeFilterCheckedListBox.SetItemChecked(i, true);
-			}
-			for (int i = 0; i < 4; i++)
-			{
-                miscNumberCheckedListBox.SetItemChecked(i, true);
-			}
-
-            refreshView();
-        }
-
         //Class for PDCard
         // Root myDeserializedClass = JsonConvert.DeserializeObject<List<PDCard>>(myJsonResponse);
         public class PDCard : IComparable
@@ -67,7 +45,7 @@ namespace PD_Helper
             // Comparator(s)
             private class SortTypeHelper : IComparer<PDCard>
             {
-				int IComparer<PDCard>.Compare(PDCard a, PDCard b)
+                int IComparer<PDCard>.Compare(PDCard a, PDCard b)
                 {
                     int typeIntA = a.typeToInt();
                     int typeIntB = b.typeToInt();
@@ -148,6 +126,28 @@ namespace PD_Helper
         bool gamepadOn = false;
         public Mem m = new Mem();
         public ListBox allSkills = new ListBox();
+
+        public Form1()
+        {
+            InitializeComponent();
+            this.KeyPreview = true;
+
+            // Set default checkmarks
+            for (int i = 0; i < 5; i++)
+            {
+                schoolFilterCheckedListBox.SetItemChecked(i, true);
+            }
+			for (int i = 0; i < rangeFilterCheckedListBox.Items.Count; i++)
+			{
+                rangeFilterCheckedListBox.SetItemChecked(i, true);
+			}
+			for (int i = 0; i < 4; i++)
+			{
+                miscNumberCheckedListBox.SetItemChecked(i, true);
+			}
+
+            refreshView();
+        }
 
         private void loadGameData(object sender, EventArgs e)
         {
@@ -318,7 +318,7 @@ namespace PD_Helper
             }
         }
 
-        private void updateEditorList()
+        private void updateEditorList(object sender, EventArgs e)
         {
 			// Use the current array of checkmarks
 			bool[] schoolFilter = new bool[5];
@@ -476,11 +476,6 @@ namespace PD_Helper
                     editorList.Items.Add(item.ToString());
                 }
             }
-        }
-
-        private void editorSearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-            updateEditorList();
         }
 
         private void loadArsenal(object sender, EventArgs e)
@@ -957,11 +952,6 @@ namespace PD_Helper
             updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
         }
 
-        private void filterRadioButtons_CheckedChanged(object sender, EventArgs e)
-        {
-            updateEditorList();
-        }
-
 		private void colorProfileButton_Click(object sender, EventArgs e)
 		{
             // Open new form for setting colors
@@ -990,11 +980,6 @@ namespace PD_Helper
             statusRadioButton.Refresh();
             specialRadioButton.ForeColor = lightColorFromType("Special");
         }
-
-		private void statisticNumeric_ValueChanged(object sender, EventArgs e)
-		{
-            updateEditorList();
-		}
 
 		private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
