@@ -146,6 +146,11 @@ namespace PD_Helper
                 miscNumberCheckedListBox.SetItemChecked(i, true);
             }
 
+            // Set default sort
+            sortComboBox1.Text = "ID";
+            sortComboBox2.Text = "None";
+            sortComboBox3.Text = "None";
+
             // Load a blank 30 aura arsenal
             List<PDCard> emptyArsenal = new List<PDCard>();
 			for (int i = 0; i < 30; i++)
