@@ -281,6 +281,14 @@ namespace PD_Helper
             if (!savedArsenalListBox.Items.Contains(loadedDeckName) == true) {
                 savedArsenalListBox.Items.Add(loadedDeckName);
             }
+
+            // Re-sort the arsenal
+            List<PDCard> cardList = new List<PDCard>();
+            for (int i = 0; i < 30; i++)
+            {
+                cardList.Add(cardDef[loadedDeck[i]]);
+            }
+            openArsenalToList(cardList, arsenalNameBox.Text, (int)schoolNumeric.Value);
         }
 
         public PDCard getCard(string name)
