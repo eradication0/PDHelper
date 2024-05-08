@@ -44,7 +44,7 @@ namespace PD_Helper
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.arsenalDropdown = new System.Windows.Forms.ComboBox();
-			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.loadedArsenalGroupBox = new System.Windows.Forms.GroupBox();
 			this.skillCountLabel = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.schoolNumeric = new System.Windows.Forms.NumericUpDown();
@@ -53,7 +53,7 @@ namespace PD_Helper
 			this.btnSaveToPDH = new System.Windows.Forms.Button();
 			this.saveToPDbtn = new System.Windows.Forms.Button();
 			this.deckListBox = new System.Windows.Forms.ListBox();
-			this.arsenalListBox = new System.Windows.Forms.GroupBox();
+			this.arsenalListGroupBox = new System.Windows.Forms.GroupBox();
 			this.colorProfileButton = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace PD_Helper
 			this.deleteArsenalButton = new System.Windows.Forms.Button();
 			this.loadArsenalButton = new System.Windows.Forms.Button();
 			this.savedArsenalListBox = new System.Windows.Forms.ListBox();
-			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.arsenalEditorGroupBox = new System.Windows.Forms.GroupBox();
 			this.labelSkillDescription = new System.Windows.Forms.RichTextBox();
 			this.labelSkillUse = new System.Windows.Forms.Label();
 			this.labelSkillStrength = new System.Windows.Forms.Label();
@@ -106,10 +106,10 @@ namespace PD_Helper
 			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
-			this.groupBox4.SuspendLayout();
+			this.loadedArsenalGroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.schoolNumeric)).BeginInit();
-			this.arsenalListBox.SuspendLayout();
-			this.groupBox6.SuspendLayout();
+			this.arsenalListGroupBox.SuspendLayout();
+			this.arsenalEditorGroupBox.SuspendLayout();
 			this.groupBox3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.costMaxNumeric)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.costMinNumeric)).BeginInit();
@@ -277,25 +277,25 @@ namespace PD_Helper
 			this.arsenalDropdown.TabIndex = 31;
 			this.arsenalDropdown.SelectedIndexChanged += new System.EventHandler(this.arsenalDropdown_SelectedIndexChanged);
 			// 
-			// groupBox4
+			// loadedArsenalGroupBox
 			// 
-			this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.groupBox4.Controls.Add(this.skillCountLabel);
-			this.groupBox4.Controls.Add(this.label10);
-			this.groupBox4.Controls.Add(this.schoolNumeric);
-			this.groupBox4.Controls.Add(this.arsenalNameLabel);
-			this.groupBox4.Controls.Add(this.arsenalNameBox);
-			this.groupBox4.Controls.Add(this.btnSaveToPDH);
-			this.groupBox4.Controls.Add(this.saveToPDbtn);
-			this.groupBox4.Controls.Add(this.deckListBox);
-			this.groupBox4.Enabled = false;
-			this.groupBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.groupBox4.Location = new System.Drawing.Point(12, 98);
-			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.Size = new System.Drawing.Size(447, 239);
-			this.groupBox4.TabIndex = 17;
-			this.groupBox4.TabStop = false;
-			this.groupBox4.Text = "Loaded Arsenal";
+			this.loadedArsenalGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.loadedArsenalGroupBox.Controls.Add(this.skillCountLabel);
+			this.loadedArsenalGroupBox.Controls.Add(this.label10);
+			this.loadedArsenalGroupBox.Controls.Add(this.schoolNumeric);
+			this.loadedArsenalGroupBox.Controls.Add(this.arsenalNameLabel);
+			this.loadedArsenalGroupBox.Controls.Add(this.arsenalNameBox);
+			this.loadedArsenalGroupBox.Controls.Add(this.btnSaveToPDH);
+			this.loadedArsenalGroupBox.Controls.Add(this.saveToPDbtn);
+			this.loadedArsenalGroupBox.Controls.Add(this.deckListBox);
+			this.loadedArsenalGroupBox.Enabled = false;
+			this.loadedArsenalGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.loadedArsenalGroupBox.Location = new System.Drawing.Point(12, 98);
+			this.loadedArsenalGroupBox.Name = "loadedArsenalGroupBox";
+			this.loadedArsenalGroupBox.Size = new System.Drawing.Size(447, 239);
+			this.loadedArsenalGroupBox.TabIndex = 17;
+			this.loadedArsenalGroupBox.TabStop = false;
+			this.loadedArsenalGroupBox.Text = "Loaded Arsenal";
 			// 
 			// skillCountLabel
 			// 
@@ -408,26 +408,26 @@ namespace PD_Helper
 			this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
 			this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
 			// 
-			// arsenalListBox
+			// arsenalListGroupBox
 			// 
-			this.arsenalListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.arsenalListBox.Controls.Add(this.colorProfileButton);
-			this.arsenalListBox.Controls.Add(this.label1);
-			this.arsenalListBox.Controls.Add(this.label6);
-			this.arsenalListBox.Controls.Add(this.refreshArsenalListButton);
-			this.arsenalListBox.Controls.Add(this.openArsenalFolderButton);
-			this.arsenalListBox.Controls.Add(this.partnerLock);
-			this.arsenalListBox.Controls.Add(this.deleteArsenalButton);
-			this.arsenalListBox.Controls.Add(this.loadArsenalButton);
-			this.arsenalListBox.Controls.Add(this.savedArsenalListBox);
-			this.arsenalListBox.Enabled = false;
-			this.arsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.arsenalListBox.Location = new System.Drawing.Point(458, 98);
-			this.arsenalListBox.Name = "arsenalListBox";
-			this.arsenalListBox.Size = new System.Drawing.Size(433, 477);
-			this.arsenalListBox.TabIndex = 1;
-			this.arsenalListBox.TabStop = false;
-			this.arsenalListBox.Text = "Arsenal List";
+			this.arsenalListGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.arsenalListGroupBox.Controls.Add(this.colorProfileButton);
+			this.arsenalListGroupBox.Controls.Add(this.label1);
+			this.arsenalListGroupBox.Controls.Add(this.label6);
+			this.arsenalListGroupBox.Controls.Add(this.refreshArsenalListButton);
+			this.arsenalListGroupBox.Controls.Add(this.openArsenalFolderButton);
+			this.arsenalListGroupBox.Controls.Add(this.partnerLock);
+			this.arsenalListGroupBox.Controls.Add(this.deleteArsenalButton);
+			this.arsenalListGroupBox.Controls.Add(this.loadArsenalButton);
+			this.arsenalListGroupBox.Controls.Add(this.savedArsenalListBox);
+			this.arsenalListGroupBox.Enabled = false;
+			this.arsenalListGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.arsenalListGroupBox.Location = new System.Drawing.Point(458, 98);
+			this.arsenalListGroupBox.Name = "arsenalListGroupBox";
+			this.arsenalListGroupBox.Size = new System.Drawing.Size(433, 477);
+			this.arsenalListGroupBox.TabIndex = 1;
+			this.arsenalListGroupBox.TabStop = false;
+			this.arsenalListGroupBox.Text = "Arsenal List";
 			// 
 			// colorProfileButton
 			// 
@@ -533,34 +533,34 @@ namespace PD_Helper
 			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
 			this.savedArsenalListBox.TabIndex = 0;
 			// 
-			// groupBox6
+			// arsenalEditorGroupBox
 			// 
-			this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.groupBox6.Controls.Add(this.labelSkillDescription);
-			this.groupBox6.Controls.Add(this.labelSkillUse);
-			this.groupBox6.Controls.Add(this.labelSkillStrength);
-			this.groupBox6.Controls.Add(this.labelSkillCost);
-			this.groupBox6.Controls.Add(this.labelSkilLRange);
-			this.groupBox6.Controls.Add(this.label24);
-			this.groupBox6.Controls.Add(this.label23);
-			this.groupBox6.Controls.Add(this.label22);
-			this.groupBox6.Controls.Add(this.labelSkillSchool);
-			this.groupBox6.Controls.Add(this.labelSkillID);
-			this.groupBox6.Controls.Add(this.labelSkillName);
-			this.groupBox6.Controls.Add(this.label11);
-			this.groupBox6.Controls.Add(this.editorSearchTextBox);
-			this.groupBox6.Controls.Add(this.resetSelectedButton);
-			this.groupBox6.Controls.Add(this.replaceSkillButton);
-			this.groupBox6.Controls.Add(this.editorList);
-			this.groupBox6.Enabled = false;
-			this.groupBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.groupBox6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.groupBox6.Location = new System.Drawing.Point(12, 330);
-			this.groupBox6.Name = "groupBox6";
-			this.groupBox6.Size = new System.Drawing.Size(447, 245);
-			this.groupBox6.TabIndex = 27;
-			this.groupBox6.TabStop = false;
-			this.groupBox6.Text = "Quick Arsenal Editor";
+			this.arsenalEditorGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillDescription);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillUse);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillStrength);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillCost);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkilLRange);
+			this.arsenalEditorGroupBox.Controls.Add(this.label24);
+			this.arsenalEditorGroupBox.Controls.Add(this.label23);
+			this.arsenalEditorGroupBox.Controls.Add(this.label22);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillSchool);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillID);
+			this.arsenalEditorGroupBox.Controls.Add(this.labelSkillName);
+			this.arsenalEditorGroupBox.Controls.Add(this.label11);
+			this.arsenalEditorGroupBox.Controls.Add(this.editorSearchTextBox);
+			this.arsenalEditorGroupBox.Controls.Add(this.resetSelectedButton);
+			this.arsenalEditorGroupBox.Controls.Add(this.replaceSkillButton);
+			this.arsenalEditorGroupBox.Controls.Add(this.editorList);
+			this.arsenalEditorGroupBox.Enabled = false;
+			this.arsenalEditorGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.arsenalEditorGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.arsenalEditorGroupBox.Location = new System.Drawing.Point(12, 330);
+			this.arsenalEditorGroupBox.Name = "arsenalEditorGroupBox";
+			this.arsenalEditorGroupBox.Size = new System.Drawing.Size(447, 245);
+			this.arsenalEditorGroupBox.TabIndex = 27;
+			this.arsenalEditorGroupBox.TabStop = false;
+			this.arsenalEditorGroupBox.Text = "Quick Arsenal Editor";
 			// 
 			// labelSkillDescription
 			// 
@@ -1143,9 +1143,9 @@ namespace PD_Helper
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
 			this.ClientSize = new System.Drawing.Size(904, 705);
 			this.Controls.Add(this.groupBox3);
-			this.Controls.Add(this.groupBox6);
-			this.Controls.Add(this.arsenalListBox);
-			this.Controls.Add(this.groupBox4);
+			this.Controls.Add(this.arsenalEditorGroupBox);
+			this.Controls.Add(this.arsenalListGroupBox);
+			this.Controls.Add(this.loadedArsenalGroupBox);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label9);
@@ -1161,13 +1161,13 @@ namespace PD_Helper
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
-			this.groupBox4.ResumeLayout(false);
-			this.groupBox4.PerformLayout();
+			this.loadedArsenalGroupBox.ResumeLayout(false);
+			this.loadedArsenalGroupBox.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.schoolNumeric)).EndInit();
-			this.arsenalListBox.ResumeLayout(false);
-			this.arsenalListBox.PerformLayout();
-			this.groupBox6.ResumeLayout(false);
-			this.groupBox6.PerformLayout();
+			this.arsenalListGroupBox.ResumeLayout(false);
+			this.arsenalListGroupBox.PerformLayout();
+			this.arsenalEditorGroupBox.ResumeLayout(false);
+			this.arsenalEditorGroupBox.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.costMaxNumeric)).EndInit();
@@ -1196,13 +1196,13 @@ namespace PD_Helper
         private Label label9;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private GroupBox groupBox4;
-        private GroupBox arsenalListBox;
+        private GroupBox loadedArsenalGroupBox;
+        private GroupBox arsenalListGroupBox;
         private ListBox deckListBox;
         private Button deleteArsenalButton;
         private Button loadArsenalButton;
         private ListBox savedArsenalListBox;
-        private GroupBox groupBox6;
+        private GroupBox arsenalEditorGroupBox;
         private Button resetSelectedButton;
         private ListBox editorList;
         private Button replaceSkillButton;

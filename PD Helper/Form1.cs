@@ -146,7 +146,42 @@ namespace PD_Helper
                 miscNumberCheckedListBox.SetItemChecked(i, true);
 			}
 
+            // Load up Arsenal
+            loadedArsenalGroupBox.Enabled = true;
+            arsenalEditorGroupBox.Enabled = true;
+            arsenalListGroupBox.Enabled = true;
+
+            loadArsenalList();
+
             refreshView();
+        }
+
+        private void loadArsenalList()
+        {
+            //load arsenal editor
+            if (editorList.Items.Count == 0)
+            {
+                foreach (var item in cardDef)
+                {
+                    editorList.Items.Add(item.Value.NAME);
+                    allSkills.Items.Add(item.Value.NAME);
+                }
+            }
+
+            //add each arsenal file to the list
+            savedArsenalListBox.Items.Clear();
+            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
+
+            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
+            string str = "";
+
+            foreach (FileInfo file in Files)
+            {
+                string currentDeck = file.Name;
+                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
+                savedArsenalListBox.Items.Add(currentDeck);
+            }
+            arsenalListGroupBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
         }
 
         private void loadGameData(object sender, EventArgs e)
@@ -710,9 +745,9 @@ namespace PD_Helper
             }
 
             // Load up Arsenal
-            groupBox4.Enabled = true;
-            groupBox6.Enabled = true;
-            arsenalListBox.Enabled = true;
+            //loadedArsenalGroupBox.Enabled = true;
+            //arsenalEditorGroupBox.Enabled = true;
+            //arsenalListGroupBox.Enabled = true;
 
             //System.Diagnostics.Debug.WriteLine(o1);
 
@@ -763,30 +798,7 @@ namespace PD_Helper
 
             //System.Diagnostics.Debug.WriteLine(loadSchoolAmount);
 
-            //load arsenal editor
-            if (editorList.Items.Count == 0)
-            {
-                foreach (var item in cardDef)
-                {
-                    editorList.Items.Add(item.Value.NAME);
-                    allSkills.Items.Add(item.Value.NAME);
-                }
-            }
-
-            //add each arsenal file to the list
-            savedArsenalListBox.Items.Clear();
-            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
-
-            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
-            string str = "";
-
-            foreach (FileInfo file in Files)
-            {
-                string currentDeck = file.Name;
-                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
-                savedArsenalListBox.Items.Add(currentDeck);
-            }
-            arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
+            loadArsenalList();
         }
 
         private void deckListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -864,7 +876,7 @@ namespace PD_Helper
                 currentDeck = currentDeck.Remove(currentDeck.Length - 8);
                 savedArsenalListBox.Items.Add(currentDeck);
             }
-            arsenalListBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
+            arsenalListGroupBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
         }
 
         private void GamepadWorker_DoWork_1(object sender, DoWorkEventArgs e)
