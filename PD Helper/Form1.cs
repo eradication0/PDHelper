@@ -146,7 +146,13 @@ namespace PD_Helper
                 miscNumberCheckedListBox.SetItemChecked(i, true);
             }
 
-            loadArsenalList();
+            // Load a blank 30 aura arsenal
+            List<PDCard> emptyArsenal = new List<PDCard>();
+			for (int i = 0; i < 30; i++)
+			{
+                emptyArsenal.Add(getCard("Aura Particle"));
+			}
+            openArsenalToList(emptyArsenal);
             refreshView();
         }
 
@@ -746,36 +752,9 @@ namespace PD_Helper
         {
             Process.Start("explorer.exe", @"Arsenals\");
         }
-        
-        private void arsenalDropdown_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void openArsenalToList(List<PDCard> cardList, string arsenalName = "", int schoolAmount = 2)
         {
-            if (m.ReadByte("base+003ED688,9") == 1)
-            {
-                partnerLock.Checked = true;
-            }
-
-            //System.Diagnostics.Debug.WriteLine(o1);
-
-            // List of fist cards per deck
-            string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
-            // Load all cards
-            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
-            string loadDeckHex = BitConverter.ToString(loadDeck);
-            
-            //add cards to list
-            loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
-            List<PDCard> cardList = new List<PDCard>();
-            int o = 0;
-
-            for (int i = 0; i < 30; i++)
-            {
-                Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
-                String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
-                cardList.Add(cardDef[currentHexString]);
-                //loadedDeck[i] = currentHexString;
-                o += 2;
-            }
-
             // Sort the list
             cardList.Sort(PDCard.SortType());
 
@@ -789,21 +768,47 @@ namespace PD_Helper
                 if (cardList[i].TYPE == "Aura") auraCount++;
             }
 
-            // Set the skill count
+            // Set the skill count, school amount, and arsenal name
             skillCountLabel.Text = Convert.ToString(30 - auraCount) + "/30";
+            schoolNumeric.Value = schoolAmount;
+            arsenalNameBox.Text = arsenalName;
+            loadedDeckName = arsenalName;
+
+            loadArsenalList();
+        }
+
+        private void arsenalDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (m.ReadByte("base+003ED688,9") == 1)
+            {
+                partnerLock.Checked = true;
+            }
+
+            //System.Diagnostics.Debug.WriteLine(o1);
+
+            // List of fist cards per deck
+            string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
+            // Load all cards
+            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
+            
+            //add cards to list
+            loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
+            List<PDCard> cardList = new List<PDCard>();
+            int o = 0;
+            for (int i = 0; i < 30; i++)
+            {
+                Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
+                String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
+                cardList.Add(cardDef[currentHexString]);
+                o += 2;
+            }
 
             //manual write school amount
             Byte[] currentByteFix = { loadDeck[60], loadDeck[61] };
             String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
             loadedDeck[30] = currentHexStringFix;
             string loadSchoolAmount = currentHexStringFix.Remove(currentHexStringFix.Length - 3);
-            schoolNumeric.Value = Int32.Parse(loadSchoolAmount);
-            arsenalNameBox.Text = arsenalDropdown.SelectedItem.ToString();
-            loadedDeckName = arsenalDropdown.SelectedItem.ToString();
-
-            //System.Diagnostics.Debug.WriteLine(loadSchoolAmount);
-
-            loadArsenalList();
+            openArsenalToList(cardList, arsenalDropdown.SelectedItem.ToString(), Int32.Parse(loadSchoolAmount));
         }
 
         private void deckListBox1_SelectedIndexChanged(object sender, EventArgs e)
