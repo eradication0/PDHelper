@@ -342,21 +342,15 @@ namespace PD_Helper
 
         private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter, bool[] miscNumberFilter)
         {
-            // Step 0: Prepare the list of skills to consider for filtering
-            List<string> consideredSkills = new List<string>();
-			foreach (var item in allSkills.Items)
-			{
-                consideredSkills.Add(item.ToString());
-			}
-
-            // Step 1: Only consider the skills matching the school filter
-            List<string> filterSkills = new List<string>();
-			foreach (var item in consideredSkills)
-			{
-                string school = schoolFromName(item);
+            string infty = getCard("Bomb").USAGE;
+            editorList.Items.Clear();
+            foreach (var item in allSkills.Items)
+            {
+                // Step 1: Only consider the skills matching the school filter
+                string school = schoolFromName(item.ToString());
                 bool toKeep = true;
                 switch (school)
-				{
+                {
                     case "Psycho":
                         toKeep = schoolFilter[0];
                         break;
@@ -373,21 +367,13 @@ namespace PD_Helper
                         toKeep = schoolFilter[4];
                         break;
                     default:
-						break;
-				}
-				if (toKeep)
-				{
-                    filterSkills.Add(item);
-				}
-			}
-            consideredSkills = filterSkills;
+                        break;
+                }
+                if (!toKeep) continue;
 
-            // Step 2: Only consider the skills matching the range filter
-            filterSkills = new List<string>();
-            foreach (var item in consideredSkills)
-            {
+                // Step 2: Only consider the skills matching the range filter
                 string range = getCard(item.ToString()).RANGE;
-                bool toKeep = true;
+                toKeep = true;
                 switch (range)
                 {
                     case "short":
@@ -423,21 +409,13 @@ namespace PD_Helper
                     default:
                         break;
                 }
-                if (toKeep)
-                {
-                    filterSkills.Add(item);
-                }
-            }
-            consideredSkills = filterSkills;
+                if (!toKeep) continue;
 
-            // Step 3: Now filter by type if necessary
-            if (!allSkillsRadioButton.Checked)
-			{
-                filterSkills = new List<string>();
-                foreach (var item in consideredSkills)
+                // Step 3: Now filter by type if necessary
+                PDCard card = getCard(item.ToString());
+                if (!allSkillsRadioButton.Checked)
                 {
                     // Get type
-                    PDCard card = getCard(item);
                     if (card == null)
                     {
                         throw new FormatException("Skill not found");
@@ -445,7 +423,7 @@ namespace PD_Helper
                     string type = card.TYPE;
 
                     // Match with the type marked
-                    bool toKeep = false;
+                    toKeep = false;
                     switch (type)
                     {
                         case "Attack":
@@ -467,22 +445,12 @@ namespace PD_Helper
                             toKeep = environmentalRadioButton.Checked;
                             break;
                     }
-                    if (toKeep)
-                    {
-                        filterSkills.Add(item);
-                    }
+                    if (!toKeep) continue;
                 }
-                consideredSkills = filterSkills;
-            }
 
-            // Step 4: Filter by the STR/DEF/USE/COST given
-            filterSkills = new List<string>();
-            string infty = getCard("Bomb").USAGE;
-            foreach (var item in consideredSkills)
-            {
-                PDCard card = getCard(item);
-                bool validSTR = (int.TryParse(card.DAMAGE, out int damage) 
-                        && damage >= (int)strMinNumeric.Value 
+                // Step 4: Filter by the STR/DEF/USE/COST given
+                bool validSTR = (int.TryParse(card.DAMAGE, out int damage)
+                        && damage >= (int)strMinNumeric.Value
                         && damage <= (int)strMaxNumeric.Value)
                     || card.TYPE != "Attack" || (miscNumberFilter[0] && card.DAMAGE == "X");
                 bool validDEF = (int.TryParse(card.DAMAGE, out int defense)
@@ -498,33 +466,14 @@ namespace PD_Helper
                         && (cost <= (int)costMaxNumeric.Value
                             || costMaxNumeric.Value == costMaxNumeric.Maximum)) // Handle Phantom Dust Skill
                     || (miscNumberFilter[3] && card.COST == "X");
-                bool valid = validSTR && validDEF && validUSE && validCOST;
+                toKeep = validSTR && validDEF && validUSE && validCOST;
 
-				if (valid)
-				{
-                    filterSkills.Add(item);
-                }
-            }
-            consideredSkills = filterSkills;
+                if (!toKeep) continue;
 
-            // Step 5: search for value in editorList
-            if (editorSearchTextBox.Text != "")
-            {
-                editorList.Items.Clear();
-                foreach (var item in consideredSkills)
+                // Step 5: search for value in editorList
+                if (editorSearchTextBox.Text == "" || item.ToString().Contains(editorSearchTextBox.Text, StringComparison.OrdinalIgnoreCase))
                 {
-                    if (item.ToString().Contains(editorSearchTextBox.Text, StringComparison.OrdinalIgnoreCase))
-                    {
-                        editorList.Items.Add(item.ToString());
-                    }
-                }
-            }
-            else
-            {
-                editorList.Items.Clear();
-                foreach (var item in consideredSkills)
-                {
-                    editorList.Items.Add(item);
+                    editorList.Items.Add(item.ToString());
                 }
             }
         }
