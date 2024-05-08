@@ -1022,5 +1022,16 @@ namespace PD_Helper
 		{
             ((CheckedListBox)sender).ClearSelected();
 		}
+
+		private void newArsenalButton_Click(object sender, EventArgs e)
+		{
+            // Load a blank 30 aura arsenal
+            List<PDCard> emptyArsenal = new List<PDCard>();
+            for (int i = 0; i < 30; i++)
+            {
+                emptyArsenal.Add(getCard("Aura Particle"));
+            }
+            openArsenalToList(emptyArsenal);
+        }
 	}
 }

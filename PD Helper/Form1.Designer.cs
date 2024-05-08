@@ -104,6 +104,7 @@ namespace PD_Helper
 			this.attackRadioButton = new System.Windows.Forms.RadioButton();
 			this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
 			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
+			this.newArsenalButton = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.loadedArsenalGroupBox.SuspendLayout();
@@ -410,6 +411,7 @@ namespace PD_Helper
 			// arsenalListGroupBox
 			// 
 			this.arsenalListGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.arsenalListGroupBox.Controls.Add(this.newArsenalButton);
 			this.arsenalListGroupBox.Controls.Add(this.colorProfileButton);
 			this.arsenalListGroupBox.Controls.Add(this.label1);
 			this.arsenalListGroupBox.Controls.Add(this.label6);
@@ -444,7 +446,7 @@ namespace PD_Helper
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-			this.label1.Location = new System.Drawing.Point(240, 95);
+			this.label1.Location = new System.Drawing.Point(240, 127);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(140, 15);
 			this.label1.TabIndex = 29;
@@ -455,7 +457,7 @@ namespace PD_Helper
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label6.ForeColor = System.Drawing.SystemColors.WindowFrame;
-			this.label6.Location = new System.Drawing.Point(240, 80);
+			this.label6.Location = new System.Drawing.Point(240, 112);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(163, 15);
 			this.label6.TabIndex = 28;
@@ -488,7 +490,7 @@ namespace PD_Helper
 			// partnerLock
 			// 
 			this.partnerLock.AutoSize = true;
-			this.partnerLock.Location = new System.Drawing.Point(240, 58);
+			this.partnerLock.Location = new System.Drawing.Point(240, 90);
 			this.partnerLock.Name = "partnerLock";
 			this.partnerLock.Size = new System.Drawing.Size(146, 19);
 			this.partnerLock.TabIndex = 25;
@@ -512,7 +514,7 @@ namespace PD_Helper
 			// 
 			this.loadArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.loadArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.loadArsenalButton.Location = new System.Drawing.Point(240, 29);
+			this.loadArsenalButton.Location = new System.Drawing.Point(240, 61);
 			this.loadArsenalButton.Name = "loadArsenalButton";
 			this.loadArsenalButton.Size = new System.Drawing.Size(187, 23);
 			this.loadArsenalButton.TabIndex = 23;
@@ -1133,6 +1135,18 @@ namespace PD_Helper
 			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
 			this.schoolFilterCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
 			// 
+			// newArsenalButton
+			// 
+			this.newArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.newArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.newArsenalButton.Location = new System.Drawing.Point(240, 29);
+			this.newArsenalButton.Name = "newArsenalButton";
+			this.newArsenalButton.Size = new System.Drawing.Size(187, 26);
+			this.newArsenalButton.TabIndex = 31;
+			this.newArsenalButton.Text = "New Arsenal";
+			this.newArsenalButton.UseVisualStyleBackColor = true;
+			this.newArsenalButton.Click += new System.EventHandler(this.newArsenalButton_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1255,5 +1269,6 @@ namespace PD_Helper
 		private NumericUpDown costMaxNumeric;
 		private NumericUpDown costMinNumeric;
 		private Label label15;
+		private Button newArsenalButton;
 	}
 }
