@@ -725,31 +725,38 @@ namespace PD_Helper
 
         private void saveToPDbtn_Click(object sender, EventArgs e)
         {
-			if (validateArsenal())
-            {
-                //writing the name
-                byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
-                Array.Resize(ref deckNameToWrite, 15);
-                string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
-                m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
-
-                // writing the cards + school
-                string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
-                byte[] dataToWrite = { };
-                Array.Resize(ref dataToWrite, 62);
-                int o = 0;
-                for (int i = 0; i < loadedDeck.Length; i++)
+			try
+			{
+                if (validateArsenal())
                 {
-                    dataToWrite[o] = Convert.ToByte(loadedDeck[i].Remove(2), 16);
-                    dataToWrite[o + 1] = Convert.ToByte(loadedDeck[i].Remove(0, 3), 16);
-                    System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(2), 16);
-                    System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(0, 3), 16);
-                    o += 2;
+                    //writing the name
+                    byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
+                    Array.Resize(ref deckNameToWrite, 15);
+                    string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
+                    m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
+
+                    // writing the cards + school
+                    string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
+                    byte[] dataToWrite = { };
+                    Array.Resize(ref dataToWrite, 62);
+                    int o = 0;
+                    for (int i = 0; i < loadedDeck.Length; i++)
+                    {
+                        dataToWrite[o] = Convert.ToByte(loadedDeck[i].Remove(2), 16);
+                        dataToWrite[o + 1] = Convert.ToByte(loadedDeck[i].Remove(0, 3), 16);
+                        System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(2), 16);
+                        System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(0, 3), 16);
+                        o += 2;
+                    }
+
+                    m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
+                    arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text.ToString();
                 }
-                
-                m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
-                arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text.ToString();
             }
+			catch (Exception)
+			{
+                MessageBox.Show("Unable to save to PDHelper");
+			}
         }
 
         private void schoolNumeric_ValueChanged(object sender, EventArgs e)
