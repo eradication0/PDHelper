@@ -823,6 +823,7 @@ namespace PD_Helper
 			this.sortComboBox3.Name = "sortComboBox3";
 			this.sortComboBox3.Size = new System.Drawing.Size(186, 23);
 			this.sortComboBox3.TabIndex = 47;
+			this.sortComboBox3.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// sortComboBox2
 			// 
@@ -844,6 +845,7 @@ namespace PD_Helper
 			this.sortComboBox2.Name = "sortComboBox2";
 			this.sortComboBox2.Size = new System.Drawing.Size(186, 23);
 			this.sortComboBox2.TabIndex = 46;
+			this.sortComboBox2.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// sortComboBox1
 			// 
@@ -864,6 +866,7 @@ namespace PD_Helper
 			this.sortComboBox1.Name = "sortComboBox1";
 			this.sortComboBox1.Size = new System.Drawing.Size(186, 23);
 			this.sortComboBox1.TabIndex = 33;
+			this.sortComboBox1.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// costMaxNumeric
 			// 
