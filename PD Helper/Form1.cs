@@ -319,10 +319,42 @@ namespace PD_Helper
             updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
         }
 
+        private IComparer<PDCard>? determineSort(string sort)
+        {
+            /*
+             * School
+             * Cost
+             * Strength
+             * Number of Uses
+             * Range
+             * ID
+             * None
+			 */
+
+            switch (sort)
+			{
+                case "School":
+                    return PDCard.SortSchool();
+                case "Cost":
+                    return PDCard.SortCost();
+                case "Strength":
+                    return PDCard.SortStr();
+                case "Number of Uses":
+                    return PDCard.SortUses();
+                case "Range":
+                    return PDCard.SortRange();
+                case "ID":
+                    return PDCard.SortID();
+                default:
+					return null;
+			}
+		}
+
         private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter, bool[] miscNumberFilter)
         {
+            // Step 0: Make a list of skills that contain all the ones to display
+            List<PDCard> displayCards = new List<PDCard>();
             string infty = getCard("Bomb").USAGE;
-            editorList.Items.Clear();
             foreach (var item in allSkills.Items)
             {
                 // Step 1: Only consider the skills matching the school filter
@@ -452,8 +484,27 @@ namespace PD_Helper
                 // Step 5: search for value in editorList
                 if (editorSearchTextBox.Text == "" || item.ToString().Contains(editorSearchTextBox.Text, StringComparison.OrdinalIgnoreCase))
                 {
-                    editorList.Items.Add(item.ToString());
+                    displayCards.Add(getCard(item.ToString()));
+                    //editorList.Items.Add(item.ToString());
                 }
+            }
+
+            // Step 6: Determine the sorting method
+            List<IComparer<PDCard>> comparers = new List<IComparer<PDCard>>();
+            IComparer<PDCard> comparer1 = determineSort(sortComboBox1.Text);
+            if (comparer1 != null) comparers.Add(comparer1);
+            else comparers.Add(PDCard.SortID()); // Default sort
+            IComparer<PDCard> comparer2 = determineSort(sortComboBox2.Text);
+            if (comparer2 != null) comparers.Add(comparer2);
+            IComparer<PDCard> comparer3 = determineSort(sortComboBox3.Text);
+            if (comparer3 != null) comparers.Add(comparer3);
+
+            // Step 7: Sort the list and display it
+            displayCards.Sort(PDCard.SortMulti(comparers.ToArray()));
+            editorList.Items.Clear();
+            foreach (var item in displayCards)
+			{
+                editorList.Items.Add(item.NAME);
             }
         }
 

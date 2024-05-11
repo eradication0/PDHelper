@@ -22,7 +22,7 @@ namespace PD_Helper
 
                 if (typeIntA > typeIntB) return 1;
                 else if (typeIntA < typeIntB) return -1;
-                else return string.Compare(a.HEX, b.HEX);
+                else return 0;
             }
         }
 
@@ -35,7 +35,7 @@ namespace PD_Helper
 
                 if (schoolIntA > schoolIntB) return 1;
                 else if (schoolIntA < schoolIntB) return -1;
-                else return string.Compare(a.HEX, b.HEX);
+                else return 0;
             }
         }
 
@@ -49,11 +49,11 @@ namespace PD_Helper
                 {
                     if (costA > costB) return 1;
                     else if (costA < costB) return -1;
-                    else return string.Compare(a.HEX, b.HEX); ;
+                    else return 0;
                 }
                 else if (!parseA && parseB) return 1;
                 else if (parseA && !parseB) return -1;
-                else return string.Compare(a.HEX, b.HEX); ;
+                else return 0;
             }
         }
 
@@ -70,7 +70,7 @@ namespace PD_Helper
 
                     if (typeIntA > typeIntB) return 1;
                     else if (typeIntA < typeIntB) return -1;
-                    else return string.Compare(a.HEX, b.HEX);
+                    else return 0;
                 }
 
                 // If these are attack/defense then proceed
@@ -83,11 +83,11 @@ namespace PD_Helper
                 {
                     if (strA > strB) return -1;
                     else if (strA < strB) return 1;
-                    else return string.Compare(a.HEX, b.HEX); ;
+                    else return 0;
                 }
                 else if (!parseA && parseB) return 1;
                 else if (parseA && !parseB) return -1;
-                else return string.Compare(a.HEX, b.HEX); ;
+                else return 0;
             }
         }
 
@@ -101,11 +101,11 @@ namespace PD_Helper
                 {
                     if (useA > useB) return 1;
                     else if (useA < useB) return -1;
-                    else return string.Compare(a.HEX, b.HEX); ;
+                    else return 0;
                 }
                 else if (!parseA && parseB) return -1;
                 else if (parseA && !parseB) return 1;
-                else return string.Compare(a.HEX, b.HEX); ;
+                else return 0;
             }
         }
 
@@ -118,7 +118,7 @@ namespace PD_Helper
 
                 if (rangeIntA > rangeIntB) return 1;
                 else if (rangeIntA < rangeIntB) return -1;
-                else return string.Compare(a.HEX, b.HEX);
+                else return 0;
             }
         }
 
@@ -128,7 +128,28 @@ namespace PD_Helper
             {
                 if (a.ID > b.ID) return 1;
                 else if (a.ID < b.ID) return -1;
-                else return string.Compare(a.HEX, b.HEX); ;
+                else return 0;
+            }
+        }
+
+        public class SortMultiHelper : IComparer<PDCard>
+        {
+            IComparer<PDCard>[] comparers;
+
+            public SortMultiHelper(IComparer<PDCard>[] comparers)
+			{
+				this.comparers = comparers;
+			}
+
+			int IComparer<PDCard>.Compare(PDCard a, PDCard b)
+            {
+				foreach (var item in comparers)
+				{
+                    int result = item.Compare(a, b);
+                    if (result != 0) return result;
+				}
+
+                return string.Compare(a.HEX, b.HEX);
             }
         }
 
@@ -143,9 +164,13 @@ namespace PD_Helper
         public static IComparer<PDCard> SortType() => new SortTypeHelper();
         public static IComparer<PDCard> SortSchool() => new SortSchoolHelper();
         public static IComparer<PDCard> SortCost() => new SortCostHelper();
+        public static IComparer<PDCard> SortStr() => new SortStrHelper();
         public static IComparer<PDCard> SortUses() => new SortUsesHelper();
         public static IComparer<PDCard> SortRange() => new SortRangeHelper();
         public static IComparer<PDCard> SortID() => new SortIDHelper();
+
+        public static IComparer<PDCard> SortMulti(IComparer<PDCard>[] comparers) 
+            => new SortMultiHelper(comparers);
 
         // Type to int for the purpose of ordering
         public int typeToInt()
