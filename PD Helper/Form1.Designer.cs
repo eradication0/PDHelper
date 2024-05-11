@@ -370,7 +370,7 @@ namespace PD_Helper
 			// 
 			this.btnSaveToPDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSaveToPDH.ForeColor = System.Drawing.Color.PaleGreen;
-			this.btnSaveToPDH.Location = new System.Drawing.Point(249, 206);
+			this.btnSaveToPDH.Location = new System.Drawing.Point(246, 206);
 			this.btnSaveToPDH.Name = "btnSaveToPDH";
 			this.btnSaveToPDH.Size = new System.Drawing.Size(191, 23);
 			this.btnSaveToPDH.TabIndex = 28;
@@ -382,7 +382,7 @@ namespace PD_Helper
 			// 
 			this.saveToPDbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.saveToPDbtn.ForeColor = System.Drawing.Color.SkyBlue;
-			this.saveToPDbtn.Location = new System.Drawing.Point(6, 206);
+			this.saveToPDbtn.Location = new System.Drawing.Point(7, 206);
 			this.saveToPDbtn.Name = "saveToPDbtn";
 			this.saveToPDbtn.Size = new System.Drawing.Size(191, 23);
 			this.saveToPDbtn.TabIndex = 27;
@@ -402,11 +402,12 @@ namespace PD_Helper
 			this.deckListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.deckListBox.FormattingEnabled = true;
 			this.deckListBox.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.deckListBox.IntegralHeight = false;
 			this.deckListBox.ItemHeight = 15;
 			this.deckListBox.Location = new System.Drawing.Point(7, 46);
 			this.deckListBox.MultiColumn = true;
 			this.deckListBox.Name = "deckListBox";
-			this.deckListBox.Size = new System.Drawing.Size(434, 154);
+			this.deckListBox.Size = new System.Drawing.Size(431, 154);
 			this.deckListBox.TabIndex = 1;
 			this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
 			this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
@@ -756,6 +757,7 @@ namespace PD_Helper
 			this.editorList.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.editorList.FormattingEnabled = true;
 			this.editorList.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.editorList.IntegralHeight = false;
 			this.editorList.ItemHeight = 15;
 			this.editorList.Location = new System.Drawing.Point(8, 22);
 			this.editorList.Name = "editorList";
