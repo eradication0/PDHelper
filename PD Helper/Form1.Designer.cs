@@ -54,6 +54,7 @@ namespace PD_Helper
 			this.saveToPDbtn = new System.Windows.Forms.Button();
 			this.deckListBox = new System.Windows.Forms.ListBox();
 			this.arsenalListGroupBox = new System.Windows.Forms.GroupBox();
+			this.newArsenalButton = new System.Windows.Forms.Button();
 			this.colorProfileButton = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
@@ -82,6 +83,9 @@ namespace PD_Helper
 			this.editorList = new System.Windows.Forms.ListBox();
 			this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.sortComboBox3 = new System.Windows.Forms.ComboBox();
+			this.sortComboBox2 = new System.Windows.Forms.ComboBox();
+			this.sortComboBox1 = new System.Windows.Forms.ComboBox();
 			this.costMaxNumeric = new System.Windows.Forms.NumericUpDown();
 			this.costMinNumeric = new System.Windows.Forms.NumericUpDown();
 			this.label15 = new System.Windows.Forms.Label();
@@ -104,7 +108,6 @@ namespace PD_Helper
 			this.attackRadioButton = new System.Windows.Forms.RadioButton();
 			this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
 			this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
-			this.newArsenalButton = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.loadedArsenalGroupBox.SuspendLayout();
@@ -367,7 +370,7 @@ namespace PD_Helper
 			// 
 			this.btnSaveToPDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSaveToPDH.ForeColor = System.Drawing.Color.PaleGreen;
-			this.btnSaveToPDH.Location = new System.Drawing.Point(249, 206);
+			this.btnSaveToPDH.Location = new System.Drawing.Point(246, 206);
 			this.btnSaveToPDH.Name = "btnSaveToPDH";
 			this.btnSaveToPDH.Size = new System.Drawing.Size(191, 23);
 			this.btnSaveToPDH.TabIndex = 28;
@@ -379,7 +382,7 @@ namespace PD_Helper
 			// 
 			this.saveToPDbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.saveToPDbtn.ForeColor = System.Drawing.Color.SkyBlue;
-			this.saveToPDbtn.Location = new System.Drawing.Point(6, 206);
+			this.saveToPDbtn.Location = new System.Drawing.Point(7, 206);
 			this.saveToPDbtn.Name = "saveToPDbtn";
 			this.saveToPDbtn.Size = new System.Drawing.Size(191, 23);
 			this.saveToPDbtn.TabIndex = 27;
@@ -399,11 +402,12 @@ namespace PD_Helper
 			this.deckListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.deckListBox.FormattingEnabled = true;
 			this.deckListBox.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.deckListBox.IntegralHeight = false;
 			this.deckListBox.ItemHeight = 15;
 			this.deckListBox.Location = new System.Drawing.Point(7, 46);
 			this.deckListBox.MultiColumn = true;
 			this.deckListBox.Name = "deckListBox";
-			this.deckListBox.Size = new System.Drawing.Size(434, 154);
+			this.deckListBox.Size = new System.Drawing.Size(431, 154);
 			this.deckListBox.TabIndex = 1;
 			this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
 			this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
@@ -428,6 +432,18 @@ namespace PD_Helper
 			this.arsenalListGroupBox.TabIndex = 1;
 			this.arsenalListGroupBox.TabStop = false;
 			this.arsenalListGroupBox.Text = "Arsenal List";
+			// 
+			// newArsenalButton
+			// 
+			this.newArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.newArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.newArsenalButton.Location = new System.Drawing.Point(240, 29);
+			this.newArsenalButton.Name = "newArsenalButton";
+			this.newArsenalButton.Size = new System.Drawing.Size(187, 26);
+			this.newArsenalButton.TabIndex = 31;
+			this.newArsenalButton.Text = "New Arsenal";
+			this.newArsenalButton.UseVisualStyleBackColor = true;
+			this.newArsenalButton.Click += new System.EventHandler(this.newArsenalButton_Click);
 			// 
 			// colorProfileButton
 			// 
@@ -741,6 +757,7 @@ namespace PD_Helper
 			this.editorList.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.editorList.FormattingEnabled = true;
 			this.editorList.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.editorList.IntegralHeight = false;
 			this.editorList.ItemHeight = 15;
 			this.editorList.Location = new System.Drawing.Point(8, 22);
 			this.editorList.Name = "editorList";
@@ -755,6 +772,9 @@ namespace PD_Helper
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.sortComboBox3);
+			this.groupBox3.Controls.Add(this.sortComboBox2);
+			this.groupBox3.Controls.Add(this.sortComboBox1);
 			this.groupBox3.Controls.Add(this.costMaxNumeric);
 			this.groupBox3.Controls.Add(this.costMinNumeric);
 			this.groupBox3.Controls.Add(this.label15);
@@ -784,6 +804,71 @@ namespace PD_Helper
 			this.groupBox3.TabIndex = 28;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Filter Settings";
+			// 
+			// sortComboBox3
+			// 
+			this.sortComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.sortComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.sortComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.sortComboBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.sortComboBox3.FormattingEnabled = true;
+			this.sortComboBox3.Items.AddRange(new object[] {
+            "School",
+            "Cost",
+            "Strength",
+            "Number of Uses",
+            "Range",
+            "ID",
+            "None"});
+			this.sortComboBox3.Location = new System.Drawing.Point(686, 70);
+			this.sortComboBox3.MaxDropDownItems = 16;
+			this.sortComboBox3.Name = "sortComboBox3";
+			this.sortComboBox3.Size = new System.Drawing.Size(186, 23);
+			this.sortComboBox3.TabIndex = 47;
+			this.sortComboBox3.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
+			// 
+			// sortComboBox2
+			// 
+			this.sortComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.sortComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.sortComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.sortComboBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.sortComboBox2.FormattingEnabled = true;
+			this.sortComboBox2.Items.AddRange(new object[] {
+            "School",
+            "Cost",
+            "Strength",
+            "Number of Uses",
+            "Range",
+            "ID",
+            "None"});
+			this.sortComboBox2.Location = new System.Drawing.Point(686, 41);
+			this.sortComboBox2.MaxDropDownItems = 16;
+			this.sortComboBox2.Name = "sortComboBox2";
+			this.sortComboBox2.Size = new System.Drawing.Size(186, 23);
+			this.sortComboBox2.TabIndex = 46;
+			this.sortComboBox2.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
+			// 
+			// sortComboBox1
+			// 
+			this.sortComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.sortComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.sortComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.sortComboBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.sortComboBox1.FormattingEnabled = true;
+			this.sortComboBox1.Items.AddRange(new object[] {
+            "School",
+            "Cost",
+            "Strength",
+            "Number of Uses",
+            "Range",
+            "ID"});
+			this.sortComboBox1.Location = new System.Drawing.Point(686, 12);
+			this.sortComboBox1.MaxDropDownItems = 16;
+			this.sortComboBox1.Name = "sortComboBox1";
+			this.sortComboBox1.Size = new System.Drawing.Size(186, 23);
+			this.sortComboBox1.TabIndex = 33;
+			this.sortComboBox1.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
 			// 
 			// costMaxNumeric
 			// 
@@ -1135,18 +1220,6 @@ namespace PD_Helper
 			this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
 			this.schoolFilterCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
 			// 
-			// newArsenalButton
-			// 
-			this.newArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.newArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.newArsenalButton.Location = new System.Drawing.Point(240, 29);
-			this.newArsenalButton.Name = "newArsenalButton";
-			this.newArsenalButton.Size = new System.Drawing.Size(187, 26);
-			this.newArsenalButton.TabIndex = 31;
-			this.newArsenalButton.Text = "New Arsenal";
-			this.newArsenalButton.UseVisualStyleBackColor = true;
-			this.newArsenalButton.Click += new System.EventHandler(this.newArsenalButton_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1270,5 +1343,8 @@ namespace PD_Helper
 		private NumericUpDown costMinNumeric;
 		private Label label15;
 		private Button newArsenalButton;
+		private ComboBox sortComboBox3;
+		private ComboBox sortComboBox2;
+		private ComboBox sortComboBox1;
 	}
 }
