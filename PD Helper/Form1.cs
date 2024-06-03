@@ -735,7 +735,7 @@ namespace PD_Helper
             }
 			catch (Exception)
 			{
-                MessageBox.Show("Unable to save to PDHelper");
+                MessageBox.Show("Unable to save to Phantom Dust. Make sure the game is open and the app is connected by pressing 'Load Profile'.");
 			}
         }
 
@@ -1013,5 +1013,20 @@ namespace PD_Helper
             }
             openArsenalToList(emptyArsenal);
         }
-	}
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
