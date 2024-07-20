@@ -126,46 +126,43 @@ namespace PD_Helper
                 gamepadOn = true;
             }
 
-            groupBox1.Enabled = true;
-
-            /*
-            for (int i = 0; i < processCollection.Length; i++)
+            // Link to Phantom Dust
+            if (memory.LinkPD() != null)
             {
-                if (processCollection[i].ProcessName == "PDUWP")
+                //Get Processes and check for Phantom Dust, attach and enable Arsenal Loading
+                label2.Text = "Found the process! ID: " + memory.pdProcess.Id.ToString();
+                label2.ForeColor = Color.Green;
+                groupBox1.Enabled = true;
+
+                //Read all names of Arsenals
+                string[] arsenalNames = memory.GetArsenalNames();
+				if (arsenalNames != null)
+				{
+					foreach (string arsenalName in arsenalNames)
+					{
+						if (arsenalName.Length > 0)
+						{
+                            arsenalDropdown.Items.Add(arsenalName);
+						}
+					}
+				}
+
+                if (arsenalDropdown.Items.Count > 0)
                 {
-                    //Get Processes and check for Phantom Dust, attach and enable Arsenal Loading
-                    label2.Text = "Found the process! ID: " + processCollection[i].Id.ToString();
-                    ProcOpen = m.OpenProcess(processCollection[i].Id, out string error);
-                    label2.ForeColor = Color.Green;
-                    groupBox1.Enabled = true;
-
-                    //Read all names of Arsenals
-                    string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
-                    for (int o = 0; o < offsets.Length; o++)
-                    {
-                        string setup = "base+003ED6B8," + offsets[o];
-                        string currentName = m.ReadString(setup, "", 16, true);
-                        if (currentName.Length > 0)
-                        {
-                            arsenalDropdown.Items.Add(m.ReadString(setup, "", 16, true));
-                        }
-                    }
-
-                    if (arsenalDropdown.Items.Count > 0)
-                    {
-                        arsenalDropdown.SelectedIndex = 0;
-                    } else
-                    {
-                        MessageBox.Show("ERROR07: The Profile has no Arsenals, please create at least one in-game Arsenal to be able to load/write/edit them.");
-                    }
-
-                    break;
-                } else if (i == processCollection.Length - 1)
-                {
-                    label2.ForeColor = Color.Red;
-                    label2.Text = "No Game Found. Start Phantom Dust First!";
+                    arsenalDropdown.SelectedIndex = 0;
                 }
-            }*/
+                else
+                {
+                    MessageBox.Show("ERROR07: The Profile has no Arsenals, please create at least one in-game Arsenal to be able to load/write/edit them.");
+                }
+
+                
+            }
+            else
+            {
+                label2.ForeColor = Color.Red;
+                label2.Text = "No Game Found. Start Phantom Dust First!";
+            }
         }
 
         private void giveMaxSkills(object sender, EventArgs e)

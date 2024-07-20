@@ -45,7 +45,7 @@ namespace PD_Helper
 		}
 
 		// Phantom Dust Process
-		Process? pdProcess = null;
+		public Process? pdProcess = null;
 		IntPtr handle = IntPtr.Zero;
 		//bool is64Bit; // Assuming this is true.
 		ProcessModule mainModule;
@@ -158,10 +158,9 @@ namespace PD_Helper
 			// Memory
 			byte[] memoryAddress = new byte[1];
 
-			// Write
+			// Read
 			IntPtr zero = IntPtr.Zero;
-			ReadProcessMemory(handle, address, memoryAddress, 1, out zero);
-			return memoryAddress[0] == 1;
+			return ReadProcessMemory(handle, address, memoryAddress, 1, out zero) && memoryAddress[0] == 1;
 		}
 
 		public bool SetPartnerLockOn(bool state)
@@ -179,6 +178,39 @@ namespace PD_Helper
 			// Write
 			IntPtr zero = IntPtr.Zero;
 			return WriteProcessMemory(handle, address, memory, 1, out zero);
+		}
+
+		public string[] GetArsenalNames()
+		{
+			LinkPD();
+			if (pdProcess == null) return null;
+
+			string[] arsenalNames = new string[16];
+			for (int i = 0; i < 16; i++)
+			{
+				// Address
+				Int64[] offsets = { 0x3ED6B8, arsenalNameOffsets[i] };
+				IntPtr address = GetAddress(offsets);
+
+				// Memory
+				byte[] memoryAddress = new byte[16];
+
+				// Encoding
+				Encoding encoding = Encoding.UTF8;
+
+				// Read
+				IntPtr zero = IntPtr.Zero;
+				if (ReadProcessMemory(handle, address, memoryAddress, 16, out zero))
+				{
+					arsenalNames[i] = encoding.GetString(memoryAddress).Split('\0')[0];
+				}
+				else
+				{
+					return null;
+				}
+			}
+
+			return arsenalNames;
 		}
 	}
 }
