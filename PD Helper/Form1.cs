@@ -49,6 +49,7 @@ namespace PD_Helper
         bool ProcOpen = false;
         bool gamepadOn = false;
         //public Mem m = new Mem();
+        public PDMemory memory = new PDMemory();
         public ListBox allSkills = new ListBox();
 
         public Form1()
@@ -125,6 +126,9 @@ namespace PD_Helper
                 GamepadWorker.RunWorkerAsync();
                 gamepadOn = true;
             }
+
+            groupBox1.Enabled = true;
+
             /*
             for (int i = 0; i < processCollection.Length; i++)
             {
@@ -181,9 +185,9 @@ namespace PD_Helper
 
         private void giveMaxCredits(object sender, EventArgs e)
         {
-            //Set 3rd byte of credits to 30 -> around 800 mil
-            //m.WriteMemory("base+003ED640,13B", "byte", "30");
-            maxCreditsButton.Enabled = false;
+			//Set 3rd byte of credits to 30 -> around 800 mil
+			//m.WriteMemory("base+003ED640,13B", "byte", "30");
+			maxCreditsButton.Enabled = !memory.GiveMaxCredits();
         }
 
         private void btnSaveToPDH_Click(object sender, EventArgs e)
