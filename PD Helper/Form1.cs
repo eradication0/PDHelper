@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using Memory;
+//using Memory;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
@@ -48,7 +48,7 @@ namespace PD_Helper
 
         bool ProcOpen = false;
         bool gamepadOn = false;
-        public Mem m = new Mem();
+        //public Mem m = new Mem();
         public ListBox allSkills = new ListBox();
 
         public Form1()
@@ -125,7 +125,7 @@ namespace PD_Helper
                 GamepadWorker.RunWorkerAsync();
                 gamepadOn = true;
             }
-
+            /*
             for (int i = 0; i < processCollection.Length; i++)
             {
                 if (processCollection[i].ProcessName == "PDUWP")
@@ -162,7 +162,7 @@ namespace PD_Helper
                     label2.ForeColor = Color.Red;
                     label2.Text = "No Game Found. Start Phantom Dust First!";
                 }
-            }
+            }*/
         }
 
         private void giveMaxSkills(object sender, EventArgs e)
@@ -174,7 +174,7 @@ namespace PD_Helper
             for (int i = 0; i < offsets.Length; i++)
             {
                 string setup = "base+003ED6B8," + offsets[i];
-                m.WriteMemory(setup, "byte", "63");
+                //m.WriteMemory(setup, "byte", "63");
             }
             maxSkillsButton.Enabled = false;
         }
@@ -182,7 +182,7 @@ namespace PD_Helper
         private void giveMaxCredits(object sender, EventArgs e)
         {
             //Set 3rd byte of credits to 30 -> around 800 mil
-            m.WriteMemory("base+003ED640,13B", "byte", "30");
+            //m.WriteMemory("base+003ED640,13B", "byte", "30");
             maxCreditsButton.Enabled = false;
         }
 
@@ -582,11 +582,11 @@ namespace PD_Helper
         {
             if (partnerLock.Checked)
             {
-                m.WriteMemory("base+003ED688,9", "byte", "01");
+                //m.WriteMemory("base+003ED688,9", "byte", "01");
             }
             else
             {
-                m.WriteMemory("base+003ED688,9", "byte", "00");
+                //m.WriteMemory("base+003ED688,9", "byte", "00");
             }
         }
 
@@ -713,7 +713,7 @@ namespace PD_Helper
                     byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
                     Array.Resize(ref deckNameToWrite, 15);
                     string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
-                    m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
+                    //m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
 
                     // writing the cards + school
                     string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
@@ -729,7 +729,7 @@ namespace PD_Helper
                         o += 2;
                     }
 
-                    m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
+                    //m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
                     arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text.ToString();
                 }
             }
@@ -774,13 +774,13 @@ namespace PD_Helper
 
         private void arsenalDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (m.ReadByte("base+003ED688,9") == 1)
+            if (false)//(m.ReadByte("base+003ED688,9") == 1)
             {
                 partnerLock.Checked = true;
             }
 
             //System.Diagnostics.Debug.WriteLine(o1);
-
+            /*
             // List of fist cards per deck
             string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
             // Load all cards
@@ -803,7 +803,7 @@ namespace PD_Helper
             String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
             loadedDeck[30] = currentHexStringFix;
             string loadSchoolAmount = currentHexStringFix.Remove(currentHexStringFix.Length - 3);
-            openArsenalToList(cardList, arsenalDropdown.SelectedItem.ToString(), Int32.Parse(loadSchoolAmount));
+            openArsenalToList(cardList, arsenalDropdown.SelectedItem.ToString(), Int32.Parse(loadSchoolAmount)); */
         }
 
         private void deckListBox1_SelectedIndexChanged(object sender, EventArgs e)
