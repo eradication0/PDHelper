@@ -212,5 +212,22 @@ namespace PD_Helper
 
 			return arsenalNames;
 		}
+
+		public byte[] GetArsenalCardsBytes(int index)
+		{
+			LinkPD();
+			if (pdProcess == null) return null;
+
+			// Address
+			Int64[] offsets = { 0x3ED6B8, arsenalCardsOffsets[index] };
+			IntPtr address = GetAddress(offsets);
+
+			// Memory
+			byte[] memoryAddress = new byte[62];
+
+			// Read
+			IntPtr zero = IntPtr.Zero;
+			return ReadProcessMemory(handle, address, memoryAddress, 62, out zero) ? memoryAddress : null;
+		}
 	}
 }

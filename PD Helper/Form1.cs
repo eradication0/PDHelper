@@ -762,11 +762,9 @@ namespace PD_Helper
             }
 
             //System.Diagnostics.Debug.WriteLine(o1);
-            /*
-            // List of fist cards per deck
-            string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
+            
             // Load all cards
-            Byte[] loadDeck = m.ReadBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], 62);
+            Byte[] loadDeck = memory.GetArsenalCardsBytes(arsenalDropdown.SelectedIndex);
             
             //add cards to list
             loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
@@ -785,7 +783,7 @@ namespace PD_Helper
             String currentHexStringFix = BitConverter.ToString(currentByteFix).Replace('-', ' ');
             loadedDeck[30] = currentHexStringFix;
             string loadSchoolAmount = currentHexStringFix.Remove(currentHexStringFix.Length - 3);
-            openArsenalToList(cardList, arsenalDropdown.SelectedItem.ToString(), Int32.Parse(loadSchoolAmount)); */
+            openArsenalToList(cardList, arsenalDropdown.SelectedItem.ToString(), Int32.Parse(loadSchoolAmount)); 
         }
 
         private void deckListBox1_SelectedIndexChanged(object sender, EventArgs e)
