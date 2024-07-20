@@ -213,6 +213,20 @@ namespace PD_Helper
 			return arsenalNames;
 		}
 
+		public bool SetArsenalName(int index, byte[] name)
+		{
+			LinkPD();
+			if (pdProcess == null) return false;
+
+			// Address
+			Int64[] offsets = { 0x3ED6B8, arsenalNameOffsets[index] };
+			IntPtr address = GetAddress(offsets);
+
+			// Write
+			IntPtr zero = IntPtr.Zero;
+			return WriteProcessMemory(handle, address, name, (uint)name.Length, out zero);
+		}
+
 		public byte[] GetArsenalCardsBytes(int index)
 		{
 			LinkPD();
@@ -228,6 +242,20 @@ namespace PD_Helper
 			// Read
 			IntPtr zero = IntPtr.Zero;
 			return ReadProcessMemory(handle, address, memoryAddress, 62, out zero) ? memoryAddress : null;
+		}
+
+		public bool SetArsenalCardsBytes(int index, byte[] write)
+		{
+			LinkPD();
+			if (pdProcess == null) return false;
+
+			// Address
+			Int64[] offsets = { 0x3ED6B8, arsenalCardsOffsets[index] };
+			IntPtr address = GetAddress(offsets);
+
+			// Write
+			IntPtr zero = IntPtr.Zero;
+			return WriteProcessMemory(handle, address, write, (uint)write.Length, out zero);
 		}
 	}
 }

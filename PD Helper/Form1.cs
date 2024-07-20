@@ -694,8 +694,7 @@ namespace PD_Helper
                     //writing the name
                     byte[] deckNameToWrite = Encoding.ASCII.GetBytes(arsenalNameBox.Text);
                     Array.Resize(ref deckNameToWrite, 15);
-                    string[] offsets = { "8", "6C", "D0", "134", "198", "1FC", "260", "2C4", "328", "38C", "3F0", "454", "4B8", "51C", "580", "5E4" };
-                    //m.WriteBytes("base+003ED6B8," + offsets[arsenalDropdown.SelectedIndex], deckNameToWrite);
+                    memory.SetArsenalName(arsenalDropdown.SelectedIndex, deckNameToWrite);
 
                     // writing the cards + school
                     string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
@@ -711,7 +710,7 @@ namespace PD_Helper
                         o += 2;
                     }
 
-                    //m.WriteBytes("base+003ED6B8," + offsetsLoadCards[arsenalDropdown.SelectedIndex], dataToWrite);
+                    memory.SetArsenalCardsBytes(arsenalDropdown.SelectedIndex, dataToWrite);
                     arsenalDropdown.Items[arsenalDropdown.SelectedIndex] = arsenalNameBox.Text.ToString();
                 }
             }
