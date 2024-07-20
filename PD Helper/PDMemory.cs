@@ -51,9 +51,20 @@ namespace PD_Helper
 		ProcessModule mainModule;
 
 		// Important pointers
-		IntPtr creditsPtr = new IntPtr(0x3ED640);
-		IntPtr partnerLockPtr = new IntPtr(0x3ED688);
-		IntPtr arsenalPtr = new IntPtr(0x3ED6B8);
+		//IntPtr creditsPtr = new IntPtr(0x3ED640);
+		//IntPtr partnerLockPtr = new IntPtr(0x3ED688);
+		//IntPtr arsenalPtr = new IntPtr(0x3ED6B8);
+
+		// Offsets
+		Int64[] cardOffsets = new Int64[375];
+
+		public PDMemory()
+		{
+			for (int i = 0x644; i <= 0x7BA; i++)
+			{
+				cardOffsets[i - 0x644] = i;
+			}
+		}
 
 		public Process? LinkPD()
 		{
@@ -96,7 +107,20 @@ namespace PD_Helper
 			LinkPD();
 			if (pdProcess == null) return false;
 
-			// TODO: IMPLEMENT
+			IntPtr zero = IntPtr.Zero;
+			foreach (Int64 cardOffset in cardOffsets)
+			{
+				// Address
+				Int64[] offsets = { 0x3ED6B8, cardOffset };
+				IntPtr address = GetAddress(offsets);
+
+				// Memory
+				byte[] memory = { 99 };
+
+				// Write
+				if (!WriteProcessMemory(handle, address, memory, 1, out zero)) return false;
+			}
+
 			return true;
 		}
 
@@ -114,7 +138,7 @@ namespace PD_Helper
 
 			// Write
 			IntPtr zero = IntPtr.Zero;
-			return WriteProcessMemory(handle, address, memory, 1, out zero); ;
+			return WriteProcessMemory(handle, address, memory, 1, out zero);
 		}
 	}
 }
