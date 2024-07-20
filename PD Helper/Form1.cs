@@ -586,6 +586,9 @@ namespace PD_Helper
 
         private void partnerLock_CheckedChanged(object sender, EventArgs e)
         {
+            memory.SetPartnerLockOn(partnerLock.Checked);
+            
+            /*
             if (partnerLock.Checked)
             {
                 //m.WriteMemory("base+003ED688,9", "byte", "01");
@@ -593,7 +596,7 @@ namespace PD_Helper
             else
             {
                 //m.WriteMemory("base+003ED688,9", "byte", "00");
-            }
+            }*/
         }
 
         private Color lightColorFromType(string type) => ColorProfileForm.getColor(type, true);

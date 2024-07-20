@@ -23,10 +23,10 @@ namespace PD_Helper
 		static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out IntPtr lpNumberOfBytesWritten);
 
 		[DllImport("kernel32.dll")]
-		public static extern Int32 CloseHandle(IntPtr hProcess);
+		static extern Int32 CloseHandle(IntPtr hProcess);
 
 		[DllImport("kernel32")]
-		public static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
+		static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
 
 		// Flags
 		[Flags]
@@ -50,19 +50,24 @@ namespace PD_Helper
 		//bool is64Bit; // Assuming this is true.
 		ProcessModule mainModule;
 
-		// Important pointers
-		//IntPtr creditsPtr = new IntPtr(0x3ED640);
-		//IntPtr partnerLockPtr = new IntPtr(0x3ED688);
-		//IntPtr arsenalPtr = new IntPtr(0x3ED6B8);
-
 		// Offsets
 		Int64[] cardOffsets = new Int64[375];
+		Int64[] arsenalNameOffsets = new Int64[16];
+		Int64[] arsenalCardsOffsets = new Int64[16];
 
 		public PDMemory()
 		{
 			for (int i = 0x644; i <= 0x7BA; i++)
 			{
 				cardOffsets[i - 0x644] = i;
+			}
+
+			int j = 0;
+			for (int i = 0x8; i <= 0x5E4; i += 0x64)
+			{
+				arsenalNameOffsets[j] = i;
+				arsenalCardsOffsets[j] = i + 0x10;
+				j++;
 			}
 		}
 
@@ -135,6 +140,41 @@ namespace PD_Helper
 
 			// Memory
 			byte[] memory = {0x30};
+
+			// Write
+			IntPtr zero = IntPtr.Zero;
+			return WriteProcessMemory(handle, address, memory, 1, out zero);
+		}
+
+		public bool GetPartnerLockOn()
+		{
+			LinkPD();
+			if (pdProcess == null) return false;
+
+			// Address
+			Int64[] offsets = { 0x3ED688, 0x9 };
+			IntPtr address = GetAddress(offsets);
+
+			// Memory
+			byte[] memoryAddress = new byte[1];
+
+			// Write
+			IntPtr zero = IntPtr.Zero;
+			ReadProcessMemory(handle, address, memoryAddress, 1, out zero);
+			return memoryAddress[0] == 1;
+		}
+
+		public bool SetPartnerLockOn(bool state)
+		{
+			LinkPD();
+			if (pdProcess == null) return false;
+
+			// Address
+			Int64[] offsets = { 0x3ED688, 0x9 };
+			IntPtr address = GetAddress(offsets);
+
+			// Memory
+			byte[] memory = { state ? (byte)0x1 : (byte)0x0 };
 
 			// Write
 			IntPtr zero = IntPtr.Zero;
