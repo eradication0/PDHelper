@@ -11,7 +11,16 @@ namespace PD_Helper
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+			try
+			{
+                Application.Run(new Form1());
+            }
+			catch (BadImageFormatException e)
+			{
+                MessageBox.Show("PD Helper was unable to start up due to Windows treating the application as a virus.", "Virus Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+			}
         }
     }
 }
