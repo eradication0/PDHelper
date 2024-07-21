@@ -827,19 +827,12 @@ namespace PD_Helper
             float ratio = (float)e.Bounds.Height / (float)schoolIcon.Height;
 
             // Draw the school icon [HEIGHT IS 15]
-            InterpolationMode interpolation = e.Graphics.InterpolationMode;
-            e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
             e.Graphics.DrawImage(schoolIcon,
                 x: (float)e.Bounds.Right - ratio * (float)schoolIcon.Width,
                 y: (float)e.Bounds.Top,
                 width: ratio * (float)schoolIcon.Width,
                 height: (float)e.Bounds.Height
                 );
-            e.Graphics.InterpolationMode = interpolation;
-            /*
-            e.Graphics.DrawImageUnscaled(schoolIcon, 
-                x: e.Bounds.Right - schoolIcon.Width,
-                y: e.Bounds.Top);*/
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
