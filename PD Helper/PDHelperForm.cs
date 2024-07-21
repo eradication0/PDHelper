@@ -802,23 +802,11 @@ namespace PD_Helper
             // Get the list box
             ListBox listBox = (ListBox)sender;
 
-            // Draw the background of the ListBox control for each item.
-            e.DrawBackground();
-
             // Set back color
             string skillName = listBox.Items[e.Index].ToString();
-            Color backColor;
+            Color backColor = (e.State & DrawItemState.Selected) == DrawItemState.Selected ? lightColorFromName(skillName) : darkColorFromName(skillName);
 
-            bool selected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
-            if (selected)
-			{
-                backColor = lightColorFromName(skillName);
-            }
-			else
-			{
-                backColor = darkColorFromName(skillName);
-            }
-
+            // Color rectangle
             e.Graphics.FillRectangle(new SolidBrush(backColor), e.Bounds);
 
             // Draw the current item text
@@ -833,9 +821,6 @@ namespace PD_Helper
             e.Graphics.DrawImageUnscaled(schoolIcon, 
                 x: e.Bounds.Right - 28,
                 y: e.Bounds.Top);
-
-            // If the ListBox has focus, draw a focus rectangle around the selected item.
-            e.DrawFocusRectangle();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -990,21 +975,6 @@ namespace PD_Helper
                 emptyArsenal.Add(getCard("Aura Particle"));
             }
             openArsenalToList(emptyArsenal);
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

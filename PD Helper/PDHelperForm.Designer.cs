@@ -832,7 +832,6 @@ namespace PD_Helper
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filter Settings";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label32
             // 
@@ -973,7 +972,6 @@ namespace PD_Helper
             this.label16.Size = new System.Drawing.Size(44, 15);
             this.label16.TabIndex = 48;
             this.label16.Text = "School";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // sortComboBox3
             // 
