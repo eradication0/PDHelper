@@ -14,7 +14,7 @@ namespace PD_Helper
 
 			try
 			{
-                Application.Run(new Form1());
+                Application.Run(new PDHelperForm());
             }
 			catch (BadImageFormatException e)
 			{

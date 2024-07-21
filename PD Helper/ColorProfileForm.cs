@@ -296,7 +296,7 @@ namespace PD_Helper
 			File.WriteAllText(path, json);
 
 			// Refresh
-			((Form1)Owner).refreshView();
+			((PDHelperForm)Owner).refreshView();
 		}
 	}
 }

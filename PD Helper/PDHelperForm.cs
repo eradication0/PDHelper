@@ -35,7 +35,7 @@ using SharpDX.XInput;
 namespace PD_Helper
 {
     //timer value 7FF7D096C8C0
-    public partial class Form1 : Form
+    public partial class PDHelperForm : Form
     {
         private Controller _controller;
 
@@ -50,7 +50,7 @@ namespace PD_Helper
         public PDMemory memory = new PDMemory();
         public ListBox allSkills = new ListBox();
 
-        public Form1()
+        public PDHelperForm()
         {
             InitializeComponent();
             this.KeyPreview = true;

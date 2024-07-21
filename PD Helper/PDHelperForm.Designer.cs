@@ -2,7 +2,7 @@
 
 namespace PD_Helper
 {
-    partial class Form1
+    partial class PDHelperForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,7 @@ namespace PD_Helper
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDHelperForm));
             this.button1 = new System.Windows.Forms.Button();
             this.maxSkillsButton = new System.Windows.Forms.Button();
             this.maxCreditsButton = new System.Windows.Forms.Button();
