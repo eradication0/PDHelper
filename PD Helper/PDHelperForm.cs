@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text; 
 using System.Threading;
@@ -826,12 +827,15 @@ namespace PD_Helper
             float ratio = (float)e.Bounds.Height / (float)schoolIcon.Height;
 
             // Draw the school icon [HEIGHT IS 15]
+            InterpolationMode interpolation = e.Graphics.InterpolationMode;
+            e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
             e.Graphics.DrawImage(schoolIcon,
                 x: (float)e.Bounds.Right - ratio * (float)schoolIcon.Width,
                 y: (float)e.Bounds.Top,
                 width: ratio * (float)schoolIcon.Width,
                 height: (float)e.Bounds.Height
                 );
+            e.Graphics.InterpolationMode = interpolation;
             /*
             e.Graphics.DrawImageUnscaled(schoolIcon, 
                 x: e.Bounds.Right - schoolIcon.Width,
