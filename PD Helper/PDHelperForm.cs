@@ -821,10 +821,20 @@ namespace PD_Helper
             string path = @"School_Icons\" + school + ".png";
             Image schoolIcon = Image.FromFile(path);
 
+            // Get size ratio
+            float ratio = (float)e.Bounds.Height / (float)schoolIcon.Height;
+
             // Draw the school icon [HEIGHT IS 15]
+            e.Graphics.DrawImage(schoolIcon,
+                x: (float)e.Bounds.Right - ratio * (float)schoolIcon.Width,
+                y: (float)e.Bounds.Top,
+                width: ratio * (float)schoolIcon.Width,
+                height: (float)e.Bounds.Height
+                );
+            /*
             e.Graphics.DrawImageUnscaled(schoolIcon, 
-                x: e.Bounds.Right - 28,
-                y: e.Bounds.Top);
+                x: e.Bounds.Right - schoolIcon.Width,
+                y: e.Bounds.Top);*/
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
