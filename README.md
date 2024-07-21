@@ -13,15 +13,15 @@ The app will not connect to anything that is not Phantom Dust, so no random edit
 # How To Use  
 [Youtube Tutorial (6min)](https://www.youtube.com/watch?v=uSrHAq2tW78) (kind of outdated)
 
-# closed game use (by @jessep13)
-1. start PD Helper
-2. edit/save your arsenals, no longer need to have the game open
+# Closed game use (by @jessep13)
+1. Start PD Helper
+2. Edit/save your arsenals, no longer need to have the game open
 
-# open game use
-if you want to write the arsenals into the game itself you need to
-1. start Phantom Dust
-2. open a profile
-3. click "load profile"
+# Open game use
+If you want to write the arsenals into the game itself you need to
+1. Start Phantom Dust
+2. Open a profile
+3. Click "load profile"
  
 # Requirements
 .NET 6.0.5 x64
@@ -40,7 +40,7 @@ if you want to write the arsenals into the game itself you need to
 # Skill Filtering (by @@jessep13)
 - **Basic Filter** sort skills by school/type/range
 - **Advanced Filters** limit skills to min/max per stat
-- **Sorting** tripple sorting ordering
+- **Sorting** triple sorting ordering
   
 # Other Features  
 - **Max out credits and skills** to make the game a even playing field for everyone  
@@ -48,6 +48,7 @@ if you want to write the arsenals into the game itself you need to
 - **Anti Cheat Mechanisms** are in place to prevent creating normally impossible arsenals    
   
 # Anti Virus Issues and False Positives
+(This and the following section may become outdated with the replacement of memory.dll causing the security issues)
 PDHelper strictly can only edit the process called "PDUWP" (Phantom Dust Universal Windows Platform)
 Because the game is fully in binary and we dont have access to a single line of code, all we do is read/write into the memory directly. This is basically changes the software in real time. Thats why Windows Defender and other Anti Virus softwares dont like it.
 Phantom Dust itself has no anti cheat or detection, so far not a single person has been banned or warned even though we are using PDHelper online.
@@ -62,7 +63,7 @@ If you are still concerned, the app is fully open source, feel free to look thro
 [VirusTotal Scan](https://www.virustotal.com/gui/file/d6ce7f94256864e6edac26b0356d5b0b8156c2ce42c69c8694eaf7dda2ec6db5?nocache=1)
 
 # How it works 
-Basically im using a library called [memory.dll](https://github.com/erfg12/memory.dll) it allows to read, search and write memory directly into applications. The rest of all the files/code just comes with VisualStudio and their .net library stuff. 
+The application utilizes the kernel.dll library included with Windows to access and manipulate the Phantom Dust game data. The rest of all the files/code just comes with VisualStudio and their .NET library stuff. 
   
 # Credits
 ## Made by Nuion
