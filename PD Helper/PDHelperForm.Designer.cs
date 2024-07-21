@@ -770,7 +770,6 @@ namespace PD_Helper
 			this.editorList.FormattingEnabled = true;
 			this.editorList.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.editorList.IntegralHeight = false;
-			this.editorList.ItemHeight = 15;
 			this.editorList.Location = new System.Drawing.Point(8, 22);
 			this.editorList.Name = "editorList";
 			this.editorList.Size = new System.Drawing.Size(205, 214);
