@@ -74,6 +74,10 @@ namespace PD_Helper
             sortComboBox2.Text = "None";
             sortComboBox3.Text = "None";
 
+            // Fix the column size of deck listbox
+            deckListBox.ColumnWidth = deckListBox.Width / 3 - 2;
+            deckListBox.ItemHeight = deckListBox.Height / 10 - 1;
+
             // Load a blank 30 aura arsenal
             List<PDCard> emptyArsenal = new List<PDCard>();
 			for (int i = 0; i < 30; i++)
