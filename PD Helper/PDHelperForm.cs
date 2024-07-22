@@ -988,5 +988,21 @@ namespace PD_Helper
             }
             openArsenalToList(emptyArsenal);
         }
+
+		private void savedArsenalListBox_DrawItem(object sender, DrawItemEventArgs e)
+		{
+            // Get ListBox
+            ListBox listBox = (ListBox)sender;
+
+            // Background
+            e.DrawBackground();
+
+            // Text
+            string arsenal = listBox.Items[e.Index].ToString();
+            e.Graphics.DrawString(arsenal, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
+
+            // Focus
+            e.DrawFocusRectangle();
+		}
 	}
 }
