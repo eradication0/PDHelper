@@ -12,8 +12,9 @@ namespace PD_Helper
     // Root myDeserializedClass = JsonConvert.DeserializeObject<List<PDCard>>(myJsonResponse);
     public class PDCard : IComparable
     {
-        // Comparator(s)
-        public class SortTypeHelper : IComparer<PDCard>
+		#region Comparators
+		// Comparator(s)
+		public class SortTypeHelper : IComparer<PDCard>
         {
             int IComparer<PDCard>.Compare(PDCard a, PDCard b)
             {
@@ -241,6 +242,10 @@ namespace PD_Helper
                     return 10;
             }
 		}
+		#endregion
+
+		// Card Database: Takes hex and returns card.
+		public static Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
 
         // JSON Properties
         [JsonProperty("NAME")]

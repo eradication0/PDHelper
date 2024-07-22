@@ -41,8 +41,7 @@ namespace PD_Helper
         private Controller _controller;
 
         // Load card definitions
-        //Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
-        Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
+        PDArsenal loadedArsenal;
         string[] loadedDeck = { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
         string loadedDeckName = "";
 
@@ -95,7 +94,7 @@ namespace PD_Helper
             //load arsenal editor
             if (editorList.Items.Count == 0)
             {
-                foreach (var item in cardDef)
+                foreach (var item in PDCard.cardDef)
                 {
                     editorList.Items.Add(item.Value.NAME);
                     allSkills.Items.Add(item.Value.NAME);
@@ -120,7 +119,6 @@ namespace PD_Helper
 
         private void loadGameData(object sender, EventArgs e)
         {
-            Process[] processCollection = Process.GetProcesses();
             arsenalDropdown.Items.Clear();
 
             //start input worker (if it hasn't yet)
@@ -160,8 +158,6 @@ namespace PD_Helper
                 {
                     MessageBox.Show("ERROR07: The Profile has no Arsenals, please create at least one in-game Arsenal to be able to load/write/edit them.");
                 }
-
-                
             }
             else
             {
@@ -172,7 +168,7 @@ namespace PD_Helper
 
         private void giveMaxSkills(object sender, EventArgs e)
         {
-            maxSkillsButton.Enabled = memory.GiveMaxSkills(); ;
+            maxSkillsButton.Enabled = memory.GiveMaxSkills();
         }
 
         private void giveMaxCredits(object sender, EventArgs e)
@@ -209,14 +205,14 @@ namespace PD_Helper
             List<PDCard> cardList = new List<PDCard>();
             for (int i = 0; i < 30; i++)
             {
-                cardList.Add(cardDef[loadedDeck[i]]);
+                cardList.Add(PDCard.cardDef[loadedDeck[i]]);
             }
             openArsenalToList(cardList, arsenalNameBox.Text, (int)schoolNumeric.Value);
         }
 
         public PDCard getCard(string name)
         {
-            foreach (PDCard pair in cardDef.Values)
+            foreach (PDCard pair in PDCard.cardDef.Values)
             {
                 if (pair.NAME == name)
                 {
@@ -531,7 +527,7 @@ namespace PD_Helper
                             deckListBox.Items.Clear();
                             for (int i = 0; i < 30; i++)
                             {
-                                if (!cardDef.ContainsKey(deckStrings[i]))
+                                if (!PDCard.cardDef.ContainsKey(deckStrings[i]))
                                 {
                                     MessageBox.Show("ERROR09: A Skill from your loaded arsenal does not exist in the game and could not be loaded. The arsenal has been tampered with or was corrupted. Please try loading another arsenal.");
                                     break;
@@ -539,7 +535,7 @@ namespace PD_Helper
                                 else
                                 {
                                     loadedDeck[i] = deckStrings[i];
-                                    deckListBox.Items.Add(cardDef[deckStrings[i]].NAME);
+                                    deckListBox.Items.Add(PDCard.cardDef[deckStrings[i]].NAME);
                                 }
 
                             }
@@ -778,7 +774,7 @@ namespace PD_Helper
             {
                 Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
                 String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
-                cardList.Add(cardDef[currentHexString]);
+                cardList.Add(PDCard.cardDef[currentHexString]);
                 o += 2;
             }
 
