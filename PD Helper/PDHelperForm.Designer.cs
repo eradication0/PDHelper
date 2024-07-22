@@ -560,6 +560,7 @@ namespace PD_Helper
 			this.savedArsenalListBox.Name = "savedArsenalListBox";
 			this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
 			this.savedArsenalListBox.TabIndex = 0;
+			this.savedArsenalListBox.DoubleClick += new System.EventHandler(this.loadArsenal);
 			// 
 			// arsenalEditorGroupBox
 			// 

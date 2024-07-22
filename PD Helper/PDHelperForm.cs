@@ -988,5 +988,5 @@ namespace PD_Helper
             }
             openArsenalToList(emptyArsenal);
         }
-    }
+	}
 }
