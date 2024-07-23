@@ -298,6 +298,16 @@ namespace PD_Helper
 
         #endregion
 
+        public enum School
+        {
+            Psycho,
+            Optical,
+            Nature,
+            Ki,
+            Faith,
+            Aura = -1
+        }
+
         // Card Database: Takes hex and returns card.
         public static Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
 
@@ -314,6 +324,6 @@ namespace PD_Helper
             return null;
         }
 
-        public static string SchoolFromName(string name) => CardFromName(name).SCHOOL;
+        public static School SchoolFromName(string name) => (School)CardFromName(name).SchoolToInt();
     }
 }

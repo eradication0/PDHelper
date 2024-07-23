@@ -304,8 +304,9 @@ namespace PD_Helper
             foreach (var item in allSkills.Items)
             {
                 // Step 1: Only consider the skills matching the school filter
-                string school = PDCard.SchoolFromName(item.ToString());
-                bool toKeep = true;
+                PDCard.School school = PDCard.SchoolFromName(item.ToString());
+                bool toKeep = schoolFilter[(int)school];
+                /*
                 switch (school)
                 {
                     case "Psycho":
@@ -325,7 +326,7 @@ namespace PD_Helper
                         break;
                     default:
                         break;
-                }
+                }*/
                 if (!toKeep) continue;
 
                 // Step 2: Only consider the skills matching the range filter
@@ -766,7 +767,7 @@ namespace PD_Helper
             e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
 
             // Get the school of the skill and its associate image path
-            string school = PDCard.SchoolFromName(skillName);
+            string school = Enum.GetName(PDCard.SchoolFromName(skillName));
             string path = @"School_Icons\" + school + ".png";
             Image schoolIcon = Image.FromFile(path);
 
