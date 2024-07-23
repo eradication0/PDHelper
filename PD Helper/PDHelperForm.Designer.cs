@@ -423,6 +423,7 @@ namespace PD_Helper
 			this.deckListBox.TabIndex = 1;
 			this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
 			this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
+			this.deckListBox.DoubleClick += new System.EventHandler(this.replaceSkill);
 			// 
 			// arsenalListGroupBox
 			// 
