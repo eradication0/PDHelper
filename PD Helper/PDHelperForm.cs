@@ -505,7 +505,6 @@ namespace PD_Helper
                             MessageBox.Show("ERROR06: The loaded Arsenal loaded is not set to 1,2 or 3 Schools.");
                         }
                     }
-
                 }
             }
             else MessageBox.Show("ERROR04: You didn't select an Arsenal in the Arsenal List.");
