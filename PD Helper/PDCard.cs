@@ -12,14 +12,36 @@ namespace PD_Helper
     // Root myDeserializedClass = JsonConvert.DeserializeObject<List<PDCard>>(myJsonResponse);
     public class PDCard : IComparable
     {
-		#region Comparators
-		// Comparator(s)
-		public class SortTypeHelper : IComparer<PDCard>
+        // JSON Properties
+        [JsonProperty("NAME")]
+        public string NAME { get; set; }
+        [JsonProperty("ID")]
+        public int? ID { get; set; }
+        [JsonProperty("SCHOOL")]
+        public string SCHOOL { get; set; }
+        [JsonProperty("DAMAGE")]
+        public string DAMAGE { get; set; }
+        [JsonProperty("COST")]
+        public string COST { get; set; }
+        [JsonProperty("USAGE")]
+        public string USAGE { get; set; }
+        [JsonProperty("RANGE")]
+        public string RANGE { get; set; }
+        [JsonProperty("DESCRIPTION")]
+        public string DESCRIPTION { get; set; }
+        [JsonProperty("TYPE")]
+        public string TYPE { get; set; }
+        [JsonProperty("HEX")]
+        public string HEX { get; set; }
+
+        #region Comparators
+        // Comparator(s)
+        public class SortTypeHelper : IComparer<PDCard>
         {
             int IComparer<PDCard>.Compare(PDCard a, PDCard b)
             {
-                int typeIntA = a.typeToInt();
-                int typeIntB = b.typeToInt();
+                int typeIntA = a.TypeToInt();
+                int typeIntB = b.TypeToInt();
 
                 if (typeIntA > typeIntB) return 1;
                 else if (typeIntA < typeIntB) return -1;
@@ -31,8 +53,8 @@ namespace PD_Helper
         {
             int IComparer<PDCard>.Compare(PDCard a, PDCard b)
             {
-                int schoolIntA = a.schoolToInt();
-                int schoolIntB = b.schoolToInt();
+                int schoolIntA = a.SchoolToInt();
+                int schoolIntB = b.SchoolToInt();
 
                 if (schoolIntA > schoolIntB) return 1;
                 else if (schoolIntA < schoolIntB) return -1;
@@ -66,8 +88,8 @@ namespace PD_Helper
 				if (a.TYPE != b.TYPE)
 				{
                     // Type comparison
-                    int typeIntA = a.typeToInt();
-                    int typeIntB = b.typeToInt();
+                    int typeIntA = a.TypeToInt();
+                    int typeIntB = b.TypeToInt();
 
                     if (typeIntA > typeIntB) return 1;
                     else if (typeIntA < typeIntB) return -1;
@@ -114,8 +136,8 @@ namespace PD_Helper
         {
             int IComparer<PDCard>.Compare(PDCard a, PDCard b)
             {
-                int rangeIntA = a.rangeToInt();
-                int rangeIntB = b.rangeToInt();
+                int rangeIntA = a.RangeToInt();
+                int rangeIntB = b.RangeToInt();
 
                 if (rangeIntA > rangeIntB) return 1;
                 else if (rangeIntA < rangeIntB) return -1;
@@ -174,7 +196,7 @@ namespace PD_Helper
             => new SortMultiHelper(comparers);
 
         // Type to int for the purpose of ordering
-        public int typeToInt()
+        public int TypeToInt()
         {
             switch (TYPE)
             {
@@ -195,7 +217,7 @@ namespace PD_Helper
             }
         }
 
-        public int schoolToInt()
+        public int SchoolToInt()
         {
             switch (SCHOOL)
             {
@@ -214,7 +236,7 @@ namespace PD_Helper
             }
         }
 
-        public int rangeToInt()
+        public int RangeToInt()
         {
 			switch (RANGE)
 			{
@@ -242,31 +264,56 @@ namespace PD_Helper
                     return 10;
             }
 		}
-		#endregion
 
-		// Card Database: Takes hex and returns card.
-		public static Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
+        public static IComparer<PDCard>? DetermineSort(string sort)
+        {
+            /*
+             * School
+             * Cost
+             * Strength
+             * Number of Uses
+             * Range
+             * ID
+             * None
+			 */
 
-        // JSON Properties
-        [JsonProperty("NAME")]
-        public string NAME { get; set; }
-        [JsonProperty("ID")]
-        public int? ID { get; set; }
-        [JsonProperty("SCHOOL")]
-        public string SCHOOL { get; set; }
-        [JsonProperty("DAMAGE")]
-        public string DAMAGE { get; set; }
-        [JsonProperty("COST")]
-        public string COST { get; set; }
-        [JsonProperty("USAGE")]
-        public string USAGE { get; set; }
-        [JsonProperty("RANGE")]
-        public string RANGE { get; set; }
-        [JsonProperty("DESCRIPTION")]
-        public string DESCRIPTION { get; set; }
-        [JsonProperty("TYPE")]
-        public string TYPE { get; set; }
-        [JsonProperty("HEX")]
-        public string HEX { get; set; }
+            switch (sort)
+            {
+                case "School":
+                    return SortSchool();
+                case "Cost":
+                    return SortCost();
+                case "Strength":
+                    return SortStr();
+                case "Number of Uses":
+                    return SortUses();
+                case "Range":
+                    return SortRange();
+                case "ID":
+                    return SortID();
+                default:
+                    return null;
+            }
+        }
+
+        #endregion
+
+        // Card Database: Takes hex and returns card.
+        public static Dictionary<string, PDCard> cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText("SkillDB.json"));
+
+        public static PDCard CardFromName(string name)
+        {
+            foreach (PDCard card in cardDef.Values)
+            {
+                if (card.NAME == name)
+                {
+                    return card;
+                }
+            }
+
+            return null;
+        }
+
+        public static string SchoolFromName(string name) => CardFromName(name).SCHOOL;
     }
 }

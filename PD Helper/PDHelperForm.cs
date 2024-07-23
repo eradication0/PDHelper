@@ -83,7 +83,7 @@ namespace PD_Helper
             List<PDCard> emptyArsenal = new List<PDCard>();
 			for (int i = 0; i < 30; i++)
 			{
-                emptyArsenal.Add(getCard("Aura Particle"));
+                emptyArsenal.Add(PDCard.CardFromName("Aura Particle"));
 			}
             openArsenalToList(emptyArsenal);
             refreshView();
@@ -210,25 +210,12 @@ namespace PD_Helper
             openArsenalToList(cardList, arsenalNameBox.Text, (int)schoolNumeric.Value);
         }
 
-        public PDCard getCard(string name)
-        {
-            foreach (PDCard pair in PDCard.cardDef.Values)
-            {
-                if (pair.NAME == name)
-                {
-                    return pair;
-                }
-            }
-
-            return null;
-        }
-
         private void replaceSkill(object sender, EventArgs e)
         {
             if (editorList.SelectedIndex != -1 && deckListBox.SelectedIndex != -1)
             {
                 //set loaded deck card change
-                PDCard card = getCard(editorList.SelectedItem.ToString());
+                PDCard card = PDCard.CardFromName(editorList.SelectedItem.ToString());
 
                 string currentHex = card.HEX;
                 loadedDeck[deckListBox.SelectedIndex] = currentHex;
@@ -309,46 +296,15 @@ namespace PD_Helper
             updateEditorList(schoolFilter, rangeFilter, miscNumberFilter);
         }
 
-        private IComparer<PDCard>? determineSort(string sort)
-        {
-            /*
-             * School
-             * Cost
-             * Strength
-             * Number of Uses
-             * Range
-             * ID
-             * None
-			 */
-
-            switch (sort)
-			{
-                case "School":
-                    return PDCard.SortSchool();
-                case "Cost":
-                    return PDCard.SortCost();
-                case "Strength":
-                    return PDCard.SortStr();
-                case "Number of Uses":
-                    return PDCard.SortUses();
-                case "Range":
-                    return PDCard.SortRange();
-                case "ID":
-                    return PDCard.SortID();
-                default:
-					return null;
-			}
-		}
-
         private void updateEditorList(bool[] schoolFilter, bool[] rangeFilter, bool[] miscNumberFilter)
         {
             // Step 0: Make a list of skills that contain all the ones to display
             List<PDCard> displayCards = new List<PDCard>();
-            string infty = getCard("Bomb").USAGE;
+            string infty = PDCard.CardFromName("Bomb").USAGE;
             foreach (var item in allSkills.Items)
             {
                 // Step 1: Only consider the skills matching the school filter
-                string school = schoolFromName(item.ToString());
+                string school = PDCard.SchoolFromName(item.ToString());
                 bool toKeep = true;
                 switch (school)
                 {
@@ -373,7 +329,7 @@ namespace PD_Helper
                 if (!toKeep) continue;
 
                 // Step 2: Only consider the skills matching the range filter
-                string range = getCard(item.ToString()).RANGE;
+                string range = PDCard.CardFromName(item.ToString()).RANGE;
                 toKeep = true;
                 switch (range)
                 {
@@ -413,7 +369,7 @@ namespace PD_Helper
                 if (!toKeep) continue;
 
                 // Step 3: Now filter by type if necessary
-                PDCard card = getCard(item.ToString());
+                PDCard card = PDCard.CardFromName(item.ToString());
                 if (!allSkillsRadioButton.Checked)
                 {
                     // Get type
@@ -474,19 +430,19 @@ namespace PD_Helper
                 // Step 5: search for value in editorList
                 if (editorSearchTextBox.Text == "" || item.ToString().Contains(editorSearchTextBox.Text, StringComparison.OrdinalIgnoreCase))
                 {
-                    displayCards.Add(getCard(item.ToString()));
+                    displayCards.Add(PDCard.CardFromName(item.ToString()));
                     //editorList.Items.Add(item.ToString());
                 }
             }
 
             // Step 6: Determine the sorting method
             List<IComparer<PDCard>> comparers = new List<IComparer<PDCard>>();
-            IComparer<PDCard> comparer1 = determineSort(sortComboBox1.Text);
+            IComparer<PDCard> comparer1 = PDCard.DetermineSort(sortComboBox1.Text);
             if (comparer1 != null) comparers.Add(comparer1);
             else comparers.Add(PDCard.SortID()); // Default sort
-            IComparer<PDCard> comparer2 = determineSort(sortComboBox2.Text);
+            IComparer<PDCard> comparer2 = PDCard.DetermineSort(sortComboBox2.Text);
             if (comparer2 != null) comparers.Add(comparer2);
-            IComparer<PDCard> comparer3 = determineSort(sortComboBox3.Text);
+            IComparer<PDCard> comparer3 = PDCard.DetermineSort(sortComboBox3.Text);
             if (comparer3 != null) comparers.Add(comparer3);
 
             // Step 7: Sort the list and display it
@@ -551,10 +507,8 @@ namespace PD_Helper
                     }
 
                 }
-
-
             }
-            else { MessageBox.Show("ERROR04: You didn't select an Arsenal in the Arsenal List."); }
+            else MessageBox.Show("ERROR04: You didn't select an Arsenal in the Arsenal List.");
         }
 
         private void deleteArsenal(object sender, EventArgs e)
@@ -575,15 +529,15 @@ namespace PD_Helper
 
         private Color lightColorFromType(string type) => ColorProfileForm.getColor(type, true);
 
-        private Color lightColorFromName(string name) => lightColorFromType(getCard(name).TYPE);
+        private Color lightColorFromName(string name) => lightColorFromType(PDCard.CardFromName(name).TYPE);
 
         private Color darkColorFromType(string type) => ColorProfileForm.getColor(type, false);
 
-        private Color darkColorFromName(string name) => darkColorFromType(getCard(name).TYPE);
+        private Color darkColorFromName(string name) => darkColorFromType(PDCard.CardFromName(name).TYPE);
 
         private void displayEditorSkill(string name)
         {
-            PDCard card = getCard(name);
+            PDCard card = PDCard.CardFromName(name);
 
             labelSkillCost.Text = card.COST;
             labelSkillDescription.Text = card.DESCRIPTION;
@@ -620,7 +574,7 @@ namespace PD_Helper
             PDCard currentCard = new PDCard();
             foreach (var cardName in deckListBox.Items)
             {
-                currentCard = getCard(cardName.ToString());
+                currentCard = PDCard.CardFromName(cardName.ToString());
                 switch (currentCard.SCHOOL)
                 {
                     case "Psycho":
@@ -795,8 +749,6 @@ namespace PD_Helper
             }
         }
 
-        private string schoolFromName(string name) => getCard(name).SCHOOL;
-
         private void skillList_DrawItem(object sender, DrawItemEventArgs e)
         {
             if (e.Index < 0) return;
@@ -815,7 +767,7 @@ namespace PD_Helper
             e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
 
             // Get the school of the skill and its associate image path
-            string school = schoolFromName(skillName);
+            string school = PDCard.SchoolFromName(skillName);
             string path = @"School_Icons\" + school + ".png";
             Image schoolIcon = Image.FromFile(path);
 
@@ -980,7 +932,7 @@ namespace PD_Helper
             List<PDCard> emptyArsenal = new List<PDCard>();
             for (int i = 0; i < 30; i++)
             {
-                emptyArsenal.Add(getCard("Aura Particle"));
+                emptyArsenal.Add(PDCard.CardFromName("Aura Particle"));
             }
             openArsenalToList(emptyArsenal);
         }
