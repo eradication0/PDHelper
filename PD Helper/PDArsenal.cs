@@ -49,6 +49,27 @@ namespace PD_Helper
 			}
 		}
 
+		public List<PDCard.School> Schools
+		{
+			get
+			{
+				// Add schools
+				List<PDCard.School> schools = new List<PDCard.School>();
+				foreach (PDCard card in cards)
+				{
+					PDCard.School school = (PDCard.School)card.SchoolToInt();
+					if (!schools.Contains(school) && school != PDCard.School.Aura)
+					{
+						schools.Add(school);
+					}
+				}
+
+				// Sort
+				schools.Sort();
+				return schools;
+			}
+		}
+
 		public PDArsenal(string name, PDCard[] cards)
 		{
 			Cards = cards;
@@ -115,7 +136,5 @@ namespace PD_Helper
 				throw new FileFormatException("The loaded Arsenal loaded is not set to 1, 2 or 3 Schools.");
 			}
 		}
-
-		
 	}
 }

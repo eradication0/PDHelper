@@ -767,8 +767,8 @@ namespace PD_Helper
             e.Graphics.DrawString(skillName, e.Font, new SolidBrush(Color.Black), e.Bounds, StringFormat.GenericDefault);
 
             // Get the school of the skill and its associate image path
-            string school = Enum.GetName(PDCard.SchoolFromName(skillName));
-            string path = @"School_Icons\" + school + ".png";
+            string schoolName = Enum.GetName(PDCard.SchoolFromName(skillName));
+            string path = @"School_Icons\" + schoolName + ".png";
             Image schoolIcon = Image.FromFile(path);
 
             // Get size ratio
