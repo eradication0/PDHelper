@@ -298,6 +298,7 @@ namespace PD_Helper
 
         #endregion
 
+        // TODO: Add SchoolToEnum accessor
         public enum School
         {
             Psycho,

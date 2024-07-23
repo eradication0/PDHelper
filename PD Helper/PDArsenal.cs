@@ -9,6 +9,7 @@ namespace PD_Helper
 {
 	internal class PDArsenal
 	{
+		// TODO: Change to List<PDCard> with capacity 30.
 		PDCard[] cards = new PDCard[30];
 		public PDCard[] Cards
 		{ 
@@ -33,14 +34,14 @@ namespace PD_Helper
 				if (value.Length > 16)
 				{
 					throw new ArgumentException("Name must not exceed 16 characters.");
-				}
+				}/*
 				else if (value.Length == 0)
 				{
 					throw new ArgumentException("Name must not be empty.");
-				}
+				}*/
 
 				var regex = new Regex(@"[\\\/\:\*\?\""\<\>\|]");
-				if (regex.IsMatch(name))
+				if (regex.IsMatch(value))
 				{
 					throw new ArgumentException(@"Name contains banned characters (\ / : * ? \ < > |).");
 				}
@@ -68,6 +69,12 @@ namespace PD_Helper
 				schools.Sort();
 				return schools;
 			}
+		}
+
+		public PDCard this[int i]
+		{
+			get { return cards[i]; }
+			set { cards[i] = value; }
 		}
 
 		public PDArsenal(string name, PDCard[] cards)
@@ -108,7 +115,7 @@ namespace PD_Helper
 			string file = File.ReadAllText(path);
 			string[] deckStrings = file.Split(',');
 			string loadSchoolAmount = deckStrings[30].Remove(deckStrings[30].Length - 3);
-			if (loadSchoolAmount == "01" || loadSchoolAmount == "02" || loadSchoolAmount == "03")
+			if (loadSchoolAmount == "00" || loadSchoolAmount == "01" || loadSchoolAmount == "02" || loadSchoolAmount == "03")
 			{
 				PDCard[] cards = new PDCard[30];
 				for (int i = 0; i < 30; i++)
@@ -133,7 +140,7 @@ namespace PD_Helper
 			}
 			else
 			{
-				throw new FileFormatException("The loaded Arsenal loaded is not set to 1, 2 or 3 Schools.");
+				throw new FileFormatException("The loaded Arsenal loaded is not set to 0, 1, 2 or 3 Schools.");
 			}
 		}
 	}
