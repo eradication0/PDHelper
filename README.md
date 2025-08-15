@@ -1,5 +1,5 @@
 # PDHelper  
-A simple app to edit the memory of Phantom Dust to give max out credits/skills aswell as load/edit/backup any arsenal you want.  
+A simple app to edit the memory of Phantom Dust to give max out credits/skills as well as load/edit/backup any arsenal you want.  
 The app will not connect to anything that is not Phantom Dust, so no random edits on any other process can occur.  
 [Download V3.1 (latest)](https://github.com/eradication0/PDHelper/releases/download/ReleaseV3.1/PD.Helper.V3.1.zip)
   
@@ -27,6 +27,9 @@ if you want to write the arsenals into the game itself you need to
 .NET 6.0.5 x64
 [Download .NET (6.0.5)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.5-windows-x64-installer)
   
+# Mod Support
+Thanks to Torph, the app now supports modding and loading modpacks directly through his modloader
+  
 # Arsenal Features
 - **Save Arsenals** directly into the game  
 - **Backup Arsenals** as a file to store infinite Arsenals that can be loaded at any time  
@@ -36,6 +39,7 @@ if you want to write the arsenals into the game itself you need to
 - **Rename Arsenal**s directly, allowing more special characters than in-game
 - **Offline Edit** edit/save/share arsenals without having having Phantom Dust open (by @jessep13)
 - **Color Coded Skills** to match the in-game colors (by @jessep13)
+- **Arsenal Hell Game Mode** load a random deck to play a chaotic gamemode
 
 # Skill Filtering (by @@jessep13)
 - **Basic Filter** sort skills by school/type/range
@@ -67,8 +71,9 @@ Basically im using a library called [memory.dll](https://github.com/erfg12/memor
 # Credits
 ## Made by Nuion
 ## Huge help by @jessep13 for the quality of life changes and filtering features
+## Much love to @torph for the mod loader and skill editor that allow all of this
 check out [phatomdust.online](https://phantomdust.online/) for everything Phantom Dust related
   
 Thanks to the testing group helping to find bugs  
-Fatnerd, Xanxus, Inflim, MysticNinja, Show, SnowRyze, Toaf, Treat, TripL, Algol, Bregan and Esper28
+An0rak, Chaos Murloc, Fatnerd, Xanxus, Inflim, MysticNinja, Show, SnowRyze, Toaf, Eat, TripL, Algol, Bregan and Esper28
  

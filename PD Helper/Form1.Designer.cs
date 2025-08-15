@@ -30,1410 +30,1364 @@ namespace PD_Helper
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.maxSkillsButton = new System.Windows.Forms.Button();
-            this.maxCreditsButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.arsenalDropdown = new System.Windows.Forms.ComboBox();
-            this.loadedArsenalGroupBox = new System.Windows.Forms.GroupBox();
-            this.skillCountLabel = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.schoolNumeric = new System.Windows.Forms.NumericUpDown();
-            this.arsenalNameLabel = new System.Windows.Forms.Label();
-            this.arsenalNameBox = new System.Windows.Forms.TextBox();
-            this.btnSaveToPDH = new System.Windows.Forms.Button();
-            this.saveToPDbtn = new System.Windows.Forms.Button();
-            this.deckListBox = new System.Windows.Forms.ListBox();
-            this.arsenalListGroupBox = new System.Windows.Forms.GroupBox();
-            this.newArsenalButton = new System.Windows.Forms.Button();
-            this.colorProfileButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.refreshArsenalListButton = new System.Windows.Forms.Button();
-            this.openArsenalFolderButton = new System.Windows.Forms.Button();
-            this.partnerLock = new System.Windows.Forms.CheckBox();
-            this.deleteArsenalButton = new System.Windows.Forms.Button();
-            this.loadArsenalButton = new System.Windows.Forms.Button();
-            this.savedArsenalListBox = new System.Windows.Forms.ListBox();
-            this.arsenalEditorGroupBox = new System.Windows.Forms.GroupBox();
-            this.labelSkillDescription = new System.Windows.Forms.RichTextBox();
-            this.labelSkillUse = new System.Windows.Forms.Label();
-            this.labelSkillStrength = new System.Windows.Forms.Label();
-            this.labelSkillCost = new System.Windows.Forms.Label();
-            this.labelSkilLRange = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.labelSkillSchool = new System.Windows.Forms.Label();
-            this.labelSkillID = new System.Windows.Forms.Label();
-            this.labelSkillName = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.editorSearchTextBox = new System.Windows.Forms.TextBox();
-            this.resetSelectedButton = new System.Windows.Forms.Button();
-            this.replaceSkillButton = new System.Windows.Forms.Button();
-            this.editorList = new System.Windows.Forms.ListBox();
-            this.GamepadWorker = new System.ComponentModel.BackgroundWorker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.sortComboBox3 = new System.Windows.Forms.ComboBox();
-            this.sortComboBox2 = new System.Windows.Forms.ComboBox();
-            this.sortComboBox1 = new System.Windows.Forms.ComboBox();
-            this.costMaxNumeric = new System.Windows.Forms.NumericUpDown();
-            this.costMinNumeric = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.miscNumberCheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.useMaxNumeric = new System.Windows.Forms.NumericUpDown();
-            this.defMaxNumeric = new System.Windows.Forms.NumericUpDown();
-            this.useMinNumeric = new System.Windows.Forms.NumericUpDown();
-            this.defMinNumeric = new System.Windows.Forms.NumericUpDown();
-            this.strMaxNumeric = new System.Windows.Forms.NumericUpDown();
-            this.strMinNumeric = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rangeFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.environmentalRadioButton = new System.Windows.Forms.RadioButton();
-            this.specialRadioButton = new System.Windows.Forms.RadioButton();
-            this.statusRadioButton = new System.Windows.Forms.RadioButton();
-            this.eraseRadioButton = new System.Windows.Forms.RadioButton();
-            this.defenseRadioButton = new System.Windows.Forms.RadioButton();
-            this.attackRadioButton = new System.Windows.Forms.RadioButton();
-            this.allSkillsRadioButton = new System.Windows.Forms.RadioButton();
-            this.schoolFilterCheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.loadedArsenalGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolNumeric)).BeginInit();
-            this.arsenalListGroupBox.SuspendLayout();
-            this.arsenalEditorGroupBox.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.costMaxNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.costMinNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.useMaxNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defMaxNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.useMinNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defMinNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.strMaxNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.strMinNumeric)).BeginInit();
-            this.SuspendLayout();
+            button1 = new Button();
+            maxSkillsButton = new Button();
+            maxCreditsButton = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            label12 = new Label();
+            arsenalDropdown = new ComboBox();
+            loadedArsenalGroupBox = new GroupBox();
+            skillCountLabel = new Label();
+            label10 = new Label();
+            schoolNumeric = new NumericUpDown();
+            arsenalNameLabel = new Label();
+            arsenalNameBox = new TextBox();
+            btnSaveToPDH = new Button();
+            saveToPDbtn = new Button();
+            deckListBox = new ListBox();
+            arsenalListGroupBox = new GroupBox();
+            label35 = new Label();
+            button3 = new Button();
+            label34 = new Label();
+            label33 = new Label();
+            button2 = new Button();
+            newArsenalButton = new Button();
+            colorProfileButton = new Button();
+            label1 = new Label();
+            label6 = new Label();
+            refreshArsenalListButton = new Button();
+            openArsenalFolderButton = new Button();
+            partnerLock = new CheckBox();
+            deleteArsenalButton = new Button();
+            loadArsenalButton = new Button();
+            savedArsenalListBox = new ListBox();
+            arsenalEditorGroupBox = new GroupBox();
+            labelSkillDescription = new RichTextBox();
+            labelSkillUse = new Label();
+            labelSkillStrength = new Label();
+            labelSkillCost = new Label();
+            labelSkilLRange = new Label();
+            label24 = new Label();
+            label23 = new Label();
+            label22 = new Label();
+            labelSkillSchool = new Label();
+            labelSkillID = new Label();
+            labelSkillName = new Label();
+            label11 = new Label();
+            editorSearchTextBox = new TextBox();
+            resetSelectedButton = new Button();
+            replaceSkillButton = new Button();
+            editorList = new ListBox();
+            GamepadWorker = new System.ComponentModel.BackgroundWorker();
+            groupBox3 = new GroupBox();
+            label32 = new Label();
+            label31 = new Label();
+            label30 = new Label();
+            label29 = new Label();
+            label28 = new Label();
+            label27 = new Label();
+            label26 = new Label();
+            label25 = new Label();
+            label21 = new Label();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
+            sortComboBox3 = new ComboBox();
+            sortComboBox2 = new ComboBox();
+            sortComboBox1 = new ComboBox();
+            costMaxNumeric = new NumericUpDown();
+            costMinNumeric = new NumericUpDown();
+            label15 = new Label();
+            miscNumberCheckedListBox = new CheckedListBox();
+            useMaxNumeric = new NumericUpDown();
+            defMaxNumeric = new NumericUpDown();
+            useMinNumeric = new NumericUpDown();
+            defMinNumeric = new NumericUpDown();
+            strMaxNumeric = new NumericUpDown();
+            strMinNumeric = new NumericUpDown();
+            label14 = new Label();
+            label13 = new Label();
+            label7 = new Label();
+            rangeFilterCheckedListBox = new CheckedListBox();
+            environmentalRadioButton = new RadioButton();
+            specialRadioButton = new RadioButton();
+            statusRadioButton = new RadioButton();
+            eraseRadioButton = new RadioButton();
+            defenseRadioButton = new RadioButton();
+            attackRadioButton = new RadioButton();
+            allSkillsRadioButton = new RadioButton();
+            schoolFilterCheckedListBox = new CheckedListBox();
+            toolTip1 = new ToolTip(components);
+            toolTip2 = new ToolTip(components);
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            loadedArsenalGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)schoolNumeric).BeginInit();
+            arsenalListGroupBox.SuspendLayout();
+            arsenalEditorGroupBox.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)costMaxNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)costMinNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)useMaxNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)defMaxNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)useMinNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)defMinNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)strMaxNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)strMinNumeric).BeginInit();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Orange;
-            this.button1.Location = new System.Drawing.Point(10, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Load Profile";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.loadGameData);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Orange;
+            button1.Location = new Point(10, 22);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 23);
+            button1.TabIndex = 0;
+            button1.Text = "Load Profile";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += loadGameData;
             // 
             // maxSkillsButton
             // 
-            this.maxSkillsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maxSkillsButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.maxSkillsButton.Location = new System.Drawing.Point(6, 52);
-            this.maxSkillsButton.Name = "maxSkillsButton";
-            this.maxSkillsButton.Size = new System.Drawing.Size(97, 23);
-            this.maxSkillsButton.TabIndex = 2;
-            this.maxSkillsButton.Text = "Max Skills";
-            this.maxSkillsButton.UseVisualStyleBackColor = true;
-            this.maxSkillsButton.Click += new System.EventHandler(this.giveMaxSkills);
+            maxSkillsButton.FlatStyle = FlatStyle.Flat;
+            maxSkillsButton.ForeColor = SystemColors.ScrollBar;
+            maxSkillsButton.Location = new Point(6, 52);
+            maxSkillsButton.Name = "maxSkillsButton";
+            maxSkillsButton.Size = new Size(97, 23);
+            maxSkillsButton.TabIndex = 2;
+            maxSkillsButton.Text = "Max Skills";
+            maxSkillsButton.UseVisualStyleBackColor = true;
+            maxSkillsButton.Click += giveMaxSkills;
             // 
             // maxCreditsButton
             // 
-            this.maxCreditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maxCreditsButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.maxCreditsButton.Location = new System.Drawing.Point(109, 52);
-            this.maxCreditsButton.Name = "maxCreditsButton";
-            this.maxCreditsButton.Size = new System.Drawing.Size(97, 23);
-            this.maxCreditsButton.TabIndex = 3;
-            this.maxCreditsButton.Text = "Max Credits";
-            this.maxCreditsButton.UseVisualStyleBackColor = true;
-            this.maxCreditsButton.Click += new System.EventHandler(this.giveMaxCredits);
+            maxCreditsButton.FlatStyle = FlatStyle.Flat;
+            maxCreditsButton.ForeColor = SystemColors.ScrollBar;
+            maxCreditsButton.Location = new Point(109, 52);
+            maxCreditsButton.Name = "maxCreditsButton";
+            maxCreditsButton.Size = new Size(97, 23);
+            maxCreditsButton.TabIndex = 3;
+            maxCreditsButton.Text = "Max Credits";
+            maxCreditsButton.UseVisualStyleBackColor = true;
+            maxCreditsButton.Click += giveMaxCredits;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(222, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Not Loaded Yet";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.AutoSize = true;
+            label2.Location = new Point(222, 26);
+            label2.Name = "label2";
+            label2.Size = new Size(88, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Not Loaded Yet";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(6, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "2. Give Maxed out Skills or Credits";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(6, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(185, 15);
+            label3.TabIndex = 6;
+            label3.Text = "2. Give Maxed out Skills or Credits";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label4.Location = new System.Drawing.Point(6, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "1. Go to your online Lab screen";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ScrollBar;
+            label4.Location = new Point(6, 19);
+            label4.Name = "label4";
+            label4.Size = new Size(170, 15);
+            label4.TabIndex = 7;
+            label4.Text = "1. Go to your online Lab screen";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label5.Location = new System.Drawing.Point(206, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 15);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "3. Go to shop and sell 1 \"Phantom Dust\" ";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Aquamarine;
+            label5.Location = new Point(206, 19);
+            label5.Name = "label5";
+            label5.Size = new Size(221, 15);
+            label5.TabIndex = 8;
+            label5.Text = "3. Go to shop and sell 1 \"Phantom Dust\" ";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label8.Location = new System.Drawing.Point(221, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(185, 15);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "(this fixes a potential visual bug)";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ScrollBar;
+            label8.Location = new Point(221, 34);
+            label8.Name = "label8";
+            label8.Size = new Size(185, 15);
+            label8.TabIndex = 11;
+            label8.Text = "(this fixes a potential visual bug)";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label9.Location = new System.Drawing.Point(144, 246);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 15);
-            this.label9.TabIndex = 12;
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(33, 33, 33);
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.ScrollBar;
+            label9.Location = new Point(144, 246);
+            label9.Name = "label9";
+            label9.Size = new Size(0, 15);
+            label9.TabIndex = 12;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.maxSkillsButton);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.maxCreditsButton);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.groupBox1.Location = new System.Drawing.Point(458, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 130);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Get Resources";
+            groupBox1.BackColor = Color.FromArgb(33, 33, 33);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(maxSkillsButton);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(maxCreditsButton);
+            groupBox1.Enabled = false;
+            groupBox1.ForeColor = SystemColors.ScrollBar;
+            groupBox1.Location = new Point(458, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(433, 130);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Get Resources";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.arsenalDropdown);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(447, 97);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Setup";
+            groupBox2.BackColor = Color.FromArgb(33, 33, 33);
+            groupBox2.Controls.Add(label12);
+            groupBox2.Controls.Add(arsenalDropdown);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(button1);
+            groupBox2.ForeColor = SystemColors.ScrollBar;
+            groupBox2.Location = new Point(12, 12);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(447, 97);
+            groupBox2.TabIndex = 15;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Setup";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(222, 56);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(156, 15);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Change Arsenal Slot to Edit";
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(222, 56);
+            label12.Name = "label12";
+            label12.Size = new Size(156, 15);
+            label12.TabIndex = 32;
+            label12.Text = "Change Arsenal Slot to Edit";
             // 
             // arsenalDropdown
             // 
-            this.arsenalDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.arsenalDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.arsenalDropdown.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.arsenalDropdown.FormattingEnabled = true;
-            this.arsenalDropdown.Location = new System.Drawing.Point(10, 51);
-            this.arsenalDropdown.MaxDropDownItems = 16;
-            this.arsenalDropdown.Name = "arsenalDropdown";
-            this.arsenalDropdown.Size = new System.Drawing.Size(205, 23);
-            this.arsenalDropdown.TabIndex = 31;
-            this.arsenalDropdown.SelectedIndexChanged += new System.EventHandler(this.arsenalDropdown_SelectedIndexChanged);
+            arsenalDropdown.BackColor = Color.FromArgb(33, 33, 33);
+            arsenalDropdown.FlatStyle = FlatStyle.Flat;
+            arsenalDropdown.ForeColor = SystemColors.ScrollBar;
+            arsenalDropdown.FormattingEnabled = true;
+            arsenalDropdown.Location = new Point(10, 51);
+            arsenalDropdown.MaxDropDownItems = 16;
+            arsenalDropdown.Name = "arsenalDropdown";
+            arsenalDropdown.Size = new Size(205, 23);
+            arsenalDropdown.TabIndex = 31;
+            arsenalDropdown.SelectedIndexChanged += arsenalDropdown_SelectedIndexChanged;
             // 
             // loadedArsenalGroupBox
             // 
-            this.loadedArsenalGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.loadedArsenalGroupBox.Controls.Add(this.skillCountLabel);
-            this.loadedArsenalGroupBox.Controls.Add(this.label10);
-            this.loadedArsenalGroupBox.Controls.Add(this.schoolNumeric);
-            this.loadedArsenalGroupBox.Controls.Add(this.arsenalNameLabel);
-            this.loadedArsenalGroupBox.Controls.Add(this.arsenalNameBox);
-            this.loadedArsenalGroupBox.Controls.Add(this.btnSaveToPDH);
-            this.loadedArsenalGroupBox.Controls.Add(this.saveToPDbtn);
-            this.loadedArsenalGroupBox.Controls.Add(this.deckListBox);
-            this.loadedArsenalGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.loadedArsenalGroupBox.Location = new System.Drawing.Point(12, 98);
-            this.loadedArsenalGroupBox.Name = "loadedArsenalGroupBox";
-            this.loadedArsenalGroupBox.Size = new System.Drawing.Size(447, 239);
-            this.loadedArsenalGroupBox.TabIndex = 17;
-            this.loadedArsenalGroupBox.TabStop = false;
-            this.loadedArsenalGroupBox.Text = "Loaded Arsenal";
+            loadedArsenalGroupBox.BackColor = Color.FromArgb(33, 33, 33);
+            loadedArsenalGroupBox.Controls.Add(skillCountLabel);
+            loadedArsenalGroupBox.Controls.Add(label10);
+            loadedArsenalGroupBox.Controls.Add(schoolNumeric);
+            loadedArsenalGroupBox.Controls.Add(arsenalNameLabel);
+            loadedArsenalGroupBox.Controls.Add(arsenalNameBox);
+            loadedArsenalGroupBox.Controls.Add(btnSaveToPDH);
+            loadedArsenalGroupBox.Controls.Add(saveToPDbtn);
+            loadedArsenalGroupBox.Controls.Add(deckListBox);
+            loadedArsenalGroupBox.ForeColor = SystemColors.ScrollBar;
+            loadedArsenalGroupBox.Location = new Point(12, 98);
+            loadedArsenalGroupBox.Name = "loadedArsenalGroupBox";
+            loadedArsenalGroupBox.Size = new Size(447, 239);
+            loadedArsenalGroupBox.TabIndex = 17;
+            loadedArsenalGroupBox.TabStop = false;
+            loadedArsenalGroupBox.Text = "Loaded Arsenal";
             // 
             // skillCountLabel
             // 
-            this.skillCountLabel.AutoSize = true;
-            this.skillCountLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.skillCountLabel.Location = new System.Drawing.Point(294, 21);
-            this.skillCountLabel.Name = "skillCountLabel";
-            this.skillCountLabel.Size = new System.Drawing.Size(31, 15);
-            this.skillCountLabel.TabIndex = 35;
-            this.skillCountLabel.Text = "-/30";
+            skillCountLabel.AutoSize = true;
+            skillCountLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            skillCountLabel.Location = new Point(294, 21);
+            skillCountLabel.Name = "skillCountLabel";
+            skillCountLabel.Size = new Size(31, 15);
+            skillCountLabel.TabIndex = 35;
+            skillCountLabel.Text = "-/30";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(352, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 15);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Schools:";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(352, 21);
+            label10.Name = "label10";
+            label10.Size = new Size(52, 15);
+            label10.TabIndex = 34;
+            label10.Text = "Schools:";
             // 
             // schoolNumeric
             // 
-            this.schoolNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.schoolNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.schoolNumeric.Location = new System.Drawing.Point(410, 17);
-            this.schoolNumeric.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.schoolNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.schoolNumeric.Name = "schoolNumeric";
-            this.schoolNumeric.Size = new System.Drawing.Size(30, 23);
-            this.schoolNumeric.TabIndex = 33;
-            this.schoolNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.schoolNumeric.ValueChanged += new System.EventHandler(this.schoolNumeric_ValueChanged);
+            schoolNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            schoolNumeric.ForeColor = SystemColors.ScrollBar;
+            schoolNumeric.Location = new Point(410, 17);
+            schoolNumeric.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
+            schoolNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            schoolNumeric.Name = "schoolNumeric";
+            schoolNumeric.Size = new Size(30, 23);
+            schoolNumeric.TabIndex = 33;
+            schoolNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            schoolNumeric.ValueChanged += schoolNumeric_ValueChanged;
             // 
             // arsenalNameLabel
             // 
-            this.arsenalNameLabel.AutoSize = true;
-            this.arsenalNameLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.arsenalNameLabel.Location = new System.Drawing.Point(6, 21);
-            this.arsenalNameLabel.Name = "arsenalNameLabel";
-            this.arsenalNameLabel.Size = new System.Drawing.Size(87, 15);
-            this.arsenalNameLabel.TabIndex = 6;
-            this.arsenalNameLabel.Text = "Arsenal Name:";
+            arsenalNameLabel.AutoSize = true;
+            arsenalNameLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            arsenalNameLabel.Location = new Point(6, 21);
+            arsenalNameLabel.Name = "arsenalNameLabel";
+            arsenalNameLabel.Size = new Size(87, 15);
+            arsenalNameLabel.TabIndex = 6;
+            arsenalNameLabel.Text = "Arsenal Name:";
             // 
             // arsenalNameBox
             // 
-            this.arsenalNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.arsenalNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.arsenalNameBox.Location = new System.Drawing.Point(96, 17);
-            this.arsenalNameBox.MaxLength = 16;
-            this.arsenalNameBox.Name = "arsenalNameBox";
-            this.arsenalNameBox.Size = new System.Drawing.Size(170, 23);
-            this.arsenalNameBox.TabIndex = 32;
-            this.arsenalNameBox.TextChanged += new System.EventHandler(this.arsenalNameBox_TextChanged);
+            arsenalNameBox.BackColor = Color.FromArgb(33, 33, 33);
+            arsenalNameBox.ForeColor = SystemColors.ScrollBar;
+            arsenalNameBox.Location = new Point(96, 17);
+            arsenalNameBox.MaxLength = 16;
+            arsenalNameBox.Name = "arsenalNameBox";
+            arsenalNameBox.Size = new Size(170, 23);
+            arsenalNameBox.TabIndex = 32;
+            arsenalNameBox.TextChanged += arsenalNameBox_TextChanged;
             // 
             // btnSaveToPDH
             // 
-            this.btnSaveToPDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveToPDH.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnSaveToPDH.Location = new System.Drawing.Point(246, 206);
-            this.btnSaveToPDH.Name = "btnSaveToPDH";
-            this.btnSaveToPDH.Size = new System.Drawing.Size(191, 23);
-            this.btnSaveToPDH.TabIndex = 28;
-            this.btnSaveToPDH.Text = "Save To PDHelper";
-            this.btnSaveToPDH.UseVisualStyleBackColor = true;
-            this.btnSaveToPDH.Click += new System.EventHandler(this.btnSaveToPDH_Click);
+            btnSaveToPDH.FlatStyle = FlatStyle.Flat;
+            btnSaveToPDH.ForeColor = Color.PaleGreen;
+            btnSaveToPDH.Location = new Point(246, 206);
+            btnSaveToPDH.Name = "btnSaveToPDH";
+            btnSaveToPDH.Size = new Size(191, 23);
+            btnSaveToPDH.TabIndex = 28;
+            btnSaveToPDH.Text = "Save To PDHelper";
+            btnSaveToPDH.UseVisualStyleBackColor = true;
+            btnSaveToPDH.Click += btnSaveToPDH_Click;
             // 
             // saveToPDbtn
             // 
-            this.saveToPDbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveToPDbtn.ForeColor = System.Drawing.Color.SkyBlue;
-            this.saveToPDbtn.Location = new System.Drawing.Point(7, 206);
-            this.saveToPDbtn.Name = "saveToPDbtn";
-            this.saveToPDbtn.Size = new System.Drawing.Size(191, 23);
-            this.saveToPDbtn.TabIndex = 27;
-            this.saveToPDbtn.Text = "Save To Phantom Dust";
-            this.saveToPDbtn.UseVisualStyleBackColor = true;
-            this.saveToPDbtn.Click += new System.EventHandler(this.saveToPDbtn_Click);
+            saveToPDbtn.FlatStyle = FlatStyle.Flat;
+            saveToPDbtn.ForeColor = Color.SkyBlue;
+            saveToPDbtn.Location = new Point(7, 206);
+            saveToPDbtn.Name = "saveToPDbtn";
+            saveToPDbtn.Size = new Size(191, 23);
+            saveToPDbtn.TabIndex = 27;
+            saveToPDbtn.Text = "Save To Phantom Dust";
+            saveToPDbtn.UseVisualStyleBackColor = true;
+            saveToPDbtn.Click += saveToPDbtn_Click;
             // 
             // deckListBox
             // 
-            this.deckListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.deckListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.deckListBox.ColumnWidth = 140;
-            this.deckListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.deckListBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.deckListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.deckListBox.FormattingEnabled = true;
-            this.deckListBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.deckListBox.IntegralHeight = false;
-            this.deckListBox.ItemHeight = 15;
-            this.deckListBox.Location = new System.Drawing.Point(7, 46);
-            this.deckListBox.MultiColumn = true;
-            this.deckListBox.Name = "deckListBox";
-            this.deckListBox.Size = new System.Drawing.Size(431, 154);
-            this.deckListBox.TabIndex = 1;
-            this.deckListBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
-            this.deckListBox.SelectedIndexChanged += new System.EventHandler(this.deckListBox1_SelectedIndexChanged);
+            deckListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            deckListBox.BackColor = Color.FromArgb(33, 33, 33);
+            deckListBox.ColumnWidth = 140;
+            deckListBox.DrawMode = DrawMode.OwnerDrawFixed;
+            deckListBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            deckListBox.ForeColor = SystemColors.ScrollBar;
+            deckListBox.FormattingEnabled = true;
+            deckListBox.ImeMode = ImeMode.Off;
+            deckListBox.IntegralHeight = false;
+            deckListBox.ItemHeight = 15;
+            deckListBox.Location = new Point(7, 46);
+            deckListBox.MultiColumn = true;
+            deckListBox.Name = "deckListBox";
+            deckListBox.Size = new Size(431, 154);
+            deckListBox.TabIndex = 1;
+            deckListBox.DrawItem += skillList_DrawItem;
+            deckListBox.SelectedIndexChanged += deckListBox1_SelectedIndexChanged;
             // 
             // arsenalListGroupBox
             // 
-            this.arsenalListGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.arsenalListGroupBox.Controls.Add(this.newArsenalButton);
-            this.arsenalListGroupBox.Controls.Add(this.colorProfileButton);
-            this.arsenalListGroupBox.Controls.Add(this.label1);
-            this.arsenalListGroupBox.Controls.Add(this.label6);
-            this.arsenalListGroupBox.Controls.Add(this.refreshArsenalListButton);
-            this.arsenalListGroupBox.Controls.Add(this.openArsenalFolderButton);
-            this.arsenalListGroupBox.Controls.Add(this.partnerLock);
-            this.arsenalListGroupBox.Controls.Add(this.deleteArsenalButton);
-            this.arsenalListGroupBox.Controls.Add(this.loadArsenalButton);
-            this.arsenalListGroupBox.Controls.Add(this.savedArsenalListBox);
-            this.arsenalListGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.arsenalListGroupBox.Location = new System.Drawing.Point(458, 98);
-            this.arsenalListGroupBox.Name = "arsenalListGroupBox";
-            this.arsenalListGroupBox.Size = new System.Drawing.Size(433, 477);
-            this.arsenalListGroupBox.TabIndex = 1;
-            this.arsenalListGroupBox.TabStop = false;
-            this.arsenalListGroupBox.Text = "Arsenal List";
+            arsenalListGroupBox.BackColor = Color.FromArgb(33, 33, 33);
+            arsenalListGroupBox.Controls.Add(label35);
+            arsenalListGroupBox.Controls.Add(button3);
+            arsenalListGroupBox.Controls.Add(label34);
+            arsenalListGroupBox.Controls.Add(label33);
+            arsenalListGroupBox.Controls.Add(button2);
+            arsenalListGroupBox.Controls.Add(newArsenalButton);
+            arsenalListGroupBox.Controls.Add(colorProfileButton);
+            arsenalListGroupBox.Controls.Add(label1);
+            arsenalListGroupBox.Controls.Add(label6);
+            arsenalListGroupBox.Controls.Add(refreshArsenalListButton);
+            arsenalListGroupBox.Controls.Add(openArsenalFolderButton);
+            arsenalListGroupBox.Controls.Add(partnerLock);
+            arsenalListGroupBox.Controls.Add(deleteArsenalButton);
+            arsenalListGroupBox.Controls.Add(loadArsenalButton);
+            arsenalListGroupBox.Controls.Add(savedArsenalListBox);
+            arsenalListGroupBox.ForeColor = SystemColors.ScrollBar;
+            arsenalListGroupBox.Location = new Point(458, 98);
+            arsenalListGroupBox.Name = "arsenalListGroupBox";
+            arsenalListGroupBox.Size = new Size(433, 477);
+            arsenalListGroupBox.TabIndex = 1;
+            arsenalListGroupBox.TabStop = false;
+            arsenalListGroupBox.Text = "Arsenal List";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label35.ForeColor = SystemColors.WindowFrame;
+            label35.Location = new Point(412, 289);
+            label35.Name = "label35";
+            label35.Size = new Size(20, 15);
+            label35.TabIndex = 36;
+            label35.Text = "(?)";
+            toolTip1.SetToolTip(label35, "Loading a modpack only changes the game temporarily. Simply restart the game to unload all modded content.");
+            // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.CornflowerBlue;
+            button3.Location = new Point(240, 314);
+            button3.Name = "button3";
+            button3.Size = new Size(171, 26);
+            button3.TabIndex = 35;
+            button3.Text = "Load Random Deck";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label34.ForeColor = SystemColors.ControlDarkDark;
+            label34.Location = new Point(240, 265);
+            label34.Name = "label34";
+            label34.Size = new Size(170, 15);
+            label34.TabIndex = 34;
+            label34.Text = "Currently No Modpack Loaded";
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label33.ForeColor = SystemColors.WindowFrame;
+            label33.Location = new Point(412, 320);
+            label33.Name = "label33";
+            label33.Size = new Size(20, 15);
+            label33.TabIndex = 33;
+            label33.Text = "(?)";
+            toolTip2.SetToolTip(label33, resources.GetString("label33.ToolTip"));
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.FromArgb(128, 128, 255);
+            button2.Location = new Point(240, 283);
+            button2.Name = "button2";
+            button2.Size = new Size(170, 26);
+            button2.TabIndex = 32;
+            button2.Text = "Load Modpack";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // newArsenalButton
             // 
-            this.newArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.newArsenalButton.Location = new System.Drawing.Point(240, 29);
-            this.newArsenalButton.Name = "newArsenalButton";
-            this.newArsenalButton.Size = new System.Drawing.Size(187, 26);
-            this.newArsenalButton.TabIndex = 31;
-            this.newArsenalButton.Text = "New Arsenal";
-            this.newArsenalButton.UseVisualStyleBackColor = true;
-            this.newArsenalButton.Click += new System.EventHandler(this.newArsenalButton_Click);
+            newArsenalButton.FlatStyle = FlatStyle.Flat;
+            newArsenalButton.ForeColor = SystemColors.ScrollBar;
+            newArsenalButton.Location = new Point(240, 29);
+            newArsenalButton.Name = "newArsenalButton";
+            newArsenalButton.Size = new Size(187, 26);
+            newArsenalButton.TabIndex = 31;
+            newArsenalButton.Text = "New Arsenal";
+            newArsenalButton.UseVisualStyleBackColor = true;
+            newArsenalButton.Click += newArsenalButton_Click;
             // 
             // colorProfileButton
             // 
-            this.colorProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colorProfileButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.colorProfileButton.Location = new System.Drawing.Point(240, 346);
-            this.colorProfileButton.Name = "colorProfileButton";
-            this.colorProfileButton.Size = new System.Drawing.Size(187, 26);
-            this.colorProfileButton.TabIndex = 30;
-            this.colorProfileButton.Text = "Color Profile Settings";
-            this.colorProfileButton.UseVisualStyleBackColor = true;
-            this.colorProfileButton.Click += new System.EventHandler(this.colorProfileButton_Click);
+            colorProfileButton.FlatStyle = FlatStyle.Flat;
+            colorProfileButton.ForeColor = SystemColors.ScrollBar;
+            colorProfileButton.Location = new Point(240, 346);
+            colorProfileButton.Name = "colorProfileButton";
+            colorProfileButton.Size = new Size(187, 26);
+            colorProfileButton.TabIndex = 30;
+            colorProfileButton.Text = "Color Profile Settings";
+            colorProfileButton.UseVisualStyleBackColor = true;
+            colorProfileButton.Click += colorProfileButton_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(240, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 15);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "to toggle Partner LockOn";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.WindowFrame;
+            label1.Location = new Point(240, 127);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 15);
+            label1.TabIndex = 29;
+            label1.Text = "to toggle Partner LockOn";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label6.Location = new System.Drawing.Point(240, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 15);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Click Right Stick on Gamepad";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.WindowFrame;
+            label6.Location = new Point(240, 112);
+            label6.Name = "label6";
+            label6.Size = new Size(163, 15);
+            label6.TabIndex = 28;
+            label6.Text = "Click Right Stick on Gamepad";
             // 
             // refreshArsenalListButton
             // 
-            this.refreshArsenalListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshArsenalListButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.refreshArsenalListButton.Location = new System.Drawing.Point(240, 378);
-            this.refreshArsenalListButton.Name = "refreshArsenalListButton";
-            this.refreshArsenalListButton.Size = new System.Drawing.Size(187, 26);
-            this.refreshArsenalListButton.TabIndex = 27;
-            this.refreshArsenalListButton.Text = "Refresh Arsenal List";
-            this.refreshArsenalListButton.UseVisualStyleBackColor = true;
-            this.refreshArsenalListButton.Click += new System.EventHandler(this.refreshArsenalList);
+            refreshArsenalListButton.FlatStyle = FlatStyle.Flat;
+            refreshArsenalListButton.ForeColor = SystemColors.ScrollBar;
+            refreshArsenalListButton.Location = new Point(240, 378);
+            refreshArsenalListButton.Name = "refreshArsenalListButton";
+            refreshArsenalListButton.Size = new Size(187, 26);
+            refreshArsenalListButton.TabIndex = 27;
+            refreshArsenalListButton.Text = "Refresh Arsenal List";
+            refreshArsenalListButton.UseVisualStyleBackColor = true;
+            refreshArsenalListButton.Click += refreshArsenalList;
             // 
             // openArsenalFolderButton
             // 
-            this.openArsenalFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openArsenalFolderButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.openArsenalFolderButton.Location = new System.Drawing.Point(240, 410);
-            this.openArsenalFolderButton.Name = "openArsenalFolderButton";
-            this.openArsenalFolderButton.Size = new System.Drawing.Size(187, 26);
-            this.openArsenalFolderButton.TabIndex = 26;
-            this.openArsenalFolderButton.Text = "Open Arsenal Folder";
-            this.openArsenalFolderButton.UseVisualStyleBackColor = true;
-            this.openArsenalFolderButton.Click += new System.EventHandler(this.openArsenalFolder);
+            openArsenalFolderButton.FlatStyle = FlatStyle.Flat;
+            openArsenalFolderButton.ForeColor = SystemColors.ScrollBar;
+            openArsenalFolderButton.Location = new Point(240, 410);
+            openArsenalFolderButton.Name = "openArsenalFolderButton";
+            openArsenalFolderButton.Size = new Size(187, 26);
+            openArsenalFolderButton.TabIndex = 26;
+            openArsenalFolderButton.Text = "Open Arsenal Folder";
+            openArsenalFolderButton.UseVisualStyleBackColor = true;
+            openArsenalFolderButton.Click += openArsenalFolder;
             // 
             // partnerLock
             // 
-            this.partnerLock.AutoSize = true;
-            this.partnerLock.Location = new System.Drawing.Point(240, 90);
-            this.partnerLock.Name = "partnerLock";
-            this.partnerLock.Size = new System.Drawing.Size(146, 19);
-            this.partnerLock.TabIndex = 25;
-            this.partnerLock.Text = "Enable Partner LockOn";
-            this.partnerLock.UseVisualStyleBackColor = true;
-            this.partnerLock.CheckedChanged += new System.EventHandler(this.partnerLock_CheckedChanged);
+            partnerLock.AutoSize = true;
+            partnerLock.Location = new Point(240, 90);
+            partnerLock.Name = "partnerLock";
+            partnerLock.Size = new Size(146, 19);
+            partnerLock.TabIndex = 25;
+            partnerLock.Text = "Enable Partner LockOn";
+            partnerLock.UseVisualStyleBackColor = true;
+            partnerLock.CheckedChanged += partnerLock_CheckedChanged;
             // 
             // deleteArsenalButton
             // 
-            this.deleteArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteArsenalButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.deleteArsenalButton.Location = new System.Drawing.Point(240, 442);
-            this.deleteArsenalButton.Name = "deleteArsenalButton";
-            this.deleteArsenalButton.Size = new System.Drawing.Size(187, 26);
-            this.deleteArsenalButton.TabIndex = 24;
-            this.deleteArsenalButton.Text = "Delete Arsenal";
-            this.deleteArsenalButton.UseVisualStyleBackColor = true;
-            this.deleteArsenalButton.Click += new System.EventHandler(this.deleteArsenal);
+            deleteArsenalButton.FlatStyle = FlatStyle.Flat;
+            deleteArsenalButton.ForeColor = Color.FromArgb(212, 116, 116);
+            deleteArsenalButton.Location = new Point(240, 442);
+            deleteArsenalButton.Name = "deleteArsenalButton";
+            deleteArsenalButton.Size = new Size(187, 26);
+            deleteArsenalButton.TabIndex = 24;
+            deleteArsenalButton.Text = "Delete Arsenal";
+            deleteArsenalButton.UseVisualStyleBackColor = true;
+            deleteArsenalButton.Click += deleteArsenal;
             // 
             // loadArsenalButton
             // 
-            this.loadArsenalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadArsenalButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.loadArsenalButton.Location = new System.Drawing.Point(240, 61);
-            this.loadArsenalButton.Name = "loadArsenalButton";
-            this.loadArsenalButton.Size = new System.Drawing.Size(187, 23);
-            this.loadArsenalButton.TabIndex = 23;
-            this.loadArsenalButton.Text = "Load Arsenal";
-            this.loadArsenalButton.UseVisualStyleBackColor = true;
-            this.loadArsenalButton.Click += new System.EventHandler(this.loadArsenal);
+            loadArsenalButton.FlatStyle = FlatStyle.Flat;
+            loadArsenalButton.ForeColor = SystemColors.ScrollBar;
+            loadArsenalButton.Location = new Point(240, 61);
+            loadArsenalButton.Name = "loadArsenalButton";
+            loadArsenalButton.Size = new Size(187, 23);
+            loadArsenalButton.TabIndex = 23;
+            loadArsenalButton.Text = "Load Arsenal";
+            loadArsenalButton.UseVisualStyleBackColor = true;
+            loadArsenalButton.Click += loadArsenal;
             // 
             // savedArsenalListBox
             // 
-            this.savedArsenalListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.savedArsenalListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.savedArsenalListBox.FormattingEnabled = true;
-            this.savedArsenalListBox.ItemHeight = 15;
-            this.savedArsenalListBox.Location = new System.Drawing.Point(6, 29);
-            this.savedArsenalListBox.Name = "savedArsenalListBox";
-            this.savedArsenalListBox.Size = new System.Drawing.Size(228, 439);
-            this.savedArsenalListBox.TabIndex = 0;
+            savedArsenalListBox.BackColor = Color.FromArgb(33, 33, 33);
+            savedArsenalListBox.ForeColor = SystemColors.ScrollBar;
+            savedArsenalListBox.FormattingEnabled = true;
+            savedArsenalListBox.ItemHeight = 15;
+            savedArsenalListBox.Location = new Point(6, 29);
+            savedArsenalListBox.Name = "savedArsenalListBox";
+            savedArsenalListBox.Size = new Size(228, 439);
+            savedArsenalListBox.TabIndex = 0;
             // 
             // arsenalEditorGroupBox
             // 
-            this.arsenalEditorGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillDescription);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillUse);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillStrength);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillCost);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkilLRange);
-            this.arsenalEditorGroupBox.Controls.Add(this.label24);
-            this.arsenalEditorGroupBox.Controls.Add(this.label23);
-            this.arsenalEditorGroupBox.Controls.Add(this.label22);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillSchool);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillID);
-            this.arsenalEditorGroupBox.Controls.Add(this.labelSkillName);
-            this.arsenalEditorGroupBox.Controls.Add(this.label11);
-            this.arsenalEditorGroupBox.Controls.Add(this.editorSearchTextBox);
-            this.arsenalEditorGroupBox.Controls.Add(this.resetSelectedButton);
-            this.arsenalEditorGroupBox.Controls.Add(this.replaceSkillButton);
-            this.arsenalEditorGroupBox.Controls.Add(this.editorList);
-            this.arsenalEditorGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.arsenalEditorGroupBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.arsenalEditorGroupBox.Location = new System.Drawing.Point(12, 330);
-            this.arsenalEditorGroupBox.Name = "arsenalEditorGroupBox";
-            this.arsenalEditorGroupBox.Size = new System.Drawing.Size(447, 245);
-            this.arsenalEditorGroupBox.TabIndex = 27;
-            this.arsenalEditorGroupBox.TabStop = false;
-            this.arsenalEditorGroupBox.Text = "Quick Arsenal Editor";
+            arsenalEditorGroupBox.BackColor = Color.FromArgb(33, 33, 33);
+            arsenalEditorGroupBox.Controls.Add(labelSkillDescription);
+            arsenalEditorGroupBox.Controls.Add(labelSkillUse);
+            arsenalEditorGroupBox.Controls.Add(labelSkillStrength);
+            arsenalEditorGroupBox.Controls.Add(labelSkillCost);
+            arsenalEditorGroupBox.Controls.Add(labelSkilLRange);
+            arsenalEditorGroupBox.Controls.Add(label24);
+            arsenalEditorGroupBox.Controls.Add(label23);
+            arsenalEditorGroupBox.Controls.Add(label22);
+            arsenalEditorGroupBox.Controls.Add(labelSkillSchool);
+            arsenalEditorGroupBox.Controls.Add(labelSkillID);
+            arsenalEditorGroupBox.Controls.Add(labelSkillName);
+            arsenalEditorGroupBox.Controls.Add(label11);
+            arsenalEditorGroupBox.Controls.Add(editorSearchTextBox);
+            arsenalEditorGroupBox.Controls.Add(resetSelectedButton);
+            arsenalEditorGroupBox.Controls.Add(replaceSkillButton);
+            arsenalEditorGroupBox.Controls.Add(editorList);
+            arsenalEditorGroupBox.FlatStyle = FlatStyle.Flat;
+            arsenalEditorGroupBox.ForeColor = SystemColors.ScrollBar;
+            arsenalEditorGroupBox.Location = new Point(12, 330);
+            arsenalEditorGroupBox.Name = "arsenalEditorGroupBox";
+            arsenalEditorGroupBox.Size = new Size(447, 245);
+            arsenalEditorGroupBox.TabIndex = 27;
+            arsenalEditorGroupBox.TabStop = false;
+            arsenalEditorGroupBox.Text = "Quick Arsenal Editor";
             // 
             // labelSkillDescription
             // 
-            this.labelSkillDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.labelSkillDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.labelSkillDescription.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.labelSkillDescription.Location = new System.Drawing.Point(222, 166);
-            this.labelSkillDescription.Name = "labelSkillDescription";
-            this.labelSkillDescription.ReadOnly = true;
-            this.labelSkillDescription.Size = new System.Drawing.Size(219, 73);
-            this.labelSkillDescription.TabIndex = 42;
-            this.labelSkillDescription.Text = "Press once to set. Detonates when anyone enters blast area. Freezes target\'s skil" +
-    "l buttons for 3 sec.";
+            labelSkillDescription.BackColor = Color.FromArgb(33, 33, 33);
+            labelSkillDescription.BorderStyle = BorderStyle.None;
+            labelSkillDescription.ForeColor = SystemColors.ScrollBar;
+            labelSkillDescription.Location = new Point(222, 166);
+            labelSkillDescription.Name = "labelSkillDescription";
+            labelSkillDescription.ReadOnly = true;
+            labelSkillDescription.Size = new Size(219, 73);
+            labelSkillDescription.TabIndex = 42;
+            labelSkillDescription.Text = "Press once to set. Detonates when anyone enters blast area. Freezes target's skill buttons for 3 sec.";
             // 
             // labelSkillUse
             // 
-            this.labelSkillUse.AutoSize = true;
-            this.labelSkillUse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSkillUse.Location = new System.Drawing.Point(343, 144);
-            this.labelSkillUse.Name = "labelSkillUse";
-            this.labelSkillUse.Size = new System.Drawing.Size(19, 15);
-            this.labelSkillUse.TabIndex = 41;
-            this.labelSkillUse.Text = "00";
-            this.labelSkillUse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkillUse.AutoSize = true;
+            labelSkillUse.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSkillUse.Location = new Point(343, 144);
+            labelSkillUse.Name = "labelSkillUse";
+            labelSkillUse.Size = new Size(19, 15);
+            labelSkillUse.TabIndex = 41;
+            labelSkillUse.Text = "00";
+            labelSkillUse.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSkillStrength
             // 
-            this.labelSkillStrength.AutoSize = true;
-            this.labelSkillStrength.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSkillStrength.Location = new System.Drawing.Point(294, 144);
-            this.labelSkillStrength.Name = "labelSkillStrength";
-            this.labelSkillStrength.Size = new System.Drawing.Size(19, 15);
-            this.labelSkillStrength.TabIndex = 40;
-            this.labelSkillStrength.Text = "00";
-            this.labelSkillStrength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkillStrength.AutoSize = true;
+            labelSkillStrength.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSkillStrength.Location = new Point(294, 144);
+            labelSkillStrength.Name = "labelSkillStrength";
+            labelSkillStrength.Size = new Size(19, 15);
+            labelSkillStrength.TabIndex = 40;
+            labelSkillStrength.Text = "00";
+            labelSkillStrength.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSkillCost
             // 
-            this.labelSkillCost.AutoSize = true;
-            this.labelSkillCost.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSkillCost.Location = new System.Drawing.Point(250, 144);
-            this.labelSkillCost.Name = "labelSkillCost";
-            this.labelSkillCost.Size = new System.Drawing.Size(19, 15);
-            this.labelSkillCost.TabIndex = 39;
-            this.labelSkillCost.Text = "00";
-            this.labelSkillCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkillCost.AutoSize = true;
+            labelSkillCost.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSkillCost.Location = new Point(250, 144);
+            labelSkillCost.Name = "labelSkillCost";
+            labelSkillCost.Size = new Size(19, 15);
+            labelSkillCost.TabIndex = 39;
+            labelSkillCost.Text = "00";
+            labelSkillCost.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSkilLRange
             // 
-            this.labelSkilLRange.AutoSize = true;
-            this.labelSkilLRange.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSkilLRange.Location = new System.Drawing.Point(389, 144);
-            this.labelSkilLRange.Name = "labelSkilLRange";
-            this.labelSkilLRange.Size = new System.Drawing.Size(52, 15);
-            this.labelSkilLRange.TabIndex = 38;
-            this.labelSkilLRange.Text = "Medium";
-            this.labelSkilLRange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkilLRange.AutoSize = true;
+            labelSkilLRange.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSkilLRange.Location = new Point(389, 144);
+            labelSkilLRange.Name = "labelSkilLRange";
+            labelSkilLRange.Size = new Size(52, 15);
+            labelSkilLRange.TabIndex = 38;
+            labelSkilLRange.Text = "Medium";
+            labelSkilLRange.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(315, 144);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 15);
-            this.label24.TabIndex = 37;
-            this.label24.Text = "Use:";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.Location = new Point(315, 144);
+            label24.Name = "label24";
+            label24.Size = new Size(31, 15);
+            label24.TabIndex = 37;
+            label24.Text = "Use:";
+            label24.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(219, 144);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(34, 15);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "Cost:";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.Location = new Point(219, 144);
+            label23.Name = "label23";
+            label23.Size = new Size(34, 15);
+            label23.TabIndex = 36;
+            label23.Text = "Cost:";
+            label23.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(270, 144);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(27, 15);
-            this.label22.TabIndex = 35;
-            this.label22.Text = "Str:";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.Location = new Point(270, 144);
+            label22.Name = "label22";
+            label22.Size = new Size(27, 15);
+            label22.TabIndex = 35;
+            label22.Text = "Str:";
+            label22.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSkillSchool
             // 
-            this.labelSkillSchool.AutoSize = true;
-            this.labelSkillSchool.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSkillSchool.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelSkillSchool.Location = new System.Drawing.Point(395, 119);
-            this.labelSkillSchool.Name = "labelSkillSchool";
-            this.labelSkillSchool.Size = new System.Drawing.Size(46, 15);
-            this.labelSkillSchool.TabIndex = 34;
-            this.labelSkillSchool.Text = "Nature";
-            this.labelSkillSchool.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkillSchool.AutoSize = true;
+            labelSkillSchool.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSkillSchool.ImageAlign = ContentAlignment.MiddleRight;
+            labelSkillSchool.Location = new Point(395, 119);
+            labelSkillSchool.Name = "labelSkillSchool";
+            labelSkillSchool.Size = new Size(46, 15);
+            labelSkillSchool.TabIndex = 34;
+            labelSkillSchool.Text = "Nature";
+            labelSkillSchool.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSkillID
             // 
-            this.labelSkillID.AutoSize = true;
-            this.labelSkillID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSkillID.Location = new System.Drawing.Point(219, 119);
-            this.labelSkillID.Name = "labelSkillID";
-            this.labelSkillID.Size = new System.Drawing.Size(28, 15);
-            this.labelSkillID.TabIndex = 33;
-            this.labelSkillID.Text = "000";
-            this.labelSkillID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkillID.AutoSize = true;
+            labelSkillID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSkillID.Location = new Point(219, 119);
+            labelSkillID.Name = "labelSkillID";
+            labelSkillID.Size = new Size(28, 15);
+            labelSkillID.TabIndex = 33;
+            labelSkillID.Text = "000";
+            labelSkillID.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSkillName
             // 
-            this.labelSkillName.AutoSize = true;
-            this.labelSkillName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSkillName.Location = new System.Drawing.Point(246, 119);
-            this.labelSkillName.Name = "labelSkillName";
-            this.labelSkillName.Size = new System.Drawing.Size(78, 15);
-            this.labelSkillName.TabIndex = 32;
-            this.labelSkillName.Text = "Aura Particle";
-            this.labelSkillName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSkillName.AutoSize = true;
+            labelSkillName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSkillName.Location = new Point(246, 119);
+            labelSkillName.Name = "labelSkillName";
+            labelSkillName.Size = new Size(78, 15);
+            labelSkillName.TabIndex = 32;
+            labelSkillName.Text = "Aura Particle";
+            labelSkillName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(218, 84);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 15);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Search:";
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(218, 84);
+            label11.Name = "label11";
+            label11.Size = new Size(48, 15);
+            label11.TabIndex = 6;
+            label11.Text = "Search:";
             // 
             // editorSearchTextBox
             // 
-            this.editorSearchTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.editorSearchTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.editorSearchTextBox.Location = new System.Drawing.Point(268, 81);
-            this.editorSearchTextBox.Name = "editorSearchTextBox";
-            this.editorSearchTextBox.Size = new System.Drawing.Size(173, 23);
-            this.editorSearchTextBox.TabIndex = 31;
-            this.editorSearchTextBox.TextChanged += new System.EventHandler(this.updateEditorList);
+            editorSearchTextBox.BackColor = Color.FromArgb(33, 33, 33);
+            editorSearchTextBox.ForeColor = SystemColors.ScrollBar;
+            editorSearchTextBox.Location = new Point(268, 81);
+            editorSearchTextBox.Name = "editorSearchTextBox";
+            editorSearchTextBox.Size = new Size(173, 23);
+            editorSearchTextBox.TabIndex = 31;
+            editorSearchTextBox.TextChanged += updateEditorList;
             // 
             // resetSelectedButton
             // 
-            this.resetSelectedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetSelectedButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.resetSelectedButton.Location = new System.Drawing.Point(218, 51);
-            this.resetSelectedButton.Name = "resetSelectedButton";
-            this.resetSelectedButton.Size = new System.Drawing.Size(223, 23);
-            this.resetSelectedButton.TabIndex = 28;
-            this.resetSelectedButton.Text = "Reset Selected";
-            this.resetSelectedButton.UseVisualStyleBackColor = true;
-            this.resetSelectedButton.Click += new System.EventHandler(this.resetSkill);
+            resetSelectedButton.FlatStyle = FlatStyle.Flat;
+            resetSelectedButton.ForeColor = SystemColors.ScrollBar;
+            resetSelectedButton.Location = new Point(218, 51);
+            resetSelectedButton.Name = "resetSelectedButton";
+            resetSelectedButton.Size = new Size(223, 23);
+            resetSelectedButton.TabIndex = 28;
+            resetSelectedButton.Text = "Reset Selected";
+            resetSelectedButton.UseVisualStyleBackColor = true;
+            resetSelectedButton.Click += resetSkill;
             // 
             // replaceSkillButton
             // 
-            this.replaceSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.replaceSkillButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.replaceSkillButton.Location = new System.Drawing.Point(218, 22);
-            this.replaceSkillButton.Name = "replaceSkillButton";
-            this.replaceSkillButton.Size = new System.Drawing.Size(223, 23);
-            this.replaceSkillButton.TabIndex = 27;
-            this.replaceSkillButton.Text = "Replace Skill";
-            this.replaceSkillButton.UseVisualStyleBackColor = true;
-            this.replaceSkillButton.Click += new System.EventHandler(this.replaceSkill);
+            replaceSkillButton.FlatStyle = FlatStyle.Flat;
+            replaceSkillButton.ForeColor = SystemColors.ScrollBar;
+            replaceSkillButton.Location = new Point(218, 22);
+            replaceSkillButton.Name = "replaceSkillButton";
+            replaceSkillButton.Size = new Size(223, 23);
+            replaceSkillButton.TabIndex = 27;
+            replaceSkillButton.Text = "Replace Skill";
+            replaceSkillButton.UseVisualStyleBackColor = true;
+            replaceSkillButton.Click += replaceSkill;
             // 
             // editorList
             // 
-            this.editorList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.editorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.editorList.ColumnWidth = 140;
-            this.editorList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.editorList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.editorList.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.editorList.FormattingEnabled = true;
-            this.editorList.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.editorList.IntegralHeight = false;
-            this.editorList.ItemHeight = 15;
-            this.editorList.Location = new System.Drawing.Point(8, 22);
-            this.editorList.Name = "editorList";
-            this.editorList.Size = new System.Drawing.Size(205, 214);
-            this.editorList.TabIndex = 27;
-            this.editorList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.skillList_DrawItem);
-            this.editorList.SelectedIndexChanged += new System.EventHandler(this.editorList_SelectedIndexChanged);
+            editorList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            editorList.BackColor = Color.FromArgb(33, 33, 33);
+            editorList.ColumnWidth = 140;
+            editorList.DrawMode = DrawMode.OwnerDrawFixed;
+            editorList.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            editorList.ForeColor = SystemColors.ScrollBar;
+            editorList.FormattingEnabled = true;
+            editorList.ImeMode = ImeMode.Off;
+            editorList.IntegralHeight = false;
+            editorList.ItemHeight = 15;
+            editorList.Location = new Point(8, 22);
+            editorList.Name = "editorList";
+            editorList.Size = new Size(205, 214);
+            editorList.TabIndex = 27;
+            editorList.DrawItem += skillList_DrawItem;
+            editorList.SelectedIndexChanged += editorList_SelectedIndexChanged;
             // 
             // GamepadWorker
             // 
-            this.GamepadWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GamepadWorker_DoWork_1);
+            GamepadWorker.DoWork += GamepadWorker_DoWork_1;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.sortComboBox3);
-            this.groupBox3.Controls.Add(this.sortComboBox2);
-            this.groupBox3.Controls.Add(this.sortComboBox1);
-            this.groupBox3.Controls.Add(this.costMaxNumeric);
-            this.groupBox3.Controls.Add(this.costMinNumeric);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.miscNumberCheckedListBox);
-            this.groupBox3.Controls.Add(this.useMaxNumeric);
-            this.groupBox3.Controls.Add(this.defMaxNumeric);
-            this.groupBox3.Controls.Add(this.useMinNumeric);
-            this.groupBox3.Controls.Add(this.defMinNumeric);
-            this.groupBox3.Controls.Add(this.strMaxNumeric);
-            this.groupBox3.Controls.Add(this.strMinNumeric);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.rangeFilterCheckedListBox);
-            this.groupBox3.Controls.Add(this.environmentalRadioButton);
-            this.groupBox3.Controls.Add(this.specialRadioButton);
-            this.groupBox3.Controls.Add(this.statusRadioButton);
-            this.groupBox3.Controls.Add(this.eraseRadioButton);
-            this.groupBox3.Controls.Add(this.defenseRadioButton);
-            this.groupBox3.Controls.Add(this.attackRadioButton);
-            this.groupBox3.Controls.Add(this.allSkillsRadioButton);
-            this.groupBox3.Controls.Add(this.schoolFilterCheckedListBox);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.groupBox3.Location = new System.Drawing.Point(12, 572);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(879, 177);
-            this.groupBox3.TabIndex = 28;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filter Settings";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            groupBox3.Controls.Add(label32);
+            groupBox3.Controls.Add(label31);
+            groupBox3.Controls.Add(label30);
+            groupBox3.Controls.Add(label29);
+            groupBox3.Controls.Add(label28);
+            groupBox3.Controls.Add(label27);
+            groupBox3.Controls.Add(label26);
+            groupBox3.Controls.Add(label25);
+            groupBox3.Controls.Add(label21);
+            groupBox3.Controls.Add(label20);
+            groupBox3.Controls.Add(label19);
+            groupBox3.Controls.Add(label18);
+            groupBox3.Controls.Add(label17);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(sortComboBox3);
+            groupBox3.Controls.Add(sortComboBox2);
+            groupBox3.Controls.Add(sortComboBox1);
+            groupBox3.Controls.Add(costMaxNumeric);
+            groupBox3.Controls.Add(costMinNumeric);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(miscNumberCheckedListBox);
+            groupBox3.Controls.Add(useMaxNumeric);
+            groupBox3.Controls.Add(defMaxNumeric);
+            groupBox3.Controls.Add(useMinNumeric);
+            groupBox3.Controls.Add(defMinNumeric);
+            groupBox3.Controls.Add(strMaxNumeric);
+            groupBox3.Controls.Add(strMinNumeric);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(label13);
+            groupBox3.Controls.Add(label7);
+            groupBox3.Controls.Add(rangeFilterCheckedListBox);
+            groupBox3.Controls.Add(environmentalRadioButton);
+            groupBox3.Controls.Add(specialRadioButton);
+            groupBox3.Controls.Add(statusRadioButton);
+            groupBox3.Controls.Add(eraseRadioButton);
+            groupBox3.Controls.Add(defenseRadioButton);
+            groupBox3.Controls.Add(attackRadioButton);
+            groupBox3.Controls.Add(allSkillsRadioButton);
+            groupBox3.Controls.Add(schoolFilterCheckedListBox);
+            groupBox3.ForeColor = SystemColors.ScrollBar;
+            groupBox3.Location = new Point(12, 572);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(879, 177);
+            groupBox3.TabIndex = 28;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Filter Settings";
+            groupBox3.Enter += groupBox3_Enter;
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(634, 107);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(34, 15);
-            this.label32.TabIndex = 61;
-            this.label32.Text = "Third";
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label32.Location = new Point(634, 107);
+            label32.Name = "label32";
+            label32.Size = new Size(34, 15);
+            label32.TabIndex = 61;
+            label32.Text = "Third";
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(624, 78);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(46, 15);
-            this.label31.TabIndex = 60;
-            this.label31.Text = "Second";
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label31.Location = new Point(624, 78);
+            label31.Name = "label31";
+            label31.Size = new Size(46, 15);
+            label31.TabIndex = 60;
+            label31.Text = "Second";
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(639, 48);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 15);
-            this.label30.TabIndex = 59;
-            this.label30.Text = "First";
+            label30.AutoSize = true;
+            label30.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label30.Location = new Point(639, 48);
+            label30.Name = "label30";
+            label30.Size = new Size(29, 15);
+            label30.TabIndex = 59;
+            label30.Text = "First";
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(672, 22);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(48, 15);
-            this.label29.TabIndex = 58;
-            this.label29.Text = "Sort By";
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label29.Location = new Point(672, 22);
+            label29.Name = "label29";
+            label29.Size = new Size(48, 15);
+            label29.TabIndex = 58;
+            label29.Text = "Sort By";
             // 
             // label28
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(475, 134);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(12, 15);
-            this.label28.TabIndex = 57;
-            this.label28.Text = "-";
+            label28.AutoSize = true;
+            label28.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label28.Location = new Point(475, 134);
+            label28.Name = "label28";
+            label28.Size = new Size(12, 15);
+            label28.TabIndex = 57;
+            label28.Text = "-";
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(475, 106);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(12, 15);
-            this.label27.TabIndex = 56;
-            this.label27.Text = "-";
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label27.Location = new Point(475, 106);
+            label27.Name = "label27";
+            label27.Size = new Size(12, 15);
+            label27.TabIndex = 56;
+            label27.Text = "-";
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(475, 77);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(12, 15);
-            this.label26.TabIndex = 55;
-            this.label26.Text = "-";
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.Location = new Point(475, 77);
+            label26.Name = "label26";
+            label26.Size = new Size(12, 15);
+            label26.TabIndex = 55;
+            label26.Text = "-";
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(475, 48);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(12, 15);
-            this.label25.TabIndex = 54;
-            this.label25.Text = "-";
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label25.Location = new Point(475, 48);
+            label25.Name = "label25";
+            label25.Size = new Size(12, 15);
+            label25.TabIndex = 54;
+            label25.Text = "-";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(531, 62);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 15);
-            this.label21.TabIndex = 53;
-            this.label21.Text = "Include";
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.Location = new Point(531, 62);
+            label21.Name = "label21";
+            label21.Size = new Size(48, 15);
+            label21.TabIndex = 53;
+            label21.Text = "Include";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(491, 22);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 15);
-            this.label20.TabIndex = 52;
-            this.label20.Text = "Max";
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.Location = new Point(491, 22);
+            label20.Name = "label20";
+            label20.Size = new Size(31, 15);
+            label20.TabIndex = 52;
+            label20.Text = "Max";
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(441, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(28, 15);
-            this.label19.TabIndex = 51;
-            this.label19.Text = "Min";
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.Location = new Point(441, 22);
+            label19.Name = "label19";
+            label19.Size = new Size(28, 15);
+            label19.TabIndex = 51;
+            label19.Text = "Min";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(224, 22);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 15);
-            this.label18.TabIndex = 50;
-            this.label18.Text = "Range";
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.Location = new Point(224, 22);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 15);
+            label18.TabIndex = 50;
+            label18.Text = "Range";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(106, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(33, 15);
-            this.label17.TabIndex = 49;
-            this.label17.Text = "Type";
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(106, 22);
+            label17.Name = "label17";
+            label17.Size = new Size(33, 15);
+            label17.TabIndex = 49;
+            label17.Text = "Type";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(7, 22);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 15);
-            this.label16.TabIndex = 48;
-            this.label16.Text = "School";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.Location = new Point(7, 22);
+            label16.Name = "label16";
+            label16.Size = new Size(44, 15);
+            label16.TabIndex = 48;
+            label16.Text = "School";
+            label16.Click += label16_Click;
             // 
             // sortComboBox3
             // 
-            this.sortComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.sortComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortComboBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.sortComboBox3.FormattingEnabled = true;
-            this.sortComboBox3.Items.AddRange(new object[] {
-            "School",
-            "Cost",
-            "Strength",
-            "Number of Uses",
-            "Range",
-            "ID",
-            "None"});
-            this.sortComboBox3.Location = new System.Drawing.Point(672, 104);
-            this.sortComboBox3.MaxDropDownItems = 16;
-            this.sortComboBox3.Name = "sortComboBox3";
-            this.sortComboBox3.Size = new System.Drawing.Size(185, 23);
-            this.sortComboBox3.TabIndex = 47;
-            this.sortComboBox3.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
+            sortComboBox3.BackColor = Color.FromArgb(33, 33, 33);
+            sortComboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            sortComboBox3.FlatStyle = FlatStyle.Flat;
+            sortComboBox3.ForeColor = SystemColors.ScrollBar;
+            sortComboBox3.FormattingEnabled = true;
+            sortComboBox3.Items.AddRange(new object[] { "School", "Cost", "Strength", "Number of Uses", "Range", "ID", "None" });
+            sortComboBox3.Location = new Point(672, 104);
+            sortComboBox3.MaxDropDownItems = 16;
+            sortComboBox3.Name = "sortComboBox3";
+            sortComboBox3.Size = new Size(185, 23);
+            sortComboBox3.TabIndex = 47;
+            sortComboBox3.SelectedIndexChanged += updateEditorList;
             // 
             // sortComboBox2
             // 
-            this.sortComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.sortComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortComboBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.sortComboBox2.FormattingEnabled = true;
-            this.sortComboBox2.Items.AddRange(new object[] {
-            "School",
-            "Cost",
-            "Strength",
-            "Number of Uses",
-            "Range",
-            "ID",
-            "None"});
-            this.sortComboBox2.Location = new System.Drawing.Point(672, 75);
-            this.sortComboBox2.MaxDropDownItems = 16;
-            this.sortComboBox2.Name = "sortComboBox2";
-            this.sortComboBox2.Size = new System.Drawing.Size(185, 23);
-            this.sortComboBox2.TabIndex = 46;
-            this.sortComboBox2.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
+            sortComboBox2.BackColor = Color.FromArgb(33, 33, 33);
+            sortComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            sortComboBox2.FlatStyle = FlatStyle.Flat;
+            sortComboBox2.ForeColor = SystemColors.ScrollBar;
+            sortComboBox2.FormattingEnabled = true;
+            sortComboBox2.Items.AddRange(new object[] { "School", "Cost", "Strength", "Number of Uses", "Range", "ID", "None" });
+            sortComboBox2.Location = new Point(672, 75);
+            sortComboBox2.MaxDropDownItems = 16;
+            sortComboBox2.Name = "sortComboBox2";
+            sortComboBox2.Size = new Size(185, 23);
+            sortComboBox2.TabIndex = 46;
+            sortComboBox2.SelectedIndexChanged += updateEditorList;
             // 
             // sortComboBox1
             // 
-            this.sortComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.sortComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortComboBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.sortComboBox1.FormattingEnabled = true;
-            this.sortComboBox1.Items.AddRange(new object[] {
-            "School",
-            "Cost",
-            "Strength",
-            "Number of Uses",
-            "Range",
-            "ID"});
-            this.sortComboBox1.Location = new System.Drawing.Point(672, 46);
-            this.sortComboBox1.MaxDropDownItems = 16;
-            this.sortComboBox1.Name = "sortComboBox1";
-            this.sortComboBox1.Size = new System.Drawing.Size(185, 23);
-            this.sortComboBox1.TabIndex = 33;
-            this.sortComboBox1.SelectedIndexChanged += new System.EventHandler(this.updateEditorList);
+            sortComboBox1.BackColor = Color.FromArgb(33, 33, 33);
+            sortComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            sortComboBox1.FlatStyle = FlatStyle.Flat;
+            sortComboBox1.ForeColor = SystemColors.ScrollBar;
+            sortComboBox1.FormattingEnabled = true;
+            sortComboBox1.Items.AddRange(new object[] { "School", "Cost", "Strength", "Number of Uses", "Range", "ID" });
+            sortComboBox1.Location = new Point(672, 46);
+            sortComboBox1.MaxDropDownItems = 16;
+            sortComboBox1.Name = "sortComboBox1";
+            sortComboBox1.Size = new Size(185, 23);
+            sortComboBox1.TabIndex = 33;
+            sortComboBox1.SelectedIndexChanged += updateEditorList;
             // 
             // costMaxNumeric
             // 
-            this.costMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.costMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.costMaxNumeric.Location = new System.Drawing.Point(489, 130);
-            this.costMaxNumeric.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.costMaxNumeric.Name = "costMaxNumeric";
-            this.costMaxNumeric.Size = new System.Drawing.Size(36, 23);
-            this.costMaxNumeric.TabIndex = 45;
-            this.costMaxNumeric.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.costMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            costMaxNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            costMaxNumeric.ForeColor = SystemColors.ScrollBar;
+            costMaxNumeric.Location = new Point(489, 130);
+            costMaxNumeric.Maximum = new decimal(new int[] { 8, 0, 0, 0 });
+            costMaxNumeric.Name = "costMaxNumeric";
+            costMaxNumeric.Size = new Size(36, 23);
+            costMaxNumeric.TabIndex = 45;
+            costMaxNumeric.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            costMaxNumeric.ValueChanged += updateEditorList;
             // 
             // costMinNumeric
             // 
-            this.costMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.costMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.costMinNumeric.Location = new System.Drawing.Point(438, 131);
-            this.costMinNumeric.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.costMinNumeric.Name = "costMinNumeric";
-            this.costMinNumeric.Size = new System.Drawing.Size(36, 23);
-            this.costMinNumeric.TabIndex = 44;
-            this.costMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            costMinNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            costMinNumeric.ForeColor = SystemColors.ScrollBar;
+            costMinNumeric.Location = new Point(438, 131);
+            costMinNumeric.Maximum = new decimal(new int[] { 8, 0, 0, 0 });
+            costMinNumeric.Name = "costMinNumeric";
+            costMinNumeric.Size = new Size(36, 23);
+            costMinNumeric.TabIndex = 44;
+            costMinNumeric.ValueChanged += updateEditorList;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(398, 133);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 15);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "COST";
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(398, 133);
+            label15.Name = "label15";
+            label15.Size = new Size(37, 15);
+            label15.TabIndex = 43;
+            label15.Text = "COST";
             // 
             // miscNumberCheckedListBox
             // 
-            this.miscNumberCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.miscNumberCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.miscNumberCheckedListBox.CheckOnClick = true;
-            this.miscNumberCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.miscNumberCheckedListBox.FormattingEnabled = true;
-            this.miscNumberCheckedListBox.Items.AddRange(new object[] {
-            "X STR",
-            "- DEF",
-            "∞ USE",
-            "X COST"});
-            this.miscNumberCheckedListBox.Location = new System.Drawing.Point(531, 84);
-            this.miscNumberCheckedListBox.Name = "miscNumberCheckedListBox";
-            this.miscNumberCheckedListBox.Size = new System.Drawing.Size(63, 72);
-            this.miscNumberCheckedListBox.TabIndex = 42;
-            this.miscNumberCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.miscNumberCheckedListBox_ItemCheck);
-            this.miscNumberCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
+            miscNumberCheckedListBox.BackColor = Color.FromArgb(33, 33, 33);
+            miscNumberCheckedListBox.BorderStyle = BorderStyle.None;
+            miscNumberCheckedListBox.CheckOnClick = true;
+            miscNumberCheckedListBox.ForeColor = SystemColors.ScrollBar;
+            miscNumberCheckedListBox.FormattingEnabled = true;
+            miscNumberCheckedListBox.Items.AddRange(new object[] { "X STR", "- DEF", "∞ USE", "X COST" });
+            miscNumberCheckedListBox.Location = new Point(531, 84);
+            miscNumberCheckedListBox.Name = "miscNumberCheckedListBox";
+            miscNumberCheckedListBox.Size = new Size(63, 72);
+            miscNumberCheckedListBox.TabIndex = 42;
+            miscNumberCheckedListBox.ItemCheck += miscNumberCheckedListBox_ItemCheck;
+            miscNumberCheckedListBox.SelectedIndexChanged += checkedListBox_SelectedIndexChanged;
             // 
             // useMaxNumeric
             // 
-            this.useMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.useMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.useMaxNumeric.Location = new System.Drawing.Point(489, 102);
-            this.useMaxNumeric.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.useMaxNumeric.Name = "useMaxNumeric";
-            this.useMaxNumeric.Size = new System.Drawing.Size(36, 23);
-            this.useMaxNumeric.TabIndex = 41;
-            this.useMaxNumeric.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.useMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            useMaxNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            useMaxNumeric.ForeColor = SystemColors.ScrollBar;
+            useMaxNumeric.Location = new Point(489, 102);
+            useMaxNumeric.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            useMaxNumeric.Name = "useMaxNumeric";
+            useMaxNumeric.Size = new Size(36, 23);
+            useMaxNumeric.TabIndex = 41;
+            useMaxNumeric.Value = new decimal(new int[] { 5, 0, 0, 0 });
+            useMaxNumeric.ValueChanged += updateEditorList;
             // 
             // defMaxNumeric
             // 
-            this.defMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.defMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.defMaxNumeric.Location = new System.Drawing.Point(489, 73);
-            this.defMaxNumeric.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.defMaxNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.defMaxNumeric.Name = "defMaxNumeric";
-            this.defMaxNumeric.Size = new System.Drawing.Size(36, 23);
-            this.defMaxNumeric.TabIndex = 40;
-            this.defMaxNumeric.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.defMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            defMaxNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            defMaxNumeric.ForeColor = SystemColors.ScrollBar;
+            defMaxNumeric.Location = new Point(489, 73);
+            defMaxNumeric.Maximum = new decimal(new int[] { 8, 0, 0, 0 });
+            defMaxNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            defMaxNumeric.Name = "defMaxNumeric";
+            defMaxNumeric.Size = new Size(36, 23);
+            defMaxNumeric.TabIndex = 40;
+            defMaxNumeric.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            defMaxNumeric.ValueChanged += updateEditorList;
             // 
             // useMinNumeric
             // 
-            this.useMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.useMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.useMinNumeric.Location = new System.Drawing.Point(438, 102);
-            this.useMinNumeric.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.useMinNumeric.Name = "useMinNumeric";
-            this.useMinNumeric.Size = new System.Drawing.Size(36, 23);
-            this.useMinNumeric.TabIndex = 39;
-            this.useMinNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.useMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            useMinNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            useMinNumeric.ForeColor = SystemColors.ScrollBar;
+            useMinNumeric.Location = new Point(438, 102);
+            useMinNumeric.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            useMinNumeric.Name = "useMinNumeric";
+            useMinNumeric.Size = new Size(36, 23);
+            useMinNumeric.TabIndex = 39;
+            useMinNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            useMinNumeric.ValueChanged += updateEditorList;
             // 
             // defMinNumeric
             // 
-            this.defMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.defMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.defMinNumeric.Location = new System.Drawing.Point(438, 73);
-            this.defMinNumeric.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.defMinNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.defMinNumeric.Name = "defMinNumeric";
-            this.defMinNumeric.Size = new System.Drawing.Size(36, 23);
-            this.defMinNumeric.TabIndex = 38;
-            this.defMinNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.defMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            defMinNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            defMinNumeric.ForeColor = SystemColors.ScrollBar;
+            defMinNumeric.Location = new Point(438, 73);
+            defMinNumeric.Maximum = new decimal(new int[] { 8, 0, 0, 0 });
+            defMinNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            defMinNumeric.Name = "defMinNumeric";
+            defMinNumeric.Size = new Size(36, 23);
+            defMinNumeric.TabIndex = 38;
+            defMinNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            defMinNumeric.ValueChanged += updateEditorList;
             // 
             // strMaxNumeric
             // 
-            this.strMaxNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.strMaxNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.strMaxNumeric.Location = new System.Drawing.Point(489, 44);
-            this.strMaxNumeric.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.strMaxNumeric.Name = "strMaxNumeric";
-            this.strMaxNumeric.Size = new System.Drawing.Size(36, 23);
-            this.strMaxNumeric.TabIndex = 37;
-            this.strMaxNumeric.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.strMaxNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            strMaxNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            strMaxNumeric.ForeColor = SystemColors.ScrollBar;
+            strMaxNumeric.Location = new Point(489, 44);
+            strMaxNumeric.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            strMaxNumeric.Name = "strMaxNumeric";
+            strMaxNumeric.Size = new Size(36, 23);
+            strMaxNumeric.TabIndex = 37;
+            strMaxNumeric.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            strMaxNumeric.ValueChanged += updateEditorList;
             // 
             // strMinNumeric
             // 
-            this.strMinNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.strMinNumeric.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.strMinNumeric.Location = new System.Drawing.Point(438, 45);
-            this.strMinNumeric.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.strMinNumeric.Name = "strMinNumeric";
-            this.strMinNumeric.Size = new System.Drawing.Size(36, 23);
-            this.strMinNumeric.TabIndex = 36;
-            this.strMinNumeric.ValueChanged += new System.EventHandler(this.updateEditorList);
+            strMinNumeric.BackColor = Color.FromArgb(33, 33, 33);
+            strMinNumeric.ForeColor = SystemColors.ScrollBar;
+            strMinNumeric.Location = new Point(438, 45);
+            strMinNumeric.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            strMinNumeric.Name = "strMinNumeric";
+            strMinNumeric.Size = new Size(36, 23);
+            strMinNumeric.TabIndex = 36;
+            strMinNumeric.ValueChanged += updateEditorList;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(405, 104);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 15);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "USE";
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Location = new Point(405, 104);
+            label14.Name = "label14";
+            label14.Size = new Size(29, 15);
+            label14.TabIndex = 16;
+            label14.Text = "USE";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(405, 75);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 15);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "DEF";
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(405, 75);
+            label13.Name = "label13";
+            label13.Size = new Size(28, 15);
+            label13.TabIndex = 15;
+            label13.Text = "DEF";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(406, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 15);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "STR";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(406, 46);
+            label7.Name = "label7";
+            label7.Size = new Size(29, 15);
+            label7.TabIndex = 14;
+            label7.Text = "STR";
             // 
             // rangeFilterCheckedListBox
             // 
-            this.rangeFilterCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.rangeFilterCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rangeFilterCheckedListBox.CheckOnClick = true;
-            this.rangeFilterCheckedListBox.ColumnWidth = 75;
-            this.rangeFilterCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.rangeFilterCheckedListBox.FormattingEnabled = true;
-            this.rangeFilterCheckedListBox.Items.AddRange(new object[] {
-            "Short",
-            "Medium",
-            "Long",
-            "Mine",
-            "Capsule",
-            "[N/A]",
-            "Self",
-            "All",
-            "Auto",
-            "Env"});
-            this.rangeFilterCheckedListBox.Location = new System.Drawing.Point(226, 44);
-            this.rangeFilterCheckedListBox.MultiColumn = true;
-            this.rangeFilterCheckedListBox.Name = "rangeFilterCheckedListBox";
-            this.rangeFilterCheckedListBox.Size = new System.Drawing.Size(154, 90);
-            this.rangeFilterCheckedListBox.TabIndex = 13;
-            this.rangeFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.rangeFilterCheckedListBox_ItemCheck);
-            this.rangeFilterCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
+            rangeFilterCheckedListBox.BackColor = Color.FromArgb(33, 33, 33);
+            rangeFilterCheckedListBox.BorderStyle = BorderStyle.None;
+            rangeFilterCheckedListBox.CheckOnClick = true;
+            rangeFilterCheckedListBox.ColumnWidth = 75;
+            rangeFilterCheckedListBox.ForeColor = SystemColors.ScrollBar;
+            rangeFilterCheckedListBox.FormattingEnabled = true;
+            rangeFilterCheckedListBox.Items.AddRange(new object[] { "Short", "Medium", "Long", "Mine", "Capsule", "[N/A]", "Self", "All", "Auto", "Env" });
+            rangeFilterCheckedListBox.Location = new Point(226, 44);
+            rangeFilterCheckedListBox.MultiColumn = true;
+            rangeFilterCheckedListBox.Name = "rangeFilterCheckedListBox";
+            rangeFilterCheckedListBox.Size = new Size(154, 90);
+            rangeFilterCheckedListBox.TabIndex = 13;
+            rangeFilterCheckedListBox.ItemCheck += rangeFilterCheckedListBox_ItemCheck;
+            rangeFilterCheckedListBox.SelectedIndexChanged += checkedListBox_SelectedIndexChanged;
             // 
             // environmentalRadioButton
             // 
-            this.environmentalRadioButton.AutoSize = true;
-            this.environmentalRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.environmentalRadioButton.Location = new System.Drawing.Point(108, 149);
-            this.environmentalRadioButton.Name = "environmentalRadioButton";
-            this.environmentalRadioButton.Size = new System.Drawing.Size(102, 19);
-            this.environmentalRadioButton.TabIndex = 12;
-            this.environmentalRadioButton.Text = "Environmental";
-            this.environmentalRadioButton.UseVisualStyleBackColor = true;
-            this.environmentalRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
+            environmentalRadioButton.AutoSize = true;
+            environmentalRadioButton.ForeColor = Color.FromArgb(112, 239, 239);
+            environmentalRadioButton.Location = new Point(108, 149);
+            environmentalRadioButton.Name = "environmentalRadioButton";
+            environmentalRadioButton.Size = new Size(102, 19);
+            environmentalRadioButton.TabIndex = 12;
+            environmentalRadioButton.Text = "Environmental";
+            environmentalRadioButton.UseVisualStyleBackColor = true;
+            environmentalRadioButton.CheckedChanged += updateEditorList;
             // 
             // specialRadioButton
             // 
-            this.specialRadioButton.AutoSize = true;
-            this.specialRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(112)))));
-            this.specialRadioButton.Location = new System.Drawing.Point(108, 132);
-            this.specialRadioButton.Name = "specialRadioButton";
-            this.specialRadioButton.Size = new System.Drawing.Size(62, 19);
-            this.specialRadioButton.TabIndex = 11;
-            this.specialRadioButton.Text = "Special";
-            this.specialRadioButton.UseVisualStyleBackColor = true;
-            this.specialRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
+            specialRadioButton.AutoSize = true;
+            specialRadioButton.ForeColor = Color.FromArgb(239, 239, 112);
+            specialRadioButton.Location = new Point(108, 132);
+            specialRadioButton.Name = "specialRadioButton";
+            specialRadioButton.Size = new Size(62, 19);
+            specialRadioButton.TabIndex = 11;
+            specialRadioButton.Text = "Special";
+            specialRadioButton.UseVisualStyleBackColor = true;
+            specialRadioButton.CheckedChanged += updateEditorList;
             // 
             // statusRadioButton
             // 
-            this.statusRadioButton.AutoSize = true;
-            this.statusRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(239)))), ((int)(((byte)(118)))));
-            this.statusRadioButton.Location = new System.Drawing.Point(108, 114);
-            this.statusRadioButton.Name = "statusRadioButton";
-            this.statusRadioButton.Size = new System.Drawing.Size(57, 19);
-            this.statusRadioButton.TabIndex = 10;
-            this.statusRadioButton.Text = "Status";
-            this.statusRadioButton.UseVisualStyleBackColor = true;
-            this.statusRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
+            statusRadioButton.AutoSize = true;
+            statusRadioButton.ForeColor = Color.FromArgb(152, 239, 118);
+            statusRadioButton.Location = new Point(108, 114);
+            statusRadioButton.Name = "statusRadioButton";
+            statusRadioButton.Size = new Size(57, 19);
+            statusRadioButton.TabIndex = 10;
+            statusRadioButton.Text = "Status";
+            statusRadioButton.UseVisualStyleBackColor = true;
+            statusRadioButton.CheckedChanged += updateEditorList;
             // 
             // eraseRadioButton
             // 
-            this.eraseRadioButton.AutoSize = true;
-            this.eraseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(112)))), ((int)(((byte)(239)))));
-            this.eraseRadioButton.Location = new System.Drawing.Point(108, 97);
-            this.eraseRadioButton.Name = "eraseRadioButton";
-            this.eraseRadioButton.Size = new System.Drawing.Size(52, 19);
-            this.eraseRadioButton.TabIndex = 9;
-            this.eraseRadioButton.Text = "Erase";
-            this.eraseRadioButton.UseVisualStyleBackColor = true;
-            this.eraseRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
+            eraseRadioButton.AutoSize = true;
+            eraseRadioButton.ForeColor = Color.FromArgb(208, 112, 239);
+            eraseRadioButton.Location = new Point(108, 97);
+            eraseRadioButton.Name = "eraseRadioButton";
+            eraseRadioButton.Size = new Size(52, 19);
+            eraseRadioButton.TabIndex = 9;
+            eraseRadioButton.Text = "Erase";
+            eraseRadioButton.UseVisualStyleBackColor = true;
+            eraseRadioButton.CheckedChanged += updateEditorList;
             // 
             // defenseRadioButton
             // 
-            this.defenseRadioButton.AutoSize = true;
-            this.defenseRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(135)))), ((int)(((byte)(239)))));
-            this.defenseRadioButton.Location = new System.Drawing.Point(108, 79);
-            this.defenseRadioButton.Name = "defenseRadioButton";
-            this.defenseRadioButton.Size = new System.Drawing.Size(67, 19);
-            this.defenseRadioButton.TabIndex = 8;
-            this.defenseRadioButton.Text = "Defense";
-            this.defenseRadioButton.UseVisualStyleBackColor = true;
-            this.defenseRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
+            defenseRadioButton.AutoSize = true;
+            defenseRadioButton.ForeColor = Color.FromArgb(112, 135, 239);
+            defenseRadioButton.Location = new Point(108, 79);
+            defenseRadioButton.Name = "defenseRadioButton";
+            defenseRadioButton.Size = new Size(67, 19);
+            defenseRadioButton.TabIndex = 8;
+            defenseRadioButton.Text = "Defense";
+            defenseRadioButton.UseVisualStyleBackColor = true;
+            defenseRadioButton.CheckedChanged += updateEditorList;
             // 
             // attackRadioButton
             // 
-            this.attackRadioButton.AutoSize = true;
-            this.attackRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(144)))), ((int)(((byte)(107)))));
-            this.attackRadioButton.Location = new System.Drawing.Point(108, 61);
-            this.attackRadioButton.Name = "attackRadioButton";
-            this.attackRadioButton.Size = new System.Drawing.Size(59, 19);
-            this.attackRadioButton.TabIndex = 7;
-            this.attackRadioButton.Text = "Attack";
-            this.attackRadioButton.UseVisualStyleBackColor = true;
-            this.attackRadioButton.CheckedChanged += new System.EventHandler(this.updateEditorList);
+            attackRadioButton.AutoSize = true;
+            attackRadioButton.ForeColor = Color.FromArgb(239, 144, 107);
+            attackRadioButton.Location = new Point(108, 61);
+            attackRadioButton.Name = "attackRadioButton";
+            attackRadioButton.Size = new Size(59, 19);
+            attackRadioButton.TabIndex = 7;
+            attackRadioButton.Text = "Attack";
+            attackRadioButton.UseVisualStyleBackColor = true;
+            attackRadioButton.CheckedChanged += updateEditorList;
             // 
             // allSkillsRadioButton
             // 
-            this.allSkillsRadioButton.AutoSize = true;
-            this.allSkillsRadioButton.Checked = true;
-            this.allSkillsRadioButton.Location = new System.Drawing.Point(108, 44);
-            this.allSkillsRadioButton.Name = "allSkillsRadioButton";
-            this.allSkillsRadioButton.Size = new System.Drawing.Size(68, 19);
-            this.allSkillsRadioButton.TabIndex = 6;
-            this.allSkillsRadioButton.TabStop = true;
-            this.allSkillsRadioButton.Text = "All Skills";
-            this.allSkillsRadioButton.UseVisualStyleBackColor = true;
+            allSkillsRadioButton.AutoSize = true;
+            allSkillsRadioButton.Checked = true;
+            allSkillsRadioButton.Location = new Point(108, 44);
+            allSkillsRadioButton.Name = "allSkillsRadioButton";
+            allSkillsRadioButton.Size = new Size(68, 19);
+            allSkillsRadioButton.TabIndex = 6;
+            allSkillsRadioButton.TabStop = true;
+            allSkillsRadioButton.Text = "All Skills";
+            allSkillsRadioButton.UseVisualStyleBackColor = true;
             // 
             // schoolFilterCheckedListBox
             // 
-            this.schoolFilterCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.schoolFilterCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.schoolFilterCheckedListBox.CheckOnClick = true;
-            this.schoolFilterCheckedListBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.schoolFilterCheckedListBox.FormattingEnabled = true;
-            this.schoolFilterCheckedListBox.Items.AddRange(new object[] {
-            "Psycho",
-            "Optical",
-            "Nature",
-            "Ki",
-            "Faith"});
-            this.schoolFilterCheckedListBox.Location = new System.Drawing.Point(7, 43);
-            this.schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
-            this.schoolFilterCheckedListBox.Size = new System.Drawing.Size(64, 90);
-            this.schoolFilterCheckedListBox.TabIndex = 0;
-            this.schoolFilterCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.schoolFilterCheckedListBox_ItemCheck);
-            this.schoolFilterCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
+            schoolFilterCheckedListBox.BackColor = Color.FromArgb(33, 33, 33);
+            schoolFilterCheckedListBox.BorderStyle = BorderStyle.None;
+            schoolFilterCheckedListBox.CheckOnClick = true;
+            schoolFilterCheckedListBox.ForeColor = SystemColors.ScrollBar;
+            schoolFilterCheckedListBox.FormattingEnabled = true;
+            schoolFilterCheckedListBox.Items.AddRange(new object[] { "Psycho", "Optical", "Nature", "Ki", "Faith" });
+            schoolFilterCheckedListBox.Location = new Point(7, 43);
+            schoolFilterCheckedListBox.Name = "schoolFilterCheckedListBox";
+            schoolFilterCheckedListBox.Size = new Size(64, 90);
+            schoolFilterCheckedListBox.TabIndex = 0;
+            schoolFilterCheckedListBox.ItemCheck += schoolFilterCheckedListBox_ItemCheck;
+            schoolFilterCheckedListBox.SelectedIndexChanged += checkedListBox_SelectedIndexChanged;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(899, 757);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.arsenalEditorGroupBox);
-            this.Controls.Add(this.arsenalListGroupBox);
-            this.Controls.Add(this.loadedArsenalGroupBox);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label9);
-            this.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
-            this.Name = "Form1";
-            this.RightToLeftLayout = true;
-            this.Text = "Nuion\'s PD Helper Extended V3.1 (Arsenal Sort Update)";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.loadedArsenalGroupBox.ResumeLayout(false);
-            this.loadedArsenalGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolNumeric)).EndInit();
-            this.arsenalListGroupBox.ResumeLayout(false);
-            this.arsenalListGroupBox.PerformLayout();
-            this.arsenalEditorGroupBox.ResumeLayout(false);
-            this.arsenalEditorGroupBox.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.costMaxNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.costMinNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.useMaxNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defMaxNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.useMinNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defMinNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.strMaxNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.strMinNumeric)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(33, 33, 33);
+            ClientSize = new Size(899, 757);
+            Controls.Add(groupBox3);
+            Controls.Add(arsenalEditorGroupBox);
+            Controls.Add(arsenalListGroupBox);
+            Controls.Add(loadedArsenalGroupBox);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(label9);
+            ForeColor = SystemColors.ScrollBar;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
+            Name = "Form1";
+            RightToLeftLayout = true;
+            Text = "Nuion's PD Helper V4.0 (Mod Support Update)";
+            KeyDown += Form1_KeyDown;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            loadedArsenalGroupBox.ResumeLayout(false);
+            loadedArsenalGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)schoolNumeric).EndInit();
+            arsenalListGroupBox.ResumeLayout(false);
+            arsenalListGroupBox.PerformLayout();
+            arsenalEditorGroupBox.ResumeLayout(false);
+            arsenalEditorGroupBox.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)costMaxNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)costMinNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)useMaxNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)defMaxNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)useMinNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)defMinNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)strMaxNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)strMinNumeric).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -1530,5 +1484,12 @@ namespace PD_Helper
         private Label label32;
         private Label label31;
         private Label label30;
+        private Button button2;
+        private Label label33;
+        private ToolTip toolTip1;
+        private Label label34;
+        private Label label35;
+        private Button button3;
+        private ToolTip toolTip2;
     }
 }
