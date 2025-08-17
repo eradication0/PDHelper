@@ -1107,10 +1107,21 @@ namespace PD_Helper
             openFileDialog.RestoreDirectory = true;
             openFileDialog.InitialDirectory = System.IO.Path.GetFullPath(@"Mods\");
             openFileDialog.Filter = "Skill Pack 3 File (*.sp3)|*.sp3|All files (*.*)|*.*";
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
+                    // Load a blank 30 aura arsenal
+                    List<PDCard> emptyArsenal = new List<PDCard>();
+                    for (int i = 0; i < 30; i++)
+                    {
+                        emptyArsenal.Add(getCard("Aura Particle"));
+                    }
+                    openArsenalToList(emptyArsenal);
+                    loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
+                    loadedDeckName = "";
+
                     string modpackPath = "\"" + openFileDialog.FileName + "\"";
                     Process.Start("ModLoader.exe", "--install " + modpackPath); //install mod via Torphs Mod loader
                     //fix path to also load an edited definition list
@@ -1124,14 +1135,6 @@ namespace PD_Helper
 
                         loadArsenalList(); //refresh all lists with new modded content
                         refreshView();
-
-                        // Load a blank 30 aura arsenal
-                        List<PDCard> emptyArsenal = new List<PDCard>();
-                        for (int i = 0; i < 30; i++)
-                        {
-                            emptyArsenal.Add(getCard("Aura Particle"));
-                        }
-                        openArsenalToList(emptyArsenal);
                         System.Windows.Forms.MessageBox.Show("Success!! Mod: '" + openFileDialog.SafeFileName.Remove(openFileDialog.SafeFileName.Length - 4) + "' and new card database applied!");
 
                     }
