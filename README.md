@@ -1,7 +1,6 @@
 # PDHelper  
 A simple app to edit the memory of Phantom Dust to give max out credits/skills as well as load/edit/backup any arsenal you want.  
 The app will not connect to anything that is not Phantom Dust, so no random edits on any other process can occur.  
-[Download V3.1 (latest)](https://github.com/eradication0/PDHelper/releases/download/ReleaseV3.1/PD.Helper.V3.1.zip)
   
 # Disclaimer
 - Use this software on your own risk!  
