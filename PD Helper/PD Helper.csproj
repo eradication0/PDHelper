@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>PD_Helper</RootNamespace>
     <Nullable>enable</Nullable>
@@ -12,6 +12,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <IsPublishable>True</IsPublishable>
     <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

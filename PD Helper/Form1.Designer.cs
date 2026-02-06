@@ -33,15 +33,8 @@ namespace PD_Helper
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
-            maxSkillsButton = new Button();
-            maxCreditsButton = new Button();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label8 = new Label();
             label9 = new Label();
-            groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             label12 = new Label();
             arsenalDropdown = new ComboBox();
@@ -55,21 +48,21 @@ namespace PD_Helper
             saveToPDbtn = new Button();
             deckListBox = new ListBox();
             arsenalListGroupBox = new GroupBox();
-            label35 = new Label();
-            button3 = new Button();
-            label34 = new Label();
+            savedArsenalListBox = new ListBox();
+            arsenalTabs = new TabControl();
+            tabPage1 = new TabPage();
             label33 = new Label();
-            button2 = new Button();
-            newArsenalButton = new Button();
-            colorProfileButton = new Button();
-            label1 = new Label();
-            label6 = new Label();
+            button3 = new Button();
             refreshArsenalListButton = new Button();
             openArsenalFolderButton = new Button();
-            partnerLock = new CheckBox();
             deleteArsenalButton = new Button();
             loadArsenalButton = new Button();
-            savedArsenalListBox = new ListBox();
+            label35 = new Label();
+            label6 = new Label();
+            partnerLock = new CheckBox();
+            label34 = new Label();
+            button2 = new Button();
+            colorProfileButton = new Button();
             arsenalEditorGroupBox = new GroupBox();
             labelSkillDescription = new RichTextBox();
             labelSkillUse = new Label();
@@ -87,6 +80,7 @@ namespace PD_Helper
             resetSelectedButton = new Button();
             replaceSkillButton = new Button();
             editorList = new ListBox();
+            maxSkillsButton = new Button();
             GamepadWorker = new System.ComponentModel.BackgroundWorker();
             groupBox3 = new GroupBox();
             label32 = new Label();
@@ -130,11 +124,12 @@ namespace PD_Helper
             schoolFilterCheckedListBox = new CheckedListBox();
             toolTip1 = new ToolTip(components);
             toolTip2 = new ToolTip(components);
-            groupBox1.SuspendLayout();
+            groupBox1 = new GroupBox();
             groupBox2.SuspendLayout();
             loadedArsenalGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)schoolNumeric).BeginInit();
             arsenalListGroupBox.SuspendLayout();
+            arsenalTabs.SuspendLayout();
             arsenalEditorGroupBox.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)costMaxNumeric).BeginInit();
@@ -145,6 +140,7 @@ namespace PD_Helper
             ((System.ComponentModel.ISupportInitialize)defMinNumeric).BeginInit();
             ((System.ComponentModel.ISupportInitialize)strMaxNumeric).BeginInit();
             ((System.ComponentModel.ISupportInitialize)strMinNumeric).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -159,30 +155,6 @@ namespace PD_Helper
             button1.UseVisualStyleBackColor = true;
             button1.Click += loadGameData;
             // 
-            // maxSkillsButton
-            // 
-            maxSkillsButton.FlatStyle = FlatStyle.Flat;
-            maxSkillsButton.ForeColor = SystemColors.ScrollBar;
-            maxSkillsButton.Location = new Point(6, 52);
-            maxSkillsButton.Name = "maxSkillsButton";
-            maxSkillsButton.Size = new Size(97, 23);
-            maxSkillsButton.TabIndex = 2;
-            maxSkillsButton.Text = "Max Skills";
-            maxSkillsButton.UseVisualStyleBackColor = true;
-            maxSkillsButton.Click += giveMaxSkills;
-            // 
-            // maxCreditsButton
-            // 
-            maxCreditsButton.FlatStyle = FlatStyle.Flat;
-            maxCreditsButton.ForeColor = SystemColors.ScrollBar;
-            maxCreditsButton.Location = new Point(109, 52);
-            maxCreditsButton.Name = "maxCreditsButton";
-            maxCreditsButton.Size = new Size(97, 23);
-            maxCreditsButton.TabIndex = 3;
-            maxCreditsButton.Text = "Max Credits";
-            maxCreditsButton.UseVisualStyleBackColor = true;
-            maxCreditsButton.Click += giveMaxCredits;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -192,49 +164,6 @@ namespace PD_Helper
             label2.TabIndex = 5;
             label2.Text = "Not Loaded Yet";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(6, 34);
-            label3.Name = "label3";
-            label3.Size = new Size(185, 15);
-            label3.TabIndex = 6;
-            label3.Text = "2. Give Maxed out Skills or Credits";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ScrollBar;
-            label4.Location = new Point(6, 19);
-            label4.Name = "label4";
-            label4.Size = new Size(170, 15);
-            label4.TabIndex = 7;
-            label4.Text = "1. Go to your online Lab screen";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Aquamarine;
-            label5.Location = new Point(206, 19);
-            label5.Name = "label5";
-            label5.Size = new Size(221, 15);
-            label5.TabIndex = 8;
-            label5.Text = "3. Go to shop and sell 1 \"Phantom Dust\" ";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ScrollBar;
-            label8.Location = new Point(221, 34);
-            label8.Name = "label8";
-            label8.Size = new Size(185, 15);
-            label8.TabIndex = 11;
-            label8.Text = "(this fixes a potential visual bug)";
             // 
             // label9
             // 
@@ -246,24 +175,6 @@ namespace PD_Helper
             label9.Name = "label9";
             label9.Size = new Size(0, 15);
             label9.TabIndex = 12;
-            // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.FromArgb(33, 33, 33);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(maxSkillsButton);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(maxCreditsButton);
-            groupBox1.Enabled = false;
-            groupBox1.ForeColor = SystemColors.ScrollBar;
-            groupBox1.Location = new Point(458, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(433, 130);
-            groupBox1.TabIndex = 14;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Get Resources";
             // 
             // groupBox2
             // 
@@ -370,7 +281,7 @@ namespace PD_Helper
             arsenalNameBox.BackColor = Color.FromArgb(33, 33, 33);
             arsenalNameBox.ForeColor = SystemColors.ScrollBar;
             arsenalNameBox.Location = new Point(96, 17);
-            arsenalNameBox.MaxLength = 16;
+            arsenalNameBox.MaxLength = 50;
             arsenalNameBox.Name = "arsenalNameBox";
             arsenalNameBox.Size = new Size(170, 23);
             arsenalNameBox.TabIndex = 32;
@@ -423,47 +334,75 @@ namespace PD_Helper
             // arsenalListGroupBox
             // 
             arsenalListGroupBox.BackColor = Color.FromArgb(33, 33, 33);
-            arsenalListGroupBox.Controls.Add(label35);
-            arsenalListGroupBox.Controls.Add(button3);
-            arsenalListGroupBox.Controls.Add(label34);
+            arsenalListGroupBox.Controls.Add(savedArsenalListBox);
+            arsenalListGroupBox.Controls.Add(arsenalTabs);
             arsenalListGroupBox.Controls.Add(label33);
-            arsenalListGroupBox.Controls.Add(button2);
-            arsenalListGroupBox.Controls.Add(newArsenalButton);
-            arsenalListGroupBox.Controls.Add(colorProfileButton);
-            arsenalListGroupBox.Controls.Add(label1);
-            arsenalListGroupBox.Controls.Add(label6);
+            arsenalListGroupBox.Controls.Add(button3);
             arsenalListGroupBox.Controls.Add(refreshArsenalListButton);
             arsenalListGroupBox.Controls.Add(openArsenalFolderButton);
-            arsenalListGroupBox.Controls.Add(partnerLock);
             arsenalListGroupBox.Controls.Add(deleteArsenalButton);
             arsenalListGroupBox.Controls.Add(loadArsenalButton);
-            arsenalListGroupBox.Controls.Add(savedArsenalListBox);
             arsenalListGroupBox.ForeColor = SystemColors.ScrollBar;
             arsenalListGroupBox.Location = new Point(458, 98);
             arsenalListGroupBox.Name = "arsenalListGroupBox";
-            arsenalListGroupBox.Size = new Size(433, 477);
+            arsenalListGroupBox.Size = new Size(433, 484);
             arsenalListGroupBox.TabIndex = 1;
             arsenalListGroupBox.TabStop = false;
             arsenalListGroupBox.Text = "Arsenal List";
             // 
-            // label35
+            // savedArsenalListBox
             // 
-            label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label35.ForeColor = SystemColors.WindowFrame;
-            label35.Location = new Point(412, 289);
-            label35.Name = "label35";
-            label35.Size = new Size(20, 15);
-            label35.TabIndex = 36;
-            label35.Text = "(?)";
-            toolTip1.SetToolTip(label35, "Loading a modpack only changes the game temporarily. Simply restart the game to unload all modded content.");
+            savedArsenalListBox.BackColor = Color.FromArgb(33, 33, 33);
+            savedArsenalListBox.ForeColor = SystemColors.ScrollBar;
+            savedArsenalListBox.FormattingEnabled = true;
+            savedArsenalListBox.ItemHeight = 15;
+            savedArsenalListBox.Items.AddRange(new object[] { "⚙Test Deck 1", "Test Deck 2", "Test Deck 3" });
+            savedArsenalListBox.Location = new Point(6, 43);
+            savedArsenalListBox.Name = "savedArsenalListBox";
+            savedArsenalListBox.Size = new Size(421, 364);
+            savedArsenalListBox.TabIndex = 0;
+            // 
+            // arsenalTabs
+            // 
+            arsenalTabs.Controls.Add(tabPage1);
+            arsenalTabs.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            arsenalTabs.HotTrack = true;
+            arsenalTabs.ItemSize = new Size(20, 20);
+            arsenalTabs.Location = new Point(6, 22);
+            arsenalTabs.Name = "arsenalTabs";
+            arsenalTabs.SelectedIndex = 0;
+            arsenalTabs.Size = new Size(419, 22);
+            arsenalTabs.TabIndex = 29;
+            arsenalTabs.SelectedIndexChanged += arsenalTabs_SelectedIndexChanged;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(411, 0);
+            tabPage1.TabIndex = 42;
+            tabPage1.Text = "TabName1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label33.ForeColor = SystemColors.WindowFrame;
+            label33.Location = new Point(230, 417);
+            label33.Name = "label33";
+            label33.Size = new Size(20, 15);
+            label33.TabIndex = 33;
+            label33.Text = "(?)";
+            toolTip2.SetToolTip(label33, resources.GetString("label33.ToolTip"));
             // 
             // button3
             // 
             button3.Enabled = false;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.CornflowerBlue;
-            button3.Location = new Point(240, 314);
+            button3.Location = new Point(256, 411);
             button3.Name = "button3";
             button3.Size = new Size(171, 26);
             button3.TabIndex = 35;
@@ -471,97 +410,15 @@ namespace PD_Helper
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.ForeColor = SystemColors.ControlDarkDark;
-            label34.Location = new Point(240, 265);
-            label34.Name = "label34";
-            label34.Size = new Size(170, 15);
-            label34.TabIndex = 34;
-            label34.Text = "Currently No Modpack Loaded";
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label33.ForeColor = SystemColors.WindowFrame;
-            label33.Location = new Point(412, 320);
-            label33.Name = "label33";
-            label33.Size = new Size(20, 15);
-            label33.TabIndex = 33;
-            label33.Text = "(?)";
-            toolTip2.SetToolTip(label33, resources.GetString("label33.ToolTip"));
-            // 
-            // button2
-            // 
-            button2.Enabled = false;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(128, 128, 255);
-            button2.Location = new Point(240, 283);
-            button2.Name = "button2";
-            button2.Size = new Size(170, 26);
-            button2.TabIndex = 32;
-            button2.Text = "Load Modpack";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // newArsenalButton
-            // 
-            newArsenalButton.FlatStyle = FlatStyle.Flat;
-            newArsenalButton.ForeColor = SystemColors.ScrollBar;
-            newArsenalButton.Location = new Point(240, 29);
-            newArsenalButton.Name = "newArsenalButton";
-            newArsenalButton.Size = new Size(187, 26);
-            newArsenalButton.TabIndex = 31;
-            newArsenalButton.Text = "New Arsenal";
-            newArsenalButton.UseVisualStyleBackColor = true;
-            newArsenalButton.Click += newArsenalButton_Click;
-            // 
-            // colorProfileButton
-            // 
-            colorProfileButton.FlatStyle = FlatStyle.Flat;
-            colorProfileButton.ForeColor = SystemColors.ScrollBar;
-            colorProfileButton.Location = new Point(240, 346);
-            colorProfileButton.Name = "colorProfileButton";
-            colorProfileButton.Size = new Size(187, 26);
-            colorProfileButton.TabIndex = 30;
-            colorProfileButton.Text = "Color Profile Settings";
-            colorProfileButton.UseVisualStyleBackColor = true;
-            colorProfileButton.Click += colorProfileButton_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.WindowFrame;
-            label1.Location = new Point(240, 127);
-            label1.Name = "label1";
-            label1.Size = new Size(140, 15);
-            label1.TabIndex = 29;
-            label1.Text = "to toggle Partner LockOn";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.WindowFrame;
-            label6.Location = new Point(240, 112);
-            label6.Name = "label6";
-            label6.Size = new Size(163, 15);
-            label6.TabIndex = 28;
-            label6.Text = "Click Right Stick on Gamepad";
-            // 
             // refreshArsenalListButton
             // 
             refreshArsenalListButton.FlatStyle = FlatStyle.Flat;
             refreshArsenalListButton.ForeColor = SystemColors.ScrollBar;
-            refreshArsenalListButton.Location = new Point(240, 378);
+            refreshArsenalListButton.Location = new Point(102, 442);
             refreshArsenalListButton.Name = "refreshArsenalListButton";
-            refreshArsenalListButton.Size = new Size(187, 26);
+            refreshArsenalListButton.Size = new Size(91, 26);
             refreshArsenalListButton.TabIndex = 27;
-            refreshArsenalListButton.Text = "Refresh Arsenal List";
+            refreshArsenalListButton.Text = "Refresh List";
             refreshArsenalListButton.UseVisualStyleBackColor = true;
             refreshArsenalListButton.Click += refreshArsenalList;
             // 
@@ -569,32 +426,21 @@ namespace PD_Helper
             // 
             openArsenalFolderButton.FlatStyle = FlatStyle.Flat;
             openArsenalFolderButton.ForeColor = SystemColors.ScrollBar;
-            openArsenalFolderButton.Location = new Point(240, 410);
+            openArsenalFolderButton.Location = new Point(6, 442);
             openArsenalFolderButton.Name = "openArsenalFolderButton";
-            openArsenalFolderButton.Size = new Size(187, 26);
+            openArsenalFolderButton.Size = new Size(92, 26);
             openArsenalFolderButton.TabIndex = 26;
-            openArsenalFolderButton.Text = "Open Arsenal Folder";
+            openArsenalFolderButton.Text = "Arsenal Folder";
             openArsenalFolderButton.UseVisualStyleBackColor = true;
             openArsenalFolderButton.Click += openArsenalFolder;
-            // 
-            // partnerLock
-            // 
-            partnerLock.AutoSize = true;
-            partnerLock.Location = new Point(240, 90);
-            partnerLock.Name = "partnerLock";
-            partnerLock.Size = new Size(146, 19);
-            partnerLock.TabIndex = 25;
-            partnerLock.Text = "Enable Partner LockOn";
-            partnerLock.UseVisualStyleBackColor = true;
-            partnerLock.CheckedChanged += partnerLock_CheckedChanged;
             // 
             // deleteArsenalButton
             // 
             deleteArsenalButton.FlatStyle = FlatStyle.Flat;
             deleteArsenalButton.ForeColor = Color.FromArgb(212, 116, 116);
-            deleteArsenalButton.Location = new Point(240, 442);
+            deleteArsenalButton.Location = new Point(256, 442);
             deleteArsenalButton.Name = "deleteArsenalButton";
-            deleteArsenalButton.Size = new Size(187, 26);
+            deleteArsenalButton.Size = new Size(171, 26);
             deleteArsenalButton.TabIndex = 24;
             deleteArsenalButton.Text = "Delete Arsenal";
             deleteArsenalButton.UseVisualStyleBackColor = true;
@@ -604,7 +450,7 @@ namespace PD_Helper
             // 
             loadArsenalButton.FlatStyle = FlatStyle.Flat;
             loadArsenalButton.ForeColor = SystemColors.ScrollBar;
-            loadArsenalButton.Location = new Point(240, 61);
+            loadArsenalButton.Location = new Point(6, 413);
             loadArsenalButton.Name = "loadArsenalButton";
             loadArsenalButton.Size = new Size(187, 23);
             loadArsenalButton.TabIndex = 23;
@@ -612,16 +458,75 @@ namespace PD_Helper
             loadArsenalButton.UseVisualStyleBackColor = true;
             loadArsenalButton.Click += loadArsenal;
             // 
-            // savedArsenalListBox
+            // label35
             // 
-            savedArsenalListBox.BackColor = Color.FromArgb(33, 33, 33);
-            savedArsenalListBox.ForeColor = SystemColors.ScrollBar;
-            savedArsenalListBox.FormattingEnabled = true;
-            savedArsenalListBox.ItemHeight = 15;
-            savedArsenalListBox.Location = new Point(6, 29);
-            savedArsenalListBox.Name = "savedArsenalListBox";
-            savedArsenalListBox.Size = new Size(228, 439);
-            savedArsenalListBox.TabIndex = 0;
+            label35.AutoSize = true;
+            label35.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label35.ForeColor = SystemColors.WindowFrame;
+            label35.Location = new Point(128, 25);
+            label35.Name = "label35";
+            label35.Size = new Size(20, 15);
+            label35.TabIndex = 36;
+            label35.Text = "(?)";
+            toolTip1.SetToolTip(label35, "Loading a modpack only changes the game temporarily. Simply restart the game to unload all modded content.");
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.WindowFrame;
+            label6.Location = new Point(153, 64);
+            label6.Name = "label6";
+            label6.Size = new Size(228, 15);
+            label6.TabIndex = 28;
+            label6.Text = "Click Right Stick to toggle Partner LockOn";
+            // 
+            // partnerLock
+            // 
+            partnerLock.AutoSize = true;
+            partnerLock.Location = new Point(156, 50);
+            partnerLock.Name = "partnerLock";
+            partnerLock.Size = new Size(146, 19);
+            partnerLock.TabIndex = 25;
+            partnerLock.Text = "Enable Partner LockOn";
+            partnerLock.UseVisualStyleBackColor = true;
+            partnerLock.CheckedChanged += partnerLock_CheckedChanged;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label34.ForeColor = SystemColors.ControlDarkDark;
+            label34.Location = new Point(154, 26);
+            label34.Name = "label34";
+            label34.Size = new Size(170, 15);
+            label34.TabIndex = 34;
+            label34.Text = "Currently No Modpack Loaded";
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.FromArgb(128, 128, 255);
+            button2.Location = new Point(6, 19);
+            button2.Name = "button2";
+            button2.Size = new Size(116, 26);
+            button2.TabIndex = 32;
+            button2.Text = "Load Modpack";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // colorProfileButton
+            // 
+            colorProfileButton.FlatStyle = FlatStyle.Flat;
+            colorProfileButton.ForeColor = SystemColors.ScrollBar;
+            colorProfileButton.Location = new Point(671, 142);
+            colorProfileButton.Name = "colorProfileButton";
+            colorProfileButton.Size = new Size(185, 26);
+            colorProfileButton.TabIndex = 30;
+            colorProfileButton.Text = "Color Profile Settings";
+            colorProfileButton.UseVisualStyleBackColor = true;
+            colorProfileButton.Click += colorProfileButton_Click;
             // 
             // arsenalEditorGroupBox
             // 
@@ -837,6 +742,18 @@ namespace PD_Helper
             editorList.DrawItem += skillList_DrawItem;
             editorList.SelectedIndexChanged += editorList_SelectedIndexChanged;
             // 
+            // maxSkillsButton
+            // 
+            maxSkillsButton.FlatStyle = FlatStyle.Flat;
+            maxSkillsButton.ForeColor = SystemColors.ScrollBar;
+            maxSkillsButton.Location = new Point(6, 51);
+            maxSkillsButton.Name = "maxSkillsButton";
+            maxSkillsButton.Size = new Size(116, 27);
+            maxSkillsButton.TabIndex = 2;
+            maxSkillsButton.Text = "Get Skills/Credits";
+            maxSkillsButton.UseVisualStyleBackColor = true;
+            maxSkillsButton.Click += giveMaxSkills;
+            // 
             // GamepadWorker
             // 
             GamepadWorker.DoWork += GamepadWorker_DoWork_1;
@@ -849,6 +766,7 @@ namespace PD_Helper
             groupBox3.Controls.Add(label29);
             groupBox3.Controls.Add(label28);
             groupBox3.Controls.Add(label27);
+            groupBox3.Controls.Add(colorProfileButton);
             groupBox3.Controls.Add(label26);
             groupBox3.Controls.Add(label25);
             groupBox3.Controls.Add(label21);
@@ -889,7 +807,6 @@ namespace PD_Helper
             groupBox3.TabIndex = 28;
             groupBox3.TabStop = false;
             groupBox3.Text = "Filter Settings";
-            groupBox3.Enter += groupBox3_Enter;
             // 
             // label32
             // 
@@ -1030,7 +947,6 @@ namespace PD_Helper
             label16.Size = new Size(44, 15);
             label16.TabIndex = 48;
             label16.Text = "School";
-            label16.Click += label16_Click;
             // 
             // sortComboBox3
             // 
@@ -1344,18 +1260,35 @@ namespace PD_Helper
             schoolFilterCheckedListBox.ItemCheck += schoolFilterCheckedListBox_ItemCheck;
             schoolFilterCheckedListBox.SelectedIndexChanged += checkedListBox_SelectedIndexChanged;
             // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.FromArgb(33, 33, 33);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label34);
+            groupBox1.Controls.Add(label35);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(maxSkillsButton);
+            groupBox1.Controls.Add(partnerLock);
+            groupBox1.ForeColor = SystemColors.ScrollBar;
+            groupBox1.Location = new Point(458, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(433, 97);
+            groupBox1.TabIndex = 33;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Misc";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(33, 33, 33);
-            ClientSize = new Size(899, 757);
+            ClientSize = new Size(900, 757);
             Controls.Add(groupBox3);
-            Controls.Add(arsenalEditorGroupBox);
             Controls.Add(arsenalListGroupBox);
+            Controls.Add(groupBox1);
+            Controls.Add(arsenalEditorGroupBox);
             Controls.Add(loadedArsenalGroupBox);
             Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
             Controls.Add(label9);
             ForeColor = SystemColors.ScrollBar;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -1363,10 +1296,8 @@ namespace PD_Helper
             KeyPreview = true;
             Name = "Form1";
             RightToLeftLayout = true;
-            Text = "Nuion's PD Helper V4.0 (Mod Support Update)";
+            Text = "Nuion's PD Helper V4.1.p (Mod Expansion Mod)";
             KeyDown += Form1_KeyDown;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             loadedArsenalGroupBox.ResumeLayout(false);
@@ -1374,6 +1305,7 @@ namespace PD_Helper
             ((System.ComponentModel.ISupportInitialize)schoolNumeric).EndInit();
             arsenalListGroupBox.ResumeLayout(false);
             arsenalListGroupBox.PerformLayout();
+            arsenalTabs.ResumeLayout(false);
             arsenalEditorGroupBox.ResumeLayout(false);
             arsenalEditorGroupBox.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -1386,6 +1318,8 @@ namespace PD_Helper
             ((System.ComponentModel.ISupportInitialize)defMinNumeric).EndInit();
             ((System.ComponentModel.ISupportInitialize)strMaxNumeric).EndInit();
             ((System.ComponentModel.ISupportInitialize)strMinNumeric).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
 
@@ -1394,15 +1328,8 @@ namespace PD_Helper
         #endregion
 
         private Button button1;
-        private Button maxSkillsButton;
-        private Button maxCreditsButton;
         private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label8;
         private Label label9;
-        private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox loadedArsenalGroupBox;
         private GroupBox arsenalListGroupBox;
@@ -1450,7 +1377,6 @@ namespace PD_Helper
 		private RadioButton defenseRadioButton;
 		private RadioButton environmentalRadioButton;
 		private Label skillCountLabel;
-        private Label label1;
 		private Button colorProfileButton;
 		private CheckedListBox rangeFilterCheckedListBox;
 		private NumericUpDown strMinNumeric;
@@ -1466,7 +1392,6 @@ namespace PD_Helper
 		private NumericUpDown costMaxNumeric;
 		private NumericUpDown costMinNumeric;
 		private Label label15;
-		private Button newArsenalButton;
 		private ComboBox sortComboBox3;
 		private ComboBox sortComboBox2;
 		private ComboBox sortComboBox1;
@@ -1491,5 +1416,9 @@ namespace PD_Helper
         private Label label35;
         private Button button3;
         private ToolTip toolTip2;
+        private Button maxSkillsButton;
+        private GroupBox groupBox1;
+        internal TabControl arsenalTabs;
+        private TabPage tabPage1;
     }
 }

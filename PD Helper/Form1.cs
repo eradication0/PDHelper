@@ -53,6 +53,7 @@ namespace PD_Helper
         bool gamepadOn = false;
         public Mem m = new Mem();
         public ListBox allSkills = new ListBox();
+        public string selectedPath = "";
 
         public Form1()
         {
@@ -73,6 +74,19 @@ namespace PD_Helper
                 miscNumberCheckedListBox.SetItemChecked(i, true);
             }
 
+            arsenalTabs.TabPages.Clear(); //remove starting tab
+
+            //create list of sub folders made by the user for arsenals
+            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //get arsenal folder info
+            DirectoryInfo[] subFolders = directory.GetDirectories(); //get all folders specifically
+            for (int i = 0; i < subFolders.Length; i++)
+            {
+                TabPage newTab = new TabPage(); //make empty tab
+                newTab.Text = subFolders[i].Name; //set text to name of folder
+                arsenalTabs.TabPages.Add(newTab); //add tab
+            }
+            selectedPath = subFolders[0].Name;
+
             // Set default sort
             sortComboBox1.Text = "ID";
             sortComboBox2.Text = "None";
@@ -87,6 +101,8 @@ namespace PD_Helper
             openArsenalToList(emptyArsenal);
             refreshView();
         }
+
+
 
         private void loadArsenalList()
         {
@@ -104,7 +120,7 @@ namespace PD_Helper
 
             //add each arsenal file to the list
             savedArsenalListBox.Items.Clear();
-            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Arsenals is your Folder
+            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\" + selectedPath + @"\"); //Assuming Arsenals is your Folder
 
             FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
             string str = "";
@@ -120,7 +136,6 @@ namespace PD_Helper
 
         private void loadGameData(object sender, EventArgs e)
         {
-            Process[] processCollection = Process.GetProcesses();
             arsenalDropdown.Items.Clear();
 
             //start input worker (if it hasn't yet)
@@ -131,6 +146,7 @@ namespace PD_Helper
                 gamepadOn = true;
             }
 
+            Process[] processCollection = Process.GetProcesses();
             for (int i = 0; i < processCollection.Length; i++)
             {
                 if (processCollection[i].ProcessName == "PDUWP")
@@ -139,7 +155,6 @@ namespace PD_Helper
                     label2.Text = "Found the process! ID: " + processCollection[i].Id.ToString();
                     ProcOpen = m.OpenProcess(processCollection[i].Id, out string error);
                     label2.ForeColor = Color.Green;
-                    groupBox1.Enabled = true;
                     button2.Enabled = true;
                     button3.Enabled = true;
 
@@ -176,23 +191,10 @@ namespace PD_Helper
 
         private void giveMaxSkills(object sender, EventArgs e)
         {
-            // List of offsets for each Card
-            string[] offsets = { "644", "645", "646", "647", "648", "649", "64A", "64B", "64C", "64D", "64E", "64F", "650", "651", "652", "653", "654", "655", "656", "657", "658", "659", "65A", "65B", "65C", "65D", "65E", "65F", "660", "661", "662", "663", "664", "665", "666", "667", "668", "669", "66A", "66B", "66C", "66D", "66E", "66F", "670", "671", "672", "673", "674", "675", "676", "677", "678", "679", "67A", "67B", "67C", "67D", "67E", "67F", "680", "681", "682", "683", "684", "685", "686", "687", "688", "689", "68A", "68B", "68C", "68D", "68E", "68F", "690", "691", "692", "693", "694", "695", "696", "697", "698", "699", "69A", "69B", "69C", "69D", "69E", "69F", "6A0", "6A1", "6A2", "6A3", "6A4", "6A5", "6A6", "6A7", "6A8", "6A9", "6AA", "6AB", "6AC", "6AD", "6AE", "6AF", "6B0", "6B1", "6B2", "6B3", "6B4", "6B5", "6B6", "6B7", "6B8", "6B9", "6BA", "6BB", "6BC", "6BD", "6BE", "6BF", "6C0", "6C1", "6C2", "6C3", "6C4", "6C5", "6C6", "6C7", "6C8", "6C9", "6CA", "6CB", "6CC", "6CD", "6CE", "6CF", "6D0", "6D1", "6D2", "6D3", "6D4", "6D5", "6D6", "6D7", "6D8", "6D9", "6DA", "6DB", "6DC", "6DD", "6DE", "6DF", "6E0", "6E1", "6E2", "6E3", "6E4", "6E5", "6E6", "6E7", "6E8", "6E9", "6EA", "6EB", "6EC", "6ED", "6EE", "6EF", "6F0", "6F1", "6F2", "6F3", "6F4", "6F5", "6F6", "6F7", "6F8", "6F9", "6FA", "6FB", "6FC", "6FD", "6FE", "6FF", "700", "701", "702", "703", "704", "705", "706", "707", "708", "709", "70A", "70B", "70C", "70D", "70E", "70F", "710", "711", "712", "713", "714", "715", "716", "717", "718", "719", "71A", "71B", "71C", "71D", "71E", "71F", "720", "721", "722", "723", "724", "725", "726", "727", "728", "729", "72A", "72B", "72C", "72D", "72E", "72F", "730", "731", "732", "733", "734", "735", "736", "737", "738", "739", "73A", "73B", "73C", "73D", "73E", "73F", "740", "741", "742", "743", "744", "745", "746", "747", "748", "749", "74A", "74B", "74C", "74D", "74E", "74F", "750", "751", "752", "753", "754", "755", "756", "757", "758", "759", "75A", "75B", "75C", "75D", "75E", "75F", "760", "761", "762", "763", "764", "765", "766", "767", "768", "769", "76A", "76B", "76C", "76D", "76E", "76F", "770", "771", "772", "773", "774", "775", "776", "777", "778", "779", "77A", "77B", "77C", "77D", "77E", "77F", "780", "781", "782", "783", "784", "785", "786", "787", "788", "789", "78A", "78B", "78C", "78D", "78E", "78F", "790", "791", "792", "793", "794", "795", "796", "797", "798", "799", "79A", "79B", "79C", "79D", "79E", "79F", "7A0", "7A1", "7A2", "7A3", "7A4", "7A5", "7A6", "7A7", "7A8", "7A9", "7AA", "7AB", "7AC", "7AD", "7AE", "7AF", "7A0", "7A1", "7A2", "7A3", "7A4", "7A5", "7A6", "7A7", "7A8", "7A9", "7AA", "7AB", "7AC", "7AD", "7AE", "7AF", "7B0", "7B1", "7B2", "7B3", "7B4", "7B5", "7B6", "7B7", "7B8", "7B9", "7BA" };
-
-            // Set owned amount of card to HEX63 -> 99
-            for (int i = 0; i < offsets.Length; i++)
-            {
-                string setup = "base+003ED6B8," + offsets[i];
-                m.WriteMemory(setup, "byte", "63");
-            }
-            maxSkillsButton.Enabled = false;
-        }
-
-        private void giveMaxCredits(object sender, EventArgs e)
-        {
-            //Set 3rd byte of credits to 30 -> around 800 mil
-            m.WriteMemory("base+003ED640,13B", "byte", "30");
-            maxCreditsButton.Enabled = false;
+            // Open new form for setting colors
+            var GiveForm = new GiveSkillCredits();
+            GiveForm.Owner = this;
+            GiveForm.ShowDialog();
         }
 
         private void btnSaveToPDH_Click(object sender, EventArgs e)
@@ -204,7 +206,7 @@ namespace PD_Helper
                 return;
             }
 
-            string path = @"Arsenals\" + loadedDeckName + ".arsenal";
+            string path = @"Arsenals\" + selectedPath + @"\" + loadedDeckName + ".arsenal";
             string str = "";
             for (int i = 0; i < 31; i++)
             {
@@ -220,25 +222,31 @@ namespace PD_Helper
             {
                 savedArsenalListBox.Items.Add(loadedDeckName);
             }
-
             // Re-sort the arsenal
             List<PDCard> cardList = new List<PDCard>();
             for (int i = 0; i < 30; i++)
             {
-                cardList.Add(cardDef[loadedDeck[i]]);
+                cardList.Add(returnSkillByHex(loadedDeck[i]));
             }
             openArsenalToList(cardList, arsenalNameBox.Text, (int)schoolNumeric.Value);
         }
 
         public PDCard getCard(string name)
         {
-            foreach (PDCard pair in cardDef.Values)
-            {
-                if (pair.NAME == name)
+            //if skill is placeholder, return placeholder
+            if (name.Contains("MODDED")) {
+                PDCard tempCard = returnSkillByHex("AA AA");
+                return tempCard;
+            } else { 
+                foreach (PDCard pair in cardDef.Values)
                 {
-                    return pair;
+                    if (pair.NAME == name)
+                    {
+                        return pair;
+                    }
                 }
             }
+
 
             return null;
         }
@@ -252,7 +260,6 @@ namespace PD_Helper
 
                 string currentHex = card.HEX;
                 loadedDeck[deckListBox.SelectedIndex] = currentHex;
-                Debug.WriteLine(card.HEX);
 
                 //set loaded deck visual
                 deckListBox.Items[deckListBox.SelectedIndex] = editorList.SelectedItem.ToString();
@@ -530,7 +537,7 @@ namespace PD_Helper
                 }
                 else
                 {
-                    string path = @"Arsenals\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
+                    string path = @"Arsenals\" + selectedPath + @"\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
                     string file = File.ReadAllText(path);
                     string[] deckStrings = file.Split(',');
                     if (deckStrings.Length < 30)
@@ -549,17 +556,8 @@ namespace PD_Helper
                             deckListBox.Items.Clear();
                             for (int i = 0; i < 30; i++)
                             {
-                                if (!cardDef.ContainsKey(deckStrings[i]))
-                                {
-                                    MessageBox.Show("ERROR09: A Skill from your loaded arsenal does not exist in the game and could not be loaded. The arsenal has been tampered with or was corrupted. Please try loading another arsenal.");
-                                    break;
-                                }
-                                else
-                                {
-                                    loadedDeck[i] = deckStrings[i];
-                                    deckListBox.Items.Add(cardDef[deckStrings[i]].NAME);
-                                }
-
+                                loadedDeck[i] = deckStrings[i];
+                                deckListBox.Items.Add(returnSkillByHex(deckStrings[i]).NAME);
                             }
 
 
@@ -658,7 +656,7 @@ namespace PD_Helper
             DialogResult dr = MessageBox.Show("Are you sure you want to delete Arsenal: " + savedArsenalListBox.SelectedItem.ToString() + "?", "Arsenal Deletion Check", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
             {
-                string path = @"Arsenals\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
+                string path = @"Arsenals\" + selectedPath + @"\" + savedArsenalListBox.SelectedItem.ToString() + ".arsenal";
                 File.Delete(path);
                 savedArsenalListBox.Items.Remove(savedArsenalListBox.SelectedItem);
             }
@@ -810,8 +808,6 @@ namespace PD_Helper
                     {
                         dataToWrite[o] = Convert.ToByte(loadedDeck[i].Remove(2), 16);
                         dataToWrite[o + 1] = Convert.ToByte(loadedDeck[i].Remove(0, 3), 16);
-                        System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(2), 16);
-                        System.Diagnostics.Debug.WriteLine(loadedDeck[i].Remove(0, 3), 16);
                         o += 2;
                     }
 
@@ -858,14 +854,40 @@ namespace PD_Helper
             loadArsenalList();
         }
 
+        private PDCard returnSkillByHex(string currentHexString)
+        {
+            //check if selected deck is modded or not
+            if (cardDef.ContainsKey(currentHexString))
+            {
+                return cardDef[currentHexString];
+            }
+            else
+            {
+                //make new empty card for placeholding
+                PDCard notFoundSkill = new PDCard();
+                
+                //hex as string to decimal
+                byte hex1 = Convert.ToByte(currentHexString.Substring(0,2),16);
+                byte hex2 = Convert.ToByte(currentHexString.Substring(3,2),16);
+                int hexResult = hex1 + hex2;
+                //placeholder data
+                notFoundSkill.HEX = currentHexString;
+                notFoundSkill.NAME = "MODDED (" + currentHexString + ")";
+                notFoundSkill.ID = hexResult;
+                notFoundSkill.COST = "0";
+                notFoundSkill.SCHOOL = "FAITH";
+                notFoundSkill.TYPE = "Environment";
+                notFoundSkill.DESCRIPTION = "This skill was not found. It is probably modded. Load a modpack to display what these skills are.";
+                return notFoundSkill;
+            }
+        }
+
         private void arsenalDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (m.ReadByte("base+003ED688,9") == 1)
             {
                 partnerLock.Checked = true;
             }
-
-            //System.Diagnostics.Debug.WriteLine(o1);
 
             // List of fist cards per deck
             string[] offsetsLoadCards = { "18", "7C", "E0", "144", "1A8", "20C", "270", "2D4", "338", "39C", "400", "464", "4C8", "52C", "590", "5F4" };
@@ -875,12 +897,13 @@ namespace PD_Helper
             //add cards to list
             loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
             List<PDCard> cardList = new List<PDCard>();
+            
             int o = 0;
             for (int i = 0; i < 30; i++)
             {
                 Byte[] currentByte = { loadDeck[o], loadDeck[o + 1] };
                 String currentHexString = BitConverter.ToString(currentByte).Replace('-', ' ');
-                cardList.Add(cardDef[currentHexString]);
+                cardList.Add(returnSkillByHex(currentHexString));
                 o += 2;
             }
 
@@ -954,20 +977,7 @@ namespace PD_Helper
 
         private void refreshArsenalList(object sender, EventArgs e)
         {
-            //add each arsenal file to the list
-            savedArsenalListBox.Items.Clear();
-            DirectoryInfo directory = new DirectoryInfo(@"Arsenals\"); //Assuming Test is your Folder
-
-            FileInfo[] Files = directory.GetFiles("*.arsenal"); //Getting Text files
-            string str = "";
-
-            foreach (FileInfo file in Files)
-            {
-                string currentDeck = file.Name;
-                currentDeck = currentDeck.Remove(currentDeck.Length - 8);
-                savedArsenalListBox.Items.Add(currentDeck);
-            }
-            arsenalListGroupBox.Text = "Arsenal List (" + savedArsenalListBox.Items.Count + ")";
+            loadArsenalList();
         }
 
         private void GamepadWorker_DoWork_1(object sender, DoWorkEventArgs e)
@@ -1088,16 +1098,7 @@ namespace PD_Helper
             ((CheckedListBox)sender).ClearSelected();
         }
 
-        private void newArsenalButton_Click(object sender, EventArgs e)
-        {
-            // Load a blank 30 aura arsenal
-            List<PDCard> emptyArsenal = new List<PDCard>();
-            for (int i = 0; i < 30; i++)
-            {
-                emptyArsenal.Add(getCard("Aura Particle"));
-            }
-            openArsenalToList(emptyArsenal);
-        }
+
 
         //modpack loader
         private void button2_Click(object sender, EventArgs e)
@@ -1106,35 +1107,40 @@ namespace PD_Helper
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.RestoreDirectory = true;
             openFileDialog.InitialDirectory = System.IO.Path.GetFullPath(@"Mods\");
-            openFileDialog.Filter = "Skill Pack 3 File (*.sp3)|*.sp3|All files (*.*)|*.*";
+            openFileDialog.Filter = "Skill Pack 4 File (*.sp4)|*.sp4|All files (*.*)|*.*";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    // Load a blank 30 aura arsenal
-                    List<PDCard> emptyArsenal = new List<PDCard>();
-                    for (int i = 0; i < 30; i++)
-                    {
-                        emptyArsenal.Add(getCard("Aura Particle"));
-                    }
-                    openArsenalToList(emptyArsenal);
-                    loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
-                    loadedDeckName = "";
-
                     string modpackPath = "\"" + openFileDialog.FileName + "\"";
                     Process.Start("ModLoader.exe", "--install " + modpackPath); //install mod via Torphs Mod loader
                     //fix path to also load an edited definition list
                     //set new modded card definitions
                     try
                     {
+                        // Load a blank 30 aura arsenal
+                        List<PDCard> emptyArsenal = new List<PDCard>();
+                        for (int i = 0; i < 30; i++)
+                        {
+                            emptyArsenal.Add(getCard("Aura Particle"));
+                        }
+                        openArsenalToList(emptyArsenal);
+                        loadedDeck = new string[] { "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "FF FF", "00 00" };
+                        loadedDeckName = "";
+
                         string moddedCardDefPath = "Mods/" + openFileDialog.SafeFileName.Remove(openFileDialog.SafeFileName.Length - 3) + "json";
                         cardDef = JsonConvert.DeserializeObject<Dictionary<string, PDCard>>(File.ReadAllText(moddedCardDefPath));
                         label34.Text = "Mod " + openFileDialog.SafeFileName.Remove(openFileDialog.SafeFileName.Length - 4) + " applied";
                         label34.ForeColor = Color.FromArgb(128, 128, 255);
 
+                        //allow game to use skills above 374 skill limit!
+                        string setup = "base+4BDC40," + 10; //offset for "max allowed skills to be used online"
+                        m.WriteMemory(setup, "bytes", "BC,02"); //writing BC02 (2 bytes) aka 500 decimal skill slots
+
                         loadArsenalList(); //refresh all lists with new modded content
                         refreshView();
+
                         System.Windows.Forms.MessageBox.Show("Success!! Mod: '" + openFileDialog.SafeFileName.Remove(openFileDialog.SafeFileName.Length - 4) + "' and new card database applied!");
 
                     }
@@ -1152,19 +1158,10 @@ namespace PD_Helper
             }
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void arsenalTabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
+            selectedPath = ((TabControl)sender).SelectedTab.Text;
+            loadArsenalList();
         }
     }
 }
