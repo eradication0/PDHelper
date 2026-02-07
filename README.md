@@ -39,6 +39,7 @@ Thanks to Torph, the app now supports modding and loading modpacks directly thro
 - **Offline Edit** edit/save/share arsenals without having having Phantom Dust open (by @jessep13)
 - **Color Coded Skills** to match the in-game colors (by @jessep13)
 - **Arsenal Hell Game Mode** load a random deck to play a chaotic gamemode
+- **Mod Support** supports moddpacks and modded skills above normal IDs
 
 # Skill Filtering (by @@jessep13)
 - **Basic Filter** sort skills by school/type/range
