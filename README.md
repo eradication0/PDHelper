@@ -23,8 +23,8 @@ if you want to write the arsenals into the game itself you need to
 3. click "load profile"
  
 # Requirements
-.NET 6.0.5 x64
-[Download .NET (6.0.5)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.5-windows-x64-installer)
+.NET 6.0.5 x64 or higher
+[Download .NET SDK](https://dotnet.microsoft.com/en-us/download)
   
 # Mod Support
 Thanks to Torph, the app now supports modding and loading modpacks directly through his modloader
